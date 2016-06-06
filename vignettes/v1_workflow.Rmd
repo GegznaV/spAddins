@@ -80,7 +80,7 @@ Let's say, between the name of a data set (`iris`) and the name of a function
 iris  head()
 ```
 
-Push the shortcut combination `Ctrl + Alt + .` and as a result the operator 
+Apply the shortcut combination `Ctrl + Alt + .` As a result the operator 
 is inserted:
 
 ```{r, eval = FALSE}
