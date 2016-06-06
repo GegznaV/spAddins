@@ -4,7 +4,7 @@ Title: A Set of RStudio Addins
 Version: 0.1.0
 Date: 2016-06-06
 Authors@R: person("Vilmantas", "Gegzna", email = "GegznaV@gmail.com", role = c("aut", "cre"))
-Maintainer: Vilmantas Gegzna <GegeznaV@gmail.com>
+Maintainer: Vilmantas Gegzna <GegznaV@gmail.com>
 Description: Package provides a set of RStudio addins.
 URL: https://github.com/GegznaV/spAddins
 BugReports: https://github.com/GegznaV/spAddins/issues

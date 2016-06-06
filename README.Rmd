@@ -22,7 +22,7 @@ knitr::opts_chunk$set(
 R package `spAddins` 
 ====================
 
-`spAddins` is an R package, that provides a set of RStudio addins.
+`spAddins` is an R package, that provides a set of RStudio addins.  
 
 Install package:
 
