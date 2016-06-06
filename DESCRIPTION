@@ -1,8 +1,8 @@
 Package: spAddins
 Type: Package
 Title: A Set of RStudio Addins
-Version: 0.1.2
-Date: 2016-06-06
+Version: 0.1.3
+Date: 2016-06-07
 Authors@R: person("Vilmantas", "Gegzna",
                     email = "GegznaV@gmail.com",
                     role = c("aut", "cre","cph")
@@ -12,8 +12,8 @@ Description: A set of RStudio addins that are designed to be used in
              combination with user-defined RStudio keyboard shortcuts. These
              addins either insert text at a cursor position (e.g. insert
              operators %>%, <<-, %$%, etc.) or replace symbols in selected
-             pieces of text, e.g., convert backslashes (in stings like this
-             one "c:\data\") to forwardslashes (which results in "c:/data/").
+             pieces of text (e.g., convert backslashes to forwardslashes which
+             results in stings like "c:\data\" converted into "c:/data/").
 URL: https://github.com/GegznaV/spAddins
 BugReports: https://github.com/GegznaV/spAddins/issues
 License: MIT + file LICENSE
