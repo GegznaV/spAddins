@@ -9,8 +9,15 @@ insertIn_Addin()
 \description{
 Call this function as an addin to insert \code{ \%in\% } at the cursor position.
 }
+\examples{
+
+# To call the functions with keyboard shortcuts explore link "spAddins"
+# in section "See also".
+
+}
 \seealso{
-Operator \link[base]{\%in\%}
+Operator \link[base]{\%in\%}.\cr
+ About shortcut keys: \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.
 
 Other 'Insert at cursor position' addins: \code{\link{insertArrowLR2_Addin}},
   \code{\link{insertCompAssignPipe_Addin}},

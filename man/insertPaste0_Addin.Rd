@@ -12,7 +12,15 @@ Call this function as an addin to insert \code{ \%++\% } at the cursor position.
 \note{
 Operator does not work unless library which contains this operator is loaded.
 }
+\examples{
+
+# To call the functions with keyboard shortcuts explore link "spAddins"
+# in section "See also".
+
+}
 \seealso{
+About shortcut keys: \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.
+
 Other 'Insert at cursor position' addins: \code{\link{insertArrowLR2_Addin}},
   \code{\link{insertCompAssignPipe_Addin}},
   \code{\link{insertExPipe_Addin}},

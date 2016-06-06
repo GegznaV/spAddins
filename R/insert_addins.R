@@ -7,7 +7,14 @@
 #' Call this function as an addin to insert \code{ \%*\% } at the cursor position.
 #'
 #' @export
-#' @seealso Operator \link[base]{\%*\%} for matrix multiplication.
+#' @seealso Operator \link[base]{\%*\%} for matrix multiplication.\cr
+#'  About shortcut keys: \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.
+#'
+#' @examples
+#'
+#' # To call the functions with keyboard shortcuts explore link "spAddins"
+#' # in section "See also".
+#'
 #' @family 'Insert at cursor position' addins
 insertMatMuliplication_Addin <- function() {
     rstudioapi::insertText(text = " %*% ")
@@ -19,7 +26,14 @@ insertMatMuliplication_Addin <- function() {
 #' Call this function as an addin to insert \code{ \%in\% } at the cursor position.
 #'
 #' @export
-#' @seealso Operator \link[base]{\%in\%}
+#' @seealso Operator \link[base]{\%in\%}.\cr
+#'  About shortcut keys: \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.
+#'
+#' @examples
+#'
+#' # To call the functions with keyboard shortcuts explore link "spAddins"
+#' # in section "See also".
+#'
 #' @family 'Insert at cursor position' addins
 insertIn_Addin <- function() {
     rstudioapi::insertText(text = " %in% ")
@@ -36,7 +50,14 @@ insertIn_Addin <- function() {
 #'
 #' @export
 #' @family 'Insert at cursor position' addins
-#' @seealso Operator \link[base]{\%in\%}
+#' @seealso Operator \link[base]{\%in\%}.\cr
+#'  About shortcut keys: \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.
+#'
+#' @examples
+#'
+#' # To call the functions with keyboard shortcuts explore link "spAddins"
+#' # in section "See also".
+#'
 insertNotIn_Addin <- function() {
     rstudioapi::insertText(text = " %!in% ")
 }
@@ -49,6 +70,13 @@ insertNotIn_Addin <- function() {
 #' @note Operator does not work unless library which contains this operator is loaded.
 #' @export
 #' @family 'Insert at cursor position' addins
+#' @seealso  About shortcut keys: \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.
+#'
+#' @examples
+#'
+#' # To call the functions with keyboard shortcuts explore link "spAddins"
+#' # in section "See also".
+#'
 # @seealso Operator \code{\link[spMisc]{\%++\%}}
 insertPaste0_Addin <- function() {
     rstudioapi::insertText(text = " %++% ")
@@ -63,7 +91,12 @@ insertPaste0_Addin <- function() {
 #' @export
 #'
 #' @family 'Insert at cursor position' addins
+#' @seealso  About shortcut keys: \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.
 #'
+#' @examples
+#'
+#' # To call the functions with keyboard shortcuts explore link "spAddins"
+#' # in section "See also".
 # @seealso \code{\link[spMisc]{\%.+.\%}}
 
 insertPaste_Addin <- function() {
@@ -79,7 +112,12 @@ insertPaste_Addin <- function() {
 #' @export
 #'
 #' @family 'Insert at cursor position' addins
+#' @seealso  About shortcut keys: \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.
 #'
+#' @examples
+#'
+#' # To call the functions with keyboard shortcuts explore link "spAddins"
+#' # in section "See also".
 # @seealso Operator \code{\link[spMisc]{\%if.NULL\%}}
 insertIfNULL_Addin <- function() {
     rstudioapi::insertText(text = " %if.NULL% ")

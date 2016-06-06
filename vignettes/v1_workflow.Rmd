@@ -1,0 +1,38 @@
+---
+title: "Recommended Workflow"
+author: "Vilmantas Gegzna"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+This vignettes describes a recommended workflow how functions of `spAddins` 
+package should be used.  
+
+1. Install package
+------------------
+Package `spAddins` can be installed from CRAN:
+```{r, eval = FALSE}
+install.packages("spAddins")
+```
+You can also install a development version the package from GitHub:
+```{r, eval = FALSE}
+install.packages("devtools")
+devtools::install_github("GegznaV/spAddins")
+```
+
+2. Set keyboard shortcuts
+-----------------------------
+
+Set keyboard shortcuts in RStudio for desired addins as described in 
+[this example](https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts).
+ 
+3. Use keyboard shortcut
+--------------------------
+
+Use your keyboard shortcut to call a desired addin function.
+
+

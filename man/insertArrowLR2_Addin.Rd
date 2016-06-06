@@ -19,8 +19,29 @@ or \code{<<-} at the cursor position.
 \note{
 use hotkeys combination \code{ALT + -} to insert \code{<-} in RStudio.
 }
+\examples{
+
+# To call the functions with keyboard shortcuts explore link "spAddins"
+# in section "See also".
+
+\donttest{
+\dontrun{
+library(spAddins)
+
+insertArrowLR2_Addin()
+## <<-
+
+insertArrowRL_Addin()
+## ->
+
+insertArrowRL2_Addin()
+## ->>
+}}
+
+}
 \seealso{
-Assignment operators \link[base]{assignOps}
+Assignment operators \link[base]{assignOps}.\cr
+ About shortcut keys: \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.
 
 Other 'Insert at cursor position' addins: \code{\link{insertCompAssignPipe_Addin}},
   \code{\link{insertExPipe_Addin}},

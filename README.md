@@ -1,5 +1,5 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-[![CRAN version](http://www.r-pkg.org/badges/version/spAddins)](http://cran.rstudio.com/web/packages/spAddins/index.html) [![CRAN mirror downloads](http://cranlogs.r-pkg.org/badges/spAddins)](http://cran.rstudio.com/web/packages/spAddins/index.html) [![Travis-CI Build Status](https://travis-ci.org/GegznaV/spAddins.png?branch=master)](https://travis-ci.org/GegznaV/spAddins)
+[![Travis-CI Build Status](https://travis-ci.org/GegznaV/spAddins.png?branch=master)](https://travis-ci.org/GegznaV/spAddins)
 
 R package `spAddins`
 ====================

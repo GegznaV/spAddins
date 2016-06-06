@@ -8,7 +8,13 @@
 #' @export
 #' @note Operator does not work unless library \pkg{magrittr} or
 #' equivalent is loaded.
-#' @seealso Pipeline operator \link[magrittr]{\%>\%}
+#' @seealso Pipeline operator \link[magrittr]{\%>\%}.\cr
+#'   About shortcut keys: \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.
+#'
+#' @examples
+#'
+#' # To call the functions with keyboard shortcuts explore link "spAddins"
+#' # in section "See also".
 #' @family 'Insert at cursor position' addins
 insertPipeline_Addin <- function() {
     rstudioapi::insertText(text = " %>% ")
@@ -23,7 +29,13 @@ insertPipeline_Addin <- function() {
 #' @note Operator does not work unless library \pkg{magrittr} or
 #' equivalent is loaded.
 #' @seealso Exposition pipe operator \link[magrittr]{\%$\%},
-#'  operator \link[base]{$}.
+#'  operator \link[base]{$}.\cr
+#'   About shortcut keys: \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.
+#'
+#' @examples
+#'
+#' # To call the functions with keyboard shortcuts explore link "spAddins"
+#' # in section "See also".
 #' @family 'Insert at cursor position' addins
 insertExPipe_Addin <- function() {
     rstudioapi::insertText(text = " %$% ")
@@ -36,7 +48,13 @@ insertExPipe_Addin <- function() {
 #' @export
 #' @note Operator does not work unless library \pkg{magrittr} or
 #' equivalent is loaded.
-#' @seealso Compound assignment pipe operator \link[magrittr]{\%<>\%}
+#' @seealso Compound assignment pipe operator \link[magrittr]{\%<>\%}\cr
+#'   About shortcut keys: \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.
+#'
+#' @examples
+#'
+#' # To call the functions with keyboard shortcuts explore link "spAddins"
+#' # in section "See also".
 #' @family 'Insert at cursor position' addins
 insertCompAssignPipe_Addin <- function() {
     rstudioapi::insertText(text = " %<>% ")
@@ -49,7 +67,13 @@ insertCompAssignPipe_Addin <- function() {
 #' @export
 #' @note Operator does not work unless library \pkg{magrittr} or
 #' equivalent is loaded.
-#' @seealso Tee operator \link[magrittr]{\%T>\%}
+#' @seealso Tee operator \link[magrittr]{\%T>\%}\cr
+#'   About shortcut keys: \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.
+#'
+#' @examples
+#'
+#' # To call the functions with keyboard shortcuts explore link "spAddins"
+#' # in section "See also".
 #' @family 'Insert at cursor position' addins
 insertTeeOperator_Addin <- function() {
     rstudioapi::insertText(text = " %T>% ")

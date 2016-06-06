@@ -1,26 +1,2 @@
--------------------------------------------------------------
-Functions in the package `spAddins` are copyrighted under
-MIT license.
-Functions in the package are copyrighted under MIT license.
-
--------------------------------------------------------------
-Copyright information for the function "insertInAddin":
-
-LICENSE: MIT
-YEAR: 2016
-COPYRIGHT HOLDER: RStudio, Inc.
--------------------------------------------------------------
-Copyright information for the remaining functions in the
-package `spAddins`:
-
-Copyright information for the remaining functions in the package:
-
-LICENSE: MIT
 YEAR: 2016
 COPYRIGHT HOLDER: Vilmantas Gegzna
--------------------------------------------------------------
-Copyright information for the imported package ‘rstudioapi’:
-
-YEAR: 2015
-COPYRIGHT HOLDER: RStudio
--------------------------------------------------------------

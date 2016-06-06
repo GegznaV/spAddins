@@ -7,6 +7,13 @@
 #' to replace all single backslashes (\code{\\}) with double backslashes
 #' (\code{\\\\}) in the seleceted text.
 #'
+#' @seealso About shortcut keys:
+#'  \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.
+#'
+#' @examples
+#'
+#' # To call the functions with keyboard shortcuts explore link "spAddins"
+#' # in section "See also".
 #'
 #' @export
 #' @family 'Replace selected symbols' addins
@@ -30,6 +37,12 @@ Back2doubleBackSlash <- function() {
 #' to replace
 #' all single backslashes (\code{\\}) with single forwasdslashes (\code{/})
 #' in the selected text.
+#' @seealso About shortcut keys: \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.
+#'
+#' @examples
+#'
+#' # To call the functions with keyboard shortcuts explore link "spAddins"
+#' # in section "See also".
 #' @export
 #' @family 'Replace selected symbols' addins
 Back2ForwardSlash <- function() {
