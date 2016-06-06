@@ -13,8 +13,8 @@ to replace all single backslashes (\code{\\}) with double backslashes
 }
 \examples{
 
-# To call the functions with keyboard shortcuts explore link "spAddins"
-# in section "See also".
+# To call the functions with keyboard shortcuts explore
+# link "keyboard shortcuts" in section "See also".
 
 }
 \seealso{

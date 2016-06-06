@@ -1,20 +1,28 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-[![Travis-CI Build Status](https://travis-ci.org/GegznaV/spAddins.png?branch=master)](https://travis-ci.org/GegznaV/spAddins)
+[![CRAN version](http://www.r-pkg.org/badges/version/spAddins)](http://cran.rstudio.com/web/packages/spAddins/index.html) [![CRAN mirror downloads](http://cranlogs.r-pkg.org/badges/spAddins)](http://cran.rstudio.com/web/packages/spAddins/index.html) [![Travis-CI Build Status](https://travis-ci.org/GegznaV/spAddins.png?branch=master)](https://travis-ci.org/GegznaV/spAddins)
 
 R package `spAddins`
 ====================
 
-`spAddins` is an R package, that provides a set of RStudio addins.
+`spAddins` is an R package. It provides a set of RStudio addins that are designed to be used in combination with user-defined RStudio keyboard shortcuts. These addins either insert text at a cursor position (e.g. insert operators `%>%`, `<<-`, `%$%`, etc.) or replace symbols in selected pieces of text, e.g., convert backslashes (in stings like this one `"c:\data\"`) to forwardslashes (which results in `"c:/data/"`).
 
-Install package:
+Install package
+---------------
 
 ``` r
 library(devtools)
 install_github("GegznaV/spAddins")
 ```
 
+Recommended workflow and some examples
+--------------------------------------
+
+``` r
+vignette("v1_workflow", package = "spAddins")
+```
+
 ------------------------------------------------------------------------
 
 <p align="right">
-File updated on <b>2016-06-06</b> with version of package <b>0.1.0</b>
+File updated on <b>2016-06-06</b> with version of package <b>0.1.2</b>
 </p>

@@ -12,8 +12,8 @@
 #'
 #' @examples
 #'
-#' # To call the functions with keyboard shortcuts explore link "spAddins"
-#' # in section "See also".
+#' # To call the functions with keyboard shortcuts explore
+#' # link "keyboard shortcuts" in section "See also".
 #'
 #' @family 'Insert at cursor position' addins
 insertMatMuliplication_Addin <- function() {
@@ -31,8 +31,8 @@ insertMatMuliplication_Addin <- function() {
 #'
 #' @examples
 #'
-#' # To call the functions with keyboard shortcuts explore link "spAddins"
-#' # in section "See also".
+#' # To call the functions with keyboard shortcuts explore
+#' # link "keyboard shortcuts" in section "See also".
 #'
 #' @family 'Insert at cursor position' addins
 insertIn_Addin <- function() {
@@ -55,8 +55,8 @@ insertIn_Addin <- function() {
 #'
 #' @examples
 #'
-#' # To call the functions with keyboard shortcuts explore link "spAddins"
-#' # in section "See also".
+#' # To call the functions with keyboard shortcuts explore
+#' # link "keyboard shortcuts" in section "See also".
 #'
 insertNotIn_Addin <- function() {
     rstudioapi::insertText(text = " %!in% ")
@@ -74,8 +74,8 @@ insertNotIn_Addin <- function() {
 #'
 #' @examples
 #'
-#' # To call the functions with keyboard shortcuts explore link "spAddins"
-#' # in section "See also".
+#' # To call the functions with keyboard shortcuts explore
+#' # link "keyboard shortcuts" in section "See also".
 #'
 # @seealso Operator \code{\link[spMisc]{\%++\%}}
 insertPaste0_Addin <- function() {
@@ -95,8 +95,8 @@ insertPaste0_Addin <- function() {
 #'
 #' @examples
 #'
-#' # To call the functions with keyboard shortcuts explore link "spAddins"
-#' # in section "See also".
+#' # To call the functions with keyboard shortcuts explore
+#' # link "keyboard shortcuts" in section "See also".
 # @seealso \code{\link[spMisc]{\%.+.\%}}
 
 insertPaste_Addin <- function() {
@@ -116,8 +116,8 @@ insertPaste_Addin <- function() {
 #'
 #' @examples
 #'
-#' # To call the functions with keyboard shortcuts explore link "spAddins"
-#' # in section "See also".
+#' # To call the functions with keyboard shortcuts explore
+#' # link "keyboard shortcuts" in section "See also".
 # @seealso Operator \code{\link[spMisc]{\%if.NULL\%}}
 insertIfNULL_Addin <- function() {
     rstudioapi::insertText(text = " %if.NULL% ")

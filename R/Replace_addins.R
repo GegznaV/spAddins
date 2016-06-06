@@ -12,8 +12,8 @@
 #'
 #' @examples
 #'
-#' # To call the functions with keyboard shortcuts explore link "spAddins"
-#' # in section "See also".
+#' # To call the functions with keyboard shortcuts explore
+#' # link "keyboard shortcuts" in section "See also".
 #'
 #' @export
 #' @family 'Replace selected symbols' addins
@@ -41,8 +41,8 @@ Back2doubleBackSlash <- function() {
 #'
 #' @examples
 #'
-#' # To call the functions with keyboard shortcuts explore link "spAddins"
-#' # in section "See also".
+#' # To call the functions with keyboard shortcuts explore
+#' # link "keyboard shortcuts" in section "See also".
 #' @export
 #' @family 'Replace selected symbols' addins
 Back2ForwardSlash <- function() {

@@ -22,13 +22,26 @@ knitr::opts_chunk$set(
 R package `spAddins` 
 ====================
 
-`spAddins` is an R package, that provides a set of RStudio addins.  
+`spAddins` is an R package.
+It provides a set of RStudio addins that are designed to be used in
+combination with user-defined RStudio keyboard shortcuts. These
+addins either insert text at a cursor position (e.g. insert
+operators `%>%`, `<<-`, `%$%`, etc.) or replace symbols in selected
+pieces of text, e.g., convert backslashes (in stings like this
+one `"c:\data\"`) to forwardslashes (which results in `"c:/data/"`).
 
-Install package:
-
+Install package
+----------------
 ```{r Install package, eval=FALSE}
 library(devtools)
 install_github("GegznaV/spAddins")
+```
+
+Recommended workflow and some examples
+---------------------------------------
+
+```{r, eval=FALSE}
+vignette("v1_workflow", package = "spAddins")
 ```
 
 

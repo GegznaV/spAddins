@@ -14,8 +14,8 @@ in the selected text.
 }
 \examples{
 
-# To call the functions with keyboard shortcuts explore link "spAddins"
-# in section "See also".
+# To call the functions with keyboard shortcuts explore
+# link "keyboard shortcuts" in section "See also".
 }
 \seealso{
 About shortcut keys: \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.

@@ -11,8 +11,8 @@ Call this function as an addin to insert \code{ \%in\% } at the cursor position.
 }
 \examples{
 
-# To call the functions with keyboard shortcuts explore link "spAddins"
-# in section "See also".
+# To call the functions with keyboard shortcuts explore
+# link "keyboard shortcuts" in section "See also".
 
 }
 \seealso{

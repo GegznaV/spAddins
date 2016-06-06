@@ -13,8 +13,8 @@
 #'
 #' @examples
 #'
-#' # To call the functions with keyboard shortcuts explore link "spAddins"
-#' # in section "See also".
+#' # To call the functions with keyboard shortcuts explore
+#' # link "keyboard shortcuts" in section "See also".
 #' @family 'Insert at cursor position' addins
 insertPipeline_Addin <- function() {
     rstudioapi::insertText(text = " %>% ")
@@ -34,8 +34,8 @@ insertPipeline_Addin <- function() {
 #'
 #' @examples
 #'
-#' # To call the functions with keyboard shortcuts explore link "spAddins"
-#' # in section "See also".
+#' # To call the functions with keyboard shortcuts explore
+#' # link "keyboard shortcuts" in section "See also".
 #' @family 'Insert at cursor position' addins
 insertExPipe_Addin <- function() {
     rstudioapi::insertText(text = " %$% ")
@@ -53,8 +53,8 @@ insertExPipe_Addin <- function() {
 #'
 #' @examples
 #'
-#' # To call the functions with keyboard shortcuts explore link "spAddins"
-#' # in section "See also".
+#' # To call the functions with keyboard shortcuts explore
+#' # link "keyboard shortcuts" in section "See also".
 #' @family 'Insert at cursor position' addins
 insertCompAssignPipe_Addin <- function() {
     rstudioapi::insertText(text = " %<>% ")
@@ -72,8 +72,8 @@ insertCompAssignPipe_Addin <- function() {
 #'
 #' @examples
 #'
-#' # To call the functions with keyboard shortcuts explore link "spAddins"
-#' # in section "See also".
+#' # To call the functions with keyboard shortcuts explore
+#' # link "keyboard shortcuts" in section "See also".
 #' @family 'Insert at cursor position' addins
 insertTeeOperator_Addin <- function() {
     rstudioapi::insertText(text = " %T>% ")

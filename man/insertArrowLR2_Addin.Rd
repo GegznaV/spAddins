@@ -21,8 +21,8 @@ use hotkeys combination \code{ALT + -} to insert \code{<-} in RStudio.
 }
 \examples{
 
-# To call the functions with keyboard shortcuts explore link "spAddins"
-# in section "See also".
+# To call the functions with keyboard shortcuts explore
+# link "keyboard shortcuts" in section "See also".
 
 \donttest{
 \dontrun{

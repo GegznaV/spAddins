@@ -14,8 +14,8 @@ Operator does not work unless library which contains this operator is loaded.
 }
 \examples{
 
-# To call the functions with keyboard shortcuts explore link "spAddins"
-# in section "See also".
+# To call the functions with keyboard shortcuts explore
+# link "keyboard shortcuts" in section "See also".
 
 }
 \seealso{
