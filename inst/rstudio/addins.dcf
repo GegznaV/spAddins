@@ -1,0 +1,75 @@
+
+Name: Insert %>%
+Description: Inserts `%>%` at the cursor position.
+Binding: insertPipeline_Addin
+Interactive: false
+
+Name: Insert %<>%
+Description: Inserts `%<>%` at the cursor position.
+Binding: insertCompAssignPipe_Addin
+Interactive: false
+
+Name: Insert %$%
+Description: Inserts `%$%` at the cursor position.
+Binding: insertExPipe_Addin
+Interactive: false
+
+Name: Insert %T>%
+Description: Inserts `%T>%` at the cursor position.
+Binding: insertTeeOperator_Addin
+Interactive: false
+
+Name: Insert %*%
+Description: Inserts `%*%` at the cursor position.
+Binding: insertMatMuliplication_Addin
+Interactive: false
+
+Name: Insert %in%
+Description: Inserts `%in%` at the cursor position.
+Binding: insertIn_Addin
+Interactive: false
+
+Name: Insert %!in%
+Description: Inserts `%!in%` at the cursor position.
+Binding: insertNotIn_Addin
+Interactive: false
+
+Name: Insert %++%
+Description: Inserts `%++%` at the cursor position.
+Binding: insertPaste0_Addin
+Interactive: false
+
+Name: Insert %.+.%
+Description: Inserts `%.+.%` at the cursor position.
+Binding: insertPaste_Addin
+Interactive: false
+
+Name: Insert %if.NULL%
+Description: Inserts `%if.NULL%` at the cursor position.
+Binding: insertIfNULL_Addin
+Interactive: false
+
+Name: Replace \ with \\
+Description: Replaces \ with \\ in the selected text.
+Binding: Back2doubleBackSlash
+Interactive: false
+
+Name: Replace \ with /
+Description: Replaces \ with / in the selected text.
+Binding: Back2ForwardSlash
+Interactive: false
+
+Name: Insert <<-
+Description: Inserts `<<-` at the cursor position.
+Binding: insertArrowLR2_Addin
+Interactive: false
+
+Name: Insert ->
+Description: Inserts `->` at the cursor position.
+Binding: insertArrowRL_Addin
+Interactive: false
+
+Name: Insert ->>
+Description: Inserts `->>` at the cursor position.
+Binding: insertArrowRL2_Addin
+Interactive: false
