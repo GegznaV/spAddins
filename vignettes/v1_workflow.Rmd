@@ -5,12 +5,12 @@ author: "Vilmantas Gegzna"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteIndexEntry{Workflow and examples}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
-This vignettes describes a recommended workflow how functions of `spAddins` 
+This vignette describes a recommended workflow how functions of `spAddins` 
 package should be used and gives several examples.
 
 
