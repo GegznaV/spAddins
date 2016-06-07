@@ -69,7 +69,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 
 <h1 class="title toc-ignore">Recommended Workflow and Examples</h1>
-<h3 class="subtitle"><em>Package <code>spAddins</code></em></h3>
 <h4 class="author"><em>Vilmantas Gegzna</em></h4>
 <h4 class="date"><em>2016-06-07</em></h4>
 
@@ -78,8 +77,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <ul>
 <li><a href="#the-workflow">The Workflow</a><ul>
 <li><a href="#step-1-install-the-package">Step 1: Install the package</a></li>
-<li><a href="#step-2-set-keyboard-shortcuts">Step 2: Set keyboard shortcuts</a></li>
-<li><a href="#step-3-place-a-cursor-select-text">Step 3: Place a cursor / Select text</a></li>
+<li><a href="#step-2-define-keyboard-shortcuts">Step 2: Define keyboard shortcuts</a></li>
+<li><a href="#step-3-place-a-cursor-select-some-text">Step 3: Place a cursor / Select some text</a></li>
 <li><a href="#step-4-use-the-keyboard-shortcuts">Step 4: Use the keyboard shortcuts</a></li>
 </ul></li>
 <li><a href="#a-few-examples">A Few Examples</a><ul>
@@ -92,7 +91,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>This vignette describes a recommended workflow of how the functions of <code>spAddins</code> package should be used and gives several examples.</p>
 <div id="the-workflow" class="section level1">
 <h1>The Workflow</h1>
-<p>Four main steps of recommended workflow can be defined. Step 1 and Step 2 should be repeated only once. Step 3 and Step 4 can be repeated as many times as needed.</p>
+<p>The recommended workflow consists of four main steps. Step 1 and Step 2 should usually be done only once. Step 3 and Step 4 can be repeated as many times as needed.</p>
 <div id="step-1-install-the-package" class="section level2">
 <h2>Step 1: Install the package</h2>
 <p>Released version of package <code>spAddins</code> can be installed from CRAN:</p>
@@ -102,45 +101,44 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <span class="kw">library</span>(devtools)
 <span class="kw">install_github</span>(<span class="st">&quot;GegznaV/spAddins&quot;</span>)</code></pre></div>
 </div>
-<div id="step-2-set-keyboard-shortcuts" class="section level2">
-<h2>Step 2: Set keyboard shortcuts</h2>
-<p>Functions in the package are also RStudio addins. This allows setting user-defined RStudio keyboard shortcuts that call functions in a more convenient way. Thus the next step is to define keyboard shortcuts for package’s <code>spAddins</code> functions you would like to use often.</p>
-<p>To learn how to add user defined RStudio keyboard shortcuts, visit these links: <a href="https://support.rstudio.com/hc/en-us/articles/206382178-Customizing-Keyboard-Shortcuts">Customizing Keyboard Shortcuts</a> and <a href="https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts">Keyboard Shorcuts</a>.</p>
+<div id="step-2-define-keyboard-shortcuts" class="section level2">
+<h2>Step 2: Define keyboard shortcuts</h2>
+<p>Functions in the package are also RStudio addins. This fact allows setting user-defined RStudio keyboard shortcuts that call the functions in a more convenient way. Thus the second step is to define keyboard shortcuts for package’s <code>spAddins</code> functions of interest.</p>
+<p>To learn how to add user defined RStudio keyboard shortcuts, visit these links: <a href="https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts">Keyboard Shorcuts</a> and <a href="https://support.rstudio.com/hc/en-us/articles/206382178-Customizing-Keyboard-Shortcuts">Customizing Keyboard Shortcuts</a>.</p>
 </div>
-<div id="step-3-place-a-cursor-select-text" class="section level2">
-<h2>Step 3: Place a cursor / Select text</h2>
+<div id="step-3-place-a-cursor-select-some-text" class="section level2">
+<h2>Step 3: Place a cursor / Select some text</h2>
 <p>Package <code>spAddins</code> contains 2 types of addins:</p>
 <ul>
-<li>those which insert text and</li>
-<li>those which replace text.</li>
+<li>those which <strong>insert</strong> text and</li>
+<li>those which <strong>replace</strong> text.</li>
 </ul>
-<p>For addins which <strong>insert</strong> text, in either R editor or in R console <strong>place</strong> a cursor at a position at which the text should be inserted.</p>
+<p>For addins which <strong>insert</strong> text, in either R editor or in R console <strong>place</strong> your cursor at the position at which the text should be inserted.</p>
 <p>For addins which <strong>replace</strong> text, either in R editor or in R console <strong>select</strong> a piece of text in which certain symbols should be replaced.</p>
 </div>
 <div id="step-4-use-the-keyboard-shortcuts" class="section level2">
 <h2>Step 4: Use the keyboard shortcuts</h2>
-<p>Apply keyboard shortcut you defined in Step 2 to call a desired addin function.</p>
+<p>To call a desired addin function, apply an appropriate keyboard shortcut which in Step 2 was associated with that function.</p>
 </div>
 </div>
 <div id="a-few-examples" class="section level1">
 <h1>A Few Examples</h1>
 <div id="insert-operator" class="section level2">
 <h2>Insert <code>%&gt;%</code> operator</h2>
-<p>This is an example how to use addins which <strong>insert</strong> text.</p>
-<p>When package <code>spAddins</code> is already installed let’s set shortcut <code>Ctrl + Alt + .</code> to call function <code>insertPipeline_Addin()</code> which inserts forward-pipe operator <code>%&gt;%</code> operator at cursor’s position. This operator is in package <code>magrittr</code> thus the package should be loaded first.</p>
+<p>This example demonstrates how to use addins which <strong>insert</strong> text.</p>
+<p>Let package <code>spAddins</code> be already installed. First, let’s set keyboard shortcut <code>Ctrl + Alt + .</code> to call function <code>insertPipeline_Addin()</code> which inserts forward-pipe operator <code>%&gt;%</code> operator at the cursor position. This operator is in package <code>magrittr</code> thus the package must be loaded:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(magrittr)</code></pre></div>
 <p>To learn more about the <code>%&gt;%</code> operator type:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">?<span class="st">`</span><span class="dt">%&gt;%</span><span class="st">`</span></code></pre></div>
-<p>Next, place your cursor at a position, where the operator should be inserted. Let’s say, between the name of a data set (<code>iris</code>) and the name of a function (<code>head()</code>):</p>
+<p>Next, place your cursor at the position, where the operator should be inserted. For example, between the name of data set <code>iris</code> and the name of a function <code>head()</code>:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">iris  <span class="kw">head</span>()</code></pre></div>
 <p>Apply the shortcut combination <code>Ctrl + Alt + .</code> As a result the operator is inserted:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">iris %&gt;%<span class="st"> </span><span class="kw">head</span>()</code></pre></div>
 </div>
 <div id="replace-with" class="section level2">
 <h2>Replace <code>\</code> with <code>/</code></h2>
-<p>This is an example how to use addins which <strong>replace</strong> text.</p>
-<p>In the following example conciser having a string <code>&quot;c:\data\&quot;</code>.<br />
-Again let’s define a new shortcut combination, say <code>Ctrl + Alt + Shift + /</code>, which calls an addin. This time addin function we need is <code>Back2ForwardSlash()</code>. This function replaces backslashes (<code>\</code>) with forward slashes (<code>/</code>). Before the replacement appropriate piece of string must be selected. Thus let’s select all string and push <code>Ctrl + Alt + Shift + /</code>. As a result the string is converted into <code>&quot;c:/data/&quot;</code>.</p>
+<p>This example describes how to use addins which <strong>replace</strong> text.</p>
+<p>Conciser having a string <code>&quot;c:\data\&quot;</code> in which backslashes (<code>\</code>) must be replaced with forward slashes (<code>/</code>). Addin function <code>Back2ForwardSlash()</code> is designed exactly for this task. Let’s define a new shortcut combination, say <code>Ctrl + Alt + Shift + /</code>, which calls the addin function. Now to know the place where the replacement should be applied an appropriate piece of text in either R editor or R console must be selected. Thus let’s select whole string <code>&quot;c:\data\&quot;</code> and push <code>Ctrl + Alt + Shift + /</code>. The result: as expected, the string is converted into <code>&quot;c:/data/&quot;</code>.</p>
 </div>
 </div>
 

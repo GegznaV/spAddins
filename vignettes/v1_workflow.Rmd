@@ -1,13 +1,12 @@
 ---
 title: "Recommended Workflow and Examples"
-subtitle: "Package `spAddins`"
 author: "Vilmantas Gegzna"
 date: "`r Sys.Date()`"
 output:
     rmarkdown::html_vignette:
         toc: yes
 vignette: >
-  %\VignetteIndexEntry{1 Workflow and examples}
+  %\VignetteIndexEntry{1 Workflow and Examples}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -18,8 +17,9 @@ package should be used and gives several examples.
 
 The Workflow
 =============
-Four main steps of recommended workflow can be defined. Step 1 and Step 2 should 
-be repeated only once. Step 3 and Step 4 can be repeated as many times as needed.
+The recommended workflow consists of four main steps.
+Step 1 and Step 2 should usually be done only once.
+Step 3 and Step 4 can be repeated as many times as needed.
 
 
 Step 1: Install the package
@@ -38,28 +38,30 @@ install_github("GegznaV/spAddins")
 ```
 
 
-Step 2: Set keyboard shortcuts
--------------------------------
+Step 2: Define keyboard shortcuts
+-----------------------------------
 
-Functions in the package are also RStudio addins. This allows setting 
-user-defined RStudio keyboard shortcuts that call functions in a more 
+Functions in the package are also RStudio addins. This fact allows setting 
+user-defined RStudio keyboard shortcuts that call the functions in a more 
 convenient way.
-Thus the next step is to define keyboard shortcuts for package's `spAddins` 
-functions you would like to use often.
+Thus the second step is to define keyboard shortcuts for package's `spAddins` 
+functions of interest.
 
 To learn how to add user defined RStudio keyboard shortcuts, visit these links:
-[Customizing Keyboard Shortcuts](https://support.rstudio.com/hc/en-us/articles/206382178-Customizing-Keyboard-Shortcuts) and [Keyboard Shorcuts](https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts).
+[Keyboard Shorcuts](https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts)
+and
+[Customizing Keyboard Shortcuts](https://support.rstudio.com/hc/en-us/articles/206382178-Customizing-Keyboard-Shortcuts).
 
 
-Step 3: Place a cursor / Select text
--------------------------------------
+Step 3: Place a cursor / Select some text
+------------------------------------------
 Package `spAddins` contains 2 types of addins:
 
-- those which insert text and
-- those which replace text.
+- those which **insert** text and
+- those which **replace** text.
 
-For addins which **insert** text, in either R editor or in R console **place** a 
-cursor at a position at which the text should be inserted.  
+For addins which **insert** text, in either R editor or in R console **place** your 
+cursor at the position at which the text should be inserted.  
 
 For addins which **replace** text, either in R editor or in R console **select** a 
 piece of text in which certain symbols should be replaced.  
@@ -67,7 +69,8 @@ piece of text in which certain symbols should be replaced.
  
 Step 4: Use the keyboard shortcuts
 ----------------------------------
-Apply keyboard shortcut you defined in Step 2 to call a desired addin function.
+To call a desired addin function, apply an appropriate keyboard shortcut which 
+in Step 2 was associated with that function.
 
 
 
@@ -77,12 +80,12 @@ A Few Examples
 
 Insert `%>%` operator
 -----------------------
-This is an example how to use addins which **insert** text.  
+This example demonstrates how to use addins which **insert** text.  
 
-When package `spAddins` is already installed let's set shortcut `Ctrl + Alt + .`
-to call function `insertPipeline_Addin()` which inserts forward-pipe operator
-`%>%` operator at cursor's position. This operator is in package `magrittr`
-thus the package should be loaded first. 
+Let package `spAddins` be already installed. First, let's set keyboard shortcut
+`Ctrl + Alt + .` to call function `insertPipeline_Addin()` which inserts
+forward-pipe operator `%>%` operator at the cursor position. This operator is 
+in package `magrittr` thus the package must be loaded: 
 ```{r, eval = FALSE}
 library(magrittr)
 ```
@@ -91,9 +94,9 @@ To learn more about the `%>%` operator type:
 ?`%>%`
 ```
 
-Next, place your cursor at a position, where the operator should be inserted. 
-Let's say, between the name of a data set (`iris`) and the name of a function 
-(`head()`):
+Next, place your cursor at the position, where the operator should be inserted. 
+For example, between the name of data set `iris` and the name of a function 
+`head()`:
 ```{r, eval = FALSE}
 iris  head()
 ```
@@ -107,12 +110,13 @@ iris %>% head()
 
 Replace `\` with `/`
 ----------------------
-This is an example how to use addins which **replace** text.  
+This example describes how to use addins which **replace** text.  
 
-In the following example conciser having a string `"c:\data\"`.  
-Again let's define a new shortcut combination, say  `Ctrl + Alt + Shift + /`,
-which calls an addin. This time addin function we need is `Back2ForwardSlash()`.
-This function replaces backslashes (`\`) with forward slashes (`/`). Before the 
-replacement appropriate piece of string must be selected. Thus let's select 
-all string and push `Ctrl + Alt + Shift + /`. As a result the string is 
-converted into `"c:/data/"`.
+Conciser having a string `"c:\data\"` in which backslashes (`\`) must be 
+replaced with forward slashes (`/`). Addin function `Back2ForwardSlash()` 
+is designed exactly for this task. Let's define a new shortcut combination,
+say  `Ctrl + Alt + Shift + /`, which calls the addin function. Now to know the
+place where the replacement should be applied an appropriate piece of text in
+either R editor or R console must be selected. Thus let's select 
+whole string `"c:\data\"` and push `Ctrl + Alt + Shift + /`. 
+The result: as expected, the string is converted into `"c:/data/"`.
