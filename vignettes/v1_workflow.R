@@ -1,9 +1,10 @@
-## ---- eval = FALSE-------------------------------------------------------
+## ----Install package from CRAN, eval=FALSE-------------------------------
 #  install.packages("spAddins")
 
-## ---- eval = FALSE-------------------------------------------------------
-#  install.packages("devtools")
-#  devtools::install_github("GegznaV/spAddins")
+## ----Install package from GitHub, eval=FALSE-----------------------------
+#  if (!require(devtools)) install.packages("devtools")
+#  library(devtools)
+#  install_github("GegznaV/spAddins")
 
 ## ---- eval = FALSE-------------------------------------------------------
 #  library(magrittr)

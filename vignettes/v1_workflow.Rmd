@@ -3,44 +3,61 @@ title: "Recommended Workflow and Examples"
 subtitle: "Package `spAddins`"
 author: "Vilmantas Gegzna"
 date: "`r Sys.Date()`"
-output: rmarkdown::html_vignette
+output:
+    rmarkdown::html_vignette:
+        toc: yes
 vignette: >
-  %\VignetteIndexEntry{Workflow and examples}
+  %\VignetteIndexEntry{1 Workflow and examples}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
-This vignette describes a recommended workflow how functions of `spAddins` 
+This vignette describes a recommended workflow of how the functions of `spAddins` 
 package should be used and gives several examples.
 
 
-The workflow
+The Workflow
 =============
 Four main steps of recommended workflow can be defined. Step 1 and Step 2 should 
-be repeated only once. Steps 3 and 4 can be repeated as many times as needed.
+be repeated only once. Step 3 and Step 4 can be repeated as many times as needed.
 
 
 Step 1: Install the package
 ---------------------------
-Package `spAddins` can be installed from CRAN:
-```{r, eval = FALSE}
+
+Released version of package `spAddins` can be installed from CRAN:
+```{r Install package from CRAN, eval=FALSE}
 install.packages("spAddins")
 ```
-It can be also installed as a development version from GitHub:
-```{r, eval = FALSE}
-install.packages("devtools")
-devtools::install_github("GegznaV/spAddins")
+
+Development version can be installed from GitHub:
+```{r Install package from GitHub, eval=FALSE}
+if (!require(devtools)) install.packages("devtools")
+library(devtools)
+install_github("GegznaV/spAddins")
 ```
+
 
 Step 2: Set keyboard shortcuts
 -------------------------------
+
+Functions in the package are also RStudio addins. This allows setting 
+user-defined RStudio keyboard shortcuts that call functions in a more 
+convenient way.
+Thus the next step is to define keyboard shortcuts for package's `spAddins` 
+functions you would like to use often.
 
 To learn how to add user defined RStudio keyboard shortcuts, visit these links:
 [Customizing Keyboard Shortcuts](https://support.rstudio.com/hc/en-us/articles/206382178-Customizing-Keyboard-Shortcuts) and [Keyboard Shorcuts](https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts).
 
 
 Step 3: Place a cursor / Select text
------------------------------------
+-------------------------------------
+Package `spAddins` contains 2 types of addins:
+
+- those which insert text and
+- those which replace text.
+
 For addins which **insert** text, in either R editor or in R console **place** a 
 cursor at a position at which the text should be inserted.  
 
@@ -50,16 +67,17 @@ piece of text in which certain symbols should be replaced.
  
 Step 4: Use the keyboard shortcuts
 ----------------------------------
-Use your keyboard shortcut to call a desired addin to insert or to replace the 
-text.
+Apply keyboard shortcut you defined in Step 2 to call a desired addin function.
 
 
 
-Examples
-=========
+A Few Examples
+===============
 
-Insert `%>%`
-------------
+
+Insert `%>%` operator
+-----------------------
+This is an example how to use addins which **insert** text.  
 
 When package `spAddins` is already installed let's set shortcut `Ctrl + Alt + .`
 to call function `insertPipeline_Addin()` which inserts forward-pipe operator
@@ -89,11 +107,12 @@ iris %>% head()
 
 Replace `\` with `/`
 ----------------------
+This is an example how to use addins which **replace** text.  
 
 In the following example conciser having a string `"c:\data\"`.  
 Again let's define a new shortcut combination, say  `Ctrl + Alt + Shift + /`,
 which calls an addin. This time addin function we need is `Back2ForwardSlash()`.
-This function replaces backslash (`\`) with forward slash `/`. Before the 
+This function replaces backslashes (`\`) with forward slashes (`/`). Before the 
 replacement appropriate piece of string must be selected. Thus let's select 
 all string and push `Ctrl + Alt + Shift + /`. As a result the string is 
 converted into `"c:/data/"`.

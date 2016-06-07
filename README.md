@@ -4,12 +4,21 @@
 R package `spAddins`
 ====================
 
-`spAddins` is an R package. It provides a set of RStudio addins that are designed to be used in combination with user-defined RStudio keyboard shortcuts. These addins either insert text at a cursor position (e.g. insert operators `%>%`, `<<-`, `%$%`, etc.) or replace symbols in selected pieces of text (e.g., convert backslashes to forwardslashes which results in strings like `"c:\data\"` converted into `"c:/data/"`).
+`spAddins` is an R package. It provides a set of RStudio addins that are designed to be used in combination with user-defined RStudio keyboard shortcuts. These addins either insert text at a cursor position (e.g. insert operators `%>%`, `<<-`, `%$%`, etc.) or replace symbols in selected pieces of text (e.g., convert backslashes to forward slashes which results in strings like `"c:\data\"` converted into `"c:/data/"`).
 
 Install package
 ---------------
 
+Install from CRAN:
+
 ``` r
+install.packages("spAddins")
+```
+
+Development version can be installed from GitHub:
+
+``` r
+if (!require(devtools)) install.packages("devtools")
 library(devtools)
 install_github("GegznaV/spAddins")
 ```
@@ -19,6 +28,8 @@ Recommended workflow and some examples
 
 ``` r
 vignette("v1_workflow", package = "spAddins")
+
+browseVignettes("spAddins")
 ```
 
 ------------------------------------------------------------------------
