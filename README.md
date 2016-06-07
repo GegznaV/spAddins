@@ -35,5 +35,5 @@ browseVignettes("spAddins")
 ------------------------------------------------------------------------
 
 <p align="right">
-File updated on <b>2016-06-07</b> with version of package <b>0.1.3</b>
+File updated on <b>2016-06-07</b> with version of package <b>0.1.4.1002</b>
 </p>
