@@ -2,7 +2,7 @@ Package: spAddins
 Type: Package
 Title: A Set of RStudio Addins
 Version: 0.1.4
-Date: 2016-06-07
+Date: 2016-06-08
 Authors@R: person("Vilmantas", "Gegzna",
                     email = "GegznaV@gmail.com",
                     role = c("aut", "cre","cph")
