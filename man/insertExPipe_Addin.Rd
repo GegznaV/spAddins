@@ -32,6 +32,8 @@ Other 'Insert at cursor position' addins: \code{\link{insertArrowLR2_Addin}},
   \code{\link{insertPaste0_Addin}},
   \code{\link{insertPaste_Addin}},
   \code{\link{insertPipeline_Addin}},
-  \code{\link{insertTeeOperator_Addin}}
+  \code{\link{insertTeeOperator_Addin}},
+  \code{\link{insert_if_null_Addin}},
+  \code{\link{insert_if_null_or_len0_Addin}}
 }
 

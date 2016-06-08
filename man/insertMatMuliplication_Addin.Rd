@@ -10,7 +10,6 @@ insertMatMuliplication_Addin()
 Call this function as an addin to insert \code{ \%*\% } at the cursor position.
 }
 \examples{
-
 # To call the functions with keyboard shortcuts explore
 # link "keyboard shortcuts" in section "See also".
 
@@ -28,6 +27,8 @@ Other 'Insert at cursor position' addins: \code{\link{insertArrowLR2_Addin}},
   \code{\link{insertPaste0_Addin}},
   \code{\link{insertPaste_Addin}},
   \code{\link{insertPipeline_Addin}},
-  \code{\link{insertTeeOperator_Addin}}
+  \code{\link{insertTeeOperator_Addin}},
+  \code{\link{insert_if_null_Addin}},
+  \code{\link{insert_if_null_or_len0_Addin}}
 }
 

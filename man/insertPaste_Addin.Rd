@@ -13,12 +13,13 @@ Call this function as an addin to insert \code{ \%.+.\% } at the cursor position
 Operator does not work unless library which contains this operator is loaded.
 }
 \examples{
-
 # To call the functions with keyboard shortcuts explore
 # link "keyboard shortcuts" in section "See also".
+
 }
 \seealso{
-About shortcut keys: \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.
+About shortcut keys: \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}. \cr
+\code{\link[spMisc]{\%.+.\%}}.
 
 Other 'Insert at cursor position' addins: \code{\link{insertArrowLR2_Addin}},
   \code{\link{insertCompAssignPipe_Addin}},
@@ -29,6 +30,8 @@ Other 'Insert at cursor position' addins: \code{\link{insertArrowLR2_Addin}},
   \code{\link{insertNotIn_Addin}},
   \code{\link{insertPaste0_Addin}},
   \code{\link{insertPipeline_Addin}},
-  \code{\link{insertTeeOperator_Addin}}
+  \code{\link{insertTeeOperator_Addin}},
+  \code{\link{insert_if_null_Addin}},
+  \code{\link{insert_if_null_or_len0_Addin}}
 }
 

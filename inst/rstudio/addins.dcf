@@ -49,6 +49,16 @@ Description: Inserts `%if.NULL%` at the cursor position.
 Binding: insertIfNULL_Addin
 Interactive: false
 
+Name: Insert %if_null%
+Description: Inserts `%if_null%` at the cursor position.
+Binding: insert_if_null_Addin
+Interactive: false
+
+Name: Insert %if_null_or_len0%
+Description: Inserts `%if_null_or_len0%` at the cursor position.
+Binding: insert_if_null_or_len0_Addin
+Interactive: false
+
 Name: Replace \ with \\
 Description: Replaces \ with \\ in the selected text.
 Binding: Back2doubleBackSlash
