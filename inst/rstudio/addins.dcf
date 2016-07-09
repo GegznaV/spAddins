@@ -83,3 +83,34 @@ Name: Insert ->>
 Description: Inserts `->>` at the cursor position.
 Binding: insertArrowRL2_Addin
 Interactive: false
+
+
+Name: Enclose with $
+Description: Encloses selected text with `$`.
+Binding: enclose_with_dolar
+Interactive: false
+
+Name: Enclose with $$
+Description: Encloses selected text with `$$`.
+Binding: enclose_with_dolar2
+Interactive: false
+
+Name: Enclose with _
+Description: Encloses selected text with `_`.
+Binding: enclose_with_underscore
+Interactive: false
+
+Name: Enclose with __
+Description: Encloses selected text with `__`.
+Binding: enclose_with_underscore2
+Interactive: false
+
+Name: Enclose with *
+Description: Encloses selected text with `*`.
+Binding: enclose_with_asterisk
+Interactive: false
+
+Name: Enclose with **
+Description: Encloses selected text with `**`.
+Binding: enclose_with_asterisk2
+Interactive: false

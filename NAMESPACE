@@ -2,6 +2,12 @@
 
 export(Back2ForwardSlash)
 export(Back2doubleBackSlash)
+export(enclose_with_asterisk)
+export(enclose_with_asterisk2)
+export(enclose_with_dolar)
+export(enclose_with_dolar2)
+export(enclose_with_underscore)
+export(enclose_with_underscore2)
 export(insertArrowLR2_Addin)
 export(insertArrowRL2_Addin)
 export(insertArrowRL_Addin)
