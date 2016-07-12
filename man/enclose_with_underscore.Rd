@@ -23,8 +23,8 @@ About shortcut keys:
 Other 'Enclose selected symbols' addins: \code{\link{enclose_with_asterisk2}},
   \code{\link{enclose_with_asterisk}},
   \code{\link{enclose_with_backtick}},
-  \code{\link{enclose_with_dolar2}},
-  \code{\link{enclose_with_dolar}},
+  \code{\link{enclose_with_dollar2}},
+  \code{\link{enclose_with_dollar}},
   \code{\link{enclose_with_underscore2}}
 }
 

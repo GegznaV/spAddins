@@ -1,74 +1,7 @@
----
-output: github_document
----
+Available add-in functions 
+==========================
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
-```{r, echo = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "README-"
-)
-```
-
-***
-
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/spAddins)](https://cran.r-project.org/package=spAddins)
-[![GitHub version](https://img.shields.io/badge/GitHub-v`r packageVersion("spAddins")`-brightgreen.svg)](https://github.com/GegznaV/spAddins)
-[![Travis-CI Build Status](https://travis-ci.org/GegznaV/spAddins.png?branch=master)](https://travis-ci.org/GegznaV/spAddins)
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Last-update](https://img.shields.io/badge/Updated%20on-`r gsub('-', '--', Sys.Date())`-yellowgreen.svg)](/commits/master)
-
-***
-
-
-  
-R package `spAddins` 
-====================
-
-`spAddins` is an R package that provides a set of RStudio addins which
-are designed to be used in
-combination with user-defined RStudio keyboard shortcuts. These
-addins either:
-
-1) **insert** text at the cursor position (e.g. insert
-operators `%>%`, `<<-`, `%$%`, etc.), 
-2) **replace** symbols in selected
-pieces of text (e.g., convert backslashes to forward slashes which results 
-in strings like `"c:\data\"` converted into `"c:/data/"`) or 
-3) **enclose** text with special symbols (e.g., converts "bold" into "\*\*bold\*\*"
-that is interpreted as "**bold**")
-which is convenient for editing R Markdown files.
-
-:key: Install package :key:
----------------------------
-
-Install released version from CRAN:
-```{r Install package from CRAN, eval=FALSE}
-install.packages("spAddins")
-```
-
-Install development version from GitHub:
-```{r Install package from GitHub, eval=FALSE}
-if (!require(devtools)) install.packages("devtools")
-library(devtools)
-install_github("GegznaV/spAddins")
-```
-
-:bulb: Recommended workflow and a few examples :bulb: 
------------------------------------------------------
-
-```{r, eval=FALSE}
-vignette("v1_workflow", package = "spAddins")
-
-browseVignettes("spAddins")
-```
-
-:zap: Available add-in functions :zap:
---------------------------------------
-
-### "Insert" family
+## "Insert" family
 
 These functions insert various R operators.
 
@@ -92,7 +25,7 @@ These functions insert various R operators.
 
 [^1]: Available at <https://github.com/GegznaV/spMisc>.
 
-### "Replace" family 
+## "Replace" family 
 
 | Action                        | Function               | Example (before) | Example (after) |
 |-------------------------------|------------------------|:----------------:|:---------------:|
@@ -100,7 +33,7 @@ These functions insert various R operators.
 | Replace \`\\\` with \` /\`    | Back2ForwardSlash()    | c:\\data\\       | c:/data/        |
 
 
-### "Enclose" family
+## "Enclose" family
 
 These functions are useful for editing R Markdown files.
 
@@ -113,8 +46,3 @@ These functions are useful for editing R Markdown files.
 | Enclose with single dollar sign (`$$`) | enclose\_with\_dollar2()     | word             | ```$$word$$```  | $word$             |
 | Enclose with single underscore (`_`)   | enclose\_with\_underscore()  | word             | \_word\_        | _word_             |
 | Enclose with double underscore (`__`)  | enclose\_with\_underscore2() | word             | \_\_word\_\_    | __word__           |
-
-
-* * *
-
-

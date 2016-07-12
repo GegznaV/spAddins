@@ -2,13 +2,13 @@
 % Please edit documentation in R/enclose_addins.R
 \name{enclose_with_backtick}
 \alias{enclose_with_backtick}
-\title{Enclose with \code{`}}
+\title{Enclose with back-tick}
 \usage{
 enclose_with_backtick()
 }
 \description{
 Select a piece of text with a cursor and call this function as an addin
-to enclose the text with back ticks sign (\code{`}).
+to enclose the text with single back tick sign \code{``}.
 }
 \examples{
 
@@ -22,8 +22,8 @@ About shortcut keys:
 
 Other 'Enclose selected symbols' addins: \code{\link{enclose_with_asterisk2}},
   \code{\link{enclose_with_asterisk}},
-  \code{\link{enclose_with_dolar2}},
-  \code{\link{enclose_with_dolar}},
+  \code{\link{enclose_with_dollar2}},
+  \code{\link{enclose_with_dollar}},
   \code{\link{enclose_with_underscore2}},
   \code{\link{enclose_with_underscore}}
 }

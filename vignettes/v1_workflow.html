@@ -12,7 +12,7 @@
 
 <meta name="author" content="Vilmantas Gegzna" />
 
-<meta name="date" content="2016-06-07" />
+<meta name="date" content="2016-07-12" />
 
 <title>Recommended Workflow and Examples</title>
 
@@ -70,11 +70,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">Recommended Workflow and Examples</h1>
 <h4 class="author"><em>Vilmantas Gegzna</em></h4>
-<h4 class="date"><em>2016-06-07</em></h4>
+<h4 class="date"><em>2016-07-12</em></h4>
 
 
 <div id="TOC">
 <ul>
+<li><a href="#about-the-package">About The Package</a></li>
 <li><a href="#the-workflow">The Workflow</a><ul>
 <li><a href="#step-1-install-the-package">Step 1: Install the package</a></li>
 <li><a href="#step-2-define-keyboard-shortcuts">Step 2: Define keyboard shortcuts</a></li>
@@ -84,11 +85,26 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#a-few-examples">A Few Examples</a><ul>
 <li><a href="#insert-operator">Insert <code>%&gt;%</code> operator</a></li>
 <li><a href="#replace-with">Replace <code>\</code> with <code>/</code></a></li>
+<li><a href="#enclose-with">Enclose with <code>**</code>…<code>**</code></a></li>
+</ul></li>
+<li><a href="#available-add-in-functions">Available add-in functions</a><ul>
+<li><a href="#insert-family">“Insert” family</a></li>
+<li><a href="#replace-family">“Replace” family</a></li>
+<li><a href="#enclose-family">“Enclose” family</a></li>
 </ul></li>
 </ul>
 </div>
 
-<p>This vignette describes a recommended workflow of how the functions of <code>spAddins</code> package should be used and gives several examples.</p>
+<p>This vignette introduces to package <code>spAddins</code>, describes a recommended workflow and how the functions of the package should be used and gives several examples.</p>
+<div id="about-the-package" class="section level1">
+<h1>About The Package</h1>
+<p><code>spAddins</code> is an R package that provides a set of RStudio addins which are designed to be used in combination with user-defined RStudio keyboard shortcuts. These addins either:</p>
+<ol style="list-style-type: decimal">
+<li><strong>insert</strong> text at the cursor position (e.g. insert operators <code>%&gt;%</code>, <code>&lt;&lt;-</code>, <code>%$%</code>, etc.),</li>
+<li><strong>replace</strong> symbols in selected pieces of text (e.g., convert backslashes to forward slashes which results in strings like <code>&quot;c:\data\&quot;</code> converted into <code>&quot;c:/data/&quot;</code>) or</li>
+<li><strong>enclose</strong> text with special symbols (e.g., converts “bold” into “**bold**” that is interpreted as “<strong>bold</strong>”) which is convenient for editing R Markdown files.</li>
+</ol>
+</div>
 <div id="the-workflow" class="section level1">
 <h1>The Workflow</h1>
 <p>The recommended workflow consists of four main steps. Step 1 and Step 2 should usually be done only once. Step 3 and Step 4 can be repeated as many times as needed.</p>
@@ -108,13 +124,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="step-3-place-a-cursor-select-some-text" class="section level2">
 <h2>Step 3: Place a cursor / Select some text</h2>
-<p>Package <code>spAddins</code> contains 2 types of addins:</p>
+<p>Package <code>spAddins</code> contains 3 types of addins:</p>
 <ul>
-<li>those which <strong>insert</strong> text and</li>
-<li>those which <strong>replace</strong> text.</li>
+<li>those which <strong>insert</strong> text;</li>
+<li>those which <strong>replace</strong> text;</li>
+<li>those which <strong>enclose</strong> text (insert symbols on both sides of selected text).</li>
 </ul>
 <p>For addins which <strong>insert</strong> text, in either R editor or in R console <strong>place</strong> your cursor at the position at which the text should be inserted.</p>
-<p>For addins which <strong>replace</strong> text, either in R editor or in R console <strong>select</strong> a piece of text in which certain symbols should be replaced.</p>
+<p>For addins which either <strong>replace</strong> or <strong>enclose</strong> text, in R editor or in R console <strong>select</strong> a piece of text in which certain symbols should be replaced or enclosed.</p>
 </div>
 <div id="step-4-use-the-keyboard-shortcuts" class="section level2">
 <h2>Step 4: Use the keyboard shortcuts</h2>
@@ -140,6 +157,211 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>This example describes how to use addins which <strong>replace</strong> text.</p>
 <p>Conciser having a string <code>&quot;c:\data\&quot;</code> in which backslashes (<code>\</code>) must be replaced with forward slashes (<code>/</code>). Addin function <code>Back2ForwardSlash()</code> is designed exactly for this task. Let’s define a new shortcut combination, say <code>Ctrl + Alt + Shift + /</code>, which calls the addin function. Now to know the place where the replacement should be applied an appropriate piece of text in either R editor or R console must be selected. Thus let’s select whole string <code>&quot;c:\data\&quot;</code> and push <code>Ctrl + Alt + Shift + /</code>. The result: as expected, the string is converted into <code>&quot;c:/data/&quot;</code>.</p>
 </div>
+<div id="enclose-with" class="section level2">
+<h2>Enclose with <code>**</code>…<code>**</code></h2>
+<p>This example describes how to use addins which <strong>enclose</strong> text.</p>
+<p>Conciser having an <a href="http://rmarkdown.rstudio.com/">R Markdown</a> file and a string <code>&quot;This word should be in bold.&quot;</code> in it. In this string word <code>word</code> must be in bold. Addin function <code>enclose_with_asterisk2()</code> encloses selected text in double asterisk <code>**</code> signs, and this is interpreted as bold in R markdown. Let’s define shortcut combination, say <code>Ctrl + Shift + B</code>, which calls the addin function. Now select the word <code>word</code> which is either in R editor or R console and push <code>Ctrl + Shift + B</code> to call the addin function. The result: <code>&quot;This **word** should be in bold.&quot;</code></p>
+</div>
+</div>
+<div id="available-add-in-functions" class="section level1">
+<h1>Available add-in functions</h1>
+<div id="insert-family" class="section level2">
+<h2>“Insert” family</h2>
+<p>These functions insert various R operators.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th align="center">Inserts</th>
+<th align="center">Package associated with operator</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>insertArrowLR2_Addin()</td>
+<td align="center">&lt;&lt;-</td>
+<td align="center">R base</td>
+</tr>
+<tr class="even">
+<td>insertArrowRL_Addin()</td>
+<td align="center">-&gt;</td>
+<td align="center">R base</td>
+</tr>
+<tr class="odd">
+<td>insertArrowRL2_Addin()</td>
+<td align="center">-&gt;&gt;</td>
+<td align="center">R base</td>
+</tr>
+<tr class="even">
+<td>insertIn_Addin()</td>
+<td align="center">%in%</td>
+<td align="center">R base</td>
+</tr>
+<tr class="odd">
+<td>insertMatMuliplication_Addin()</td>
+<td align="center">%*%</td>
+<td align="center">R base</td>
+</tr>
+<tr class="even">
+<td>insert_if_null_Addin()</td>
+<td align="center">%if_null%</td>
+<td align="center">spMisc<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></td>
+</tr>
+<tr class="odd">
+<td>insert_if_null_or_len0_Addin()</td>
+<td align="center">%if_null_or_len0%</td>
+<td align="center">spMisc</td>
+</tr>
+<tr class="even">
+<td>insertIfNULL_Addin()</td>
+<td align="center">%if.NULL%</td>
+<td align="center">spMisc</td>
+</tr>
+<tr class="odd">
+<td>insertNotIn_Addin()</td>
+<td align="center">%!in%</td>
+<td align="center">spMisc</td>
+</tr>
+<tr class="even">
+<td>insertPaste_Addin()</td>
+<td align="center">%.+.%</td>
+<td align="center">spMisc</td>
+</tr>
+<tr class="odd">
+<td>insertPaste0_Addin()</td>
+<td align="center">%++%</td>
+<td align="center">spMisc</td>
+</tr>
+<tr class="even">
+<td>insertPipeline_Addin()</td>
+<td align="center">%&gt;%</td>
+<td align="center">magrittr</td>
+</tr>
+<tr class="odd">
+<td>insertTeeOperator_Addin()</td>
+<td align="center">%T&gt;%</td>
+<td align="center">magrittr</td>
+</tr>
+<tr class="even">
+<td>insertCompAssignPipe_Addin()</td>
+<td align="center">%&lt;&gt;%</td>
+<td align="center">magrittr</td>
+</tr>
+<tr class="odd">
+<td>insertExPipe_Addin()</td>
+<td align="center">%$%</td>
+<td align="center">magrittr</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="replace-family" class="section level2">
+<h2>“Replace” family</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Action</th>
+<th>Function</th>
+<th align="center">Example (before)</th>
+<th align="center">Example (after)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Replace `\` with ` \\`</td>
+<td>Back2doubleBackSlash()</td>
+<td align="center">c:\data\</td>
+<td align="center">c:\\data\\</td>
+</tr>
+<tr class="even">
+<td>Replace `\` with ` /`</td>
+<td>Back2ForwardSlash()</td>
+<td align="center">c:\data\</td>
+<td align="center">c:/data/</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="enclose-family" class="section level2">
+<h2>“Enclose” family</h2>
+<p>These functions are useful for editing R Markdown files.</p>
+<table style="width:100%;">
+<colgroup>
+<col width="31%"></col>
+<col width="23%"></col>
+<col width="14%"></col>
+<col width="13%"></col>
+<col width="16%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>Action</th>
+<th>Function</th>
+<th align="center">Example (before)</th>
+<th align="center">Example (after)</th>
+<th align="center">Interpreted result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Enclose with single asterisk (<code>*</code>)</td>
+<td>enclose_with_asterisk()</td>
+<td align="center">word</td>
+<td align="center">*word*</td>
+<td align="center"><em>word</em></td>
+</tr>
+<tr class="even">
+<td>Enclose with double asterisk (<code>**</code>)</td>
+<td>enclose_with_asterisk2()</td>
+<td align="center">word</td>
+<td align="center">**word**</td>
+<td align="center"><strong>word</strong></td>
+</tr>
+<tr class="odd">
+<td>Enclose with single back tick (`)</td>
+<td>enclose_with_backtick()</td>
+<td align="center">word</td>
+<td align="center">`word`</td>
+<td align="center"><code>word</code></td>
+</tr>
+<tr class="even">
+<td>Enclose with single dollar sign (<code>$</code>)</td>
+<td>enclose_with_dollar()</td>
+<td align="center">word</td>
+<td align="center">$word$</td>
+<td align="center"><span class="math inline">\(word\)</span></td>
+</tr>
+<tr class="odd">
+<td>Enclose with single dollar sign (<code>$$</code>)</td>
+<td>enclose_with_dollar2()</td>
+<td align="center">word</td>
+<td align="center"><code>$$word$$</code></td>
+<td align="center"><span class="math inline">\(word\)</span></td>
+</tr>
+<tr class="even">
+<td>Enclose with single underscore (<code>_</code>)</td>
+<td>enclose_with_underscore()</td>
+<td align="center">word</td>
+<td align="center">_word_</td>
+<td align="center"><em>word</em></td>
+</tr>
+<tr class="odd">
+<td>Enclose with double underscore (<code>__</code>)</td>
+<td>enclose_with_underscore2()</td>
+<td align="center">word</td>
+<td align="center">__word__</td>
+<td align="center"><strong>word</strong></td>
+</tr>
+</tbody>
+</table>
+<p><img src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTgiIGhlaWdodD0iMjAiPjxsaW5lYXJHcmFkaWVudCBpZD0iYiIgeDI9IjAiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNiYmIiIHN0b3Atb3BhY2l0eT0iLjEiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3Atb3BhY2l0eT0iLjEiLz48L2xpbmVhckdyYWRpZW50PjxtYXNrIGlkPSJhIj48cmVjdCB3aWR0aD0iMTk4IiBoZWlnaHQ9IjIwIiByeD0iMyIgZmlsbD0iI2ZmZiIvPjwvbWFzaz48ZyBtYXNrPSJ1cmwoI2EpIj48cGF0aCBmaWxsPSIjNTU1IiBkPSJNMCAwaDEyM3YyMEgweiIvPjxwYXRoIGZpbGw9IiNhNGE2MWQiIGQ9Ik0xMjMgMGg3NXYyMGgtNzV6Ii8+PHBhdGggZmlsbD0idXJsKCNiKSIgZD0iTTAgMGgxOTh2MjBIMHoiLz48L2c+PGcgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkRlamFWdSBTYW5zLFZlcmRhbmEsR2VuZXZhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiPjx0ZXh0IHg9IjYxLjUiIHk9IjE1IiBmaWxsPSIjMDEwMTAxIiBmaWxsLW9wYWNpdHk9Ii4zIj5WaWduZXR0ZSB1cGRhdGVkIG9uPC90ZXh0Pjx0ZXh0IHg9IjYxLjUiIHk9IjE0Ij5WaWduZXR0ZSB1cGRhdGVkIG9uPC90ZXh0Pjx0ZXh0IHg9IjE1OS41IiB5PSIxNSIgZmlsbD0iIzAxMDEwMSIgZmlsbC1vcGFjaXR5PSIuMyI+MjAxNi0wNy0xMjwvdGV4dD48dGV4dCB4PSIxNTkuNSIgeT0iMTQiPjIwMTYtMDctMTI8L3RleHQ+PC9nPjwvc3ZnPg==" /> <img src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIiIGhlaWdodD0iMjAiPjxsaW5lYXJHcmFkaWVudCBpZD0iYiIgeDI9IjAiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNiYmIiIHN0b3Atb3BhY2l0eT0iLjEiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3Atb3BhY2l0eT0iLjEiLz48L2xpbmVhckdyYWRpZW50PjxtYXNrIGlkPSJhIj48cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjIwIiByeD0iMyIgZmlsbD0iI2ZmZiIvPjwvbWFzaz48ZyBtYXNrPSJ1cmwoI2EpIj48cGF0aCBmaWxsPSIjNTU1IiBkPSJNMCAwaDExNXYyMEgweiIvPjxwYXRoIGZpbGw9IiM5N0NBMDAiIGQ9Ik0xMTUgMGg3N3YyMGgtNzd6Ii8+PHBhdGggZmlsbD0idXJsKCNiKSIgZD0iTTAgMGgxOTJ2MjBIMHoiLz48L2c+PGcgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkRlamFWdSBTYW5zLFZlcmRhbmEsR2VuZXZhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiPjx0ZXh0IHg9IjU3LjUiIHk9IjE1IiBmaWxsPSIjMDEwMTAxIiBmaWxsLW9wYWNpdHk9Ii4zIj5WZXJzaW9uIG9mIHBhY2thZ2U8L3RleHQ+PHRleHQgeD0iNTcuNSIgeT0iMTQiPlZlcnNpb24gb2YgcGFja2FnZTwvdGV4dD48dGV4dCB4PSIxNTIuNSIgeT0iMTUiIGZpbGw9IiMwMTAxMDEiIGZpbGwtb3BhY2l0eT0iLjMiPnYwLjEuNC41MDAwPC90ZXh0Pjx0ZXh0IHg9IjE1Mi41IiB5PSIxNCI+djAuMS40LjUwMDA8L3RleHQ+PC9nPjwvc3ZnPg==" /></p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Available at <a href="https://github.com/GegznaV/spMisc" class="uri">https://github.com/GegznaV/spMisc</a>.<a href="#fnref1">↩</a></p></li>
+</ol>
 </div>
 
 

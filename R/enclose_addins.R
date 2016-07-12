@@ -16,13 +16,13 @@ enclose_selection_with <- function(SYMBOL = "") {
 }
 
 
-# Enclose with dolar sign ($) ---------------------------------------------
+# Enclose with dollar sign ($) ---------------------------------------------
 
 
 #' Enclose with \code{$}
 #'
 #' Select a piece of text with a cursor and call this function as an addin
-#' to enclose the text with dolar sign (\code{$}).
+#' to enclose the text with dollar sign (\code{$}).
 #'
 #' @seealso About shortcut keys:
 #'  \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.
@@ -34,7 +34,7 @@ enclose_selection_with <- function(SYMBOL = "") {
 #'
 #' @export
 #' @family 'Enclose selected symbols' addins
-enclose_with_dolar <- function() {
+enclose_with_dollar <- function() {
     enclose_selection_with(SYMBOL = "$")
 }
 
@@ -42,7 +42,7 @@ enclose_with_dolar <- function() {
 #' Enclose with \code{$$}
 #'
 #' Select a piece of text with a cursor and call this function as an addin
-#' to enclose the text with double dolar sign (\code{$$}).
+#' to enclose the text with double dollar sign (\code{$$}).
 #'
 #' @seealso About shortcut keys:
 #'  \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.
@@ -54,7 +54,7 @@ enclose_with_dolar <- function() {
 #'
 #' @export
 #' @family 'Enclose selected symbols' addins
-enclose_with_dolar2 <- function() {
+enclose_with_dollar2 <- function() {
     enclose_selection_with(SYMBOL = "$$")
 }
 
@@ -147,10 +147,10 @@ enclose_with_asterisk2 <- function() {
 
 }
 
-#' Enclose with \code{`}
+#' Enclose with back-tick
 #'
 #' Select a piece of text with a cursor and call this function as an addin
-#' to enclose the text with back ticks sign (\code{`}).
+#' to enclose the text with single back tick sign \code{``}.
 #'
 #' @seealso About shortcut keys:
 #'  \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.

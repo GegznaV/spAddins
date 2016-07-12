@@ -11,8 +11,27 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-This vignette describes a recommended workflow of how the functions of `spAddins` 
-package should be used and gives several examples.
+
+This vignette introduces to package `spAddins`, describes a recommended 
+workflow and how the functions of the package should be used and gives several examples.
+
+About The Package
+==================
+
+`spAddins` is an R package that provides a set of RStudio addins which
+are designed to be used in
+combination with user-defined RStudio keyboard shortcuts. These
+addins either:
+
+1) **insert** text at the cursor position (e.g. insert
+operators `%>%`, `<<-`, `%$%`, etc.), 
+2) **replace** symbols in selected
+pieces of text (e.g., convert backslashes to forward slashes which results 
+in strings like `"c:\data\"` converted into `"c:/data/"`) or 
+3) **enclose** text with special symbols (e.g., converts "bold" into "\*\*bold\*\*"
+that is interpreted as "**bold**")
+which is convenient for editing R Markdown files.
+
 
 
 The Workflow
@@ -55,16 +74,17 @@ and
 
 Step 3: Place a cursor / Select some text
 ------------------------------------------
-Package `spAddins` contains 2 types of addins:
+Package `spAddins` contains 3 types of addins:
 
-- those which **insert** text and
-- those which **replace** text.
+- those which **insert** text;
+- those which **replace** text;
+- those which **enclose** text (insert symbols on both sides of selected text).
 
 For addins which **insert** text, in either R editor or in R console **place** your 
 cursor at the position at which the text should be inserted.  
 
-For addins which **replace** text, either in R editor or in R console **select** a 
-piece of text in which certain symbols should be replaced.  
+For addins which either **replace** or **enclose** text, in R editor or in
+R console **select** a piece of text in which certain symbols should be replaced or enclosed.  
 
  
 Step 4: Use the keyboard shortcuts
@@ -73,10 +93,8 @@ To call a desired addin function, apply an appropriate keyboard shortcut which
 in Step 2 was associated with that function.
 
 
-
 A Few Examples
 ===============
-
 
 Insert `%>%` operator
 -----------------------
@@ -108,6 +126,7 @@ is inserted:
 iris %>% head()
 ```
 
+
 Replace `\` with `/`
 ----------------------
 This example describes how to use addins which **replace** text.  
@@ -120,3 +139,73 @@ place where the replacement should be applied an appropriate piece of text in
 either R editor or R console must be selected. Thus let's select 
 whole string `"c:\data\"` and push `Ctrl + Alt + Shift + /`. 
 The result: as expected, the string is converted into `"c:/data/"`.
+
+
+Enclose with `**`...`**`
+----------------------
+This example describes how to use addins which **enclose** text.  
+
+Conciser having an [R Markdown](http://rmarkdown.rstudio.com/) file and a string `"This word should be in bold."` in it. In this string word `word` must be in bold. 
+Addin function `enclose_with_asterisk2()` encloses selected text in double asterisk `**` signs, and this is interpreted as bold in R markdown. Let's define shortcut combination,
+say  `Ctrl + Shift + B`, which calls the addin function. Now select the word `word`
+which is either in R editor or R console and push `Ctrl + Shift + B` to call the addin function.
+The result: `"This **word** should be in bold."`
+
+
+Available add-in functions 
+==========================
+
+## "Insert" family
+
+These functions insert various R operators.
+
+| Function                            | Inserts              | Package associated with operator|
+|-------------------------------------|:--------------------:|:-------------------------------:|
+| insertArrowLR2\_Addin()             | &lt;&lt;-            | R base                          |
+| insertArrowRL\_Addin()              | -&gt;                | R base                          |
+| insertArrowRL2\_Addin()             | -&gt;&gt;            | R base                          |
+| insertIn\_Addin()                   | %in%                 | R base                          |
+| insertMatMuliplication\_Addin()     | %\*%                 | R base                          |
+| insert\_if\_null\_Addin()           | %if\_null%           | spMisc[^1]                      |
+| insert\_if\_null\_or\_len0\_Addin() | %if\_null\_or\_len0% | spMisc                          |
+| insertIfNULL\_Addin()               | %if.NULL%            | spMisc                          |
+| insertNotIn\_Addin()                | %!in%                | spMisc                          |
+| insertPaste\_Addin()                | %.+.%                | spMisc                          |
+| insertPaste0\_Addin()               | %++%                 | spMisc                          |
+| insertPipeline\_Addin()             | %&gt;%               | magrittr                        |
+| insertTeeOperator\_Addin()          | %T&gt;%              | magrittr                        |
+| insertCompAssignPipe\_Addin()       | %&lt;&gt;%           | magrittr                        |
+| insertExPipe\_Addin()               | %$%                  | magrittr                        |
+
+[^1]: Available at <https://github.com/GegznaV/spMisc>.
+
+## "Replace" family 
+
+| Action                        | Function               | Example (before) | Example (after) |
+|-------------------------------|------------------------|:----------------:|:---------------:|
+| Replace \`\\\` with \` \\\\\` | Back2doubleBackSlash() | c:\\data\\       | c:\\\\data\\\\  |
+| Replace \`\\\` with \` /\`    | Back2ForwardSlash()    | c:\\data\\       | c:/data/        |
+
+
+## "Enclose" family
+
+These functions are useful for editing R Markdown files.
+
+| Action                                 | Function                     | Example (before) | Example (after) | Interpreted result |
+|----------------------------------------|------------------------------|:----------------:|:---------------:|:------------------:|
+| Enclose with single asterisk (`*`)     | enclose\_with\_asterisk()    | word             | \*word\*        | *word*             |
+| Enclose with double asterisk (`**`)    | enclose\_with\_asterisk2()   | word             | \*\*word\*\*    | **word**           |
+| Enclose with single back tick (\`)     | enclose\_with\_backtick()    | word             | \`word\`        | `word`             |
+| Enclose with single dollar sign (`$`)  | enclose\_with\_dollar()      | word             | &#36;word&#36;  | $word$             |
+| Enclose with single dollar sign (`$$`) | enclose\_with\_dollar2()     | word             | ```$$word$$```  | $word$             |
+| Enclose with single underscore (`_`)   | enclose\_with\_underscore()  | word             | \_word\_        | _word_             |
+| Enclose with double underscore (`__`)  | enclose\_with\_underscore2() | word             | \_\_word\_\_    | __word__           |
+
+
+![](https://img.shields.io/badge/Vignette%20updated%20on-`r gsub('-', '--', Sys.Date())`-yellowgreen.svg)
+![](https://img.shields.io/badge/Version%20of%20package-v`r packageVersion("spAddins")`-green.svg)
+
+
+            
+
+ 

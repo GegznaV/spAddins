@@ -88,12 +88,12 @@ Interactive: false
 
 Name: Enclose with $
 Description: Encloses selected text with `$`.
-Binding: enclose_with_dolar
+Binding: enclose_with_dollar
 Interactive: false
 
 Name: Enclose with $$
 Description: Encloses selected text with `$$`.
-Binding: enclose_with_dolar2
+Binding: enclose_with_dollar2
 Interactive: false
 
 Name: Enclose with _
