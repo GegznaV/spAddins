@@ -68,6 +68,7 @@ insertNotIn_Addin <- function() {
 #' @export
 #' @family 'Insert at cursor position' addins
 #' @seealso  About shortcut keys: \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.\cr
+#' Operator \code{\link[spMisc]{\%++\%}}.
 #'
 #' @examples
 #' # To call the functions with keyboard shortcuts explore
@@ -87,6 +88,7 @@ insertPaste0_Addin <- function() {
 #'
 #' @family 'Insert at cursor position' addins
 #' @seealso  About shortcut keys: \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}. \cr
+#' \code{\link[spMisc]{\%.+.\%}}.
 #'
 #' @examples
 #' # To call the functions with keyboard shortcuts explore
@@ -107,6 +109,7 @@ insertPaste_Addin <- function() {
 #'
 #' @family 'Insert at cursor position' addins
 #' @seealso  About shortcut keys: \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.\cr
+#' Operator \code{\link[spMisc]{\%if.NULL\%}}.
 #'
 #' @examples
 #' # To call the functions with keyboard shortcuts explore
@@ -128,6 +131,7 @@ insertIfNULL_Addin <- function() {
 #'
 #' @family 'Insert at cursor position' addins
 #' @seealso  About shortcut keys: \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}. \cr
+#' Operator \code{\link[spMisc]{\%if_null\%}}.
 #'
 #' @examples
 #' # To call the functions with keyboard shortcuts explore
@@ -148,6 +152,7 @@ insert_if_null_Addin <- function() {
 #'
 #' @family 'Insert at cursor position' addins
 #' @seealso  About shortcut keys: \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}. \cr
+#'  Operator \code{\link[spMisc]{\%if_null_or_len0\%}}.
 #' @examples
 #' # To call the functions with keyboard shortcuts explore
 #' # link "keyboard shortcuts" in section "See also".

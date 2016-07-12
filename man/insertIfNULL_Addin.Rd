@@ -19,7 +19,6 @@ Operator does not work unless library which contains this operator is loaded.
 }
 \seealso{
 About shortcut keys: \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.\cr
-Operator \code{\link[spMisc]{\%if.NULL\%}}.
 
 Other 'Insert at cursor position' addins: \code{\link{insertArrowLR2_Addin}},
   \code{\link{insertCompAssignPipe_Addin}},
@@ -31,7 +30,10 @@ Other 'Insert at cursor position' addins: \code{\link{insertArrowLR2_Addin}},
   \code{\link{insertPaste_Addin}},
   \code{\link{insertPipeline_Addin}},
   \code{\link{insertTeeOperator_Addin}},
+  \code{\link{insert_ds_line_Addin}},
   \code{\link{insert_if_null_Addin}},
-  \code{\link{insert_if_null_or_len0_Addin}}
+  \code{\link{insert_if_null_or_len0_Addin}},
+  \code{\link{insert_ss_line_Addin}},
+  \code{\link{insert_sw_line_Addin}}
 }
 

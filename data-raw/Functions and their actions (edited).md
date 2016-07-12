@@ -23,6 +23,15 @@ These functions insert various R operators.
 | insertPaste\_Addin()                | %.+.%                | spMisc                          |
 | insertPaste0\_Addin()               | %++%                 | spMisc                          |
 
+The following functions may be useful for editing **R Markdown** files or for structuring 
+R code files if lines are commented (`#`).
+
+| Function                            | Description                      | Example (first 10 symbols) |
+|-------------------------------------|:--------------------------------:|:--------------------------:|
+| insert\_ss\_line\_Addin()           | Insert single straight (SS) line | `----------`               |
+| insert\_ds\_line\_Addin()           | Insert double straight (DS) line | `==========`               |
+| insert\_sw\_line\_Addin()           | Insert single wavy (SW) line     | `~~~~~~~~~~`               |
+
 [^1]: Available at <https://github.com/GegznaV/spMisc>.
 
 ## "Replace" family 

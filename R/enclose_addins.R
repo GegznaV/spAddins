@@ -1,5 +1,7 @@
 
+
 # 'Enclose selected symbols' addins ---------------------------------------
+
 
 # enclose_selection_with --------------------------------------------------
 enclose_selection_with <- function(SYMBOL = "") {

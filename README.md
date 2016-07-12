@@ -3,7 +3,7 @@
 
 ------------------------------------------------------------------------
 
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/spAddins)](https://cran.r-project.org/package=spAddins) [![GitHub version](https://img.shields.io/badge/GitHub-v0.1.4.5001-brightgreen.svg)](https://github.com/GegznaV/spAddins) [![Travis-CI Build Status](https://travis-ci.org/GegznaV/spAddins.png?branch=master)](https://travis-ci.org/GegznaV/spAddins) [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Last-update](https://img.shields.io/badge/Updated%20on-2016--07--12-yellowgreen.svg)](/commits/master)
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/spAddins)](https://cran.r-project.org/package=spAddins) [![GitHub version](https://img.shields.io/badge/GitHub-0.1.5-brightgreen.svg)](https://github.com/GegznaV/spAddins) [![Travis-CI Build Status](https://travis-ci.org/GegznaV/spAddins.png?branch=master)](https://travis-ci.org/GegznaV/spAddins) [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Last-update](https://img.shields.io/badge/Updated%20on-2016--07--12-yellowgreen.svg)](/commits/master)
 
 ------------------------------------------------------------------------
 
@@ -66,6 +66,14 @@ These functions insert various R operators.
 | insertNotIn\_Addin()                |         %!in%        |              spMisc              |
 | insertPaste\_Addin()                |         %.+.%        |              spMisc              |
 | insertPaste0\_Addin()               |         %++%         |              spMisc              |
+
+The following functions may be useful for editing **R Markdown** files or for structuring R code files if lines are commented (`#`).
+
+| Function                  |            Description           | Example (first 10 symbols) |
+|---------------------------|:--------------------------------:|:--------------------------:|
+| insert\_ss\_line\_Addin() | Insert single straight (SS) line |        `----------`        |
+| insert\_ds\_line\_Addin() | Insert double straight (DS) line |        `==========`        |
+| insert\_sw\_line\_Addin() |   Insert single wavy (SW) line   |        `~~~~~~~~~~`        |
 
 ### "Replace" family
 

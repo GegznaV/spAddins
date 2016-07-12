@@ -1,4 +1,5 @@
 
+
 # Main "replace" function
 
 replace_in_selection <- function(pattern, replacement){
@@ -13,6 +14,7 @@ replace_in_selection <- function(pattern, replacement){
         break
     }
 }
+
 
 
 # 'Replace selected symbols' addins ---------------------------------------

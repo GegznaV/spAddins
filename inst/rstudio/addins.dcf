@@ -120,3 +120,18 @@ Name: Enclose with `
 Description: Encloses selected text with `.
 Binding: enclose_with_backtick
 Interactive: false
+
+Name: Insert single straight line
+Description: Insert single straight line.
+Binding: insert_ss_line_Addin
+Interactive: false
+
+Name: Insert double straight line
+Description: Insert double straight line.
+Binding: insert_ds_line_Addin
+Interactive: false
+
+Name: Insert single wavy line
+Description: Insert single wavy line.
+Binding: insert_sw_line_Addin
+Interactive: false

@@ -2,6 +2,7 @@
 
 # Arrows ------------------------------------------------------------------
 
+
 #' Insert arrow (->, ->>, <<-)
 #'
 #' Call these functions as addins to insert either \code{->},\code{->>},

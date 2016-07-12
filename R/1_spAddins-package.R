@@ -1,3 +1,4 @@
+
 #' @name spAddins
 #' @docType package
 #'
@@ -32,6 +33,7 @@
 #'
 #'
 #'
+
 
 
 NULL
