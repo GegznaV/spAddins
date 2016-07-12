@@ -3,7 +3,7 @@
 
 ------------------------------------------------------------------------
 
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/spAddins)](https://cran.r-project.org/package=spAddins) [![GitHub version](https://img.shields.io/badge/GitHub-v0.1.4.5000-brightgreen.svg)](https://github.com/GegznaV/spAddins) [![Travis-CI Build Status](https://travis-ci.org/GegznaV/spAddins.png?branch=master)](https://travis-ci.org/GegznaV/spAddins) [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Last-update](https://img.shields.io/badge/Updated%20on-2016--07--12-yellowgreen.svg)](/commits/master)
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/spAddins)](https://cran.r-project.org/package=spAddins) [![GitHub version](https://img.shields.io/badge/GitHub-v0.1.4.5001-brightgreen.svg)](https://github.com/GegznaV/spAddins) [![Travis-CI Build Status](https://travis-ci.org/GegznaV/spAddins.png?branch=master)](https://travis-ci.org/GegznaV/spAddins) [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Last-update](https://img.shields.io/badge/Updated%20on-2016--07--12-yellowgreen.svg)](/commits/master)
 
 ------------------------------------------------------------------------
 
@@ -56,94 +56,94 @@ These functions insert various R operators.
 | insertArrowRL2\_Addin()             |       -&gt;&gt;      |              R base              |
 | insertIn\_Addin()                   |         %in%         |              R base              |
 | insertMatMuliplication\_Addin()     |         %\*%         |              R base              |
-| insert\_if\_null\_Addin()           |      %if\_null%      |             spMisc[1]            |
-| insert\_if\_null\_or\_len0\_Addin() | %if\_null\_or\_len0% |              spMisc              |
-| insertIfNULL\_Addin()               |       %if.NULL%      |              spMisc              |
-| insertNotIn\_Addin()                |         %!in%        |              spMisc              |
-| insertPaste\_Addin()                |         %.+.%        |              spMisc              |
-| insertPaste0\_Addin()               |         %++%         |              spMisc              |
 | insertPipeline\_Addin()             |        %&gt;%        |             magrittr             |
 | insertTeeOperator\_Addin()          |        %T&gt;%       |             magrittr             |
 | insertCompAssignPipe\_Addin()       |      %&lt;&gt;%      |             magrittr             |
 | insertExPipe\_Addin()               |          %$%         |             magrittr             |
+| insertIfNULL\_Addin()               |       %if.NULL%      |             spMisc[1]            |
+| insert\_if\_null\_Addin()           |      %if\_null%      |              spMisc              |
+| insert\_if\_null\_or\_len0\_Addin() | %if\_null\_or\_len0% |              spMisc              |
+| insertNotIn\_Addin()                |         %!in%        |              spMisc              |
+| insertPaste\_Addin()                |         %.+.%        |              spMisc              |
+| insertPaste0\_Addin()               |         %++%         |              spMisc              |
 
 ### "Replace" family
 
-| Action                        | Function               | Example (before) | Example (after) |
-|-------------------------------|------------------------|:----------------:|:---------------:|
-| Replace \`\\\` with \` \\\\\` | Back2doubleBackSlash() |    c:\\data\\    |  c:\\\\data\\\\ |
-| Replace \`\\\` with \` /\`    | Back2ForwardSlash()    |    c:\\data\\    |     c:/data/    |
+| Action                        | Function               | Text to edit |     Result     |
+|-------------------------------|------------------------|:------------:|:--------------:|
+| Replace \`\\\` with \` \\\\\` | Back2doubleBackSlash() |  c:\\data\\  | c:\\\\data\\\\ |
+| Replace \`\\\` with \` /\`    | Back2ForwardSlash()    |  c:\\data\\  |    c:/data/    |
 
 ### "Enclose" family
 
-These functions are useful for editing R Markdown files.
+These functions are useful for editing **R Markdown** files.
 
-<table style="width:100%;">
+<table>
 <colgroup>
-<col width="31%" />
-<col width="23%" />
+<col width="28%" />
+<col width="21%" />
 <col width="14%" />
-<col width="13%" />
-<col width="16%" />
+<col width="20%" />
+<col width="14%" />
 </colgroup>
 <thead>
 <tr class="header">
 <th>Action</th>
 <th>Function</th>
-<th align="center">Example (before)</th>
-<th align="center">Example (after)</th>
-<th align="center">Interpreted result</th>
+<th align="center">Text to edit</th>
+<th align="center">Result</th>
+<th align="center">Interpreted in markdown as</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Enclose with single asterisk (<code>*</code>)</td>
 <td>enclose_with_asterisk()</td>
-<td align="center">word</td>
-<td align="center">*word*</td>
-<td align="center"><em>word</em></td>
-</tr>
-<tr class="even">
-<td>Enclose with double asterisk (<code>**</code>)</td>
-<td>enclose_with_asterisk2()</td>
-<td align="center">word</td>
-<td align="center">**word**</td>
-<td align="center"><strong>word</strong></td>
-</tr>
-<tr class="odd">
-<td>Enclose with single back tick (`)</td>
-<td>enclose_with_backtick()</td>
-<td align="center">word</td>
-<td align="center">`word`</td>
-<td align="center"><code>word</code></td>
-</tr>
-<tr class="even">
-<td>Enclose with single dollar sign (<code>$</code>)</td>
-<td>enclose_with_dollar()</td>
-<td align="center">word</td>
-<td align="center">$word$</td>
-<td align="center"><span class="math inline"><em>w</em><em>o</em><em>r</em><em>d</em></span></td>
-</tr>
-<tr class="odd">
-<td>Enclose with single dollar sign (<code>$$</code>)</td>
-<td>enclose_with_dollar2()</td>
-<td align="center">word</td>
-<td align="center"><code>$$word$$</code></td>
-<td align="center"><span class="math inline"><em>w</em><em>o</em><em>r</em><em>d</em></span></td>
+<td align="center">italics</td>
+<td align="center">*italics*</td>
+<td align="center"><em>italics</em></td>
 </tr>
 <tr class="even">
 <td>Enclose with single underscore (<code>_</code>)</td>
 <td>enclose_with_underscore()</td>
-<td align="center">word</td>
-<td align="center">_word_</td>
-<td align="center"><em>word</em></td>
+<td align="center">italics</td>
+<td align="center">_italics_</td>
+<td align="center"><em>italics</em></td>
 </tr>
 <tr class="odd">
+<td>Enclose with double asterisk (<code>**</code>)</td>
+<td>enclose_with_asterisk2()</td>
+<td align="center">bold</td>
+<td align="center">**bold**</td>
+<td align="center"><strong>bold</strong></td>
+</tr>
+<tr class="even">
 <td>Enclose with double underscore (<code>__</code>)</td>
 <td>enclose_with_underscore2()</td>
-<td align="center">word</td>
-<td align="center">__word__</td>
-<td align="center"><strong>word</strong></td>
+<td align="center">bold</td>
+<td align="center">__bold__</td>
+<td align="center"><strong>bold</strong></td>
+</tr>
+<tr class="odd">
+<td>Enclose with single back tick (` )</td>
+<td>enclose_with_backtick()</td>
+<td align="center">code</td>
+<td align="center">`code`</td>
+<td align="center"><code>code</code></td>
+</tr>
+<tr class="even">
+<td>Enclose with single dollar sign (<code>$</code>)</td>
+<td>enclose_with_dollar()</td>
+<td align="center">equation^{inline}</td>
+<td align="center"><code>$equation^{inline}$</code></td>
+<td align="center"><span class="math inline"><em>e</em><em>q</em><em>u</em><em>a</em><em>t</em><em>i</em><em>o</em><em>n</em><sup><em>i</em><em>n</em><em>l</em><em>i</em><em>n</em><em>e</em></sup></span></td>
+</tr>
+<tr class="odd">
+<td>Enclose with single dollar sign (<code>$$</code>)</td>
+<td>enclose_with_dollar2()</td>
+<td align="center">equation_{block}</td>
+<td align="center"><code>$$equation_{block}$$</code></td>
+<td align="center"><span class="math inline"><em>e</em><em>q</em><em>u</em><em>a</em><em>t</em><em>i</em><em>o</em><em>n</em><sub><em>b</em><em>l</em><em>o</em><em>c</em><em>k</em></sub></span></td>
 </tr>
 </tbody>
 </table>

@@ -1,7 +1,7 @@
 Package: spAddins
 Type: Package
 Title: A Set of RStudio Addins
-Version: 0.1.4.5000
+Version: 0.1.4.5001
 Date: 2016-07-12
 Authors@R: person("Vilmantas", "Gegzna",
                     email = "GegznaV@gmail.com",

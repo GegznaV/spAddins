@@ -203,36 +203,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <td align="center">R base</td>
 </tr>
 <tr class="even">
-<td>insert_if_null_Addin()</td>
-<td align="center">%if_null%</td>
-<td align="center">spMisc<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></td>
-</tr>
-<tr class="odd">
-<td>insert_if_null_or_len0_Addin()</td>
-<td align="center">%if_null_or_len0%</td>
-<td align="center">spMisc</td>
-</tr>
-<tr class="even">
-<td>insertIfNULL_Addin()</td>
-<td align="center">%if.NULL%</td>
-<td align="center">spMisc</td>
-</tr>
-<tr class="odd">
-<td>insertNotIn_Addin()</td>
-<td align="center">%!in%</td>
-<td align="center">spMisc</td>
-</tr>
-<tr class="even">
-<td>insertPaste_Addin()</td>
-<td align="center">%.+.%</td>
-<td align="center">spMisc</td>
-</tr>
-<tr class="odd">
-<td>insertPaste0_Addin()</td>
-<td align="center">%++%</td>
-<td align="center">spMisc</td>
-</tr>
-<tr class="even">
 <td>insertPipeline_Addin()</td>
 <td align="center">%&gt;%</td>
 <td align="center">magrittr</td>
@@ -252,6 +222,36 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <td align="center">%$%</td>
 <td align="center">magrittr</td>
 </tr>
+<tr class="even">
+<td>insertIfNULL_Addin()</td>
+<td align="center">%if.NULL%</td>
+<td align="center">spMisc<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></td>
+</tr>
+<tr class="odd">
+<td>insert_if_null_Addin()</td>
+<td align="center">%if_null%</td>
+<td align="center">spMisc</td>
+</tr>
+<tr class="even">
+<td>insert_if_null_or_len0_Addin()</td>
+<td align="center">%if_null_or_len0%</td>
+<td align="center">spMisc</td>
+</tr>
+<tr class="odd">
+<td>insertNotIn_Addin()</td>
+<td align="center">%!in%</td>
+<td align="center">spMisc</td>
+</tr>
+<tr class="even">
+<td>insertPaste_Addin()</td>
+<td align="center">%.+.%</td>
+<td align="center">spMisc</td>
+</tr>
+<tr class="odd">
+<td>insertPaste0_Addin()</td>
+<td align="center">%++%</td>
+<td align="center">spMisc</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -262,8 +262,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <tr class="header">
 <th>Action</th>
 <th>Function</th>
-<th align="center">Example (before)</th>
-<th align="center">Example (after)</th>
+<th align="center">Text to edit</th>
+<th align="center">Result</th>
 </tr>
 </thead>
 <tbody>
@@ -284,77 +284,76 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="enclose-family" class="section level2">
 <h2>“Enclose” family</h2>
-<p>These functions are useful for editing R Markdown files.</p>
-<table style="width:100%;">
+<p>These functions are useful for editing <strong>R Markdown</strong> files.</p>
+<table>
 <colgroup>
-<col width="31%"></col>
-<col width="23%"></col>
+<col width="28%"></col>
+<col width="21%"></col>
 <col width="14%"></col>
-<col width="13%"></col>
-<col width="16%"></col>
+<col width="20%"></col>
+<col width="14%"></col>
 </colgroup>
 <thead>
 <tr class="header">
 <th>Action</th>
 <th>Function</th>
-<th align="center">Example (before)</th>
-<th align="center">Example (after)</th>
-<th align="center">Interpreted result</th>
+<th align="center">Text to edit</th>
+<th align="center">Result</th>
+<th align="center">Interpreted in markdown as</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Enclose with single asterisk (<code>*</code>)</td>
 <td>enclose_with_asterisk()</td>
-<td align="center">word</td>
-<td align="center">*word*</td>
-<td align="center"><em>word</em></td>
-</tr>
-<tr class="even">
-<td>Enclose with double asterisk (<code>**</code>)</td>
-<td>enclose_with_asterisk2()</td>
-<td align="center">word</td>
-<td align="center">**word**</td>
-<td align="center"><strong>word</strong></td>
-</tr>
-<tr class="odd">
-<td>Enclose with single back tick (`)</td>
-<td>enclose_with_backtick()</td>
-<td align="center">word</td>
-<td align="center">`word`</td>
-<td align="center"><code>word</code></td>
-</tr>
-<tr class="even">
-<td>Enclose with single dollar sign (<code>$</code>)</td>
-<td>enclose_with_dollar()</td>
-<td align="center">word</td>
-<td align="center">$word$</td>
-<td align="center"><span class="math inline">\(word\)</span></td>
-</tr>
-<tr class="odd">
-<td>Enclose with single dollar sign (<code>$$</code>)</td>
-<td>enclose_with_dollar2()</td>
-<td align="center">word</td>
-<td align="center"><code>$$word$$</code></td>
-<td align="center"><span class="math inline">\(word\)</span></td>
+<td align="center">italics</td>
+<td align="center">*italics*</td>
+<td align="center"><em>italics</em></td>
 </tr>
 <tr class="even">
 <td>Enclose with single underscore (<code>_</code>)</td>
 <td>enclose_with_underscore()</td>
-<td align="center">word</td>
-<td align="center">_word_</td>
-<td align="center"><em>word</em></td>
+<td align="center">italics</td>
+<td align="center">_italics_</td>
+<td align="center"><em>italics</em></td>
 </tr>
 <tr class="odd">
+<td>Enclose with double asterisk (<code>**</code>)</td>
+<td>enclose_with_asterisk2()</td>
+<td align="center">bold</td>
+<td align="center">**bold**</td>
+<td align="center"><strong>bold</strong></td>
+</tr>
+<tr class="even">
 <td>Enclose with double underscore (<code>__</code>)</td>
 <td>enclose_with_underscore2()</td>
-<td align="center">word</td>
-<td align="center">__word__</td>
-<td align="center"><strong>word</strong></td>
+<td align="center">bold</td>
+<td align="center">__bold__</td>
+<td align="center"><strong>bold</strong></td>
+</tr>
+<tr class="odd">
+<td>Enclose with single back tick (` )</td>
+<td>enclose_with_backtick()</td>
+<td align="center">code</td>
+<td align="center">`code`</td>
+<td align="center"><code>code</code></td>
+</tr>
+<tr class="even">
+<td>Enclose with single dollar sign (<code>$</code>)</td>
+<td>enclose_with_dollar()</td>
+<td align="center">equation^{inline}</td>
+<td align="center"><code>$equation^{inline}$</code></td>
+<td align="center"><span class="math inline">\(equation^{inline}\)</span></td>
+</tr>
+<tr class="odd">
+<td>Enclose with single dollar sign (<code>$$</code>)</td>
+<td>enclose_with_dollar2()</td>
+<td align="center">equation_{block}</td>
+<td align="center"><code>$$equation_{block}$$</code></td>
+<td align="center"><span class="math inline">\(equation_{block}\)</span></td>
 </tr>
 </tbody>
 </table>
-<p><img src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTgiIGhlaWdodD0iMjAiPjxsaW5lYXJHcmFkaWVudCBpZD0iYiIgeDI9IjAiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNiYmIiIHN0b3Atb3BhY2l0eT0iLjEiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3Atb3BhY2l0eT0iLjEiLz48L2xpbmVhckdyYWRpZW50PjxtYXNrIGlkPSJhIj48cmVjdCB3aWR0aD0iMTk4IiBoZWlnaHQ9IjIwIiByeD0iMyIgZmlsbD0iI2ZmZiIvPjwvbWFzaz48ZyBtYXNrPSJ1cmwoI2EpIj48cGF0aCBmaWxsPSIjNTU1IiBkPSJNMCAwaDEyM3YyMEgweiIvPjxwYXRoIGZpbGw9IiNhNGE2MWQiIGQ9Ik0xMjMgMGg3NXYyMGgtNzV6Ii8+PHBhdGggZmlsbD0idXJsKCNiKSIgZD0iTTAgMGgxOTh2MjBIMHoiLz48L2c+PGcgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkRlamFWdSBTYW5zLFZlcmRhbmEsR2VuZXZhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiPjx0ZXh0IHg9IjYxLjUiIHk9IjE1IiBmaWxsPSIjMDEwMTAxIiBmaWxsLW9wYWNpdHk9Ii4zIj5WaWduZXR0ZSB1cGRhdGVkIG9uPC90ZXh0Pjx0ZXh0IHg9IjYxLjUiIHk9IjE0Ij5WaWduZXR0ZSB1cGRhdGVkIG9uPC90ZXh0Pjx0ZXh0IHg9IjE1OS41IiB5PSIxNSIgZmlsbD0iIzAxMDEwMSIgZmlsbC1vcGFjaXR5PSIuMyI+MjAxNi0wNy0xMjwvdGV4dD48dGV4dCB4PSIxNTkuNSIgeT0iMTQiPjIwMTYtMDctMTI8L3RleHQ+PC9nPjwvc3ZnPg==" /> <img src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIiIGhlaWdodD0iMjAiPjxsaW5lYXJHcmFkaWVudCBpZD0iYiIgeDI9IjAiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNiYmIiIHN0b3Atb3BhY2l0eT0iLjEiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3Atb3BhY2l0eT0iLjEiLz48L2xpbmVhckdyYWRpZW50PjxtYXNrIGlkPSJhIj48cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjIwIiByeD0iMyIgZmlsbD0iI2ZmZiIvPjwvbWFzaz48ZyBtYXNrPSJ1cmwoI2EpIj48cGF0aCBmaWxsPSIjNTU1IiBkPSJNMCAwaDExNXYyMEgweiIvPjxwYXRoIGZpbGw9IiM5N0NBMDAiIGQ9Ik0xMTUgMGg3N3YyMGgtNzd6Ii8+PHBhdGggZmlsbD0idXJsKCNiKSIgZD0iTTAgMGgxOTJ2MjBIMHoiLz48L2c+PGcgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkRlamFWdSBTYW5zLFZlcmRhbmEsR2VuZXZhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiPjx0ZXh0IHg9IjU3LjUiIHk9IjE1IiBmaWxsPSIjMDEwMTAxIiBmaWxsLW9wYWNpdHk9Ii4zIj5WZXJzaW9uIG9mIHBhY2thZ2U8L3RleHQ+PHRleHQgeD0iNTcuNSIgeT0iMTQiPlZlcnNpb24gb2YgcGFja2FnZTwvdGV4dD48dGV4dCB4PSIxNTIuNSIgeT0iMTUiIGZpbGw9IiMwMTAxMDEiIGZpbGwtb3BhY2l0eT0iLjMiPnYwLjEuNC41MDAwPC90ZXh0Pjx0ZXh0IHg9IjE1Mi41IiB5PSIxNCI+djAuMS40LjUwMDA8L3RleHQ+PC9nPjwvc3ZnPg==" /></p>
 </div>
 </div>
 <div class="footnotes">
