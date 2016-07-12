@@ -177,8 +177,8 @@ These functions insert various R operators.
 | insertPaste\_Addin()                | %.+.%                | spMisc                          |
 | insertPaste0\_Addin()               | %++%                 | spMisc                          |
 
-The following functions may be useful for editing **R Markdown** files or for structuring 
-R code files if lines are commented (`#`).
+The following functions may be useful for editing **R Markdown** files or,
+if commented (`#`), for structuring R code files.
 
 | Function                            | Description                      | Example (first 10 symbols) |
 |-------------------------------------|:--------------------------------:|:--------------------------:|
