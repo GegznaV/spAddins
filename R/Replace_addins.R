@@ -1,4 +1,20 @@
 
+# Main "replace" function
+
+replace_in_selection <- function(pattern, replacement){
+    context <- rstudioapi::getActiveDocumentContext()
+    # '\\'
+
+    for (sel in context$selection) {
+        TXT <- sel$text
+        nTXT <- gsub(pattern = pattern, replacement = replacement, TXT, fixed = TRUE)
+
+        rstudioapi::modifyRange(sel$range, as.character(nTXT), context$id)
+        break
+    }
+}
+
+
 # 'Replace selected symbols' addins ---------------------------------------
 
 #' Replace \code{\\} with \code{\\\\}
@@ -18,16 +34,7 @@
 #' @export
 #' @family 'Replace selected symbols' addins
 Back2doubleBackSlash <- function() {
-    context <- rstudioapi::getActiveDocumentContext()
-    # '\\'
-
-    for (sel in context$selection) {
-        TXT <- sel$text
-        nTXT <- gsub("\\","\\\\", TXT, fixed = TRUE)
-
-        rstudioapi::modifyRange(sel$range, as.character(nTXT), context$id)
-        break
-    }
+    replace_in_selection(pattern = "\\", replacement = "\\\\")
 }
 
 
@@ -46,14 +53,5 @@ Back2doubleBackSlash <- function() {
 #' @export
 #' @family 'Replace selected symbols' addins
 Back2ForwardSlash <- function() {
-    context <- rstudioapi::getActiveDocumentContext()
-    # '\\'
-
-    for (sel in context$selection) {
-        TXT <- sel$text
-        nTXT <- gsub("\\","/", TXT, fixed = TRUE)
-
-        rstudioapi::modifyRange(sel$range, as.character(nTXT), context$id)
-        break
-    }
+    replace_in_selection(pattern = "\\", replacement = "/")
 }

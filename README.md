@@ -1,6 +1,15 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/spAddins)](https://cran.r-project.org/package=spAddins) [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![GitHub version](https://img.shields.io/badge/GitHub-v0.1.4.4000-brightgreen.svg)](https://github.com/GegznaV/spAddins) [![Travis-CI Build Status](https://travis-ci.org/GegznaV/spAddins.png?branch=master)](https://travis-ci.org/GegznaV/spAddins)
+
+------------------------------------------------------------------------
+
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/spAddins)](https://cran.r-project.org/package=spAddins) [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![GitHub version](https://img.shields.io/badge/GitHub-v0.1.4.4001-brightgreen.svg)](https://github.com/GegznaV/spAddins) [![Travis-CI Build Status](https://travis-ci.org/GegznaV/spAddins.png?branch=master)](https://travis-ci.org/GegznaV/spAddins)
+
+------------------------------------------------------------------------
+
+[![Last-update](https://img.shields.io/badge/last%20update-2016--07--12-yellowgreen.svg)](/commits/master)
+
+------------------------------------------------------------------------
 
 R package `spAddins`
 ====================
@@ -34,7 +43,3 @@ browseVignettes("spAddins")
 ```
 
 ------------------------------------------------------------------------
-
-<p align="right">
-File updated on <b>2016-07-10</b> with version of package <b>0.1.4.4000</b>
-</p>

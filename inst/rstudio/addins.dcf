@@ -85,6 +85,7 @@ Binding: insertArrowRL2_Addin
 Interactive: false
 
 
+
 Name: Enclose with $
 Description: Encloses selected text with `$`.
 Binding: enclose_with_dolar
@@ -113,4 +114,9 @@ Interactive: false
 Name: Enclose with **
 Description: Encloses selected text with `**`.
 Binding: enclose_with_asterisk2
+Interactive: false
+
+Name: Enclose with `
+Description: Encloses selected text with `.
+Binding: enclose_with_backtick
 Interactive: false

@@ -1,6 +1,24 @@
 
 # 'Enclose selected symbols' addins ---------------------------------------
 
+# enclose_selection_with --------------------------------------------------
+enclose_selection_with <- function(SYMBOL = "") {
+    context <- rstudioapi::getActiveDocumentContext()
+
+    for (sel in context$selection) {
+        TXT <- sel$text
+
+        nTXT <- paste0(SYMBOL, TXT, SYMBOL)
+
+        rstudioapi::modifyRange(sel$range, as.character(nTXT), context$id)
+        break
+    }
+}
+
+
+# Enclose with dolar sign ($) ---------------------------------------------
+
+
 #' Enclose with \code{$}
 #'
 #' Select a piece of text with a cursor and call this function as an addin
@@ -17,17 +35,7 @@
 #' @export
 #' @family 'Enclose selected symbols' addins
 enclose_with_dolar <- function() {
-    context <- rstudioapi::getActiveDocumentContext()
-    # '\\'
-
-    for (sel in context$selection) {
-        TXT <- sel$text
-        SYMBOL <- "$"
-        nTXT <- paste0(SYMBOL, TXT, SYMBOL)
-
-        rstudioapi::modifyRange(sel$range, as.character(nTXT), context$id)
-        break
-    }
+    enclose_selection_with(SYMBOL = "$")
 }
 
 
@@ -47,17 +55,7 @@ enclose_with_dolar <- function() {
 #' @export
 #' @family 'Enclose selected symbols' addins
 enclose_with_dolar2 <- function() {
-    context <- rstudioapi::getActiveDocumentContext()
-    # '\\'
-
-    for (sel in context$selection) {
-        TXT <- sel$text
-        SYMBOL <- "$$"
-        nTXT <- paste0(SYMBOL, TXT, SYMBOL)
-
-        rstudioapi::modifyRange(sel$range, as.character(nTXT), context$id)
-        break
-    }
+    enclose_selection_with(SYMBOL = "$$")
 }
 
 
@@ -79,17 +77,8 @@ enclose_with_dolar2 <- function() {
 #' @export
 #' @family 'Enclose selected symbols' addins
 enclose_with_underscore <- function() {
-    context <- rstudioapi::getActiveDocumentContext()
-    # '\\'
+    enclose_selection_with(SYMBOL = "_")
 
-    for (sel in context$selection) {
-        TXT <- sel$text
-        SYMBOL <- "_"
-        nTXT <- paste0(SYMBOL, TXT, SYMBOL)
-
-        rstudioapi::modifyRange(sel$range, as.character(nTXT), context$id)
-        break
-    }
 }
 
 
@@ -111,17 +100,8 @@ enclose_with_underscore <- function() {
 #' @export
 #' @family 'Enclose selected symbols' addins
 enclose_with_underscore2 <- function() {
-    context <- rstudioapi::getActiveDocumentContext()
-    # '\\'
+    enclose_selection_with(SYMBOL = "__")
 
-    for (sel in context$selection) {
-        TXT <- sel$text
-        SYMBOL <- "__"
-        nTXT <- paste0(SYMBOL, TXT, SYMBOL)
-
-        rstudioapi::modifyRange(sel$range, as.character(nTXT), context$id)
-        break
-    }
 }
 
 # Asterisk ----------------------------------
@@ -142,17 +122,8 @@ enclose_with_underscore2 <- function() {
 #' @export
 #' @family 'Enclose selected symbols' addins
 enclose_with_asterisk <- function() {
-    context <- rstudioapi::getActiveDocumentContext()
-    # '\\'
+    enclose_selection_with(SYMBOL = "*")
 
-    for (sel in context$selection) {
-        TXT <- sel$text
-        SYMBOL <- "*"
-        nTXT <- paste0(SYMBOL, TXT, SYMBOL)
-
-        rstudioapi::modifyRange(sel$range, as.character(nTXT), context$id)
-        break
-    }
 }
 
 
@@ -172,15 +143,30 @@ enclose_with_asterisk <- function() {
 #' @export
 #' @family 'Enclose selected symbols' addins
 enclose_with_asterisk2 <- function() {
-    context <- rstudioapi::getActiveDocumentContext()
-    # '\\'
+    enclose_selection_with(SYMBOL = "**")
 
-    for (sel in context$selection) {
-        TXT <- sel$text
-        SYMBOL <- "**"
-        nTXT <- paste0(SYMBOL, TXT, SYMBOL)
-
-        rstudioapi::modifyRange(sel$range, as.character(nTXT), context$id)
-        break
-    }
 }
+
+#' Enclose with \code{`}
+#'
+#' Select a piece of text with a cursor and call this function as an addin
+#' to enclose the text with back ticks sign (\code{`}).
+#'
+#' @seealso About shortcut keys:
+#'  \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.
+#'
+#' @examples
+#'
+#' # To call the functions with keyboard shortcuts explore
+#' # link "keyboard shortcuts" in section "See also".
+#'
+#' @export
+#' @family 'Enclose selected symbols' addins
+enclose_with_backtick <- function() {
+    enclose_selection_with(SYMBOL = "`")
+}
+
+
+
+
+
