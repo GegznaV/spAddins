@@ -7,8 +7,11 @@ replace_in_selection <- function(pattern, replacement){
     # '\\'
 
     for (sel in context$selection) {
-        TXT <- sel$text
-        nTXT <- gsub(pattern = pattern, replacement = replacement, TXT, fixed = TRUE)
+        TXT  <- sel$text
+        Encoding(TXT) <- "UTF-8"
+
+        nTXT <- gsub(pattern = pattern, replacement = replacement, TXT,
+                     fixed = TRUE)
 
         rstudioapi::modifyRange(sel$range, as.character(nTXT), context$id)
         break

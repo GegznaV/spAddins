@@ -9,6 +9,7 @@ enclose_selection_with <- function(SYMBOL = "") {
 
     for (sel in context$selection) {
         TXT <- sel$text
+        Encoding(TXT) <- "UTF-8"
 
         nTXT <- paste0(SYMBOL, TXT, SYMBOL)
 
