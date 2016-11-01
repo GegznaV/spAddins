@@ -69,6 +69,14 @@ Description: Replaces \ with / in the selected text.
 Binding: Back2ForwardSlash
 Interactive: false
 
+
+Name: Correct md generated with "Writage"
+Description: Corrects md punctuaction in the selected text
+Binding: correct_writage_md_addin
+Interactive: false
+
+
+
 Name: Insert <<-
 Description: Inserts `<<-` at the cursor position.
 Binding: insertArrowLR2_Addin
