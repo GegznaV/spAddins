@@ -81,8 +81,8 @@ correct_writage_md <- function(TEXT){
     # TEXT <- readLines(filename, encoding = "UTF-8")
 
     # Remove unnecessay slashes
-    pattern     <- c( "\\`", "\\]", "\\[",  "\\_","\\*", "\\\\", " " )
-    replacement <- c( "`",     "]",   "[",    "_", "*",  "\\",  " " )
+    pattern     <- c( "\\`", "\\]", "\\[",  "\\_","\\*", "\\\\", " ", "&lt;", "&gt;" )
+    replacement <- c( "`",     "]",   "[",    "_", "*",  "\\",  " ", "<", ">" )
 
     i <- 1
 
