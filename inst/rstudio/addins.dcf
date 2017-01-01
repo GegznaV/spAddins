@@ -143,3 +143,13 @@ Name: Insert single wavy line
 Description: Insert single wavy line.
 Binding: insert_sw_line_Addin
 Interactive: false
+
+Name: Insert R code chunk for conspects
+Description: Insert chunk for conspects.
+Binding: insert_chunk_r_Addin
+Interactive: false
+
+Name: Insert python code chunk for conspects
+Description: Insert chunk for conspects.
+Binding: insert_chunk_python_Addin
+Interactive: false

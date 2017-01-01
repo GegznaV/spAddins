@@ -2,7 +2,6 @@
 
 replace_in_selection <- function(pattern, replacement){
     context <- rstudioapi::getActiveDocumentContext()
-    # '\\'
 
     for (sel in context$selection) {
         TXT  <- sel$text
