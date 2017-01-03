@@ -155,7 +155,7 @@ The result: `"This **word** should be in bold."`
 Available add-in functions 
 ==========================
 
-## "Insert" family
+### "Insert" family
 
 These functions insert various R operators.
 
@@ -177,18 +177,18 @@ These functions insert various R operators.
 | insertPaste\_Addin()                | %.+.%                | spMisc                          |
 | insertPaste0\_Addin()               | %++%                 | spMisc                          |
 
-The following functions may be useful for editing **R Markdown** files or,
+The following functions may be useful for either editing **R Markdown** files or,
 if commented (`#`), for structuring R code files.
 
 | Function                            | Description                      | Example (first 10 symbols) |
 |-------------------------------------|:--------------------------------:|:--------------------------:|
 | insert\_ss\_line\_Addin()           | Insert single straight (SS) line | `----------`               |
 | insert\_ds\_line\_Addin()           | Insert double straight (DS) line | `==========`               |
-| insert\_sw\_line\_Addin()           | Insert single wavy (SW) line     | `~~~~~~~~~~`               |                   |
+| insert\_sw\_line\_Addin()           | Insert single wavy (SW) line     | `~~~~~~~~~~`               | 
 
 [^1]: Available at <https://github.com/GegznaV/spMisc>.
 
-## "Replace" family 
+### "Replace" family 
 
 | Action                        | Function               | Text to edit     | Result          |
 |-------------------------------|------------------------|:----------------:|:---------------:|
@@ -196,16 +196,21 @@ if commented (`#`), for structuring R code files.
 | Replace \`\\\` with \` /\`    | Back2ForwardSlash()    | c:\\data\\       | c:/data/        |
 
 
-## "Enclose" family
+### "Enclose" family
 
 These functions are useful for editing **R Markdown** files.
 
-| Action                                 | Function                     | Text to edit      | Result                     | Interpreted in markdown as     |
-|----------------------------------------|------------------------------|:-----------------:|:--------------------------:|:------------------:|
-| Enclose with single asterisk (`*`)     | enclose\_with\_asterisk()    | italics           | \*italics\*                | *italics*          |
-| Enclose with single underscore (`_`)   | enclose\_with\_underscore()  | italics           | \_italics\_                | _italics_          |
-| Enclose with double asterisk (`**`)    | enclose\_with\_asterisk2()   | bold              | \*\*bold\*\*               | **bold**           |
-| Enclose with double underscore (`__`)  | enclose\_with\_underscore2() | bold              | \_\_bold\_\_               | __bold__           |
-| Enclose with single back tick (\`  )   | enclose\_with\_backtick()    |  code             | \`code\`                   | `code`             |
-| Enclose with single dollar sign (`$`)  | enclose\_with\_dollar()      | equation^{inline} | ```$equation^{inline}$```  | $equation^{inline}$|
-| Enclose with single dollar sign (`$$`) | enclose\_with\_dollar2()     | equation_{block}  | ```$$equation_{block}$$``` | $equation_{block}$ |
+| Action                                 | Function                     | Text to edit      | Result                     | In markdown interpreted as |
+|----------------------------------------|------------------------------|:-----------------:|:--------------------------:|:-------------------:|
+| Enclose with single asterisk (`*`)     | enclose\_with\_asterisk()    | italics           | \*italics\*                | *italics*           |
+| Enclose with single underscore (`_`)   | enclose\_with\_underscore()  | italics           | \_italics\_                | _italics_           |
+| Enclose with double asterisk (`**`)    | enclose\_with\_asterisk2()   | bold              | \*\*bold\*\*               | **bold**            |
+| Enclose with double underscore (`__`)  | enclose\_with\_underscore2() | bold              | \_\_bold\_\_               | __bold__            |
+| Enclose with caret (`^`)               | enclose\_with\_caret()       | a superscript     | a \^superscript\^          | a ^superscript^     |
+| Enclose with single tilde (`~`)        | enclose\_with\_tilde()       | a subscript       | a \~subscript\~            | a ~subscript~       |
+| Enclose with double tilde (`~~`)       | enclose\_with\_tilde2()      | strikethrough     | \~\~strikethrough\~\~      | ~~strikethrough~~   |
+| Enclose with single back tick (\`)     | enclose\_with\_backtick()    |  code             | \`code\`                   | `code`              |
+| Enclose with single dollar sign (`$`)  | enclose\_with\_dollar()      | equation^{inline} | ```$equation^{inline}$```  | $equation^{inline}$ |
+| Enclose with double dollar sign (`$$`) | enclose\_with\_dollar2()     | equation_{block}  | ```$$equation_{block}$$``` | $equation_{block}$  |
+
+* * *

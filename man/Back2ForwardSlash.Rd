@@ -21,7 +21,6 @@ in the selected text.
 About shortcut keys:
 \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.
 
-Other 'Replace selected symbols' addins: \code{\link{Back2doubleBackSlash}},
-  \code{\link{correct_writage_md_addin}}
+Other 'Replace selected symbols' addins: \code{\link{Back2doubleBackSlash}}
 }
 

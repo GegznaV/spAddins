@@ -12,7 +12,7 @@
 
 <meta name="author" content="Vilmantas Gegzna" />
 
-<meta name="date" content="2016-07-12" />
+<meta name="date" content="2017-01-03" />
 
 <title>Recommended Workflow and Examples</title>
 
@@ -70,7 +70,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">Recommended Workflow and Examples</h1>
 <h4 class="author"><em>Vilmantas Gegzna</em></h4>
-<h4 class="date"><em>2016-07-12</em></h4>
+<h4 class="date"><em>2017-01-03</em></h4>
 
 
 <div id="TOC">
@@ -165,8 +165,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="available-add-in-functions" class="section level1">
 <h1>Available add-in functions</h1>
-<div id="insert-family" class="section level2">
-<h2>“Insert” family</h2>
+<div id="insert-family" class="section level3">
+<h3>“Insert” family</h3>
 <p>These functions insert various R operators.</p>
 <table>
 <thead>
@@ -254,7 +254,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </tr>
 </tbody>
 </table>
-<p>The following functions may be useful for editing <strong>R Markdown</strong> files or, if commented (<code>#</code>), for structuring R code files.</p>
+<p>The following functions may be useful for either editing <strong>R Markdown</strong> files or, if commented (<code>#</code>), for structuring R code files.</p>
 <table>
 <thead>
 <tr class="header">
@@ -282,8 +282,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </tbody>
 </table>
 </div>
-<div id="replace-family" class="section level2">
-<h2>“Replace” family</h2>
+<div id="replace-family" class="section level3">
+<h3>“Replace” family</h3>
 <table>
 <thead>
 <tr class="header">
@@ -309,16 +309,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </tbody>
 </table>
 </div>
-<div id="enclose-family" class="section level2">
-<h2>“Enclose” family</h2>
+<div id="enclose-family" class="section level3">
+<h3>“Enclose” family</h3>
 <p>These functions are useful for editing <strong>R Markdown</strong> files.</p>
-<table>
+<table style="width:100%;">
 <colgroup>
 <col width="28%"></col>
 <col width="21%"></col>
-<col width="14%"></col>
+<col width="13%"></col>
 <col width="20%"></col>
-<col width="14%"></col>
+<col width="15%"></col>
 </colgroup>
 <thead>
 <tr class="header">
@@ -326,7 +326,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <th>Function</th>
 <th align="center">Text to edit</th>
 <th align="center">Result</th>
-<th align="center">Interpreted in markdown as</th>
+<th align="center">In markdown interpreted as</th>
 </tr>
 </thead>
 <tbody>
@@ -359,21 +359,42 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <td align="center"><strong>bold</strong></td>
 </tr>
 <tr class="odd">
-<td>Enclose with single back tick (` )</td>
+<td>Enclose with caret (<code>^</code>)</td>
+<td>enclose_with_caret()</td>
+<td align="center">a superscript</td>
+<td align="center">a ^superscript^</td>
+<td align="center">a <sup>superscript</sup></td>
+</tr>
+<tr class="even">
+<td>Enclose with single tilde (<code>~</code>)</td>
+<td>enclose_with_tilde()</td>
+<td align="center">a subscript</td>
+<td align="center">a ~subscript~</td>
+<td align="center">a <sub>subscript</sub></td>
+</tr>
+<tr class="odd">
+<td>Enclose with double tilde (<code>~~</code>)</td>
+<td>enclose_with_tilde2()</td>
+<td align="center">strikethrough</td>
+<td align="center">~~strikethrough~~</td>
+<td align="center"><del>strikethrough</del></td>
+</tr>
+<tr class="even">
+<td>Enclose with single back tick (`)</td>
 <td>enclose_with_backtick()</td>
 <td align="center">code</td>
 <td align="center">`code`</td>
 <td align="center"><code>code</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Enclose with single dollar sign (<code>$</code>)</td>
 <td>enclose_with_dollar()</td>
 <td align="center">equation^{inline}</td>
 <td align="center"><code>$equation^{inline}$</code></td>
 <td align="center"><span class="math inline">\(equation^{inline}\)</span></td>
 </tr>
-<tr class="odd">
-<td>Enclose with single dollar sign (<code>$$</code>)</td>
+<tr class="even">
+<td>Enclose with double dollar sign (<code>$$</code>)</td>
 <td>enclose_with_dollar2()</td>
 <td align="center">equation_{block}</td>
 <td align="center"><code>$$equation_{block}$$</code></td>
@@ -381,6 +402,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </tr>
 </tbody>
 </table>
+<hr />
 </div>
 </div>
 <div class="footnotes">

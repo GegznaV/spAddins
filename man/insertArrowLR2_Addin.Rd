@@ -53,8 +53,6 @@ Other 'Insert at cursor position' addins: \code{\link{insertCompAssignPipe_Addin
   \code{\link{insertPaste_Addin}},
   \code{\link{insertPipeline_Addin}},
   \code{\link{insertTeeOperator_Addin}},
-  \code{\link{insert_chunk_python_Addin}},
-  \code{\link{insert_chunk_r_Addin}},
   \code{\link{insert_ds_line_Addin}},
   \code{\link{insert_if_null_Addin}},
   \code{\link{insert_if_null_or_len0_Addin}},

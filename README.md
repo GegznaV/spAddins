@@ -3,7 +3,7 @@
 
 ------------------------------------------------------------------------
 
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/spAddins)](https://cran.r-project.org/package=spAddins) [![GitHub version](https://img.shields.io/badge/GitHub-0.1.6.1005-brightgreen.svg)](https://github.com/GegznaV/spAddins) [![Travis-CI Build Status](https://travis-ci.org/GegznaV/spAddins.png?branch=master)](https://travis-ci.org/GegznaV/spAddins) [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Last-update](https://img.shields.io/badge/Updated%20on-2017--01--01-yellowgreen.svg)](/commits/master)
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/spAddins)](https://cran.r-project.org/package=spAddins) [![GitHub version](https://img.shields.io/badge/GitHub-0.1.6.1006-brightgreen.svg)](https://github.com/GegznaV/spAddins) [![Travis-CI Build Status](https://travis-ci.org/GegznaV/spAddins.png?branch=master)](https://travis-ci.org/GegznaV/spAddins) [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Last-update](https://img.shields.io/badge/Updated%20on-2017--01--03-yellowgreen.svg)](/commits/master)
 
 ------------------------------------------------------------------------
 
@@ -67,7 +67,7 @@ These functions insert various R operators.
 | insertPaste\_Addin()                |         %.+.%        |              spMisc              |
 | insertPaste0\_Addin()               |         %++%         |              spMisc              |
 
-The following functions may be useful for editing **R Markdown** files or, if commented (`#`), for structuring R code files.
+The following functions may be useful for either editing **R Markdown** files or, if commented (`#`), for structuring R code files.
 
 | Function                  |            Description           | Example (first 10 symbols) |
 |---------------------------|:--------------------------------:|:--------------------------:|
@@ -86,13 +86,13 @@ The following functions may be useful for editing **R Markdown** files or, if co
 
 These functions are useful for editing **R Markdown** files.
 
-<table>
+<table style="width:100%;">
 <colgroup>
 <col width="28%" />
 <col width="21%" />
-<col width="14%" />
+<col width="13%" />
 <col width="20%" />
-<col width="14%" />
+<col width="15%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -100,7 +100,7 @@ These functions are useful for editing **R Markdown** files.
 <th>Function</th>
 <th align="center">Text to edit</th>
 <th align="center">Result</th>
-<th align="center">Interpreted in markdown as</th>
+<th align="center">In markdown interpreted as</th>
 </tr>
 </thead>
 <tbody>
@@ -133,21 +133,42 @@ These functions are useful for editing **R Markdown** files.
 <td align="center"><strong>bold</strong></td>
 </tr>
 <tr class="odd">
-<td>Enclose with single back tick (` )</td>
+<td>Enclose with caret (<code>^</code>)</td>
+<td>enclose_with_caret()</td>
+<td align="center">a superscript</td>
+<td align="center">a ^superscript^</td>
+<td align="center">a <sup>superscript</sup></td>
+</tr>
+<tr class="even">
+<td>Enclose with single tilde (<code>~</code>)</td>
+<td>enclose_with_tilde()</td>
+<td align="center">a subscript</td>
+<td align="center">a ~subscript~</td>
+<td align="center">a <sub>subscript</sub></td>
+</tr>
+<tr class="odd">
+<td>Enclose with double tilde (<code>~~</code>)</td>
+<td>enclose_with_tilde2()</td>
+<td align="center">strikethrough</td>
+<td align="center">~~strikethrough~~</td>
+<td align="center"><del>strikethrough</del></td>
+</tr>
+<tr class="even">
+<td>Enclose with single back tick (`)</td>
 <td>enclose_with_backtick()</td>
 <td align="center">code</td>
 <td align="center">`code`</td>
 <td align="center"><code>code</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Enclose with single dollar sign (<code>$</code>)</td>
 <td>enclose_with_dollar()</td>
 <td align="center">equation^{inline}</td>
 <td align="center"><code>$equation^{inline}$</code></td>
 <td align="center"><span class="math inline"><em>e</em><em>q</em><em>u</em><em>a</em><em>t</em><em>i</em><em>o</em><em>n</em><sup><em>i</em><em>n</em><em>l</em><em>i</em><em>n</em><em>e</em></sup></span></td>
 </tr>
-<tr class="odd">
-<td>Enclose with single dollar sign (<code>$$</code>)</td>
+<tr class="even">
+<td>Enclose with double dollar sign (<code>$$</code>)</td>
 <td>enclose_with_dollar2()</td>
 <td align="center">equation_{block}</td>
 <td align="center"><code>$$equation_{block}$$</code></td>

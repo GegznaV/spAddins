@@ -8,7 +8,7 @@ enclose_with_asterisk()
 }
 \description{
 Select a piece of text with a cursor and call this function as an addin
-to enclose the text with asterisk sign (\code{*}).
+to enclose the text with asterisk (\code{*}).
 }
 \examples{
 
@@ -24,6 +24,8 @@ Other 'Enclose selected symbols' addins: \code{\link{enclose_with_asterisk2}},
   \code{\link{enclose_with_backtick}},
   \code{\link{enclose_with_dollar2}},
   \code{\link{enclose_with_dollar}},
+  \code{\link{enclose_with_tilde2}},
+  \code{\link{enclose_with_tilde}},
   \code{\link{enclose_with_underscore2}},
   \code{\link{enclose_with_underscore}}
 }

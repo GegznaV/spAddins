@@ -21,7 +21,6 @@ to replace all single backslashes (\code{\\}) with double backslashes
 About shortcut keys:
  \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.
 
-Other 'Replace selected symbols' addins: \code{\link{Back2ForwardSlash}},
-  \code{\link{correct_writage_md_addin}}
+Other 'Replace selected symbols' addins: \code{\link{Back2ForwardSlash}}
 }
 
