@@ -1,13 +1,12 @@
 Package: spAddins
 Type: Package
 Title: A Set of RStudio Addins
-Version: 0.1.7
+Version: 0.1.7.1000
 Date: 2017-01-03
 Authors@R: person("Vilmantas", "Gegzna",
                     email = "GegznaV@gmail.com",
                     role = c("aut", "cre","cph")
             )
-Maintainer: Vilmantas Gegzna <GegznaV@gmail.com>
 Description: A set of RStudio addins that are designed to be used in
              combination with user-defined RStudio keyboard shortcuts. These
              addins either:
@@ -23,7 +22,7 @@ BugReports: https://github.com/GegznaV/spAddins/issues
 License: MIT + file LICENSE
 LazyData: TRUE
 Encoding: UTF-8
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1
 VignetteBuilder: knitr
 Depends:
     R (>= 3.2)
@@ -33,4 +32,3 @@ Suggests:
     magrittr,
     knitr,
     rmarkdown
-
