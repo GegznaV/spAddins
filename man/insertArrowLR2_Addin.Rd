@@ -2,8 +2,8 @@
 % Please edit documentation in R/Arrows_insert_addins.R
 \name{insertArrowLR2_Addin}
 \alias{insertArrowLR2_Addin}
-\alias{insertArrowRL2_Addin}
 \alias{insertArrowRL_Addin}
+\alias{insertArrowRL2_Addin}
 \title{Insert arrow (->, ->>, <<-)}
 \usage{
 insertArrowLR2_Addin()
@@ -59,4 +59,3 @@ Other 'Insert at cursor position' addins: \code{\link{insertCompAssignPipe_Addin
   \code{\link{insert_ss_line_Addin}},
   \code{\link{insert_sw_line_Addin}}
 }
-

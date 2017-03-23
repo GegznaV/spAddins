@@ -4,14 +4,14 @@
 
 
 # enclose_selection_with --------------------------------------------------
-enclose_selection_with <- function(SYMBOL = "") {
+enclose_selection_with <- function(symbol_ = "", symbol_2 = symbol_) {
     context <- rstudioapi::getActiveDocumentContext()
 
     for (sel in context$selection) {
         TXT <- sel$text
         Encoding(TXT) <- "UTF-8"
 
-        nTXT <- paste0(SYMBOL, TXT, SYMBOL)
+        nTXT <- paste0(symbol_, TXT, symbol_2)
 
         rstudioapi::modifyRange(sel$range, as.character(nTXT), context$id)
         break
@@ -38,7 +38,7 @@ enclose_selection_with <- function(SYMBOL = "") {
 #' @export
 #' @family 'Enclose selected symbols' addins
 enclose_with_dollar <- function() {
-    enclose_selection_with(SYMBOL = "$")
+    enclose_selection_with(symbol_ = "$")
 }
 
 
@@ -58,7 +58,7 @@ enclose_with_dollar <- function() {
 #' @export
 #' @family 'Enclose selected symbols' addins
 enclose_with_dollar2 <- function() {
-    enclose_selection_with(SYMBOL = "$$")
+    enclose_selection_with(symbol_ = "$$")
 }
 
 
@@ -80,7 +80,7 @@ enclose_with_dollar2 <- function() {
 #' @export
 #' @family 'Enclose selected symbols' addins
 enclose_with_underscore <- function() {
-    enclose_selection_with(SYMBOL = "_")
+    enclose_selection_with(symbol_ = "_")
 
 }
 
@@ -103,7 +103,7 @@ enclose_with_underscore <- function() {
 #' @export
 #' @family 'Enclose selected symbols' addins
 enclose_with_underscore2 <- function() {
-    enclose_selection_with(SYMBOL = "__")
+    enclose_selection_with(symbol_ = "__")
 
 }
 
@@ -125,7 +125,7 @@ enclose_with_underscore2 <- function() {
 #' @export
 #' @family 'Enclose selected symbols' addins
 enclose_with_asterisk <- function() {
-    enclose_selection_with(SYMBOL = "*")
+    enclose_selection_with(symbol_ = "*")
 
 }
 
@@ -146,7 +146,7 @@ enclose_with_asterisk <- function() {
 #' @export
 #' @family 'Enclose selected symbols' addins
 enclose_with_asterisk2 <- function() {
-    enclose_selection_with(SYMBOL = "**")
+    enclose_selection_with(symbol_ = "**")
 
 }
 
@@ -166,7 +166,7 @@ enclose_with_asterisk2 <- function() {
 #' @export
 #' @family 'Enclose selected symbols' addins
 enclose_with_backtick <- function() {
-    enclose_selection_with(SYMBOL = "`")
+    enclose_selection_with(symbol_ = "`")
 }
 
 
@@ -186,7 +186,7 @@ enclose_with_backtick <- function() {
 #' @export
 #' @family 'Enclose selected symbols' addins
 enclose_with_tilde <- function() {
-    enclose_selection_with(SYMBOL = "~")
+    enclose_selection_with(symbol_ = "~")
 }
 
 
@@ -206,7 +206,7 @@ enclose_with_tilde <- function() {
 #' @export
 #' @family 'Enclose selected symbols' addins
 enclose_with_tilde2 <- function() {
-    enclose_selection_with(SYMBOL = "~~")
+    enclose_selection_with(symbol_ = "~~")
 }
 
 
@@ -226,5 +226,5 @@ enclose_with_tilde2 <- function() {
 #' @export
 #' @family 'Enclose selected symbols' addins
 enclose_with_tilde2 <- function() {
-    enclose_selection_with(SYMBOL = "^")
+    enclose_selection_with(symbol_ = "^")
 }

@@ -23,4 +23,3 @@ About shortcut keys:
 
 Other 'Replace selected symbols' addins: \code{\link{Back2doubleBackSlash}}
 }
-

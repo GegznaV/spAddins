@@ -34,4 +34,3 @@ Other 'Insert at cursor position' addins: \code{\link{insertArrowLR2_Addin}},
   \code{\link{insert_ss_line_Addin}},
   \code{\link{insert_sw_line_Addin}}
 }
-

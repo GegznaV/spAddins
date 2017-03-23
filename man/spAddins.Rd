@@ -29,4 +29,3 @@ keyboard shortcuts:\enumerate{
 \item{\href{https://support.rstudio.com/hc/en-us/articles/206382178-Customizing-Keyboard-Shortcuts}{Customizing keyboard shortcuts.}}
 }
 }
-

@@ -2,6 +2,7 @@
 % Please edit documentation in R/enclose_addins.R
 \name{enclose_with_tilde2}
 \alias{enclose_with_tilde2}
+\alias{enclose_with_tilde2}
 \title{Enclose with double tilde}
 \usage{
 enclose_with_tilde2()
@@ -50,4 +51,3 @@ Other 'Enclose selected symbols' addins: \code{\link{enclose_with_asterisk2}},
   \code{\link{enclose_with_underscore2}},
   \code{\link{enclose_with_underscore}}
 }
-

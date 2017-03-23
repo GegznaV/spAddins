@@ -26,4 +26,3 @@ Other 'Insert at cursor position' addins: \code{\link{insertArrowLR2_Addin}},
   \code{\link{insert_if_null_or_len0_Addin}},
   \code{\link{insert_sw_line_Addin}}
 }
-

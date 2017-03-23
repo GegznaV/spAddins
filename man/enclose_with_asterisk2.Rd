@@ -29,4 +29,3 @@ Other 'Enclose selected symbols' addins: \code{\link{enclose_with_asterisk}},
   \code{\link{enclose_with_underscore2}},
   \code{\link{enclose_with_underscore}}
 }
-
