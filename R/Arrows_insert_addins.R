@@ -19,8 +19,8 @@
 #' # To call the functions with keyboard shortcuts explore
 #' # link "keyboard shortcuts" in section "See also".
 #'
-#' \donttest{
 #' \dontrun{
+#' \donttest{
 #' library(spAddins)
 #'
 #' insertArrowLR2_Addin()

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>A Set of RStudio Addins • spAddins</title>
-<!-- jquery --><script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- jquery --><script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/sandstone/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><!-- Font Awesome icons --><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 <!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
 <script src="jquery.sticky-kit.min.js"></script><script src="pkgdown.js"></script><!-- mathjax --><script src="https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!--[if lt IE 9]>
@@ -24,7 +24,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">spAddins</a>
+      <a class="navbar-brand" href="index.html">spAddins | R package</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -96,264 +96,19 @@
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">"spAddins"</span>)</code></pre></div>
 <p>Install development version from GitHub:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">if (!<span class="kw">require</span>(devtools)) <span class="kw">install.packages</span>(<span class="st">"devtools"</span>)
-<span class="kw">library</span>(devtools)
-<span class="kw">install_github</span>(<span class="st">"GegznaV/spAddins"</span>)</code></pre></div>
+devtools::<span class="kw">install_github</span>(<span class="st">"GegznaV/spAddins"</span>)</code></pre></div>
 </div>
 <div id="recommended-workflow-and-a-few-examples" class="section level2">
 <h2 class="hasAnchor">
 <a href="#recommended-workflow-and-a-few-examples" class="anchor"></a>Recommended workflow and a few examples</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">vignette</span>(<span class="st">"v1_workflow"</span>, <span class="dt">package =</span> <span class="st">"spAddins"</span>)
-
-<span class="kw">browseVignettes</span>(<span class="st">"spAddins"</span>)</code></pre></div>
-</div>
-<div id="available-add-in-functions" class="section level2">
-<h2 class="hasAnchor">
-<a href="#available-add-in-functions" class="anchor"></a>Available add-in functions</h2>
-<div id="insert-family" class="section level3">
-<h3 class="hasAnchor">
-<a href="#insert-family" class="anchor"></a>“Insert” family</h3>
-<p>These functions insert various R operators.</p>
-<table class="table">
-<thead><tr class="header">
-<th>Function</th>
-<th align="center">Inserts</th>
-<th align="center">
-<code>R</code> package associated with operator</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td>insertArrowLR2_Addin()</td>
-<td align="center">&lt;&lt;-</td>
-<td align="center">R base</td>
-</tr>
-<tr class="even">
-<td>insertArrowRL_Addin()</td>
-<td align="center">-&gt;</td>
-<td align="center">R base</td>
-</tr>
-<tr class="odd">
-<td>insertArrowRL2_Addin()</td>
-<td align="center">-&gt;&gt;</td>
-<td align="center">R base</td>
-</tr>
-<tr class="even">
-<td>insertIn_Addin()</td>
-<td align="center">%in%</td>
-<td align="center">R base</td>
-</tr>
-<tr class="odd">
-<td>insertMatMuliplication_Addin()</td>
-<td align="center">%*%</td>
-<td align="center">R base</td>
-</tr>
-<tr class="even">
-<td>insertPipeline_Addin()</td>
-<td align="center">%&gt;%</td>
-<td align="center">magrittr</td>
-</tr>
-<tr class="odd">
-<td>insertTeeOperator_Addin()</td>
-<td align="center">%T&gt;%</td>
-<td align="center">magrittr</td>
-</tr>
-<tr class="even">
-<td>insertCompAssignPipe_Addin()</td>
-<td align="center">%&lt;&gt;%</td>
-<td align="center">magrittr</td>
-</tr>
-<tr class="odd">
-<td>insertExPipe_Addin()</td>
-<td align="center">%$%</td>
-<td align="center">magrittr</td>
-</tr>
-<tr class="even">
-<td>insert_if_null_Addin()</td>
-<td align="center">%if_null%</td>
-<td align="center">spMisc<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>
-</td>
-</tr>
-<tr class="odd">
-<td>insert_if_null_or_len0_Addin()</td>
-<td align="center">%if_null_or_len0%</td>
-<td align="center">spMisc</td>
-</tr>
-<tr class="even">
-<td>insertNotIn_Addin()</td>
-<td align="center">%!in%</td>
-<td align="center">spMisc</td>
-</tr>
-<tr class="odd">
-<td>insertPaste_Addin()</td>
-<td align="center">%.+.%</td>
-<td align="center">spMisc</td>
-</tr>
-<tr class="even">
-<td>insertPaste0_Addin()</td>
-<td align="center">%++%</td>
-<td align="center">spMisc</td>
-</tr>
-<tr class="odd">
-<td>insertPasteRebus_Addin()</td>
-<td align="center">%R%</td>
-<td align="center">rebus</td>
-</tr>
-</tbody>
-</table>
-<p>The following functions may be useful for either editing <strong>R Markdown</strong> files or, if commented (<code>#</code>), for structuring R code files.</p>
-<table class="table">
-<thead><tr class="header">
-<th>Function</th>
-<th align="center">Description</th>
-<th align="center">Example (first 10 symbols)</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td>insert_ss_line_Addin()</td>
-<td align="center">Insert single straight (SS) line</td>
-<td align="center"><code>----------</code></td>
-</tr>
-<tr class="even">
-<td>insert_ds_line_Addin()</td>
-<td align="center">Insert double straight (DS) line</td>
-<td align="center"><code>==========</code></td>
-</tr>
-<tr class="odd">
-<td>insert_sw_line_Addin()</td>
-<td align="center">Insert single wavy (SW) line</td>
-<td align="center"><code>~~~~~~~~~~</code></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="replace-family" class="section level3">
-<h3 class="hasAnchor">
-<a href="#replace-family" class="anchor"></a>“Replace” family</h3>
-<table class="table">
-<thead><tr class="header">
-<th>Action</th>
-<th>Function</th>
-<th align="center">Text to edit</th>
-<th align="center">Result</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td>Replace `\` with ` \\`</td>
-<td>Back2doubleBackSlash()</td>
-<td align="center">c:\data\</td>
-<td align="center">c:\\data\\</td>
-</tr>
-<tr class="even">
-<td>Replace `\` with ` /`</td>
-<td>Back2ForwardSlash()</td>
-<td align="center">c:\data\</td>
-<td align="center">c:/data/</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="enclose-family" class="section level3">
-<h3 class="hasAnchor">
-<a href="#enclose-family" class="anchor"></a>“Enclose” family</h3>
-<p>These functions are useful for editing <strong>R Markdown</strong> files.</p>
-<table style="width:100%;" class="table">
-<colgroup>
-<col width="28%">
-<col width="21%">
-<col width="13%">
-<col width="20%">
-<col width="15%">
-</colgroup>
-<thead><tr class="header">
-<th>Action</th>
-<th>Function</th>
-<th align="center">Text to edit</th>
-<th align="center">Result</th>
-<th align="center">Interpreted as</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td>Enclose with single asterisk (<code>*</code>)</td>
-<td>enclose_with_asterisk()</td>
-<td align="center">italics</td>
-<td align="center">*italics*</td>
-<td align="center"><em>italics</em></td>
-</tr>
-<tr class="even">
-<td>Enclose with single underscore (<code>_</code>)</td>
-<td>enclose_with_underscore()</td>
-<td align="center">italics</td>
-<td align="center">_italics_</td>
-<td align="center"><em>italics</em></td>
-</tr>
-<tr class="odd">
-<td>Enclose with double asterisk (<code>**</code>)</td>
-<td>enclose_with_asterisk2()</td>
-<td align="center">bold</td>
-<td align="center">**bold**</td>
-<td align="center"><strong>bold</strong></td>
-</tr>
-<tr class="even">
-<td>Enclose with double underscore (<code>__</code>)</td>
-<td>enclose_with_underscore2()</td>
-<td align="center">bold</td>
-<td align="center">__bold__</td>
-<td align="center"><strong>bold</strong></td>
-</tr>
-<tr class="odd">
-<td>Enclose with caret (<code>^</code>)</td>
-<td>&lt;&lt;–&gt;-&gt;&gt;enclose_with_caret()</td>
-<td align="center">a superscript</td>
-<td align="center">a ^superscript^</td>
-<td align="center">a <sup>superscript</sup>
-</td>
-</tr>
-<tr class="even">
-<td>Enclose with single tilde (<code>~</code>)</td>
-<td>enclose_with_tilde()</td>
-<td align="center">a subscript</td>
-<td align="center">a ~subscript~</td>
-<td align="center">a <sub>subscript</sub>
-</td>
-</tr>
-<tr class="odd">
-<td>Enclose with double tilde (<code>~~</code>)</td>
-<td>enclose_with_tilde2()</td>
-<td align="center">strikethrough</td>
-<td align="center">~~strikethrough~~</td>
-<td align="center"><del>strikethrough</del></td>
-</tr>
-<tr class="even">
-<td>Enclose with single back tick (`)</td>
-<td>enclose_with_backtick()</td>
-<td align="center">code</td>
-<td align="center">`code`</td>
-<td align="center"><code>code</code></td>
-</tr>
-<tr class="odd">
-<td>Enclose with single dollar sign (<code>$</code>)</td>
-<td>enclose_with_dollar()</td>
-<td align="center">equation^{inline}</td>
-<td align="center"><code>$equation^{inline}$</code></td>
-<td align="center"><span class="math inline">\(equation^{inline}\)</span></td>
-</tr>
-<tr class="even">
-<td>Enclose with double dollar sign (<code>$$</code>)</td>
-<td>enclose_with_dollar2()</td>
-<td align="center">equation_{block}</td>
-<td align="center"><code>$$equation_{block}$$</code></td>
-<td align="center"><span class="math inline">\(equation_{block}\)</span></td>
-</tr>
-</tbody>
-</table>
+<p>Get started online <a href="http://gegznav.github.io/spAddins/articles/v1_workflow.html" class="uri">http://gegznav.github.io/spAddins/articles/v1_workflow.html</a></p>
+<p>And offline:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">vignette</span>(<span class="st">"v1_workflow"</span>, <span class="dt">package =</span> <span class="st">"spAddins"</span>)</code></pre></div>
+<!-- browseVignettes("spAddins") -->
+<hr>
+<p>More information at <a href="http://gegznav.github.io/spAddins/" class="uri">http://gegznav.github.io/spAddins/</a></p>
 <hr>
 </div>
-</div>
-</div>
-<div class="footnotes">
-<hr>
-<ol>
-<li id="fn1"><p>Available at <a href="https://github.com/GegznaV/spMisc" class="uri">https://github.com/GegznaV/spMisc</a>.<a href="#fnref1">↩</a></p></li>
-</ol>
 </div>
 </div>
   </div>

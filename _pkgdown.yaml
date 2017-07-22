@@ -1,7 +1,10 @@
+template:
+  params:
+    bootswatch: sandstone
+
 navbar:
-  title: spAddins
+  title: "spAddins | R package"
   type: default
-  theme: sandstone
   left:
   - icon: fa-home fa-lg
     href: /index.html
@@ -10,25 +13,22 @@ navbar:
   - text: Articles
     menu:
     - text: Recommended Workflow and Examples
-      href: articles/workflow.html
+      href: articles/v1_workflow.html
   right:
   - icon: fa-github fa-lg
     href: https://github.com/GegznaV/spAddins
+
 reference:
 - title: '"Replace" family functions'
-  desc: ~
   contents:
   - '`Back2doubleBackSlash`'
   - '`Back2ForwardSlash`'
 - title: '"Enclose" family functions'
-  desc: ~
   contents:
   - starts_with("enclose")
 - title: '"Insert" family functions'
-  desc: ~
   contents:
   - starts_with("insert")
-- title: '"Insert" family functions'
-  desc: ~
+- title: 'Other'
   contents:
   - '`spAddins`'
