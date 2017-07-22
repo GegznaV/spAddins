@@ -155,3 +155,21 @@ insert_if_null_Addin <- function() {
 insert_if_null_or_len0_Addin <- function() {
     rstudioapi::insertText(text = " %if_null_or_len0% ")
 }
+
+#' Insert \%R\%
+#'
+#' Call this function as an addin to insert \code{ \%R\% } at the cursor position.
+#'
+#' @note Operator does not work unless library which contains this operator is loaded.
+#'
+#' @export
+#'
+#' @family 'Insert at cursor position' addins
+#' @seealso  About shortcut keys: \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}. \cr
+#' @examples
+#' # To call the functions with keyboard shortcuts explore
+#' # link "keyboard shortcuts" in section "See also".
+#'
+insertPasteRebus <- function() {
+    rstudioapi::insertText(text = " %R% ")
+}

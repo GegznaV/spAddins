@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
 [![GitHub version](https://img.shields.io/badge/GitHub-`r packageVersion("spAddins")`-brightgreen.svg)](https://github.com/GegznaV/spAddins)
 [![Travis-CI Build Status](https://travis-ci.org/GegznaV/spAddins.png?branch=master)](https://travis-ci.org/GegznaV/spAddins)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Rdoc](http://www.rdocumentation.org/badges/version/spAddins)](http://www.rdocumentation.org/packages/spAddins)
 [![Last-update](https://img.shields.io/badge/Updated%20on-`r gsub('-', '--', Sys.Date())`-yellowgreen.svg)](/commits/master)
 
 ***
@@ -42,7 +43,7 @@ in strings like `"c:\data\"` converted into `"c:/data/"`) or
 that is interpreted as "**bold**")
 which is convenient for editing R Markdown files.
 
-:key: Install package :key:
+Install package
 ---------------------------
 
 Install released version from CRAN:
@@ -57,7 +58,7 @@ library(devtools)
 install_github("GegznaV/spAddins")
 ```
 
-:bulb: Recommended workflow and a few examples :bulb: 
+Recommended workflow and a few examples
 -----------------------------------------------------
 
 ```{r, eval=FALSE}
@@ -66,14 +67,14 @@ vignette("v1_workflow", package = "spAddins")
 browseVignettes("spAddins")
 ```
 
-:zap: Available add-in functions :zap:
+Available add-in functions
 --------------------------------------
 
 ### "Insert" family
 
 These functions insert various R operators.
 
-| Function                            | Inserts              | Package associated with operator|
+| Function                            | Inserts              | `R` package associated with operator|
 |-------------------------------------|:--------------------:|:-------------------------------:|
 | insertArrowLR2\_Addin()             | &lt;&lt;-            | R base                          |
 | insertArrowRL\_Addin()              | -&gt;                | R base                          |
@@ -84,12 +85,12 @@ These functions insert various R operators.
 | insertTeeOperator\_Addin()          | %T&gt;%              | magrittr                        |
 | insertCompAssignPipe\_Addin()       | %&lt;&gt;%           | magrittr                        |
 | insertExPipe\_Addin()               | %$%                  | magrittr                        |
-| insertIfNULL\_Addin()               | %if.NULL%            | spMisc[^1]                      |
-| insert\_if\_null\_Addin()           | %if\_null%           | spMisc                          |
+| insert\_if\_null\_Addin()           | %if\_null%           | spMisc[^1]                      |
 | insert\_if\_null\_or\_len0\_Addin() | %if\_null\_or\_len0% | spMisc                          |
 | insertNotIn\_Addin()                | %!in%                | spMisc                          |
 | insertPaste\_Addin()                | %.+.%                | spMisc                          |
 | insertPaste0\_Addin()               | %++%                 | spMisc                          |
+| insertPasteRebus\_Addin()           | %R%                  | rebus                           |
 
 The following functions may be useful for either editing **R Markdown** files or,
 if commented (`#`), for structuring R code files.
@@ -114,7 +115,7 @@ if commented (`#`), for structuring R code files.
 
 These functions are useful for editing **R Markdown** files.
 
-| Action                                 | Function                     | Text to edit      | Result                     | In markdown interpreted as |
+| Action                                 | Function                     | Text to edit      | Result                     | Interpreted as      |
 |----------------------------------------|------------------------------|:-----------------:|:--------------------------:|:-------------------:|
 | Enclose with single asterisk (`*`)     | enclose\_with\_asterisk()    | italics           | \*italics\*                | *italics*           |
 | Enclose with single underscore (`_`)   | enclose\_with\_underscore()  | italics           | \_italics\_                | _italics_           |

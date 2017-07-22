@@ -200,7 +200,7 @@ if commented (`#`), for structuring R code files.
 
 These functions are useful for editing **R Markdown** files.
 
-| Action                                 | Function                     | Text to edit      | Result                     | In markdown interpreted as |
+| Action                                 | Function                     | Text to edit      | Result                     | Interpreted as |
 |----------------------------------------|------------------------------|:-----------------:|:--------------------------:|:-------------------:|
 | Enclose with single asterisk (`*`)     | enclose\_with\_asterisk()    | italics           | \*italics\*                | *italics*           |
 | Enclose with single underscore (`_`)   | enclose\_with\_underscore()  | italics           | \_italics\_                | _italics_           |
