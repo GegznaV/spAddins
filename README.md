@@ -3,7 +3,7 @@
 
 ------------------------------------------------------------------------
 
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/spAddins)](https://cran.r-project.org/package=spAddins) [![GitHub version](https://img.shields.io/badge/GitHub-0.1.7.1000-brightgreen.svg)](https://github.com/GegznaV/spAddins) [![Travis-CI Build Status](https://travis-ci.org/GegznaV/spAddins.png?branch=master)](https://travis-ci.org/GegznaV/spAddins) [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Rdoc](http://www.rdocumentation.org/badges/version/spAddins)](http://www.rdocumentation.org/packages/spAddins) [![Last-update](https://img.shields.io/badge/Updated%20on-2017--07--23-yellowgreen.svg)](/commits/master)
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/spAddins)](https://cran.r-project.org/package=spAddins) [![GitHub version](https://img.shields.io/badge/GitHub-0.1.7.2000-brightgreen.svg)](https://github.com/GegznaV/spAddins) [![Travis-CI Build Status](https://travis-ci.org/GegznaV/spAddins.png?branch=master)](https://travis-ci.org/GegznaV/spAddins) [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Rdoc](http://www.rdocumentation.org/badges/version/spAddins)](http://www.rdocumentation.org/packages/spAddins) [![Last-update](https://img.shields.io/badge/Updated%20on-2017--07--23-yellowgreen.svg)](/commits/master)
 
 ------------------------------------------------------------------------
 
@@ -134,7 +134,7 @@ These functions are useful for editing **R Markdown** files.
 </tr>
 <tr class="odd">
 <td>Enclose with caret (<code>^</code>)</td>
-<td>enclose_with_caret()</td>
+<td>&lt;&lt;--&gt;-&gt;&gt;enclose_with_caret()</td>
 <td align="center">a superscript</td>
 <td align="center">a ^superscript^</td>
 <td align="center">a <sup>superscript</sup></td>

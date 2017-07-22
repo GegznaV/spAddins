@@ -200,13 +200,13 @@ if commented (`#`), for structuring R code files.
 
 These functions are useful for editing **R Markdown** files.
 
-| Action                                 | Function                     | Text to edit      | Result                     | Interpreted as |
+| Action                                 | Function                     | Text to edit      | Result                     | Interpreted as      |
 |----------------------------------------|------------------------------|:-----------------:|:--------------------------:|:-------------------:|
 | Enclose with single asterisk (`*`)     | enclose\_with\_asterisk()    | italics           | \*italics\*                | *italics*           |
 | Enclose with single underscore (`_`)   | enclose\_with\_underscore()  | italics           | \_italics\_                | _italics_           |
 | Enclose with double asterisk (`**`)    | enclose\_with\_asterisk2()   | bold              | \*\*bold\*\*               | **bold**            |
 | Enclose with double underscore (`__`)  | enclose\_with\_underscore2() | bold              | \_\_bold\_\_               | __bold__            |
-| Enclose with caret (`^`)               | enclose\_with\_caret()       | a superscript     | a \^superscript\^          | a ^superscript^     |
+| Enclose with caret (`^`)               | <<-->->>enclose\_with\_caret()       | a superscript     | a \^superscript\^          | a ^superscript^     |
 | Enclose with single tilde (`~`)        | enclose\_with\_tilde()       | a subscript       | a \~subscript\~            | a ~subscript~       |
 | Enclose with double tilde (`~~`)       | enclose\_with\_tilde2()      | strikethrough     | \~\~strikethrough\~\~      | ~~strikethrough~~   |
 | Enclose with single back tick (\`)     | enclose\_with\_backtick()    |  code             | \`code\`                   | `code`              |

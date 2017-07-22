@@ -5,3 +5,6 @@
 ^README-.*\.png$
 ^data-raw$
 ^D:\Dokumentai\R\spAddins\docs$
+^_pkgdown.yaml
+^pkgdown.*
+^pkgdown$
