@@ -2,7 +2,7 @@ favicon: "favicon.png"
 
 template:
   params:
-    bootswatch: sandstone
+    bootswatch: united
 
 navbar:
   title: "spAddins | R package"
@@ -10,9 +10,9 @@ navbar:
   left:
   - icon: fa-home fa-lg
     href: index.html
-  - text: Reference
+  - text: Functions
     href: reference/index.html
-  - text: Articles
+  - text: Tutorials and Examples
     menu:
     - text: Recommended Workflow and Examples
       href: articles/v1_workflow.html
