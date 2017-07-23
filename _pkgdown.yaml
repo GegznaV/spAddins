@@ -1,3 +1,5 @@
+favicon: "favicon.png"
+
 template:
   params:
     bootswatch: sandstone
