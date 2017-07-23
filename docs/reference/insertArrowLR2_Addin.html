@@ -52,7 +52,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="..//spAddins">
+  <a href="../index.html">
     <span class="fa fa-home fa-lg"></span>
      
   </a>
@@ -137,16 +137,21 @@ or <code>&lt;&lt;-</code> at the cursor position.</p>
 # To call the functions with keyboard shortcuts explore
 # link "keyboard shortcuts" in section "See also".
 
-</div><div class='input'><span class='fu'>library</span>(<span class='no'>spAddins</span>)
+</div># NOT RUN {
+\donttest{
+library(spAddins)
 
-<span class='fu'>insertArrowLR2_Addin</span>()
-<span class='co'>## &lt;&lt;-</span>
+insertArrowLR2_Addin()
+## <<-
 
-<span class='fu'>insertArrowRL_Addin</span>()
-<span class='co'>## -&gt;</span>
+insertArrowRL_Addin()
+## ->
 
-<span class='fu'>insertArrowRL2_Addin</span>()
-<span class='co'>## -&gt;&gt;</span></div><div class='input'>
+insertArrowRL2_Addin()
+## ->>
+}
+# }
+<div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
