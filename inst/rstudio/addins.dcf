@@ -149,8 +149,6 @@ Description: Encloses selected text with ^.
 Binding: enclose_with_caret
 Interactive: false
 
-
-
 Name: Insert single straight line
 Description: Insert single straight line.
 Binding: insert_ss_line_Addin
@@ -175,3 +173,10 @@ Name: Insert python code chunk for conspects
 Description: Insert chunk for conspects.
 Binding: insert_chunk_python_Addin
 Interactive: false
+
+Name: Tidy R code
+Description: Tidy several aspects of R source code.
+Binding: tidy_r_code_Addin
+Interactive: false
+
+

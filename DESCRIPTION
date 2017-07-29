@@ -1,8 +1,8 @@
 Package: spAddins
 Type: Package
 Title: A Set of RStudio Addins
-Version: 0.1.7.2000
-Date: 2017-07-23
+Version: 0.1.7.3000
+Date: 2017-07-24
 Authors@R: person("Vilmantas", "Gegzna",
                     email = "GegznaV@gmail.com",
                     role = c("aut", "cre","cph")
@@ -27,7 +27,8 @@ VignetteBuilder: knitr
 Depends:
     R (>= 3.2)
 Imports:
-    rstudioapi
+    rstudioapi,
+    formatR
 Suggests:
     magrittr,
     knitr,

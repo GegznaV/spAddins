@@ -12,7 +12,6 @@ knitr::opts_chunk$set(
 )
 ```
 
-***
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/spAddins)](https://cran.r-project.org/package=spAddins)
 [![GitHub version](https://img.shields.io/badge/GitHub-`r packageVersion("spAddins")`-brightgreen.svg)](https://github.com/GegznaV/spAddins)
@@ -23,14 +22,17 @@ knitr::opts_chunk$set(
 
 
 
-```{r, fig.align='center', out.height='30%', out.width='30%',echo=FALSE}
+<!--
+```{r, fig.align='center', out.height='30%', out.width='30%', echo=FALSE, eval = FALSE}
 knitr::include_graphics("http://gegznav.github.io/spAddins/logo.png")
 ```
+-->
+***
 
+<img src="http://gegznav.github.io/spAddins/logo.png" align="right" width="15%" height="15%"/> 
    
-   
-R package `spAddins` 
-====================
+R package `spAddins`  
+=========================================================================
 
 `spAddins` is an R package that provides a set of RStudio addins which
 are designed to be used in
