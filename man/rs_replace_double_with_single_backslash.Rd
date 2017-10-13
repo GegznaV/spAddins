@@ -11,16 +11,7 @@ Select a piece of text with a cursor and call this function as an addin
 to replace all double backslashes (\code{\\\\}) with single backslashes
 (\code{\\}) in the seleceted text.
 }
-\examples{
-
-# To call the functions with keyboard shortcuts explore
-# link "keyboard shortcuts" in section "See also".
-
-}
 \seealso{
-About shortcut keys:
- \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.
-
 Other 'Replace selected symbols' addins: \code{\link{rs_replace_backslash_with_forwasdslash}},
   \code{\link{rs_replace_single_with_double_backslash}}
 }

@@ -142,7 +142,8 @@ The result: as expected, the string is converted into `"c:/data/"`.
 
 
 Enclose with `**`...`**`
-----------------------
+------------------------
+
 This example describes how to use addins which **enclose** text.  
 
 Conciser having an [R Markdown](http://rmarkdown.rstudio.com/) file and a string `"This word should be in bold."` in it. In this string word `word` must be in bold. 
@@ -155,7 +156,7 @@ The result: `"This **word** should be in bold."`
 Available add-in functions 
 ==========================
 
-### "Insert" family
+## "Insert" family
 
 These functions insert various R operators.
 
@@ -170,33 +171,39 @@ These functions insert various R operators.
 | insertTeeOperator\_Addin()          | %T&gt;%              | magrittr                        |
 | insertCompAssignPipe\_Addin()       | %&lt;&gt;%           | magrittr                        |
 | insertExPipe\_Addin()               | %$%                  | magrittr                        |
-| insertIfNULL\_Addin()               | %if.NULL%            | spMisc[^1]                      |
+
+<!-- 
+| insertIfNULL\_Addin()               | %if.NULL%            | spMisc[^1]                      | 
 | insert\_if\_null\_Addin()           | %if\_null%           | spMisc                          |
 | insert\_if\_null\_or\_len0\_Addin() | %if\_null\_or\_len0% | spMisc                          |
 | insertNotIn\_Addin()                | %!in%                | spMisc                          |
 | insertPaste\_Addin()                | %.+.%                | spMisc                          |
 | insertPaste0\_Addin()               | %++%                 | spMisc                          |
 
+[^1]: Available at <https://github.com/GegznaV/spMisc>.
+-->
+
 The following functions may be useful for either editing **R Markdown** files or,
 if commented (`#`), for structuring R code files.
 
-| Function                            | Description                      | Example (first 10 symbols) |
-|-------------------------------------|:--------------------------------:|:--------------------------:|
-| insert\_ss\_line\_Addin()           | Insert single straight (SS) line | `----------`               |
-| insert\_ds\_line\_Addin()           | Insert double straight (DS) line | `==========`               |
-| insert\_sw\_line\_Addin()           | Insert single wavy (SW) line     | `~~~~~~~~~~`               | 
+| Function                | Description                      | Example (first 10 symbols) |
+|-------------------------|:--------------------------------:|:--------------------------:|
+| rs\_insert\_ss\_line()  | Insert single straight (SS) line | `----------`               |
+| rs\_insert\_ds\_line()  | Insert double straight (DS) line | `==========`               |
+| rs\_insert\_sw\_line()  | Insert single wavy (SW) line     | `~~~~~~~~~~`               | 
 
-[^1]: Available at <https://github.com/GegznaV/spMisc>.
 
-### "Replace" family 
+
+## "Replace" family 
 
 | Action                        | Function               | Text to edit     | Result          |
 |-------------------------------|------------------------|:----------------:|:---------------:|
-| Replace \`\\\` with \` \\\\\` | Back2doubleBackSlash() | c:\\data\\       | c:\\\\data\\\\  |
-| Replace \`\\\` with \` /\`    | Back2ForwardSlash()    | c:\\data\\       | c:/data/        |
+| Replace \`\\\` with \` \\\\\` | rs\_replace\_backslash\_with\_forwasdslash()   | c:\\data\\      | c:\\\\data\\\\  |
+| Replace \`\\\` with \` /\`    | rs\_replace\_single\_with\_double\_backslash() | c:\\data\\      | c:/data/        |
+| Replace \` /\` with \`\\\`    | rs\_replace\_double\_with\_single\_backslash() | c:\\\\data\\\\  | c:\\data\\      |
 
 
-### "Enclose" family
+## "Enclose" family
 
 These functions are useful for editing **R Markdown** files.
 
@@ -206,11 +213,18 @@ These functions are useful for editing **R Markdown** files.
 | Enclose with single underscore (`_`)   | enclose\_with\_underscore()  | italics           | \_italics\_                | _italics_           |
 | Enclose with double asterisk (`**`)    | enclose\_with\_asterisk2()   | bold              | \*\*bold\*\*               | **bold**            |
 | Enclose with double underscore (`__`)  | enclose\_with\_underscore2() | bold              | \_\_bold\_\_               | __bold__            |
-| Enclose with caret (`^`)               | <<-->->>enclose\_with\_caret()       | a superscript     | a \^superscript\^          | a ^superscript^     |
+| Enclose with caret (`^`)               | enclose\_with\_caret()       | a superscript     | a \^superscript\^          | a ^superscript^     |
 | Enclose with single tilde (`~`)        | enclose\_with\_tilde()       | a subscript       | a \~subscript\~            | a ~subscript~       |
 | Enclose with double tilde (`~~`)       | enclose\_with\_tilde2()      | strikethrough     | \~\~strikethrough\~\~      | ~~strikethrough~~   |
-| Enclose with single back tick (\`)     | enclose\_with\_backtick()    |  code             | \`code\`                   | `code`              |
+| Enclose with single back tick (\`)     | enclose\_with\_backtick()    | code              | \`code\`                   | `code`              |
 | Enclose with single dollar sign (`$`)  | enclose\_with\_dollar()      | equation^{inline} | ```$equation^{inline}$```  | $equation^{inline}$ |
 | Enclose with double dollar sign (`$$`) | enclose\_with\_dollar2()     | equation_{block}  | ```$$equation_{block}$$``` | $equation_{block}$  |
+
+See also 
+=============================
+
+To call the functions with keyboard shortcuts in *RStudio* explore 
+[this article](https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts).
+ 
 
 * * *

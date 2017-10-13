@@ -12,15 +12,7 @@ to replace
 all single back-slashes (\code{\\}) with single forwasd-slashes (\code{/})
 in the selected text.
 }
-\examples{
-
-# To call the functions with keyboard shortcuts explore
-# link "keyboard shortcuts" in section "See also".
-}
 \seealso{
-About shortcut keys:
-\href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.
-
 Other 'Replace selected symbols' addins: \code{\link{rs_replace_double_with_single_backslash}},
   \code{\link{rs_replace_single_with_double_backslash}}
 }

@@ -10,23 +10,13 @@ enclose_with_tilde()
 Select a piece of text with a cursor and call this function as an addin
 to enclose the text with single tilde \code{~}.
 }
-\examples{
-
-# To call the functions with keyboard shortcuts explore
-# link "keyboard shortcuts" in section "See also".
-
-}
 \seealso{
-About shortcut keys:
- \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.
-
 Other 'Enclose selected symbols' addins: \code{\link{enclose_with_asterisk2}},
   \code{\link{enclose_with_asterisk}},
   \code{\link{enclose_with_backtick}},
-  \code{\link{enclose_with_dollar2}},
-  \code{\link{enclose_with_dollar}},
   \code{\link{enclose_with_italic_bold}},
   \code{\link{enclose_with_tilde2}},
   \code{\link{enclose_with_underscore2}},
-  \code{\link{enclose_with_underscore}}
+  \code{\link{enclose_with_underscore}},
+  \code{\link{rs_equation_inline}}
 }

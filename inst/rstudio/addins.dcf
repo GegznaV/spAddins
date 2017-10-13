@@ -1,40 +1,40 @@
 
 Name: Insert %>%
 Description: Insert `%>%` at the cursor position.
-Binding: insertPipeline_Addin
+Binding: rs_insert_pipe
 Interactive: false
 
 Name: Insert %<>%
 Description: Insert `%<>%` at the cursor position.
-Binding: insertCompAssignPipe_Addin
+Binding: rs_insert_update_pipe
 Interactive: false
 
 Name: Insert %$%
 Description: Insert `%$%` at the cursor position.
-Binding: insertExPipe_Addin
+Binding: rs_insert_dollar_pipe
 Interactive: false
 
 Name: Insert %T>%
 Description: Insert `%T>%` at the cursor position.
-Binding: insertTeeOperator_Addin
+Binding: rs_insert_tee_pipe
 Interactive: false
 
 Name: Insert %*%
 Description: Insert `%*%` at the cursor position.
-Binding: insertMatMuliplication_Addin
+Binding: rs_insert_matrix_multiplication
 Interactive: false
 
 Name: Insert %in%
 Description: Insert `%in%` at the cursor position.
-Binding: insertIn_Addin
+Binding: rs_insert_infix_in
 Interactive: false
-
-
 
 Name: Insert %R%
 Description: Insert `%R%` at the cursor position.
-Binding: insertPasteRebus
+Binding: rs_insert_infix_r
 Interactive: false
+
+
 
 Name: Convert \ into \\
 Description: Replaces \ with \\ in the selected text.
@@ -76,57 +76,62 @@ Interactive: false
 
 
 
-Name: Equation inline ($ $)
+Name: Equation inline ($.$)
 Description: Enclose selected text with `$`.
-Binding: enclose_with_dollar
+Binding: rs_equation_inline
 Interactive: false
 
-Name: Equation block ($$ $$)
+Name: Equation block ($$.$$)
 Description: Enclose selected text with `$$`.
-Binding: enclose_with_dollar2
+Binding: rs_equation_block
 Interactive: false
 
-Name: Italic (_ _)
+Name: Equation block (\[ . \])
+Description: Enclose selected text with `\[ . \]`.
+Binding: rs_equation_block2
+Interactive: false
+
+Name: Italic (_._)
 Description: Enclose selected text with `_`.
 Binding: enclose_with_underscore
 Interactive: false
 
-Name: Bold (__ __)
+Name: Bold (__.__)
 Description: Enclose selected text with `__`.
 Binding: enclose_with_underscore2
 Interactive: false
 
-Name: Italic (* *)
+Name: Italic (*.*)
 Description: Enclose selected text with `*`.
 Binding: enclose_with_asterisk
 Interactive: false
 
-Name: Bold (** **)
+Name: Bold (**.**)
 Description: Enclose selected text with `**`.
 Binding: enclose_with_asterisk2
 Interactive: false
 
-Name: Bold italic (**_ _**)
-Description: Enclose selected text with `**_`,`_**`.
+Name: Bold italic (**_._**)
+Description: Enclose selected text with `**_._**`.
 Binding: enclose_with_italic_bold
 Interactive: false
 
-Name: Code (` `)
+Name: Code (`.`)
 Description: Enclose selected text with `.
 Binding: enclose_with_backtick
 Interactive: false
 
-Name: Subscript (~ ~)
+Name: Subscript (~.~)
 Description: Enclose selected text with ~.
 Binding: enclose_with_tilde
 Interactive: false
 
-Name: Strike through (~~ ~~)
+Name: Strike through (~~.~~)
 Description: Enclose selected text with ~~.
 Binding: enclose_with_tilde2
 Interactive: false
 
-Name: Superscript (^ ^)
+Name: Superscript (^.^)
 Description: Enclose selected text with ^.
 Binding: enclose_with_caret
 Interactive: false
