@@ -3,19 +3,23 @@
 # 'Enclose selected symbols' addins ---------------------------------------
 
 
-# enclose_selection_with --------------------------------------------------
-enclose_selection_with <- function(symbol_ = "", symbol_2 = symbol_) {
+# rs_enclose_selection_with --------------------------------------------------
+rs_enclose_selection_with <- function(symbol = "",
+                                      symbol_before = symbol,
+                                      symbol_after  = symbol) {
     context <- rstudioapi::getActiveDocumentContext()
 
-    for (sel in context$selection) {
-        TXT <- sel$text
-        Encoding(TXT) <- "UTF-8"
+    # For the first selection only
+    sel <- context$selection[[1]]
+    old_text <- sel$text
+    Encoding(old_text) <- "UTF-8"
 
-        nTXT <- paste0(symbol_, TXT, symbol_2)
+    new_text <- paste0(symbol_before, old_text, symbol_after)
 
-        rstudioapi::modifyRange(sel$range, as.character(nTXT), context$id)
-        break
-    }
+    rstudioapi::insertText(location = sel$range,
+                           text = as.character(new_text),
+                           id = context$id)
+
 }
 
 
@@ -38,7 +42,7 @@ enclose_selection_with <- function(symbol_ = "", symbol_2 = symbol_) {
 #' @export
 #' @family 'Enclose selected symbols' addins
 enclose_with_dollar <- function() {
-    enclose_selection_with(symbol_ = "$")
+    rs_enclose_selection_with(symbol = "$")
 }
 
 
@@ -58,7 +62,7 @@ enclose_with_dollar <- function() {
 #' @export
 #' @family 'Enclose selected symbols' addins
 enclose_with_dollar2 <- function() {
-    enclose_selection_with(symbol_ = "$$")
+    rs_enclose_selection_with(symbol = "$$")
 }
 
 
@@ -80,11 +84,9 @@ enclose_with_dollar2 <- function() {
 #' @export
 #' @family 'Enclose selected symbols' addins
 enclose_with_underscore <- function() {
-    enclose_selection_with(symbol_ = "_")
+    rs_enclose_selection_with(symbol = "_")
 
 }
-
-
 
 
 #' Enclose with \code{__}
@@ -103,7 +105,7 @@ enclose_with_underscore <- function() {
 #' @export
 #' @family 'Enclose selected symbols' addins
 enclose_with_underscore2 <- function() {
-    enclose_selection_with(symbol_ = "__")
+    rs_enclose_selection_with(symbol = "__")
 
 }
 
@@ -125,7 +127,7 @@ enclose_with_underscore2 <- function() {
 #' @export
 #' @family 'Enclose selected symbols' addins
 enclose_with_asterisk <- function() {
-    enclose_selection_with(symbol_ = "*")
+    rs_enclose_selection_with(symbol = "*")
 
 }
 
@@ -146,7 +148,7 @@ enclose_with_asterisk <- function() {
 #' @export
 #' @family 'Enclose selected symbols' addins
 enclose_with_asterisk2 <- function() {
-    enclose_selection_with(symbol_ = "**")
+    rs_enclose_selection_with(symbol = "**")
 
 }
 
@@ -166,7 +168,7 @@ enclose_with_asterisk2 <- function() {
 #' @export
 #' @family 'Enclose selected symbols' addins
 enclose_with_backtick <- function() {
-    enclose_selection_with(symbol_ = "`")
+    rs_enclose_selection_with(symbol = "`")
 }
 
 
@@ -186,7 +188,7 @@ enclose_with_backtick <- function() {
 #' @export
 #' @family 'Enclose selected symbols' addins
 enclose_with_tilde <- function() {
-    enclose_selection_with(symbol_ = "~")
+    rs_enclose_selection_with(symbol = "~")
 }
 
 
@@ -206,7 +208,7 @@ enclose_with_tilde <- function() {
 #' @export
 #' @family 'Enclose selected symbols' addins
 enclose_with_tilde2 <- function() {
-    enclose_selection_with(symbol_ = "~~")
+    rs_enclose_selection_with(symbol = "~~")
 }
 
 
@@ -226,7 +228,28 @@ enclose_with_tilde2 <- function() {
 #' @export
 #' @family 'Enclose selected symbols' addins
 enclose_with_tilde2 <- function() {
-    enclose_selection_with(symbol_ = "^")
+    rs_enclose_selection_with(symbol = "^")
 }
 
+# Enclose with dollar sign ($) ---------------------------------------------
 
+
+#' Enclose with \code{**_  _**}
+#'
+#' Select a piece of text with a cursor and call this function as an addin
+#' to enclose the text with symbols, which are interpreted as "italic bold"
+#' in markdown (\code{**_ _**}).
+#'
+#' @seealso About shortcut keys:
+#'  \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.
+#'
+#' @examples
+#'
+#' # To call the functions with keyboard shortcuts explore
+#' # link "keyboard shortcuts" in section "See also".
+#'
+#' @export
+#' @family 'Enclose selected symbols' addins
+enclose_with_italic_bold <- function() {
+    rs_enclose_selection_with(symbol_before = "**_", symbol_after = "_**")
+}

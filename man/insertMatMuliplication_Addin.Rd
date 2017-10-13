@@ -29,9 +29,9 @@ Other 'Insert at cursor position' addins: \code{\link{insertArrowLR2_Addin}},
   \code{\link{insertPaste_Addin}},
   \code{\link{insertPipeline_Addin}},
   \code{\link{insertTeeOperator_Addin}},
-  \code{\link{insert_ds_line_Addin}},
   \code{\link{insert_if_null_Addin}},
   \code{\link{insert_if_null_or_len0_Addin}},
-  \code{\link{insert_ss_line_Addin}},
-  \code{\link{insert_sw_line_Addin}}
+  \code{\link{rs_insert_ds_line}},
+  \code{\link{rs_insert_ss_line}},
+  \code{\link{rs_insert_sw_line}}
 }

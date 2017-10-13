@@ -1,18 +1,20 @@
 # Main "replace" function
-
-replace_in_selection <- function(pattern, replacement){
+rs_replace_in_selection <- function(pattern, replacement) {
     context <- rstudioapi::getActiveDocumentContext()
 
-    for (sel in context$selection) {
-        TXT  <- sel$text
-        Encoding(TXT) <- "UTF-8"
+    sel <-  context$selection[[1]]
+    old_text  <- sel$text
+    Encoding(old_text) <- "UTF-8"
 
-        nTXT <- gsub(pattern = pattern, replacement = replacement, TXT,
+    new_text <- gsub(pattern = pattern,
+                     replacement = replacement,
+                     x = old_text,
                      fixed = TRUE)
 
-        rstudioapi::modifyRange(sel$range, as.character(nTXT), context$id)
-        break
-    }
+    rstudioapi::modifyRange(location = sel$range,
+                            text = as.character(new_text),
+                            id = context$id)
+
 }
 
 
@@ -35,8 +37,28 @@ replace_in_selection <- function(pattern, replacement){
 #'
 #' @export
 #' @family 'Replace selected symbols' addins
-Back2doubleBackSlash <- function() {
-    replace_in_selection(pattern = "\\", replacement = "\\\\")
+rs_replace_single_with_double_backslash <- function() {
+    rs_replace_in_selection(pattern = "\\", replacement = "\\\\")
+}
+
+#' Replace \code{\\\\} with \code{\\}
+#'
+#' Select a piece of text with a cursor and call this function as an addin
+#' to replace all double backslashes (\code{\\\\}) with single backslashes
+#' (\code{\\}) in the seleceted text.
+#'
+#' @seealso About shortcut keys:
+#'  \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.
+#'
+#' @examples
+#'
+#' # To call the functions with keyboard shortcuts explore
+#' # link "keyboard shortcuts" in section "See also".
+#'
+#' @export
+#' @family 'Replace selected symbols' addins
+rs_replace_double_with_single_backslash <- function() {
+    rs_replace_in_selection(pattern = "\\\\", replacement = "\\")
 }
 
 
@@ -44,7 +66,7 @@ Back2doubleBackSlash <- function() {
 #'
 #' Select a piece of text with a cursor and call this function as an addin
 #' to replace
-#' all single backslashes (\code{\\}) with single forwasdslashes (\code{/})
+#' all single back-slashes (\code{\\}) with single forwasd-slashes (\code{/})
 #' in the selected text.
 #' @seealso About shortcut keys:
 #' \href{https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts}{keyboard shortcuts}.
@@ -55,8 +77,8 @@ Back2doubleBackSlash <- function() {
 #' # link "keyboard shortcuts" in section "See also".
 #' @export
 #' @family 'Replace selected symbols' addins
-Back2ForwardSlash <- function() {
-    replace_in_selection(pattern = "\\", replacement = "/")
+rs_replace_backslash_with_forwasdslash <- function() {
+    rs_replace_in_selection(pattern = "\\", replacement = "/")
 }
 
 

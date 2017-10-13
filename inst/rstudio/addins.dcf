@@ -1,77 +1,54 @@
 
 Name: Insert %>%
-Description: Inserts `%>%` at the cursor position.
+Description: Insert `%>%` at the cursor position.
 Binding: insertPipeline_Addin
 Interactive: false
 
 Name: Insert %<>%
-Description: Inserts `%<>%` at the cursor position.
+Description: Insert `%<>%` at the cursor position.
 Binding: insertCompAssignPipe_Addin
 Interactive: false
 
 Name: Insert %$%
-Description: Inserts `%$%` at the cursor position.
+Description: Insert `%$%` at the cursor position.
 Binding: insertExPipe_Addin
 Interactive: false
 
 Name: Insert %T>%
-Description: Inserts `%T>%` at the cursor position.
+Description: Insert `%T>%` at the cursor position.
 Binding: insertTeeOperator_Addin
 Interactive: false
 
 Name: Insert %*%
-Description: Inserts `%*%` at the cursor position.
+Description: Insert `%*%` at the cursor position.
 Binding: insertMatMuliplication_Addin
 Interactive: false
 
 Name: Insert %in%
-Description: Inserts `%in%` at the cursor position.
+Description: Insert `%in%` at the cursor position.
 Binding: insertIn_Addin
 Interactive: false
 
-Name: Insert %!in%
-Description: Inserts `%!in%` at the cursor position.
-Binding: insertNotIn_Addin
-Interactive: false
 
-Name: Insert %++%
-Description: Inserts `%++%` at the cursor position.
-Binding: insertPaste0_Addin
-Interactive: false
-
-Name: Insert %.+.%
-Description: Inserts `%.+.%` at the cursor position.
-Binding: insertPaste_Addin
-Interactive: false
-
-Name: Insert %if.NULL%
-Description: Inserts `%if.NULL%` at the cursor position.
-Binding: insertIfNULL_Addin
-Interactive: false
-
-Name: Insert %if_null%
-Description: Inserts `%if_null%` at the cursor position.
-Binding: insert_if_null_Addin
-Interactive: false
-
-Name: Insert %if_null_or_len0%
-Description: Inserts `%if_null_or_len0%` at the cursor position.
-Binding: insert_if_null_or_len0_Addin
-Interactive: false
 
 Name: Insert %R%
-Description: Inserts `%R%` at the cursor position.
+Description: Insert `%R%` at the cursor position.
 Binding: insertPasteRebus
 Interactive: false
 
-Name: Replace \ with \\
+Name: Convert \ into \\
 Description: Replaces \ with \\ in the selected text.
-Binding: Back2doubleBackSlash
+Binding: rs_replace_single_with_double_backslash
 Interactive: false
 
-Name: Replace \ with /
+Name: Convert \\ into \
+Description: Replaces \\ with \ in the selected text.
+Binding: rs_replace_double_with_single_backslash
+Interactive: false
+
+Name: Convert \ into /
 Description: Replaces \ with / in the selected text.
-Binding: Back2ForwardSlash
+Binding: rs_replace_backslash_with_forwasdslash
 Interactive: false
 
 
@@ -83,85 +60,90 @@ Interactive: false
 
 
 Name: Insert <<-
-Description: Inserts `<<-` at the cursor position.
+Description: Insert `<<-` at the cursor position.
 Binding: insertArrowLR2_Addin
 Interactive: false
 
 Name: Insert ->
-Description: Inserts `->` at the cursor position.
+Description: Insert `->` at the cursor position.
 Binding: insertArrowRL_Addin
 Interactive: false
 
 Name: Insert ->>
-Description: Inserts `->>` at the cursor position.
+Description: Insert `->>` at the cursor position.
 Binding: insertArrowRL2_Addin
 Interactive: false
 
 
 
-Name: Enclose with $
-Description: Encloses selected text with `$`.
+Name: Equation inline ($ $)
+Description: Enclose selected text with `$`.
 Binding: enclose_with_dollar
 Interactive: false
 
-Name: Enclose with $$
-Description: Encloses selected text with `$$`.
+Name: Equation block ($$ $$)
+Description: Enclose selected text with `$$`.
 Binding: enclose_with_dollar2
 Interactive: false
 
-Name: Enclose with _
-Description: Encloses selected text with `_`.
+Name: Italic (_ _)
+Description: Enclose selected text with `_`.
 Binding: enclose_with_underscore
 Interactive: false
 
-Name: Enclose with __
-Description: Encloses selected text with `__`.
+Name: Bold (__ __)
+Description: Enclose selected text with `__`.
 Binding: enclose_with_underscore2
 Interactive: false
 
-Name: Enclose with *
-Description: Encloses selected text with `*`.
+Name: Italic (* *)
+Description: Enclose selected text with `*`.
 Binding: enclose_with_asterisk
 Interactive: false
 
-Name: Enclose with **
-Description: Encloses selected text with `**`.
+Name: Bold (** **)
+Description: Enclose selected text with `**`.
 Binding: enclose_with_asterisk2
 Interactive: false
 
-Name: Enclose with `
-Description: Encloses selected text with `.
+Name: Bold italic (**_ _**)
+Description: Enclose selected text with `**_`,`_**`.
+Binding: enclose_with_italic_bold
+Interactive: false
+
+Name: Code (` `)
+Description: Enclose selected text with `.
 Binding: enclose_with_backtick
 Interactive: false
 
-Name: Enclose with ~
-Description: Encloses selected text with ~.
+Name: Subscript (~ ~)
+Description: Enclose selected text with ~.
 Binding: enclose_with_tilde
 Interactive: false
 
-Name: Enclose with ~~
-Description: Encloses selected text with ~~.
+Name: Strike through (~~ ~~)
+Description: Enclose selected text with ~~.
 Binding: enclose_with_tilde2
 Interactive: false
 
-Name: Enclose with ^
-Description: Encloses selected text with ^.
+Name: Superscript (^ ^)
+Description: Enclose selected text with ^.
 Binding: enclose_with_caret
 Interactive: false
 
 Name: Insert single straight line
 Description: Insert single straight line.
-Binding: insert_ss_line_Addin
+Binding: rs_insert_ss_line
 Interactive: false
 
 Name: Insert double straight line
 Description: Insert double straight line.
-Binding: insert_ds_line_Addin
+Binding: rs_insert_ds_line
 Interactive: false
 
 Name: Insert single wavy line
 Description: Insert single wavy line.
-Binding: insert_sw_line_Addin
+Binding: rs_insert_sw_line
 Interactive: false
 
 Name: Insert R code chunk for conspects
