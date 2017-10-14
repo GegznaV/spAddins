@@ -88,11 +88,16 @@
 <p><code>spAddins</code> is an R package that provides a set of RStudio addins which are designed to be used in combination with user-defined RStudio keyboard shortcuts. These addins either:</p>
 <ol style="list-style-type: decimal">
 <li>
-<strong>insert</strong> text at the cursor position (e.g. insert operators <code>%&gt;%</code>, <code>&lt;&lt;-</code>, <code>%$%</code>, etc.),</li>
+<strong>format text in R Markdown documents</strong>:
+<ul>
 <li>
-<strong>replace</strong> symbols in selected pieces of text (e.g., convert backslashes to forward slashes which results in strings like <code>"c:\data\"</code> converted into <code>"c:/data/"</code>) or</li>
+<strong>enclose</strong> either selected text or selected rows with special symbols and text gets inerpreted in a special way when rendered with R Markdown (e.g., converts “bold” into “**bold**” that is interpreted as “<strong>bold</strong>”).</li>
+</ul>
+</li>
 <li>
-<strong>enclose</strong> text with special symbols (e.g., converts “bold” into “**bold**” that is interpreted as “<strong>bold</strong>”) which is convenient for editing R Markdown files.</li>
+<strong>insert</strong> text (e.g., operators <code>%&gt;%</code>, <code>&lt;&lt;-</code>, <code>%$%</code>) at the cursor position;</li>
+<li>
+<strong>replace</strong> symbols in selected pieces of text (e.g., convert backslashes to forward slashes which results in strings like <code>"c:\data\"</code> converted into <code>"c:/data/"</code>).</li>
 </ol>
 <div id="install-package" class="section level2">
 <h2 class="hasAnchor">
@@ -115,7 +120,7 @@ devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocument
 <hr>
 <p>TO DO:</p>
 <ol style="list-style-type: decimal">
-<li>Interactive addin, that enables to select properties of the list;</li>
+<li>Create an interactive addin, that enables to select formatting options;</li>
 <li>Write unit tests.</li>
 </ol>
 </div>

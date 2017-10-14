@@ -39,14 +39,13 @@ are designed to be used in
 combination with user-defined RStudio keyboard shortcuts. These
 addins either:
 
-1) **insert** text at the cursor position (e.g. insert
-operators `%>%`, `<<-`, `%$%`, etc.), 
-2) **replace** symbols in selected
+1) **format text in R Markdown documents**:
+    - **enclose** either selected text or selected rows with special symbols and text gets inerpreted in a special way when rendered with R Markdown (e.g., converts "bold" into "\*\*bold\*\*"
+that is interpreted as "**bold**").
+2) **insert** text (e.g., operators `%>%`, `<<-`, `%$%`) at the cursor position; 
+3)  **replace** symbols in selected
 pieces of text (e.g., convert backslashes to forward slashes which results 
-in strings like `"c:\data\"` converted into `"c:/data/"`) or 
-3) **enclose** text with special symbols (e.g., converts "bold" into "\*\*bold\*\*"
-that is interpreted as "**bold**")
-which is convenient for editing R Markdown files.
+in strings like `"c:\data\"` converted into `"c:/data/"`). 
 
 Install package
 ---------------------------
@@ -81,6 +80,6 @@ More information at http://gegznav.github.io/spAddins/
 
 TO DO:
 
-1. Interactive addin, that enables to select properties of the list;
+1. Create an interactive addin, that enables to select formatting options;
 2. Write unit tests.
 
