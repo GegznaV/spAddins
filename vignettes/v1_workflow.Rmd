@@ -12,25 +12,28 @@ vignette: >
 ---
 
 
-This vignette introduces to package `spAddins`, describes a recommended 
-workflow and how the functions of the package should be used and gives several examples.
+This vignette introduces to package `spAddins`: describes a
+recommended 
+workflow, explains how the functions of the package should be
+used and gives several examples.
 
 About The Package
 ==================
 
-`spAddins` is an R package that provides a set of RStudio addins which
+`spAddins` is an R package that provides a set of *RStudio* addins which
 are designed to be used in
-combination with user-defined RStudio keyboard shortcuts. These
-addins either:
+combination with user-defined *RStudio* keyboard shortcuts. These
+addins do the following:
 
-1) **insert** text at the cursor position (e.g. insert
-operators `%>%`, `<<-`, `%$%`, etc.), 
-2) **replace** symbols in selected
+
+1) **format text in R Markdown documents**:
+    - **enclose** either selected text or selected rows with special symbols and text gets inerpreted in a special way when rendered with R Markdown (e.g., converts "bold" into "\*\*bold\*\*"
+that is interpreted as "**bold**").
+2) **insert** text (e.g., operators `%>%`, `<<-`, `%$%`) at the cursor position; 
+3)  **replace** symbols in selected
 pieces of text (e.g., convert backslashes to forward slashes which results 
-in strings like `"c:\data\"` converted into `"c:/data/"`) or 
-3) **enclose** text with special symbols (e.g., converts "bold" into "\*\*bold\*\*"
-that is interpreted as "**bold**")
-which is convenient for editing R Markdown files.
+in strings like `"c:\data\"` converted into `"c:/data/"`). 
+
 
 
 
@@ -60,16 +63,16 @@ install_github("GegznaV/spAddins")
 Step 2: Define keyboard shortcuts
 -----------------------------------
 
-Functions in the package are also RStudio addins. This fact allows setting 
-user-defined RStudio keyboard shortcuts that call the functions in a more 
+The most of the functions in the package are also *RStudio* addins. 
+This fact allows setting user-defined *RStudio* keyboard shortcuts 
+that call the functions in a more 
 convenient way.
-Thus the second step is to define keyboard shortcuts for package's `spAddins` 
-functions of interest.
+Thus the second step is to define keyboard shortcuts for package's `spAddins` functions of interest.
 
-To learn how to add user defined RStudio keyboard shortcuts, visit these links:
-[Keyboard Shorcuts](https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts)
-and
-[Customizing Keyboard Shortcuts](https://support.rstudio.com/hc/en-us/articles/206382178-Customizing-Keyboard-Shortcuts).
+To learn how to add user defined *RStudio* keyboard shortcuts, visit these links:
+
+- [Keyboard Shorcuts](https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts)
+- [Customizing Keyboard Shortcuts](https://support.rstudio.com/hc/en-us/articles/206382178-Customizing-Keyboard-Shortcuts).
 
 
 Step 3: Place a cursor / Select some text
@@ -96,35 +99,45 @@ in Step 2 was associated with that function.
 A Few Examples
 ===============
 
-Insert `%>%` operator
+Insert `%$%` operator
 -----------------------
 This example demonstrates how to use addins which **insert** text.  
 
 Let package `spAddins` be already installed. First, let's set keyboard shortcut
-`Ctrl + Alt + .` to call function `insertPipeline_Addin()` which inserts
-forward-pipe operator `%>%` operator at the cursor position. This operator is 
-in package `magrittr` thus the package must be loaded: 
+`Ctrl + Alt + Shift + S` to call function `rs_insert_exposition_pipe()` which inserts
+exposition pipe-operator `%$%` at the cursor position. This operator is defined
+in package `magrittr` thus the package must be loaded too: 
+```{r, include = FALSE}
+library(magrittr)
+```
 ```{r, eval = FALSE}
 library(magrittr)
 ```
-To learn more about the `%>%` operator type:
+To learn more about the `%$%` operator type:
 ```{r, eval = FALSE}
-?`%>%`
+?magrittr::`%$%`
+```
+
+It can replace this commands, where `$` is used, e.g.:
+
+```{r, eval = FALSE}
+table(CO2$Type, CO2$Treatment)
 ```
 
 Next, place your cursor at the position, where the operator should be inserted. 
-For example, between the name of data set `iris` and the name of a function 
-`head()`:
+For example, between the name of data set `CO2` and the name of a function 
+`table()`:
 ```{r, eval = FALSE}
-iris  head()
+CO2  table(Type, Treatment)
 ```
 
-Apply the shortcut combination `Ctrl + Alt + .` As a result the operator 
+Apply the shortcut combination `Ctrl + Alt + Shift + S`. As a result the operator 
 is inserted:
 
-```{r, eval = FALSE}
-iris %>% head()
+```{r}
+CO2  %$%  table(Type, Treatment)
 ```
+
 
 
 Replace `\` with `/`
@@ -132,7 +145,7 @@ Replace `\` with `/`
 This example describes how to use addins which **replace** text.  
 
 Conciser having a string `"c:\data\"` in which backslashes (`\`) must be 
-replaced with forward slashes (`/`). Addin function `Back2ForwardSlash()` 
+replaced with forward slashes (`/`). Addin function `rs_replace_slash_b2fw()` (b -- backslash, fw -- forward slash)
 is designed exactly for this task. Let's define a new shortcut combination,
 say  `Ctrl + Alt + Shift + /`, which calls the addin function. Now to know the
 place where the replacement should be applied an appropriate piece of text in
@@ -147,7 +160,7 @@ Enclose with `**`...`**`
 This example describes how to use addins which **enclose** text.  
 
 Conciser having an [R Markdown](http://rmarkdown.rstudio.com/) file and a string `"This word should be in bold."` in it. In this string word `word` must be in bold. 
-Addin function `enclose_with_asterisk2()` encloses selected text in double asterisk `**` signs, and this is interpreted as bold in R markdown. Let's define shortcut combination,
+Addin function `rmd_bold()` encloses selected text in double asterisk `**` signs, and this is interpreted as bold in R markdown. Let's define shortcut combination,
 say  `Ctrl + Shift + B`, which calls the addin function. Now select the word `word`
 which is either in R editor or R console and push `Ctrl + Shift + B` to call the addin function.
 The result: `"This **word** should be in bold."`
@@ -160,17 +173,20 @@ Available add-in functions
 
 These functions insert various R operators.
 
+
 | Function                            | Inserts              | Package associated with operator|
 |-------------------------------------|:--------------------:|:-------------------------------:|
-| insertArrowLR2\_Addin()             | &lt;&lt;-            | R base                          |
-| insertArrowRL\_Addin()              | -&gt;                | R base                          |
-| insertArrowRL2\_Addin()             | -&gt;&gt;            | R base                          |
-| insertIn\_Addin()                   | %in%                 | R base                          |
-| insertMatMuliplication\_Addin()     | %\*%                 | R base                          |
-| insertPipeline\_Addin()             | %&gt;%               | magrittr                        |
-| insertTeeOperator\_Addin()          | %T&gt;%              | magrittr                        |
-| insertCompAssignPipe\_Addin()       | %&lt;&gt;%           | magrittr                        |
-| insertExPipe\_Addin()               | %$%                  | magrittr                        |
+| rs\_insert\_arrow\_rl2()            | &lt;&lt;-            | R base                          |
+| rs\_insert\_arrow\_lr()             | -&gt;                | R base                          |
+| rs\_insert\_arrow\_lr2()            | -&gt;&gt;            | R base                          |
+| rs\_insert\_infix\_in()             | %in%                 | R base                          |
+| rs\_insert\_matrix\_multiplication()| %\*%                 | R base                          |
+| rs\_insert\_pipe                    | %&gt;%               | magrittr                        |
+| rs\_insert\_tee\_pipe()             | %T&gt;%              | magrittr                        |
+| rs\_insert\_update\_pipe()          | %&lt;&gt;%           | magrittr                        |
+| rs\_insert\_exposition\_pipe()      | %$%                  | magrittr                        |
+
+Table: A few examples of addins that insert operators
 
 <!-- 
 | insertIfNULL\_Addin()               | %if.NULL%            | spMisc[^1]                      | 
@@ -188,43 +204,60 @@ if commented (`#`), for structuring R code files.
 
 | Function                | Description                      | Example (first 10 symbols) |
 |-------------------------|:--------------------------------:|:--------------------------:|
-| rs\_insert\_ss\_line()  | Insert single straight (SS) line | `----------`               |
-| rs\_insert\_ds\_line()  | Insert double straight (DS) line | `==========`               |
-| rs\_insert\_sw\_line()  | Insert single wavy (SW) line     | `~~~~~~~~~~`               | 
+| rs\_insert\_line\_ss()  | Insert single straight (SS) line | `----------`               |
+| rs\_insert\_line\_ds()  | Insert double straight (DS) line | `==========`               |
+| rs\_insert\_line\_sw()  | Insert single wavy (SW) line     | `~~~~~~~~~~`               | 
 
+Table: Addins that insert lines
+
+The length of line is from the beggining of selection to the 79-th column of the row (i.e., the position of 79-th symbol in the row).
 
 
 ## "Replace" family 
 
-| Action                        | Function               | Text to edit     | Result          |
-|-------------------------------|------------------------|:----------------:|:---------------:|
-| Replace \`\\\` with \` \\\\\` | rs\_replace\_backslash\_with\_forwasdslash()   | c:\\data\\      | c:\\\\data\\\\  |
-| Replace \`\\\` with \` /\`    | rs\_replace\_single\_with\_double\_backslash() | c:\\data\\      | c:/data/        |
-| Replace \` /\` with \`\\\`    | rs\_replace\_double\_with\_single\_backslash() | c:\\\\data\\\\  | c:\\data\\      |
+
+| Action                   | Function                              | Text to edit     | Result           |
+|--------------------------|---------------------------------------|:----------------:|:----------------:|
+| Replace \\ with \\\\     | rs\_replace\_slash\_bs2d()            | "c:\\data\\"     | "c:\\\\data\\\\" |
+| Replace \\ with  /       | rs\_replace\_slash\_b2fw()            | "c:\\data\\"     | "c:/data/"       |
+| Replace  / with \\       | rs\_replace\_slash\_fw2b()            | new line/n       | new line\\n      |
+| Replace \\\\ with \\     | rs\_replace\_slash\_bd2s()            | new line\\\\n    | new line\\n      |
+
+Table: Addins that convert between types of slashes
 
 
 ## "Enclose" family
 
 These functions are useful for editing **R Markdown** files.
 
-| Action                                 | Function                     | Text to edit      | Result                     | Interpreted as      |
-|----------------------------------------|------------------------------|:-----------------:|:--------------------------:|:-------------------:|
-| Enclose with single asterisk (`*`)     | enclose\_with\_asterisk()    | italics           | \*italics\*                | *italics*           |
-| Enclose with single underscore (`_`)   | enclose\_with\_underscore()  | italics           | \_italics\_                | _italics_           |
-| Enclose with double asterisk (`**`)    | enclose\_with\_asterisk2()   | bold              | \*\*bold\*\*               | **bold**            |
-| Enclose with double underscore (`__`)  | enclose\_with\_underscore2() | bold              | \_\_bold\_\_               | __bold__            |
-| Enclose with caret (`^`)               | enclose\_with\_caret()       | a superscript     | a \^superscript\^          | a ^superscript^     |
-| Enclose with single tilde (`~`)        | enclose\_with\_tilde()       | a subscript       | a \~subscript\~            | a ~subscript~       |
-| Enclose with double tilde (`~~`)       | enclose\_with\_tilde2()      | strikethrough     | \~\~strikethrough\~\~      | ~~strikethrough~~   |
-| Enclose with single back tick (\`)     | enclose\_with\_backtick()    | code              | \`code\`                   | `code`              |
-| Enclose with single dollar sign (`$`)  | enclose\_with\_dollar()      | equation^{inline} | ```$equation^{inline}$```  | $equation^{inline}$ |
-| Enclose with double dollar sign (`$$`) | enclose\_with\_dollar2()     | equation_{block}  | ```$$equation_{block}$$``` | $equation_{block}$  |
+| Action                                           | Function                     | Text to edit      | Result                     | Interpreted as      |
+|--------------------------------------------------|------------------------------|:-----------------:|:--------------------------:|:-------------------:|
+| Enclose with double asterisk (`**`)              | rmd\_bold()                  | bold              | \*\*bold\*\*               | **bold**            |
+| Enclose with single underscore (`**_` and `_**`) | rmd\_italics()               | italics           | \_italics\_                | _italics_           |
+| Enclose with single underscore (`_`)             | rmd\_bold\_italics()         | bold italics      | \*\*\_bold italics\_\*\*   | **_bold italics_**  |
+| Enclose with double underscore (`__`)            | rmd\_bold2()                 | bold              | \_\_bold\_\_               | __bold__            |
+| Enclose with single asterisk (`*`)               | rmd\_italics2()              | italics           | \*italics\*                | *italics*           |
+| Enclose with caret (`^`)                         | rmd\_superscript()           | a superscript     | a \^superscript\^          | a ^superscript^     |
+| Enclose with single tilde (`~`)                  | rmd\_subscript()             | a subscript       | a \~subscript\~            | a ~subscript~       |
+| Enclose with double tilde (`~~`)                 | rmd\_strikethrough()         | strikethrough     | \~\~strikethrough\~\~      | ~~strikethrough~~   |
+| Enclose with single backick (\`)                 | rmd\_code\_inline()          | code              | \`code\`                   | `code`              |
+| Enclose as inline R code to evaluate             | rmd\_r\_code\_inline()       | 2 + 3             | \` r 2 + 3\`               | `r 2 + 3`           |
+| Enclose with single dollar sign (`$`)            | enclose\_with\_dollar()      | equation^{inline} | ```$equation^{inline}$```  | $equation^{inline}$ |
+| Enclose with double dollar sign (`$$`)           | enclose\_with\_dollar2()     | equation_{block}  | ```$$equation_{block}$$``` | $equation_{block}$  |
 
-See also 
-=============================
+Table: Several examples of addins that format text in *R Markdown*
 
-To call the functions with keyboard shortcuts in *RStudio* explore 
-[this article](https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts).
- 
+
+<!-- # Useful links -->
+
+<!-- Similar *R* packages -->
+
+<!-- 1. Package [{remedy}](https://github.com/ThinkR-open/remedy) facilitates work with *R Markdown* documents. -->
+<!-- 2. https://github.com/daattali/addinslist#addinslist-table -->
+<!-- 3. https://www.r-bloggers.com/list-of-useful-rstudio-addins-made-by-users-a-github-repo/ -->
+
+# Feedback
+
+Your feedback is wellcome at https://github.com/GegznaV/spAddins/issues
 
 * * *

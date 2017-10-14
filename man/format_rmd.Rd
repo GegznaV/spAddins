@@ -3,26 +3,26 @@
 \name{format_rmd}
 \alias{format_rmd}
 \alias{rmd_bold}
-\alias{rmd_italic}
-\alias{rmd_bold_ilalic}
+\alias{rmd_italics}
+\alias{rmd_bold_italics}
 \alias{rmd_bold2}
-\alias{rmd_italic2}
+\alias{rmd_italics2}
 \alias{rmd_code_inline}
 \alias{rmd_r_code_inline}
 \alias{rmd_superscript}
 \alias{rmd_subscript}
 \alias{rmd_strikethrough}
-\title{R Markdown formatting}
+\title{Basic R Markdown formatting}
 \usage{
 rmd_bold()
 
-rmd_italic()
+rmd_italics()
 
-rmd_bold_ilalic()
+rmd_bold_italics()
 
 rmd_bold2()
 
-rmd_italic2()
+rmd_italics2()
 
 rmd_code_inline()
 
@@ -38,10 +38,10 @@ rmd_strikethrough()
 RStudio addins, which enclose selected text with symbols that give special interpretation
 in R Markdown: \itemize{
   \item \code{rmd_bold()}:           between \code{**} and \code{**} as bold;
-  \item \code{rmd_italic()}:         between \code{_} and \code{_} as italic;
-  \item \code{rmd_bold_italic()}:    between \code{**_} and \code{_**}as bold italic;
+  \item \code{rmd_italics()}:         between \code{_} and \code{_} as italics;
+  \item \code{rmd_bold_italics()}:    between \code{**_} and \code{_**}as bold italics;
   \item \code{rmd_bold2()}:          between \code{__} and \code{__} as bold;
-  \item \code{rmd_italic2()}:        between \code{*} and \code{*} as italic;
+  \item \code{rmd_italics2()}:        between \code{*} and \code{*} as italics;
   \item \code{rmd_code_inline()}:    between backticks (``) as inline code;
   \item \code{rmd_r_code_inline()}:  formats text as inline R code to evaluate;
   \item \code{rmd_superscript()}:    between \code{^} and \code{^} as superscript;

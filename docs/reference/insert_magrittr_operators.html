@@ -97,7 +97,8 @@
     </div>
 
     
-    <p>Call this function as an addin to insert <code> %&gt;% </code> at the cursor position.</p>
+    <p>These addins insert operators <code>%&gt;%</code>, <code>%&lt;&gt;%</code>, <code>%$%</code>, and <code>%T&gt;%</code> at the cursor position.
+The operators  are defined in package <span class="pkg">magrittr</span>.</p>
     
 
     <pre class="usage"><span class='fu'>rs_insert_pipe</span>()
@@ -115,11 +116,13 @@ equivalent is loaded.</p>
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <p>Pipeline operator %&gt;%.
-Compound assignment pipe operator %&lt;&gt;%.
-Exposition pipe operator <a href='http://www.rdocumentation.org/packages/magrittr/topics/exposition'>%$%</a> and operator <a href='http://www.rdocumentation.org/packages/base/topics/Extract'>$</a>.
-Tee operator %T&gt;%.</p>
-<p>Other 'Insert at cursor position' addins: <code><a href='insert_arrows.html'>insert_arrows</a></code>,
+    <ul>
+<li><p>Forward pipeline operator %&gt;%</p></li>
+<li><p>Compound assignment pipe operator %&lt;&gt;%</p></li>
+<li><p>Exposition pipe operator <a href='http://www.rdocumentation.org/packages/magrittr/topics/exposition'>%$%</a> and operator <a href='http://www.rdocumentation.org/packages/base/topics/Extract'>$</a></p></li>
+<li><p>Tee operator %T&gt;%</p></li>
+</ul>
+    <p>Other 'Insert at cursor position' addins: <code><a href='insert_arrows.html'>insert_arrows</a></code>,
   <code>insert_symbol_sequences</code>,
   <code><a href='rs_insert_infix_R.html'>rs_insert_infix_R</a></code>,
   <code><a href='rs_insert_infix_in.html'>rs_insert_infix_in</a></code>,

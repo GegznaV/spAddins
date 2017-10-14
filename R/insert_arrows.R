@@ -9,7 +9,7 @@
 #' @note use hotkeys combination \code{ALT} + \code{-} to insert \code{<-} in RStudio.
 #'
 #' @seealso Assignment operators \link[base]{assignOps}.\cr
-#'
+#' @examples
 #' \dontrun{
 #' \donttest{
 #' library(spAddins)
@@ -25,7 +25,8 @@
 #'
 #' rs_insert_arrow_lr2()
 #' ## ->>
-#' }}
+#' }
+#' }
 #' @name insert_arrows
 #' @family 'Insert at cursor position' addins
 rs_insert_arrow_rl <- function() {

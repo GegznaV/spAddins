@@ -17,17 +17,20 @@ rs_insert_exposition_pipe()
 rs_insert_tee_pipe()
 }
 \description{
-Call this function as an addin to insert \code{ \%>\% } at the cursor position.
+These addins insert operators \code{\%>\%}, \code{\%<>\%}, \code{\%$\%}, and \code{\%T>\%} at the cursor position.
+The operators  are defined in package \pkg{magrittr}.
 }
 \note{
 Operator does not work unless package \pkg{magrittr} or
 equivalent is loaded.
 }
 \seealso{
-Pipeline operator \link[magrittr]{\%>\%}.\cr
-Compound assignment pipe operator \link[magrittr]{\%<>\%}.\cr
-Exposition pipe operator \link[magrittr]{\%$\%} and operator \link[base]{$}.\cr
-Tee operator \link[magrittr]{\%T>\%}.\cr
+\itemize{
+   \item Forward pipeline operator \link[magrittr]{\%>\%}
+   \item Compound assignment pipe operator \link[magrittr]{\%<>\%}
+   \item Exposition pipe operator \link[magrittr]{\%$\%} and operator \link[base]{$}
+   \item Tee operator \link[magrittr]{\%T>\%}
+}
 
 Other 'Insert at cursor position' addins: \code{\link{insert_arrows}},
   \code{\link{insert_symbol_sequences}},

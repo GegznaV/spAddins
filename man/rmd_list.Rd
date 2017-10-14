@@ -6,7 +6,7 @@
 \alias{rmd_list_numbered}
 \alias{rmd_list_lettered}
 \alias{rmd_master_list}
-\title{Create R Markdown lists}
+\title{Format as R Markdown list}
 \usage{
 rmd_list(type = "unordered", level = 1)
 

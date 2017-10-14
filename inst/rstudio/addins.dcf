@@ -18,14 +18,14 @@ Description: Enclose selected text with `**` and `**`.
 Binding: rmd_bold
 Interactive: false
 
-Name: Rmd: Italic (_ _)
+Name: Rmd: Italics (_ _)
 Description: Enclose selected text with `_` and `_`.
-Binding: rmd_italic
+Binding: rmd_italics
 Interactive: false
 
-Name: Rmd: Bold italic (**_ _**)
+Name: Rmd: Bold italics (**_ _**)
 Description: Enclose selected text with `**_` and `_**`.
-Binding: rmd_bold_ilalic
+Binding: rmd_bold_italics
 Interactive: false
 
 Name: Rmd: Bold (__ __)
@@ -33,9 +33,9 @@ Description: Enclose selected text with `__` and `__`.
 Binding: rmd_bold2
 Interactive: false
 
-Name: Rmd: Italic (* *)
+Name: Rmd: Italics (* *)
 Description: Enclose selected text with `*` and `*`.
-Binding: rmd_italic2
+Binding: rmd_italics2
 Interactive: false
 
 Name: Rmd: Code inline (` `)
@@ -63,12 +63,12 @@ Description: Enclose selected text with ~~ and ~~.
 Binding: rmd_strikethrough
 Interactive: false
 
-Name: Rmd: Code block
+Name: Rmd: Code block (``` ```)
 Description: Enclose selected lines with ``` and ```.
 Binding: rmd_code_block
 Interactive: false
 
-Name: Rmd: R code block
+Name: Rmd: R code block (```{r}  ```)
 Description: Enclose selected lines with ```{r} and ```.
 Binding: rmd_r_code_block
 Interactive: false

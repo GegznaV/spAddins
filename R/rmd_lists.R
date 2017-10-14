@@ -10,7 +10,7 @@ insert_at_row_start <- function(row, text = NULL) {
 }
 
 
-#' Create R Markdown lists
+#' Format as R Markdown list
 #'
 #' RStudio addins which convert text into R Markdown lists.
 #' Fot the first-level lists: \itemize{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/tidy_r_code.R
 \name{tidy_r_code}
 \alias{tidy_r_code}
-\title{Tidy up several aspects of an R code in a selection}
+\title{Tidy up several aspects of an R code}
 \usage{
 tidy_r_code(str)
 }
@@ -10,6 +10,11 @@ tidy_r_code(str)
 \item{str}{a sting}
 }
 \description{
+Tidy up several aspects of an R code in a selection: #' \enumerate{
+   \item Remove a space before a bracket;
+   \item Make space betweeb `for`/ `if` and opening of its condition;
+   \item Remove speces before and after `:`, `::`, and `:::`.
+}
 Other aspects are corrected by clicking \strong{Ctrl + Shift + A} and
 \strong{Ctrl + I} in RStudio.
 }

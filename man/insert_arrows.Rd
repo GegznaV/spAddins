@@ -23,9 +23,7 @@ RStudio addin to insert either \code{->}, \code{->>},
 \note{
 use hotkeys combination \code{ALT} + \code{-} to insert \code{<-} in RStudio.
 }
-\seealso{
-Assignment operators \link[base]{assignOps}.\cr
-
+\examples{
 \dontrun{
 \donttest{
 library(spAddins)
@@ -41,7 +39,11 @@ rs_insert_arrow_lr()
 
 rs_insert_arrow_lr2()
 ## ->>
-}}
+}
+}
+}
+\seealso{
+Assignment operators \link[base]{assignOps}.\cr
 
 Other 'Insert at cursor position' addins: \code{\link{insert_magrittr_operators}},
   \code{\link{insert_symbol_sequences}},

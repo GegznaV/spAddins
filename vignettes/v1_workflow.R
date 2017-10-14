@@ -6,15 +6,21 @@
 #  library(devtools)
 #  install_github("GegznaV/spAddins")
 
+## ---- include = FALSE----------------------------------------------------
+library(magrittr)
+
 ## ---- eval = FALSE-------------------------------------------------------
 #  library(magrittr)
 
 ## ---- eval = FALSE-------------------------------------------------------
-#  ?`%>%`
+#  ?magrittr::`%$%`
 
 ## ---- eval = FALSE-------------------------------------------------------
-#  iris  head()
+#  table(CO2$Type, CO2$Treatment)
 
 ## ---- eval = FALSE-------------------------------------------------------
-#  iris %>% head()
+#  CO2  table(Type, Treatment)
+
+## ------------------------------------------------------------------------
+CO2  %$%  table(Type, Treatment)
 

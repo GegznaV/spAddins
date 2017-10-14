@@ -5,7 +5,7 @@
 \alias{rmd_equation_inline}
 \alias{rmd_equation_block}
 \alias{rmd_equation_block2}
-\title{As LaTeX equation}
+\title{Format as LaTeX equation}
 \usage{
 rmd_equation_inline()
 

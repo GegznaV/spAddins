@@ -1,5 +1,5 @@
 # Equations -------------------------------------------------------------------
-#' As LaTeX equation
+#' Format as LaTeX equation
 #'
 #' Select a piece of text with a cursor and call this function as an addin
 #' to enclose the text to interpret as inline equation (\code{$.$}) or

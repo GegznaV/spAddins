@@ -5,7 +5,7 @@
 \alias{rmd_r_code_block}
 \alias{rmd_code_block}
 \alias{rs_insert_lines}
-\title{Insert code block}
+\title{Convert rows into the block of code}
 \usage{
 rmd_r_code_block()
 

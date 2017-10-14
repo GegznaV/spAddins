@@ -1,5 +1,10 @@
-#' Tidy up several aspects of an R code in a selection
+#' Tidy up several aspects of an R code
 #'
+#' Tidy up several aspects of an R code in a selection: #' \enumerate{
+#'    \item Remove a space before a bracket;
+#'    \item Make space betweeb `for`/ `if` and opening of its condition;
+#'    \item Remove speces before and after `:`, `::`, and `:::`.
+#' }
 #' Other aspects are corrected by clicking \strong{Ctrl + Shift + A} and
 #' \strong{Ctrl + I} in RStudio.
 #'
@@ -14,7 +19,7 @@ tidy_r_code <- function(str) {
                 replacement = "\\1 \\2",
                 TXT)
 
-    # Remove speces between and after :, ::, and :::
+    # Remove speces before and after :, ::, and :::
     TXT <- gsub(pattern     = "(.)\\s?(:{1,3})\\s?(.)",
                 replacement = "\\1\\2\\3",
                 TXT)
