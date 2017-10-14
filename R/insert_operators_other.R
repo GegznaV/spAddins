@@ -2,8 +2,8 @@
 # Base R operators ------------------------------------------------------------
 
 rs_insert_code_block <- function(language = "{r}") {
-    rs_insert_lines(above = paste0("```", language),
-                    below =  "```")
+    rs_enclose_all_with_lines(above = paste0("```", language),
+                              below =  "```")
 }
 
 # =============================================================================

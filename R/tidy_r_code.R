@@ -27,7 +27,7 @@ tidy_r_code <- function(str) {
 }
 
 
-#' Tidy up several aspects of an R code in a selection
+#' Addin to tidy up several aspects of an R code in a selection
 #'
 #' @export
 rs_tidy_r_code <- function(){

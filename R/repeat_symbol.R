@@ -1,19 +1,22 @@
-# ==========================================================================
+#' Repeat sequence of symbols
+#'
+#' @param text (character) The symbol (or sequence of symbols) to be repeated
+#'             until desired length of string.
+#' @param length.out (integer) The length of the sequence.
+#'
+#' @return Sting of defined length.
+#' @export
+#'
+#' @importFrom magrittr "%>%"
+#'
+#' @examples
+#'
+#' repeat_symbol(".", 10)
+#'
+#' repeat_symbol("..+", 10)
 repeat_symbol <- function(text, length.out) {
-    paste0(rep(text, length.out = length.out), collapse = "")
+    rep_len(text, length.out)  %>%
+    paste0(collapse = "")  %>%
+    substr(1, length.out)
 }
-# ==========================================================================
-selection_start_column <- function() {
-    context <- rstudioapi::getActiveDocumentContext()
-    start_pos <- context$selection[[1]]$range$start[2]
-    start_pos
-}
-# ==========================================================================
-rs_insert_symbol_seq <- function(symbol,
-                                 start_column = 1,
-                                 end_column = 80) {
 
-    TEXT = repeat_symbol(as.character(symbol), end_column - start_column)
-    rstudioapi::insertText(text = TEXT)
-}
-# ==========================================================================

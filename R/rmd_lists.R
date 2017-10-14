@@ -1,15 +1,3 @@
-# @param row index of row
-# @param text text to add
-insert_at_row_start <- function(row, text = NULL) {
-    row <- row[1]
-    location <- list(start = c(row, 1),
-                     end   = c(row, 1))
-    class(location) <- "document_range"
-
-    rstudioapi::insertText(location = location, text = text)
-}
-
-
 #' Format as R Markdown list
 #'
 #' RStudio addins which convert text into R Markdown lists.
@@ -64,11 +52,11 @@ rmd_list <- function(type = "unordered", level = 1) {
     )
 
 
-    purrr::walk2(selected_rows, text, insert_at_row_start)
+    purrr::walk2(selected_rows, text, rs_insert_at_row_start)
 
     # insert an empty line:  to display list correctly
     if (level == 1) {
-        insert_at_row_start(selected_rows[1], "\n")
+        rs_insert_at_row_start(selected_rows[1], "\n")
     }
 }
 

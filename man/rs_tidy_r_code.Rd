@@ -2,10 +2,10 @@
 % Please edit documentation in R/tidy_r_code.R
 \name{rs_tidy_r_code}
 \alias{rs_tidy_r_code}
-\title{Tidy up several aspects of an R code in a selection}
+\title{Addin to tidy up several aspects of an R code in a selection}
 \usage{
 rs_tidy_r_code()
 }
 \description{
-Tidy up several aspects of an R code in a selection
+Addin to tidy up several aspects of an R code in a selection
 }

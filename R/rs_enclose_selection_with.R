@@ -1,6 +1,16 @@
 # 'Enclose selected symbols' addins ---------------------------------------
 
 # rs_enclose_selection_with --------------------------------------------------
+#
+#' Enclose selection of text with indicated symbols.
+#'
+#'
+#' @param symbol (character) A sequence of symbols to add on both sides of selection.
+#' @param symbol_before (character) A sequence of symbols to before the selection
+#'                      (overrides value of \code{symbol}).
+#' @param symbol_after  (character) A sequence of symbols to add after the selection
+#'                      (overrides value of \code{symbol}).
+#' @export
 rs_enclose_selection_with <- function(symbol = "",
                                       symbol_before = symbol,
                                       symbol_after  = symbol) {
@@ -18,6 +28,4 @@ rs_enclose_selection_with <- function(symbol = "",
                            id = context$id)
 
 }
-
-
 

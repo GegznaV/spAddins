@@ -1,3 +1,43 @@
+Name: Rmd: Heading 1 (#)
+Description: Insert #
+Binding: rmd_heading_1
+Interactive: false
+
+Name: Rmd: Heading 1 (======)
+Description: Underline with ======
+Binding: rmd_heading_1_title
+Interactive: false
+
+Name: Rmd: Heading 2 (##)
+Description: Insert ##
+Binding: rmd_heading_2
+Interactive: false
+
+Name: Rmd: Heading 2 (------)
+Description: Underline with ------
+Binding: rmd_heading_2_subtitle
+Interactive: false
+
+Name: Rmd: Heading 3 (###)
+Description: Insert ###
+Binding: rmd_heading_3
+Interactive: false
+
+Name: Rmd: Heading 4 (####)
+Description: Insert ####
+Binding: rmd_heading_4
+Interactive: false
+
+Name: Rmd: Heading 5 (#####)
+Description: Insert #####
+Binding: rmd_heading_5
+Interactive: false
+
+Name: Rmd: Heading 6 (######)
+Description: Insert ######
+Binding: rmd_heading_6
+Interactive: false
+
 Name: Rmd: Equation inline ($ $)
 Description: Enclose selected text with `$`.
 Binding: rmd_equation_inline

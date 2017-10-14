@@ -4,26 +4,18 @@
 \alias{rmd_code_block}
 \alias{rmd_r_code_block}
 \alias{rmd_code_block}
-\alias{rs_insert_lines}
 \title{Convert rows into the block of code}
 \usage{
 rmd_r_code_block()
 
 rmd_code_block()
-
-rs_insert_lines(above = NA, below = NA)
-}
-\arguments{
-\item{above}{(character) Text to be inserted in line above the selection.}
-
-\item{below}{(character) Text to be inserted in line below the selection.}
 }
 \description{
 RStudio addin to insert selected lines into code block: \itemize{
    \item \code{rmd_r_code_block()} - R code block;
    \item \code{rmd_code_block()} - verbatim code block.
 }
-\code{rs_insert_lines} - function that adds lines above and below the selection.
+\code{rs_enclose_all_with_lines} - function that adds lines above and below the selection.
 }
 \seealso{
 Other R Markdown formatting addins: \code{\link{format_rmd}},
