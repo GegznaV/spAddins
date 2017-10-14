@@ -1,3 +1,98 @@
+Name: Rmd: Equation inline ($ $)
+Description: Enclose selected text with `$`.
+Binding: rmd_equation_inline
+Interactive: false
+
+Name: Rmd: Equation block ($$ $$)
+Description: Enclose selected text with `$$`.
+Binding: rmd_equation_block
+Interactive: false
+
+Name: Rmd: Equation block (\[   \])
+Description: Enclose selected text with `\[` and `\]`.
+Binding: rmd_equation_block2
+Interactive: false
+
+Name: Rmd: Bold (** **)
+Description: Enclose selected text with `**` and `**`.
+Binding: rmd_bold
+Interactive: false
+
+Name: Rmd: Italic (_ _)
+Description: Enclose selected text with `_` and `_`.
+Binding: rmd_italic
+Interactive: false
+
+Name: Rmd: Bold italic (**_ _**)
+Description: Enclose selected text with `**_` and `_**`.
+Binding: rmd_bold_ilalic
+Interactive: false
+
+Name: Rmd: Bold (__ __)
+Description: Enclose selected text with `__` and `__`.
+Binding: rmd_bold2
+Interactive: false
+
+Name: Rmd: Italic (* *)
+Description: Enclose selected text with `*` and `*`.
+Binding: rmd_italic2
+Interactive: false
+
+Name: Rmd: Code inline (` `)
+Description: Enclose selected text with ` and `.
+Binding: rmd_code_inline
+Interactive: false
+
+Name: Rmd: R code inline (`r  `)
+Description: Enclose selected text with `r and `.
+Binding: rmd_r_code_inline
+Interactive: false
+
+Name: Rmd: Superscript (^ ^)
+Description: Enclose selected text with ^ and ^.
+Binding: rmd_superscript
+Interactive: false
+
+Name: Rmd: Subscript (~ ~)
+Description: Enclose selected text with ~ and ~.
+Binding: rmd_subscript
+Interactive: false
+
+Name: Rmd: Strike through (~~ ~~)
+Description: Enclose selected text with ~~ and ~~.
+Binding: rmd_strikethrough
+Interactive: false
+
+Name: Rmd: Code block
+Description: Enclose selected lines with ``` and ```.
+Binding: rmd_code_block
+Interactive: false
+
+Name: Rmd: R code block
+Description: Enclose selected lines with ```{r} and ```.
+Binding: rmd_r_code_block
+Interactive: false
+
+Name: Rmd: unordered list (+, +, +, ...)
+Description: Make unordered list.
+Binding: rmd_list_unordered
+Interactive: false
+
+Name: Rmd: numbered list (1, 2, 3, ...)
+Description: Make numbered list.
+Binding: rmd_list_numbered
+Interactive: false
+
+Name: Rmd: lettered list (a, b, c, ...)
+Description: Make lettered list.
+Binding: rmd_list_lettered
+Interactive: false
+
+Name: Rmd: master list
+Description: Make masterlist list.
+Binding: rmd_master_list
+Interactive: false
+
 
 Name: Insert %>%
 Description: Insert `%>%` at the cursor position.
@@ -11,7 +106,7 @@ Interactive: false
 
 Name: Insert %$%
 Description: Insert `%$%` at the cursor position.
-Binding: rs_insert_dollar_pipe
+Binding: rs_insert_exposition_pipe
 Interactive: false
 
 Name: Insert %T>%
@@ -29,141 +124,78 @@ Description: Insert `%in%` at the cursor position.
 Binding: rs_insert_infix_in
 Interactive: false
 
+Name: Insert %!in%
+Description: Insert `%!in%` at the cursor position.
+Binding: rs_insert_infix_not_in
+Interactive: false
+
 Name: Insert %R%
 Description: Insert `%R%` at the cursor position.
-Binding: rs_insert_infix_r
+Binding: rs_insert_infix_R
 Interactive: false
 
 
-
-Name: Convert \ into \\
+Name: Replace \ with \\
 Description: Replaces \ with \\ in the selected text.
-Binding: rs_replace_single_with_double_backslash
+Binding: rs_replace_slash_bs2d
 Interactive: false
 
-Name: Convert \\ into \
+Name: Replace \\ with \
 Description: Replaces \\ with \ in the selected text.
-Binding: rs_replace_double_with_single_backslash
+Binding: rs_replace_slash_bd2s
 Interactive: false
 
-Name: Convert \ into /
+Name: Replace \ with /
 Description: Replaces \ with / in the selected text.
-Binding: rs_replace_backslash_with_forwasdslash
+Binding: rs_replace_slash_b2fw
+Interactive: false
+
+Name: Replace / with \
+Description: Replaces / with \ in the selected text.
+Binding: rs_replace_slash_fw2b
 Interactive: false
 
 
-Name: Correct md generated with "Writage"
-Description: Corrects md punctuaction in the selected text
-Binding: correct_writage_md_addin
+Name: Insert single straight line (-----)
+Description: Insert sequence of symbols "-".
+Binding: rs_insert_line_ss
 Interactive: false
 
+Name: Insert double straight line (=====)
+Description: Insert sequence of symbols "=".
+Binding: rs_insert_line_ds
+Interactive: false
 
+Name: Insert single wavy line (~~~~~)
+Description: Insert sequence of symbols "~".
+Binding: rs_insert_line_sw
+Interactive: false
+
+Name: Insert <-
+Description: Insert `<-` at the cursor position.
+Binding: rs_insert_arrow_rl
+Interactive: false
 
 Name: Insert <<-
 Description: Insert `<<-` at the cursor position.
-Binding: insertArrowLR2_Addin
+Binding: rs_insert_arrow_rl2
 Interactive: false
 
 Name: Insert ->
 Description: Insert `->` at the cursor position.
-Binding: insertArrowRL_Addin
+Binding: rs_insert_arrow_lr
 Interactive: false
 
 Name: Insert ->>
 Description: Insert `->>` at the cursor position.
-Binding: insertArrowRL2_Addin
+Binding: rs_insert_arrow_lr2
 Interactive: false
 
 
-
-Name: Equation inline ($.$)
-Description: Enclose selected text with `$`.
-Binding: rs_equation_inline
-Interactive: false
-
-Name: Equation block ($$.$$)
-Description: Enclose selected text with `$$`.
-Binding: rs_equation_block
-Interactive: false
-
-Name: Equation block (\[ . \])
-Description: Enclose selected text with `\[ . \]`.
-Binding: rs_equation_block2
-Interactive: false
-
-Name: Italic (_._)
-Description: Enclose selected text with `_`.
-Binding: enclose_with_underscore
-Interactive: false
-
-Name: Bold (__.__)
-Description: Enclose selected text with `__`.
-Binding: enclose_with_underscore2
-Interactive: false
-
-Name: Italic (*.*)
-Description: Enclose selected text with `*`.
-Binding: enclose_with_asterisk
-Interactive: false
-
-Name: Bold (**.**)
-Description: Enclose selected text with `**`.
-Binding: enclose_with_asterisk2
-Interactive: false
-
-Name: Bold italic (**_._**)
-Description: Enclose selected text with `**_._**`.
-Binding: enclose_with_italic_bold
-Interactive: false
-
-Name: Code (`.`)
-Description: Enclose selected text with `.
-Binding: enclose_with_backtick
-Interactive: false
-
-Name: Subscript (~.~)
-Description: Enclose selected text with ~.
-Binding: enclose_with_tilde
-Interactive: false
-
-Name: Strike through (~~.~~)
-Description: Enclose selected text with ~~.
-Binding: enclose_with_tilde2
-Interactive: false
-
-Name: Superscript (^.^)
-Description: Enclose selected text with ^.
-Binding: enclose_with_caret
-Interactive: false
-
-Name: Insert single straight line
-Description: Insert single straight line.
-Binding: rs_insert_ss_line
-Interactive: false
-
-Name: Insert double straight line
-Description: Insert double straight line.
-Binding: rs_insert_ds_line
-Interactive: false
-
-Name: Insert single wavy line
-Description: Insert single wavy line.
-Binding: rs_insert_sw_line
-Interactive: false
-
-Name: Insert R code chunk for conspects
-Description: Insert chunk for conspects.
-Binding: insert_chunk_r_Addin
-Interactive: false
-
-Name: Insert python code chunk for conspects
-Description: Insert chunk for conspects.
-Binding: insert_chunk_python_Addin
-Interactive: false
 
 Name: Tidy R code
 Description: Tidy several aspects of R source code.
-Binding: tidy_r_code_Addin
+Binding: rs_tidy_r_code
 Interactive: false
 
 

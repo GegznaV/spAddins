@@ -1,8 +1,8 @@
 Package: spAddins
 Type: Package
 Title: A Set of RStudio Addins
-Version: 0.1.7.4000
-Date: 2017-10-13
+Version: 0.1.8.1000
+Date: 2017-10-14
 Authors@R: person("Vilmantas", "Gegzna",
                     email = "GegznaV@gmail.com",
                     role = c("aut", "cre","cph")
@@ -29,8 +29,11 @@ Depends:
 Imports:
     rstudioapi,
     formatR,
-    stringr
+    stringr,
+    purrr
 Suggests:
     magrittr,
     knitr,
-    rmarkdown
+    rmarkdown,
+    rebus,
+    magrittr

@@ -1,5 +1,8 @@
 #' Tidy up several aspects of an R code in a selection
 #'
+#' Other aspects are corrected by clicking \strong{Ctrl + Shift + A} and
+#' \strong{Ctrl + I} in RStudio.
+#'
 #' @param str a sting
 tidy_r_code <- function(str) {
     # Remove space before bracket
@@ -11,7 +14,7 @@ tidy_r_code <- function(str) {
                 replacement = "\\1 \\2",
                 TXT)
 
-    # Remove speces between and afrer :, ::, and :::
+    # Remove speces between and after :, ::, and :::
     TXT <- gsub(pattern     = "(.)\\s?(:{1,3})\\s?(.)",
                 replacement = "\\1\\2\\3",
                 TXT)
@@ -22,7 +25,7 @@ tidy_r_code <- function(str) {
 #' Tidy up several aspects of an R code in a selection
 #'
 #' @export
-tidy_r_code_Addin <- function(){
+rs_tidy_r_code <- function(){
     context <- rstudioapi::getActiveDocumentContext()
 
     for (sel in context$selection) {

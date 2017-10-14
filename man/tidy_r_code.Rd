@@ -10,5 +10,6 @@ tidy_r_code(str)
 \item{str}{a sting}
 }
 \description{
-Tidy up several aspects of an R code in a selection
+Other aspects are corrected by clicking \strong{Ctrl + Shift + A} and
+\strong{Ctrl + I} in RStudio.
 }
