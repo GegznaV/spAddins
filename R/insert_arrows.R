@@ -33,19 +33,19 @@ rs_insert_arrow_rl <- function() {
 }
 
 #' @export
-#' @rdname rs_insert
+#' @rdname insert_arrows
 rs_insert_arrow_rl2 <- function() {
     rstudioapi::insertText(text = "<<-")
 }
 
 #' @export
-#' @rdname rs_insert
+#' @rdname insert_arrows
 rs_insert_arrow_lr <- function() {
     rstudioapi::insertText(text = "->")
 }
 
 #' @export
-#' @rdname rs_insert
+#' @rdname insert_arrows
 rs_insert_arrow_lr2 <- function() {
     rstudioapi::insertText(text = "->>")
 }

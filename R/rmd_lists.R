@@ -1,3 +1,5 @@
+# @param row index of row
+# @param text text to add
 insert_at_row_start <- function(row, text = NULL) {
     row <- row[1]
     location <- list(start = c(row, 1),
@@ -8,9 +10,7 @@ insert_at_row_start <- function(row, text = NULL) {
 }
 
 
-
-
-#' R Markdown lists
+#' Create R Markdown lists
 #'
 #' RStudio addins which convert text into R Markdown lists.
 #' Fot the first-level lists: \itemize{
@@ -18,15 +18,15 @@ insert_at_row_start <- function(row, text = NULL) {
 #'   \item \code{rmd_unordered_list()} - unordered list;
 #'   \item \code{rmd_numbered_list()} - numbered list;
 #'   \item \code{rmd_lettered_list()} - lettered list (non-capital English letters);
-#'   \item \code{rmd_master_list()} - master list (whichnumbering continues
-#'                                    throughout the document).
-#'
+#'   \item \code{rmd_master_list()} - master list (which numbering continues throughout the document).
 #'   }
 #'
-#' @name rmd_list
+#' @param type (character) the type of list "unordered","numbered", "lettered",  "LETTERED", "master".
+#'
+#' @param level (integer) the level of list.
+#'
 #' @export
 #' @family R Markdown formatting addins
-
 rmd_list <- function(type = "unordered", level = 1) {
     obj <- rstudioapi::getSourceEditorContext()
     sel <- obj$selection[[1]]
@@ -75,24 +75,24 @@ rmd_list <- function(type = "unordered", level = 1) {
 
 #' @rdname rmd_list
 #' @export
-rmd_list_unordered <- function(variables) {
+rmd_list_unordered <- function() {
     rmd_list("unordered")
 }
 
 #' @rdname rmd_list
 #' @export
-rmd_list_numbered <- function(variables) {
+rmd_list_numbered <- function() {
     rmd_list("numbered")
 }
 
 #' @rdname rmd_list
 #' @export
-rmd_list_lettered <- function(variables) {
+rmd_list_lettered <- function() {
     rmd_list("lettered")
 }
 
 #' @rdname rmd_list
 #' @export
-rmd_master_list <- function(variables) {
+rmd_master_list <- function() {
     rmd_list("master")
 }

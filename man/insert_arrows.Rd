@@ -3,9 +3,18 @@
 \name{insert_arrows}
 \alias{insert_arrows}
 \alias{rs_insert_arrow_rl}
+\alias{rs_insert_arrow_rl2}
+\alias{rs_insert_arrow_lr}
+\alias{rs_insert_arrow_lr2}
 \title{Insert arrow (->, ->>, <-, <<-)}
 \usage{
 rs_insert_arrow_rl()
+
+rs_insert_arrow_rl2()
+
+rs_insert_arrow_lr()
+
+rs_insert_arrow_lr2()
 }
 \description{
 RStudio addin to insert either \code{->}, \code{->>},

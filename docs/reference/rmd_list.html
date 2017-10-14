@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>R Markdown lists � rmd_list • spAddins</title>
+<title>Create R Markdown lists � rmd_list • spAddins</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -93,21 +93,43 @@
       <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>R Markdown lists</h1>
+    <h1>Create R Markdown lists</h1>
     </div>
 
-
+    
+    <p>RStudio addins which convert text into R Markdown lists.
+Fot the first-level lists:</p><ul>
+<li><p><code>rmd_list()</code> - the main function, that make lists;</p></li>
+<li><p><code>rmd_unordered_list()</code> - unordered list;</p></li>
+<li><p><code>rmd_numbered_list()</code> - numbered list;</p></li>
+<li><p><code>rmd_lettered_list()</code> - lettered list (non-capital English letters);</p></li>
+<li><p><code>rmd_master_list()</code> - master list (which numbering continues throughout the document).</p></li>
+</ul>
+    
 
     <pre class="usage"><span class='fu'>rmd_list</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"unordered"</span>, <span class='kw'>level</span> <span class='kw'>=</span> <span class='fl'>1</span>)
 
-<span class='fu'>rmd_list_unordered</span>(<span class='no'>variables</span>)
+<span class='fu'>rmd_list_unordered</span>()
 
-<span class='fu'>rmd_list_numbered</span>(<span class='no'>variables</span>)
+<span class='fu'>rmd_list_numbered</span>()
 
-<span class='fu'>rmd_list_lettered</span>(<span class='no'>variables</span>)
+<span class='fu'>rmd_list_lettered</span>()
 
-<span class='fu'>rmd_master_list</span>(<span class='no'>variables</span>)</pre>
-        
+<span class='fu'>rmd_master_list</span>()</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>type</th>
+      <td><p>(character) the type of list "unordered","numbered", "lettered",  "LETTERED", "master".</p></td>
+    </tr>
+    <tr>
+      <th>level</th>
+      <td><p>(integer) the level of list.</p></td>
+    </tr>
+    </table>
+    
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <p>Other R Markdown formatting addins: <code><a href='format_rmd.html'>format_rmd</a></code>,
@@ -118,6 +140,7 @@
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
       
       <li><a href="#see-also">See also</a></li>
           </ul>

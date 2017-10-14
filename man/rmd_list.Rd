@@ -6,17 +6,32 @@
 \alias{rmd_list_numbered}
 \alias{rmd_list_lettered}
 \alias{rmd_master_list}
-\title{R Markdown lists}
+\title{Create R Markdown lists}
 \usage{
 rmd_list(type = "unordered", level = 1)
 
-rmd_list_unordered(variables)
+rmd_list_unordered()
 
-rmd_list_numbered(variables)
+rmd_list_numbered()
 
-rmd_list_lettered(variables)
+rmd_list_lettered()
 
-rmd_master_list(variables)
+rmd_master_list()
+}
+\arguments{
+\item{type}{(character) the type of list "unordered","numbered", "lettered",  "LETTERED", "master".}
+
+\item{level}{(integer) the level of list.}
+}
+\description{
+RStudio addins which convert text into R Markdown lists.
+Fot the first-level lists: \itemize{
+  \item \code{rmd_list()} - the main function, that make lists;
+  \item \code{rmd_unordered_list()} - unordered list;
+  \item \code{rmd_numbered_list()} - numbered list;
+  \item \code{rmd_lettered_list()} - lettered list (non-capital English letters);
+  \item \code{rmd_master_list()} - master list (which numbering continues throughout the document).
+  }
 }
 \seealso{
 Other R Markdown formatting addins: \code{\link{format_rmd}},

@@ -79,4 +79,8 @@ More information at http://gegznav.github.io/spAddins/
 
 ***
 
+TO DO:
+
+1. Interactive addin, that enables to select properties of the list;
+2. Write unit tests.
 
