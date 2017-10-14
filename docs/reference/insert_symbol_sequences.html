@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Articles • spAddins</title>
+<title>Insert various lines � insert_symbol_sequences • spAddins</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -38,7 +38,7 @@
 </head>
 
   <body>
-    <div class="container template-vignette-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -90,20 +90,56 @@
       
       </header>
 
-      <div class="page-header">
-  <h1>Articles <small>version&nbsp;0.1.8.1000</small></h1>
-</div>
-
-<div class="row">
-  <div class="col-md-9">
-    <div class="section ">
-      <h3>All vignettes</h3>
-      <p class="section-desc"></p>
-
-      <ul>
-        <li><a href="v1_workflow.html">Recommended Workflow and Examples</a></li>
-      </ul>
+      <div class="row">
+  <div class="col-md-9 contents">
+    <div class="page-header">
+    <h1>Insert various lines</h1>
     </div>
+
+    
+    <p><code>rs_insert_ss_line</code> to insert <code>------</code>;
+<code>rs_insert_ds_line</code> to insert <code>======</code>;
+<code>rs_insert_dw_line</code> to insert <code>~~~~~~</code> at the cursor position.</p>
+    
+
+    <pre class="usage"><span class='fu'>rs_insert_line_ss</span>(<span class='kw'>start</span> <span class='kw'>=</span> <span class='fu'>selection_start_column</span>(), <span class='kw'>end</span> <span class='kw'>=</span> <span class='fl'>79</span>)
+
+<span class='fu'>rs_insert_line_ds</span>(<span class='kw'>start</span> <span class='kw'>=</span> <span class='fu'>selection_start_column</span>(), <span class='kw'>end</span> <span class='kw'>=</span> <span class='fl'>79</span>)
+
+<span class='fu'>rs_insert_line_sw</span>(<span class='kw'>start</span> <span class='kw'>=</span> <span class='fu'>selection_start_column</span>(), <span class='kw'>end</span> <span class='kw'>=</span> <span class='fl'>79</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>start</th>
+      <td><p>(numeric) The number of column the line begins at.</p></td>
+    </tr>
+    <tr>
+      <th>end</th>
+      <td><p>(numeric) The number of column the line ends at.</p></td>
+    </tr>
+    </table>
+    
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <p>Other 'Insert at cursor position' addins: <code><a href='insert_arrows.html'>insert_arrows</a></code>,
+  <code><a href='insert_magrittr_operators.html'>insert_magrittr_operators</a></code>,
+  <code><a href='rs_insert_infix_R.html'>rs_insert_infix_R</a></code>,
+  <code><a href='rs_insert_infix_in.html'>rs_insert_infix_in</a></code>,
+  <code><a href='rs_insert_infix_not_in.html'>rs_insert_infix_not_in</a></code>,
+  <code><a href='rs_insert_matrix_multiplication.html'>rs_insert_matrix_multiplication</a></code></p>
+    
+
+  </div>
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
+      
+      <li><a href="#see-also">See also</a></li>
+          </ul>
+
   </div>
 </div>
 

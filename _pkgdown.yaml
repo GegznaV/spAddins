@@ -23,14 +23,14 @@ navbar:
 reference:
 - title: '"Replace" family functions'
   contents:
-  - '`Back2doubleBackSlash`'
-  - '`Back2ForwardSlash`'
-- title: '"Enclose" family functions'
+  - starts_with("rs_replace")
+- title: 'Add-ins to format R Markdown documents'
   contents:
-  - starts_with("enclose")
-- title: '"Insert" family functions'
+  - starts_with("rs_enclose")
+  - starts_with("rmd_")
+- title: 'Insert operators'
   contents:
-  - starts_with("insert")
+  - starts_with("rs_insert")
 - title: 'Other'
   contents:
   - '`spAddins`'

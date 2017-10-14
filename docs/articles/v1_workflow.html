@@ -73,7 +73,7 @@
       <h1>Recommended Workflow and Examples</h1>
                         <h4 class="author">Vilmantas Gegzna</h4>
             
-            <h4 class="date">2017-07-24</h4>
+            <h4 class="date">2017-10-14</h4>
           </div>
 
     
@@ -103,7 +103,7 @@
 <p>Released version of package <code>spAddins</code> can be installed from CRAN:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">"spAddins"</span>)</code></pre></div>
 <p>Development version can be installed from GitHub:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">if (!<span class="kw">require</span>(devtools)) <span class="kw">install.packages</span>(<span class="st">"devtools"</span>)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> (<span class="op">!</span><span class="kw">require</span>(devtools)) <span class="kw">install.packages</span>(<span class="st">"devtools"</span>)
 <span class="kw">library</span>(devtools)
 <span class="kw">install_github</span>(<span class="st">"GegznaV/spAddins"</span>)</code></pre></div>
 </div>
@@ -138,36 +138,36 @@
 <h2 class="hasAnchor">
 <a href="#insert-operator" class="anchor"></a>Insert <code>%&gt;%</code> operator</h2>
 <p>This example demonstrates how to use addins which <strong>insert</strong> text.</p>
-<p>Let package <code>spAddins</code> be already installed. First, let’s set keyboard shortcut <code>Ctrl + Alt + .</code> to call function <code><a href="../reference/insertPipeline_Addin.html">insertPipeline_Addin()</a></code> which inserts forward-pipe operator <code>%&gt;%</code> operator at the cursor position. This operator is in package <code>magrittr</code> thus the package must be loaded:</p>
+<p>Let package <code>spAddins</code> be already installed. First, let’s set keyboard shortcut <code>Ctrl + Alt + .</code> to call function <code>insertPipeline_Addin()</code> which inserts forward-pipe operator <code>%&gt;%</code> operator at the cursor position. This operator is in package <code>magrittr</code> thus the package must be loaded:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(magrittr)</code></pre></div>
 <p>To learn more about the <code>%&gt;%</code> operator type:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">?<span class="st">`</span><span class="dt">%&gt;%</span><span class="st">`</span></code></pre></div>
 <p>Next, place your cursor at the position, where the operator should be inserted. For example, between the name of data set <code>iris</code> and the name of a function <code>head()</code>:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">iris  <span class="kw">head</span>()</code></pre></div>
 <p>Apply the shortcut combination <code>Ctrl + Alt + .</code> As a result the operator is inserted:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">iris %&gt;%<span class="st"> </span><span class="kw">head</span>()</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">iris <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>()</code></pre></div>
 </div>
 <div id="replace-with" class="section level2">
 <h2 class="hasAnchor">
 <a href="#replace-with" class="anchor"></a>Replace <code>\</code> with <code>/</code>
 </h2>
 <p>This example describes how to use addins which <strong>replace</strong> text.</p>
-<p>Conciser having a string <code>"c:\data\"</code> in which backslashes (<code>\</code>) must be replaced with forward slashes (<code>/</code>). Addin function <code><a href="../reference/Back2ForwardSlash.html">Back2ForwardSlash()</a></code> is designed exactly for this task. Let’s define a new shortcut combination, say <code>Ctrl + Alt + Shift + /</code>, which calls the addin function. Now to know the place where the replacement should be applied an appropriate piece of text in either R editor or R console must be selected. Thus let’s select whole string <code>"c:\data\"</code> and push <code>Ctrl + Alt + Shift + /</code>. The result: as expected, the string is converted into <code>"c:/data/"</code>.</p>
+<p>Conciser having a string <code>"c:\data\"</code> in which backslashes (<code>\</code>) must be replaced with forward slashes (<code>/</code>). Addin function <code>Back2ForwardSlash()</code> is designed exactly for this task. Let’s define a new shortcut combination, say <code>Ctrl + Alt + Shift + /</code>, which calls the addin function. Now to know the place where the replacement should be applied an appropriate piece of text in either R editor or R console must be selected. Thus let’s select whole string <code>"c:\data\"</code> and push <code>Ctrl + Alt + Shift + /</code>. The result: as expected, the string is converted into <code>"c:/data/"</code>.</p>
 </div>
 <div id="enclose-with" class="section level2">
 <h2 class="hasAnchor">
 <a href="#enclose-with" class="anchor"></a>Enclose with <code>**</code>…<code>**</code>
 </h2>
 <p>This example describes how to use addins which <strong>enclose</strong> text.</p>
-<p>Conciser having an <a href="http://rmarkdown.rstudio.com/">R Markdown</a> file and a string <code>"This word should be in bold."</code> in it. In this string word <code>word</code> must be in bold. Addin function <code><a href="../reference/enclose_with_asterisk2.html">enclose_with_asterisk2()</a></code> encloses selected text in double asterisk <code>**</code> signs, and this is interpreted as bold in R markdown. Let’s define shortcut combination, say <code>Ctrl + Shift + B</code>, which calls the addin function. Now select the word <code>word</code> which is either in R editor or R console and push <code>Ctrl + Shift + B</code> to call the addin function. The result: <code>"This **word** should be in bold."</code></p>
+<p>Conciser having an <a href="http://rmarkdown.rstudio.com/">R Markdown</a> file and a string <code>"This word should be in bold."</code> in it. In this string word <code>word</code> must be in bold. Addin function <code>enclose_with_asterisk2()</code> encloses selected text in double asterisk <code>**</code> signs, and this is interpreted as bold in R markdown. Let’s define shortcut combination, say <code>Ctrl + Shift + B</code>, which calls the addin function. Now select the word <code>word</code> which is either in R editor or R console and push <code>Ctrl + Shift + B</code> to call the addin function. The result: <code>"This **word** should be in bold."</code></p>
 </div>
 </div>
 <div id="available-add-in-functions" class="section level1">
 <h1 class="hasAnchor">
 <a href="#available-add-in-functions" class="anchor"></a>Available add-in functions</h1>
-<div id="insert-family" class="section level3">
-<h3 class="hasAnchor">
-<a href="#insert-family" class="anchor"></a>“Insert” family</h3>
+<div id="insert-family" class="section level2">
+<h2 class="hasAnchor">
+<a href="#insert-family" class="anchor"></a>“Insert” family</h2>
 <p>These functions insert various R operators.</p>
 <table class="table">
 <thead><tr class="header">
@@ -221,40 +221,18 @@
 <td align="center">%$%</td>
 <td align="center">magrittr</td>
 </tr>
-<tr class="even">
-<td>insertIfNULL_Addin()</td>
-<td align="center">%if.NULL%</td>
-<td align="center">spMisc<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>
-</td>
-</tr>
-<tr class="odd">
-<td>insert_if_null_Addin()</td>
-<td align="center">%if_null%</td>
-<td align="center">spMisc</td>
-</tr>
-<tr class="even">
-<td>insert_if_null_or_len0_Addin()</td>
-<td align="center">%if_null_or_len0%</td>
-<td align="center">spMisc</td>
-</tr>
-<tr class="odd">
-<td>insertNotIn_Addin()</td>
-<td align="center">%!in%</td>
-<td align="center">spMisc</td>
-</tr>
-<tr class="even">
-<td>insertPaste_Addin()</td>
-<td align="center">%.+.%</td>
-<td align="center">spMisc</td>
-</tr>
-<tr class="odd">
-<td>insertPaste0_Addin()</td>
-<td align="center">%++%</td>
-<td align="center">spMisc</td>
-</tr>
 </tbody>
 </table>
-<p>The following functions may be useful for either editing <strong>R Markdown</strong> files or, if commented (<code>#</code>), for structuring R code files.</p>
+<!-- 
+| insertIfNULL\_Addin()               | %if.NULL%            | spMisc[^1]                      | 
+| insert\_if\_null\_Addin()           | %if\_null%           | spMisc                          |
+| insert\_if\_null\_or\_len0\_Addin() | %if\_null\_or\_len0% | spMisc                          |
+| insertNotIn\_Addin()                | %!in%                | spMisc                          |
+| insertPaste\_Addin()                | %.+.%                | spMisc                          |
+| insertPaste0\_Addin()               | %++%                 | spMisc                          |
+
+[^1]: Available at <https://github.com/GegznaV/spMisc>.
+--><p>The following functions may be useful for either editing <strong>R Markdown</strong> files or, if commented (<code>#</code>), for structuring R code files.</p>
 <table class="table">
 <thead><tr class="header">
 <th>Function</th>
@@ -263,27 +241,33 @@
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td>insert_ss_line_Addin()</td>
+<td>rs_insert_ss_line()</td>
 <td align="center">Insert single straight (SS) line</td>
 <td align="center"><code>----------</code></td>
 </tr>
 <tr class="even">
-<td>insert_ds_line_Addin()</td>
+<td>rs_insert_ds_line()</td>
 <td align="center">Insert double straight (DS) line</td>
 <td align="center"><code>==========</code></td>
 </tr>
 <tr class="odd">
-<td>insert_sw_line_Addin()</td>
+<td>rs_insert_sw_line()</td>
 <td align="center">Insert single wavy (SW) line</td>
 <td align="center"><code>~~~~~~~~~~</code></td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="replace-family" class="section level3">
-<h3 class="hasAnchor">
-<a href="#replace-family" class="anchor"></a>“Replace” family</h3>
+<div id="replace-family" class="section level2">
+<h2 class="hasAnchor">
+<a href="#replace-family" class="anchor"></a>“Replace” family</h2>
 <table class="table">
+<colgroup>
+<col width="34%">
+<col width="26%">
+<col width="20%">
+<col width="19%">
+</colgroup>
 <thead><tr class="header">
 <th>Action</th>
 <th>Function</th>
@@ -293,22 +277,28 @@
 <tbody>
 <tr class="odd">
 <td>Replace `\` with ` \\`</td>
-<td>Back2doubleBackSlash()</td>
+<td>rs_replace_backslash_with_forwasdslash()</td>
 <td align="center">c:\data\</td>
 <td align="center">c:\\data\\</td>
 </tr>
 <tr class="even">
 <td>Replace `\` with ` /`</td>
-<td>Back2ForwardSlash()</td>
+<td>rs_replace_single_with_double_backslash()</td>
 <td align="center">c:\data\</td>
 <td align="center">c:/data/</td>
+</tr>
+<tr class="odd">
+<td>Replace ` /` with `\`</td>
+<td>rs_replace_double_with_single_backslash()</td>
+<td align="center">c:\\data\\</td>
+<td align="center">c:\data\</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="enclose-family" class="section level3">
-<h3 class="hasAnchor">
-<a href="#enclose-family" class="anchor"></a>“Enclose” family</h3>
+<div id="enclose-family" class="section level2">
+<h2 class="hasAnchor">
+<a href="#enclose-family" class="anchor"></a>“Enclose” family</h2>
 <p>These functions are useful for editing <strong>R Markdown</strong> files.</p>
 <table style="width:100%;" class="table">
 <colgroup>
@@ -356,7 +346,7 @@
 </tr>
 <tr class="odd">
 <td>Enclose with caret (<code>^</code>)</td>
-<td>&lt;&lt;–&gt;-&gt;&gt;enclose_with_caret()</td>
+<td>enclose_with_caret()</td>
 <td align="center">a superscript</td>
 <td align="center">a ^superscript^</td>
 <td align="center">a <sup>superscript</sup>
@@ -400,14 +390,13 @@
 </tr>
 </tbody>
 </table>
-<hr>
 </div>
 </div>
-<div class="footnotes">
+<div id="see-also" class="section level1">
+<h1 class="hasAnchor">
+<a href="#see-also" class="anchor"></a>See also</h1>
+<p>To call the functions with keyboard shortcuts in <em>RStudio</em> explore <a href="https://rstudio.github.io/rstudioaddins/#keyboard-shorcuts">this article</a>.</p>
 <hr>
-<ol>
-<li id="fn1"><p>Available at <a href="https://github.com/GegznaV/spMisc" class="uri">https://github.com/GegznaV/spMisc</a>.<a href="#fnref1">↩</a></p></li>
-</ol>
 </div>
 </div>
   </div>
@@ -433,7 +422,14 @@
       <li><a href="#enclose-with">Enclose with <code>**</code>…<code>**</code></a></li>
       </ul>
 </li>
-      <li><a href="#available-add-in-functions">Available add-in functions</a></li>
+      <li>
+<a href="#available-add-in-functions">Available add-in functions</a><ul class="nav nav-pills nav-stacked">
+<li><a href="#insert-family">“Insert” family</a></li>
+      <li><a href="#replace-family">“Replace” family</a></li>
+      <li><a href="#enclose-family">“Enclose” family</a></li>
+      </ul>
+</li>
+      <li><a href="#see-also">See also</a></li>
       </ul>
 </div>
       </div>

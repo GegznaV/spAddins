@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>License • spAddins</title>
+<title>Insert %R% � rs_insert_infix_R • spAddins</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -20,9 +20,9 @@
 
 
 <!-- pkgdown -->
-<link href="pkgdown.css" rel="stylesheet">
-<script src="jquery.sticky-kit.min.js"></script>
-<script src="pkgdown.js"></script>
+<link href="../pkgdown.css" rel="stylesheet">
+<script src="../jquery.sticky-kit.min.js"></script>
+<script src="../pkgdown.js"></script>
   
   
 <!-- mathjax -->
@@ -34,11 +34,11 @@
 <![endif]-->
 
 
-  	<link rel="icon" href="favicon.png" />
+  	<link rel="icon" href="../favicon.png" />
 </head>
 
   <body>
-    <div class="container template-license">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -48,18 +48,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">spAddins | R package</a>
+      <a class="navbar-brand" href="../index.html">spAddins | R package</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="index.html">
+  <a href="../index.html">
     <span class="fa fa-home fa-lg"></span>
      
   </a>
 </li>
 <li>
-  <a href="reference/index.html">Functions</a>
+  <a href="../reference/index.html">Functions</a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -69,7 +69,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="articles/v1_workflow.html">Recommended Workflow and Examples</a>
+      <a href="../articles/v1_workflow.html">Recommended Workflow and Examples</a>
     </li>
   </ul>
 </li>
@@ -91,19 +91,44 @@
       </header>
 
       <div class="row">
-  <div class="contents col-md-12">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>License</h1>
+    <h1>Insert %R%</h1>
     </div>
 
-<pre>YEAR: 2016
-COPYRIGHT HOLDER: Vilmantas Gegzna
-</pre>
+    
+    <p>Call this function as an addin to insert <code> %R% </code> at the cursor position.</p>
+    
+
+    <pre class="usage"><span class='fu'>rs_insert_infix_R</span>()</pre>
+        
+    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
+
+    <p>Operator does not work unless library which contains this operator is loaded.</p>
+    
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <p>Operator <a href='http://www.rdocumentation.org/packages/rebus.base/topics/Concatenation'>%R%</a> in <span class="pkg">rebus</span>.</p>
+<p>Other 'Insert at cursor position' addins: <code><a href='insert_arrows.html'>insert_arrows</a></code>,
+  <code><a href='insert_magrittr_operators.html'>insert_magrittr_operators</a></code>,
+  <code>insert_symbol_sequences</code>,
+  <code><a href='rs_insert_infix_in.html'>rs_insert_infix_in</a></code>,
+  <code><a href='rs_insert_infix_not_in.html'>rs_insert_infix_not_in</a></code>,
+  <code><a href='rs_insert_matrix_multiplication.html'>rs_insert_matrix_multiplication</a></code></p>
+    
 
   </div>
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      
+      <li><a href="#note">Note</a></li>
 
+      <li><a href="#see-also">See also</a></li>
+          </ul>
+
+  </div>
 </div>
-
 
       <footer>
       <div class="copyright">

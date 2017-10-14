@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>License • spAddins</title>
+<title>Replace slash � replace_slash • spAddins</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -20,9 +20,9 @@
 
 
 <!-- pkgdown -->
-<link href="pkgdown.css" rel="stylesheet">
-<script src="jquery.sticky-kit.min.js"></script>
-<script src="pkgdown.js"></script>
+<link href="../pkgdown.css" rel="stylesheet">
+<script src="../jquery.sticky-kit.min.js"></script>
+<script src="../pkgdown.js"></script>
   
   
 <!-- mathjax -->
@@ -34,11 +34,11 @@
 <![endif]-->
 
 
-  	<link rel="icon" href="favicon.png" />
+  	<link rel="icon" href="../favicon.png" />
 </head>
 
   <body>
-    <div class="container template-license">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -48,18 +48,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">spAddins | R package</a>
+      <a class="navbar-brand" href="../index.html">spAddins | R package</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="index.html">
+  <a href="../index.html">
     <span class="fa fa-home fa-lg"></span>
      
   </a>
 </li>
 <li>
-  <a href="reference/index.html">Functions</a>
+  <a href="../reference/index.html">Functions</a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -69,7 +69,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="articles/v1_workflow.html">Recommended Workflow and Examples</a>
+      <a href="../articles/v1_workflow.html">Recommended Workflow and Examples</a>
     </li>
   </ul>
 </li>
@@ -91,19 +91,38 @@
       </header>
 
       <div class="row">
-  <div class="contents col-md-12">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>License</h1>
+    <h1>Replace slash</h1>
     </div>
 
-<pre>YEAR: 2016
-COPYRIGHT HOLDER: Vilmantas Gegzna
-</pre>
+    
+    <p>Select a piece of text with a cursor and convert beteewn slashes in the
+selected text:</p><ul>
+<li><p><code>rs_replace_slash_bs2d</code> single back-slash into double back-slash;</p></li>
+<li><p><code>rs_replace_slash_bd2s</code> double back-slash into single back-slash;</p></li>
+<li><p><code>rs_replace_slash_b2fw</code> back-slash into forward-slash;</p></li>
+<li><p><code>rs_replace_slash_fw2b</code> forward-slash into back-slash.</p></li>
+</ul>
+    
+
+    <pre class="usage"><span class='fu'>rs_replace_slash_bs2d</span>()
+
+<span class='fu'>rs_replace_slash_bd2s</span>()
+
+<span class='fu'>rs_replace_slash_b2fw</span>()
+
+<span class='fu'>rs_replace_slash_fw2b</span>()</pre>
+        
 
   </div>
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+                </ul>
 
+  </div>
 </div>
-
 
       <footer>
       <div class="copyright">
