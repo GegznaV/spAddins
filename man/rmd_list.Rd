@@ -3,8 +3,11 @@
 \name{rmd_list}
 \alias{rmd_list}
 \alias{rmd_list_unordered}
+\alias{rmd_list_unordered_2}
 \alias{rmd_list_numbered}
+\alias{rmd_list_numbered_2}
 \alias{rmd_list_lettered}
+\alias{rmd_list_lettered_2}
 \alias{rmd_master_list}
 \title{Format as R Markdown list}
 \usage{
@@ -12,9 +15,15 @@ rmd_list(type = "unordered", level = 1)
 
 rmd_list_unordered()
 
+rmd_list_unordered_2()
+
 rmd_list_numbered()
 
+rmd_list_numbered_2()
+
 rmd_list_lettered()
+
+rmd_list_lettered_2()
 
 rmd_master_list()
 }

@@ -1,42 +1,86 @@
 Name: Rmd: Heading 1 (#)
 Description: Insert #
-Binding: rmd_heading_1
+Binding: rmd_b_heading_1
 Interactive: false
 
 Name: Rmd: Heading 1 (======)
 Description: Underline with ======
-Binding: rmd_heading_1_title
+Binding: rmd_b_heading_1_title
 Interactive: false
 
 Name: Rmd: Heading 2 (##)
 Description: Insert ##
-Binding: rmd_heading_2
+Binding: rmd_b_heading_2
 Interactive: false
 
 Name: Rmd: Heading 2 (------)
 Description: Underline with ------
-Binding: rmd_heading_2_subtitle
+Binding: rmd_b_heading_2_subtitle
 Interactive: false
 
 Name: Rmd: Heading 3 (###)
 Description: Insert ###
-Binding: rmd_heading_3
+Binding: rmd_b_heading_3
 Interactive: false
 
 Name: Rmd: Heading 4 (####)
 Description: Insert ####
-Binding: rmd_heading_4
+Binding: rmd_b_heading_4
 Interactive: false
 
 Name: Rmd: Heading 5 (#####)
 Description: Insert #####
-Binding: rmd_heading_5
+Binding: rmd_b_heading_5
 Interactive: false
 
 Name: Rmd: Heading 6 (######)
 Description: Insert ######
-Binding: rmd_heading_6
+Binding: rmd_b_heading_6
 Interactive: false
+
+
+
+Name: Rmd: Bold (** **)
+Description: Enclose selected text with `**` and `**`.
+Binding: rmd_a_bold
+Interactive: false
+
+Name: Rmd: Italics (_ _)
+Description: Enclose selected text with `_` and `_`.
+Binding: rmd_a_italics
+Interactive: false
+
+Name: Rmd: Bold italics (**_ _**)
+Description: Enclose selected text with `**_` and `_**`.
+Binding: rmd_a_bold_italics
+Interactive: false
+
+Name: Rmd: Bold (__ __)
+Description: Enclose selected text with `__` and `__`.
+Binding: rmd_a_bold2
+Interactive: false
+
+Name: Rmd: Italics (* *)
+Description: Enclose selected text with `*` and `*`.
+Binding: rmd_a_italics2
+Interactive: false
+
+Name: Rmd: Superscript (^ ^)
+Description: Enclose selected text with ^ and ^.
+Binding: rmd_a_superscript
+Interactive: false
+
+Name: Rmd: Subscript (~ ~)
+Description: Enclose selected text with ~ and ~.
+Binding: rmd_a_subscript
+Interactive: false
+
+Name: Rmd: Strike through (~~ ~~)
+Description: Enclose selected text with ~~ and ~~.
+Binding: rmd_a_strikethrough
+Interactive: false
+
+
 
 Name: Rmd: Equation inline ($ $)
 Description: Enclose selected text with `$`.
@@ -53,30 +97,7 @@ Description: Enclose selected text with `\[` and `\]`.
 Binding: rmd_equation_block2
 Interactive: false
 
-Name: Rmd: Bold (** **)
-Description: Enclose selected text with `**` and `**`.
-Binding: rmd_bold
-Interactive: false
 
-Name: Rmd: Italics (_ _)
-Description: Enclose selected text with `_` and `_`.
-Binding: rmd_italics
-Interactive: false
-
-Name: Rmd: Bold italics (**_ _**)
-Description: Enclose selected text with `**_` and `_**`.
-Binding: rmd_bold_italics
-Interactive: false
-
-Name: Rmd: Bold (__ __)
-Description: Enclose selected text with `__` and `__`.
-Binding: rmd_bold2
-Interactive: false
-
-Name: Rmd: Italics (* *)
-Description: Enclose selected text with `*` and `*`.
-Binding: rmd_italics2
-Interactive: false
 
 Name: Rmd: Code inline (` `)
 Description: Enclose selected text with ` and `.
@@ -85,23 +106,9 @@ Interactive: false
 
 Name: Rmd: R code inline (`r  `)
 Description: Enclose selected text with `r and `.
-Binding: rmd_r_code_inline
+Binding: rmd_code_inline_r
 Interactive: false
 
-Name: Rmd: Superscript (^ ^)
-Description: Enclose selected text with ^ and ^.
-Binding: rmd_superscript
-Interactive: false
-
-Name: Rmd: Subscript (~ ~)
-Description: Enclose selected text with ~ and ~.
-Binding: rmd_subscript
-Interactive: false
-
-Name: Rmd: Strike through (~~ ~~)
-Description: Enclose selected text with ~~ and ~~.
-Binding: rmd_strikethrough
-Interactive: false
 
 Name: Rmd: Code block (``` ```)
 Description: Enclose selected lines with ``` and ```.
@@ -110,22 +117,37 @@ Interactive: false
 
 Name: Rmd: R code block (```{r}  ```)
 Description: Enclose selected lines with ```{r} and ```.
-Binding: rmd_r_code_block
+Binding: rmd_code_block_r
 Interactive: false
 
-Name: Rmd: unordered list (+, +, +, ...)
-Description: Make unordered list.
+Name: Rmd: unordered list (level 1: -, -, -, ...)
+Description: Make unordered list (level 1).
 Binding: rmd_list_unordered
 Interactive: false
 
-Name: Rmd: numbered list (1, 2, 3, ...)
-Description: Make numbered list.
+Name: Rmd: unordered list (level 2: +, +, +, ...)
+Description: Make unordered list (level 2).
+Binding: rmd_list_unordered_2
+Interactive: false
+
+Name: Rmd: numbered list (level 1: 1, 2, 3, ...)
+Description: Make numbered list (level 1).
 Binding: rmd_list_numbered
 Interactive: false
 
-Name: Rmd: lettered list (a, b, c, ...)
-Description: Make lettered list.
+Name: Rmd: numbered list (level 2: 1, 2, 3, ...)
+Description: Make numbered list (level 2).
+Binding: rmd_list_numbered_2
+Interactive: false
+
+Name: Rmd: lettered list (level 1: a, b, c, ...)
+Description: Make lettered list (level 1).
 Binding: rmd_list_lettered
+Interactive: false
+
+Name: Rmd: lettered list (level 2: a, b, c, ...)
+Description: Make lettered list (level 2).
+Binding: rmd_list_lettered_2
 Interactive: false
 
 Name: Rmd: master list

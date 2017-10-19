@@ -2,11 +2,11 @@
 % Please edit documentation in R/insert_code_block.R
 \name{rmd_code_block}
 \alias{rmd_code_block}
-\alias{rmd_r_code_block}
+\alias{rmd_code_block_r}
 \alias{rmd_code_block}
 \title{Convert rows into the block of code}
 \usage{
-rmd_r_code_block()
+rmd_code_block_r()
 
 rmd_code_block()
 }

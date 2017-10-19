@@ -64,19 +64,37 @@ rmd_list <- function(type = "unordered", level = 1) {
 #' @rdname rmd_list
 #' @export
 rmd_list_unordered <- function() {
-    rmd_list("unordered")
+    rmd_list("-", level = 1)
+}
+
+#' @rdname rmd_list
+#' @export
+rmd_list_unordered_2 <- function() {
+    rmd_list("+", level = 2)
 }
 
 #' @rdname rmd_list
 #' @export
 rmd_list_numbered <- function() {
-    rmd_list("numbered")
+    rmd_list("numbered", level = 1)
+}
+
+#' @rdname rmd_list
+#' @export
+rmd_list_numbered_2 <- function() {
+    rmd_list("numbered", level = 2)
 }
 
 #' @rdname rmd_list
 #' @export
 rmd_list_lettered <- function() {
-    rmd_list("lettered")
+    rmd_list("lettered", level = 1)
+}
+
+#' @rdname rmd_list
+#' @export
+rmd_list_lettered_2 <- function() {
+    rmd_list("lettered", level = 2)
 }
 
 #' @rdname rmd_list

@@ -1,3 +1,9 @@
+rs_insert_code_block <- function(language = "{r}") {
+    rs_enclose_all_with_lines(above = paste0("```", language),
+                              below =  "```")
+}
+
+
 # RStudio addin to
 #
 #

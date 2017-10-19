@@ -12,7 +12,7 @@
 #' @export
 #' @family R Markdown formatting addins
 #'
-rmd_r_code_block <- function() {
+rmd_code_block_r <- function() {
     rs_enclose_all_with_lines(above = "```{r}", below = "```")
 }
 
