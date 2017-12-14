@@ -30,7 +30,6 @@ Depends:
 Imports:
     rstudioapi,
     magrittr,
-    formatR,
     stringr,
     purrr
 Suggests:
