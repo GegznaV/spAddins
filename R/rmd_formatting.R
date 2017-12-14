@@ -2,16 +2,16 @@
 #   \item \code{rmd_...()} as ... (\code{...} and \code{...});
 #   \item \code{rmd_...()} as ... (\code{...} and \code{...});
 
-#' Basic R Markdown formatting
+#' Add-ins for basic R Markdown formatting
 #'
-#' RStudio addins, which enclose selected text with symbols that give special interpretation
-#' in R Markdown: \itemize{
+#' RStudio add-ins, which enclose selected text with symbols that have special
+#' interpretation in R Markdown. Function, symbols and interpretation \itemize{
 #'   \item \code{rmd_bold()}:           between \code{**} and \code{**} as bold;
 #'   \item \code{rmd_italics()}:        between \code{_} and \code{_} as italics;
 #'   \item \code{rmd_bold_italics()}:   between \code{**_} and \code{_**}as bold italics;
 #'   \item \code{rmd_bold2()}:          between \code{__} and \code{__} as bold;
 #'   \item \code{rmd_italics2()}:       between \code{*} and \code{*} as italics;
-#'   \item \code{rmd_code_inline()}:    between backticks (``) as inline code;
+#'   \item \code{rmd_code_inline()}:    between back-ticks (``) as inline code;
 #'   \item \code{rmd_r_code_inline()}:  formats text as inline R code to evaluate;
 #'   \item \code{rmd_superscript()}:    between \code{^} and \code{^} as superscript;
 #'   \item \code{rmd_subscript()}:      between \code{~} and \code{~} as subscript;
@@ -20,7 +20,7 @@
 #'
 #' @name format_rmd
 #' @export
-#' @family R Markdown formatting addins
+#' @family R Markdown formatting add-ins
 rmd_a_bold <- function() {
     rs_enclose_selection_with(symbol = "**")
 

@@ -17,8 +17,9 @@ rs_insert_exposition_pipe()
 rs_insert_tee_pipe()
 }
 \description{
-These addins insert operators \code{\%>\%}, \code{\%<>\%}, \code{\%$\%}, and \code{\%T>\%} at the cursor position.
-The operators  are defined in package \pkg{magrittr}.
+These add-ins insert operators \code{\%>\%}, \code{\%<>\%}, \code{\%$\%},
+and \code{\%T>\%} at the cursor position.
+The operators are defined in package \pkg{magrittr}.
 }
 \note{
 Operator does not work unless package \pkg{magrittr} or
@@ -32,9 +33,7 @@ equivalent is loaded.
    \item Tee operator \link[magrittr]{\%T>\%}
 }
 
-Other 'Insert at cursor position' addins: \code{\link{insert_arrows}},
-  \code{\link{insert_symbol_sequences}},
-  \code{\link{rs_insert_infix_R}},
+Other 'Insert at cursor position' add-ins: \code{\link{rs_insert_infix_R}},
   \code{\link{rs_insert_infix_in}},
   \code{\link{rs_insert_infix_not_in}},
   \code{\link{rs_insert_matrix_multiplication}}

@@ -2,9 +2,10 @@
 
 #' Insert various lines
 #'
-#' \code{rs_insert_ss_line} to insert \code{------};\cr
-#' \code{rs_insert_ds_line} to insert \code{======};\cr
-#' \code{rs_insert_dw_line} to insert \code{~~~~~~} at the cursor position.
+#' Use
+#' \code{rs_insert_ss_line()} to insert \code{------};\cr
+#' \code{rs_insert_ds_line()} to insert \code{======};\cr
+#' \code{rs_insert_dw_line()} to insert \code{~~~~~~} at the cursor position.
 #'
 #' @param start (numeric) The number of column the line begins at.
 #' @param end (numeric) The number of column the line ends at.

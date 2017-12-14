@@ -17,7 +17,7 @@ rs_insert_arrow_lr()
 rs_insert_arrow_lr2()
 }
 \description{
-RStudio addin to insert either \code{->}, \code{->>},
+RStudio add-in to insert either \code{->}, \code{->>},
 \code{<-} or \code{<<-} at the cursor position.
 }
 \note{
@@ -45,10 +45,5 @@ rs_insert_arrow_lr2()
 \seealso{
 Assignment operators \link[base]{assignOps}.\cr
 
-Other 'Insert at cursor position' addins: \code{\link{insert_magrittr_operators}},
-  \code{\link{insert_symbol_sequences}},
-  \code{\link{rs_insert_infix_R}},
-  \code{\link{rs_insert_infix_in}},
-  \code{\link{rs_insert_infix_not_in}},
-  \code{\link{rs_insert_matrix_multiplication}}
+Other 'Insert at cursor position' addins: \code{\link{insert_symbol_sequences}}
 }

@@ -1,7 +1,5 @@
 #' Insert text at the beginning of the row
 #'
-#' Insert text at the beginning of the row.
-#'
 #' @param row (integer) The index of the row.
 #' @param text (character) The text to add.
 #'

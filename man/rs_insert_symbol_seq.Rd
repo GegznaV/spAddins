@@ -2,17 +2,17 @@
 % Please edit documentation in R/rs_insert_symbol_seq.R
 \name{rs_insert_symbol_seq}
 \alias{rs_insert_symbol_seq}
-\title{Insert a sequance of symbols}
+\title{Insert a sequence of symbols}
 \usage{
 rs_insert_symbol_seq(symbol, start_column = 1, end_column = 80)
 }
 \arguments{
 \item{symbol}{(character) A sequence of symbols to be repeated}
 
-\item{start_column}{(integer) Column position where the sequaence beggins.}
+\item{start_column}{(integer) Column position where the sequence begins.}
 
-\item{end_column}{(integer) Column position where the sequaence stops.}
+\item{end_column}{(integer) Column position where the sequence stops.}
 }
 \description{
-Insert a sequance of symbols
+Insert a sequence of symbols
 }

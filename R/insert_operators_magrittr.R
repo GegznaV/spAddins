@@ -2,8 +2,9 @@
 
 #' Insert \%>\%, \%<>\%, \%$\% and \%T>\%
 #'
-#' These addins insert operators \code{\%>\%}, \code{\%<>\%}, \code{\%$\%}, and \code{\%T>\%} at the cursor position.
-#' The operators  are defined in package \pkg{magrittr}.
+#' These add-ins insert operators \code{\%>\%}, \code{\%<>\%}, \code{\%$\%},
+#' and \code{\%T>\%} at the cursor position.
+#' The operators are defined in package \pkg{magrittr}.
 #'
 #' @note Operator does not work unless package \pkg{magrittr} or
 #' equivalent is loaded.
@@ -17,7 +18,7 @@
 #'
 #' @name insert_magrittr_operators
 #' @export
-#' @family 'Insert at cursor position' addins
+#' @family 'Insert at cursor position' add-ins
 rs_insert_pipe <- function() {
     rstudioapi::insertText(text = " %>% ")
 }

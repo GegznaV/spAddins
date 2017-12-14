@@ -14,11 +14,12 @@ rmd_equation_block()
 rmd_equation_block2()
 }
 \description{
-Select a piece of text with a cursor and call this function as an addin
-to enclose the text to interpret as inline equation (\code{$.$}) or
-block equotion  (e.g., \code{$$.$$} or \code{\[.\]}) in R Markdown.
+Select a piece of text with a cursor and call these functions as an add-in
+to enclose the text with special symbols. Text between \code{$.$} is
+interpreted as an inline equation and between \code{$$.$$} or \code{\[.\]}
+as a block equation in R Markdown.
 }
 \seealso{
-Other R Markdown formatting addins: \code{\link{format_rmd}},
-  \code{\link{rmd_code_block}}, \code{\link{rmd_list}}
+Other R Markdown formatting add-ins: \code{\link{format_rmd}},
+  \code{\link{rmd_list}}
 }

@@ -7,14 +7,12 @@
 rs_insert_infix_in()
 }
 \description{
-Call this function as an addin to insert \code{ \%in\% } at the cursor position.
+Call this function as an add-in to insert \code{ \%in\% } at the cursor position.
 }
 \seealso{
 Operator \link[base]{\%in\%}.
 
-Other 'Insert at cursor position' addins: \code{\link{insert_arrows}},
-  \code{\link{insert_magrittr_operators}},
-  \code{\link{insert_symbol_sequences}},
+Other 'Insert at cursor position' add-ins: \code{\link{insert_magrittr_operators}},
   \code{\link{rs_insert_infix_R}},
   \code{\link{rs_insert_infix_not_in}},
   \code{\link{rs_insert_matrix_multiplication}}

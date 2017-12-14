@@ -1,8 +1,8 @@
-#' Insert a sequance of symbols
+#' Insert a sequence of symbols
 #'
 #' @param symbol (character) A sequence of symbols to be repeated
-#' @param start_column (integer) Column position where the sequaence beggins.
-#' @param end_column (integer) Column position where the sequaence stops.
+#' @param start_column (integer) Column position where the sequence begins.
+#' @param end_column (integer) Column position where the sequence stops.
 #'
 #' @export
 rs_insert_symbol_seq <- function(symbol,

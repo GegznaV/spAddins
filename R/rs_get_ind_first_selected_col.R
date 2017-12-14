@@ -1,4 +1,4 @@
-#' Get index of the first column in selection
+#' Get index of the first column in the selection
 #'
 #' @export
 rs_get_ind_first_selected_col <- function() {
@@ -7,8 +7,7 @@ rs_get_ind_first_selected_col <- function() {
     start_pos
 }
 
-
-#' Get index of the first row in selection
+#' Get index of the first row in the selection
 #'
 #' @export
 rs_get_ind_first_selected_row <- function() {
