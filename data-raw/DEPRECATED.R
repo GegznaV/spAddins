@@ -111,3 +111,6 @@ insert_if_null_Addin <- function() {
 insert_if_null_or_len0_Addin <- function() {
     rstudioapi::insertText(text = " %if_null_or_len0% ")
 }
+
+
+

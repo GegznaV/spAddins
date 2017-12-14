@@ -1,3 +1,7 @@
+# ==============================================================================
+# This function deprecated due tu package `styler`
+# ============================================================================
+
 #' Tidy up several aspects of an R code
 #'
 #' Tidy up several aspects of an R code in a selection: #' \enumerate{
@@ -7,6 +11,8 @@
 #' }
 #' Other aspects are corrected by clicking \strong{Ctrl + Shift + A} and
 #' \strong{Ctrl + I} in RStudio.
+#'
+#' NOTE: This function deprecated due tu package \pkg{styler}
 #'
 #' @param str a sting
 tidy_r_code <- function(str) {
@@ -43,3 +49,10 @@ rs_tidy_r_code <- function(){
         break
     }
 }
+
+
+
+# Name: Tidy R code
+# Description: Tidy several aspects of R source code.
+# Binding: rs_tidy_r_code
+# Interactive: false

@@ -255,9 +255,3 @@ Interactive: false
 
 
 
-Name: Tidy R code
-Description: Tidy several aspects of R source code.
-Binding: rs_tidy_r_code
-Interactive: false
-
-
