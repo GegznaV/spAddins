@@ -2,7 +2,7 @@
 
 #' Insert arrow (->, ->>, <-, <<-)
 #'
-#' RStudio addin to insert either \code{->}, \code{->>},
+#' RStudio add-in to insert either \code{->}, \code{->>},
 #' \code{<-} or \code{<<-} at the cursor position.
 #'
 #' @export

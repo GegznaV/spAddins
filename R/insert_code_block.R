@@ -2,7 +2,7 @@
 
 #' Convert rows into the block of code
 #'
-#' RStudio addin to insert selected lines into code block: \itemize{
+#' RStudio add-in to insert selected lines into code block: \itemize{
 #'    \item \code{rmd_r_code_block()} - R code block;
 #'    \item \code{rmd_code_block()} - verbatim code block.
 #' }

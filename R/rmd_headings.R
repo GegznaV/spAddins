@@ -1,6 +1,6 @@
-
-
-#' Format as R Markdown rmd_headings
+#' Format text as R Markdown headings
+#'
+#' RStudio add-ins to format text as R Markdown headings.
 #'
 #' @name rmd_headings
 #' @export

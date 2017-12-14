@@ -12,5 +12,5 @@ rs_insert_at_row_start(row, text = NULL)
 \item{text}{(character) The text to add.}
 }
 \description{
-Insert text at the beginning of the row.
+Insert text at the beginning of the row
 }

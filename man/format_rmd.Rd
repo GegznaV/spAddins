@@ -12,7 +12,7 @@
 \alias{rmd_a_superscript}
 \alias{rmd_a_subscript}
 \alias{rmd_a_strikethrough}
-\title{Basic R Markdown formatting}
+\title{Add-ins for basic R Markdown formatting}
 \usage{
 rmd_a_bold()
 
@@ -35,14 +35,14 @@ rmd_a_subscript()
 rmd_a_strikethrough()
 }
 \description{
-RStudio addins, which enclose selected text with symbols that give special interpretation
-in R Markdown: \itemize{
+RStudio add-ins, which enclose selected text with symbols that have special
+interpretation in R Markdown. Function, symbols and interpretation \itemize{
   \item \code{rmd_bold()}:           between \code{**} and \code{**} as bold;
   \item \code{rmd_italics()}:        between \code{_} and \code{_} as italics;
   \item \code{rmd_bold_italics()}:   between \code{**_} and \code{_**}as bold italics;
   \item \code{rmd_bold2()}:          between \code{__} and \code{__} as bold;
   \item \code{rmd_italics2()}:       between \code{*} and \code{*} as italics;
-  \item \code{rmd_code_inline()}:    between backticks (``) as inline code;
+  \item \code{rmd_code_inline()}:    between back-ticks (``) as inline code;
   \item \code{rmd_r_code_inline()}:  formats text as inline R code to evaluate;
   \item \code{rmd_superscript()}:    between \code{^} and \code{^} as superscript;
   \item \code{rmd_subscript()}:      between \code{~} and \code{~} as subscript;
@@ -50,6 +50,6 @@ in R Markdown: \itemize{
 }
 }
 \seealso{
-Other R Markdown formatting addins: \code{\link{rmd_code_block}},
-  \code{\link{rmd_equations}}, \code{\link{rmd_list}}
+Other R Markdown formatting add-ins: \code{\link{rmd_equations}},
+  \code{\link{rmd_list}}
 }

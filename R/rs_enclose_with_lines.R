@@ -1,12 +1,10 @@
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 rs_insert_code_block <- function(language = "{r}") {
     rs_enclose_all_with_lines(above = paste0("```", language),
                               below =  "```")
 }
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-# RStudio addin to
-#
-#
 #' Enclose selection with lines
 #'
 #' Enclose selected rows with lines above and below: \itemize{
@@ -33,7 +31,6 @@ rs_enclose_all_with_lines <- function(above = NA, below = NA) {
     rstudioapi::insertText(location = range_first,
                            text = stringr::str_c(above, "\n"))
 }
-
 
 
 

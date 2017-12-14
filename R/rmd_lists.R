@@ -1,7 +1,7 @@
-#' Format as R Markdown list
+#' Format text as R Markdown list
 #'
-#' RStudio addins which convert text into R Markdown lists.
-#' Fot the first-level lists: \itemize{
+#' RStudio add-ins which convert text into R Markdown lists.
+#' For the first-level lists: \itemize{
 #'   \item \code{rmd_list()} - the main function, that make lists;
 #'   \item \code{rmd_unordered_list()} - unordered list;
 #'   \item \code{rmd_numbered_list()} - numbered list;
@@ -9,12 +9,13 @@
 #'   \item \code{rmd_master_list()} - master list (which numbering continues throughout the document).
 #'   }
 #'
-#' @param type (character) the type of list "unordered","numbered", "lettered",  "LETTERED", "master".
+#' @param type (character) the type of list "unordered", "numbered", "lettered",  "LETTERED", "master".
 #'
 #' @param level (integer) the level of list.
 #'
 #' @export
-#' @family R Markdown formatting addins
+#' @family R Markdown formatting add-ins
+
 rmd_list <- function(type = "unordered", level = 1) {
     obj <- rstudioapi::getSourceEditorContext()
     sel <- obj$selection[[1]]

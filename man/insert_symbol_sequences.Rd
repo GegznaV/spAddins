@@ -21,15 +21,11 @@ rs_insert_line_sw(start = rs_get_ind_first_selected_col(), end = 79)
 \item{end}{(numeric) The number of column the line ends at.}
 }
 \description{
-\code{rs_insert_ss_line} to insert \code{------};\cr
-\code{rs_insert_ds_line} to insert \code{======};\cr
-\code{rs_insert_dw_line} to insert \code{~~~~~~} at the cursor position.
+Use
+\code{rs_insert_ss_line()} to insert \code{------};\cr
+\code{rs_insert_ds_line()} to insert \code{======};\cr
+\code{rs_insert_dw_line()} to insert \code{~~~~~~} at the cursor position.
 }
 \seealso{
-Other 'Insert at cursor position' addins: \code{\link{insert_arrows}},
-  \code{\link{insert_magrittr_operators}},
-  \code{\link{rs_insert_infix_R}},
-  \code{\link{rs_insert_infix_in}},
-  \code{\link{rs_insert_infix_not_in}},
-  \code{\link{rs_insert_matrix_multiplication}}
+Other 'Insert at cursor position' addins: \code{\link{insert_arrows}}
 }

@@ -3,7 +3,6 @@
 # r_github_packages:
 #   - GegznaV/spMisc
 
-
 language: R
 sudo: false
 cache: packages

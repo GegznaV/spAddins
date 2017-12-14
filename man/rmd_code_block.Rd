@@ -11,13 +11,9 @@ rmd_code_block_r()
 rmd_code_block()
 }
 \description{
-RStudio addin to insert selected lines into code block: \itemize{
+RStudio add-in to insert selected lines into code block: \itemize{
    \item \code{rmd_r_code_block()} - R code block;
    \item \code{rmd_code_block()} - verbatim code block.
 }
 \code{rs_enclose_all_with_lines} - function that adds lines above and below the selection.
-}
-\seealso{
-Other R Markdown formatting addins: \code{\link{format_rmd}},
-  \code{\link{rmd_equations}}, \code{\link{rmd_list}}
 }

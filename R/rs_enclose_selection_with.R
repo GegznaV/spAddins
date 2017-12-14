@@ -1,9 +1,6 @@
 # 'Enclose selected symbols' addins ---------------------------------------
 
-# rs_enclose_selection_with --------------------------------------------------
-#
-#' Enclose selection of text with indicated symbols.
-#'
+#' Enclose selection of text with indicated symbols
 #'
 #' @param symbol (character) A sequence of symbols to add on both sides of selection.
 #' @param symbol_before (character) A sequence of symbols to before the selection
@@ -26,6 +23,5 @@ rs_enclose_selection_with <- function(symbol = "",
     rstudioapi::insertText(location = sel$range,
                            text = as.character(new_text),
                            id = context$id)
-
 }
 

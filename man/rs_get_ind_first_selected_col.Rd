@@ -2,10 +2,10 @@
 % Please edit documentation in R/rs_get_ind_first_selected_col.R
 \name{rs_get_ind_first_selected_col}
 \alias{rs_get_ind_first_selected_col}
-\title{Get index of the first column in selection}
+\title{Get index of the first column in the selection}
 \usage{
 rs_get_ind_first_selected_col()
 }
 \description{
-Get index of the first column in selection
+Get index of the first column in the selection
 }
