@@ -17,23 +17,23 @@
 #' @export
 #' @family 'Replace selected symbols' add-ins
 rs_replace_slash_bs2d <- function() {
-    rs_replace_in_selection(pattern = "\\", replacement = "\\\\")
+  rs_replace_in_selection(pattern = "\\", replacement = "\\\\")
 }
 
 #' @rdname replace_slash
 #' @export
 rs_replace_slash_bd2s <- function() {
-    rs_replace_in_selection(pattern = "\\\\", replacement = "\\")
+  rs_replace_in_selection(pattern = "\\\\", replacement = "\\")
 }
 
 #' @rdname replace_slash
 #' @export
 rs_replace_slash_b2fw <- function() {
-    rs_replace_in_selection(pattern = "\\", replacement = "/")
+  rs_replace_in_selection(pattern = "\\", replacement = "/")
 }
 
 #' @rdname replace_slash
 #' @export
 rs_replace_slash_fw2b <- function() {
-    rs_replace_in_selection(pattern = "/", replacement = "\\")
+  rs_replace_in_selection(pattern = "/", replacement = "\\")
 }

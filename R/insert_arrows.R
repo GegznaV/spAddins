@@ -30,23 +30,23 @@
 #' @name insert_arrows
 #' @family 'Insert at cursor position' addins
 rs_insert_arrow_rl <- function() {
-    rstudioapi::insertText(text = "<-")
+  rstudioapi::insertText(text = "<-")
 }
 
 #' @export
 #' @rdname insert_arrows
 rs_insert_arrow_rl2 <- function() {
-    rstudioapi::insertText(text = "<<-")
+  rstudioapi::insertText(text = "<<-")
 }
 
 #' @export
 #' @rdname insert_arrows
 rs_insert_arrow_lr <- function() {
-    rstudioapi::insertText(text = "->")
+  rstudioapi::insertText(text = "->")
 }
 
 #' @export
 #' @rdname insert_arrows
 rs_insert_arrow_lr2 <- function() {
-    rstudioapi::insertText(text = "->>")
+  rstudioapi::insertText(text = "->>")
 }

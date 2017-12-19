@@ -17,89 +17,89 @@
 #' @family R Markdown formatting add-ins
 
 rmd_list <- function(type = "unordered", level = 1) {
-    obj <- rstudioapi::getSourceEditorContext()
-    sel <- obj$selection[[1]]
-    selected_rows <- sel$range$start[1]:sel$range$end[1]
+  obj <- rstudioapi::getSourceEditorContext()
+  sel <- obj$selection[[1]]
+  selected_rows <- sel$range$start[1]:sel$range$end[1]
 
-    ind <- seq_along(selected_rows)
+  ind <- seq_along(selected_rows)
 
-    # Identitation for level of list
-    lev <- rep("\t", level - 1)
-
-
-    text <- switch(type,
-                   "1" = ,
-                   "ordered" = ,
-                   "numbered" = ,
-                   "numbers" = paste0(lev, ind,          ". "),
-
-                   "a" = ,
-                   "lettered" = ,
-                   "letters" = paste0(lev, letters[ind], ". "),
-
-                   "A" = ,
-                   "LETTERED" = ,
-                   "LETTERS" = paste0(lev, LETTERS[ind], ". "),
-
-                   "+" = ,
-                   "unordered" = paste0(lev, rep("+", max(ind)), " "),
-
-                   "-" = paste0(lev, rep("-", max(ind)), " "),
-                   "*" = paste0(lev, rep("*", max(ind)), " "),
-
-                   "(@)" = ,
-                   "@" = ,
-                   "master" = paste0(rep("(@)", max(ind)), " ")
-    )
+  # Identitation for level of list
+  lev <- rep("\t", level - 1)
 
 
-    purrr::walk2(selected_rows, text, rs_insert_at_row_start)
+  text <- switch(type,
+    "1" = ,
+    "ordered" = ,
+    "numbered" = ,
+    "numbers" = paste0(lev, ind, ". "),
 
-    # insert an empty line:  to display list correctly
-    if (level == 1) {
-        rs_insert_at_row_start(selected_rows[1], "\n")
-    }
+    "a" = ,
+    "lettered" = ,
+    "letters" = paste0(lev, letters[ind], ". "),
+
+    "A" = ,
+    "LETTERED" = ,
+    "LETTERS" = paste0(lev, LETTERS[ind], ". "),
+
+    "+" = ,
+    "unordered" = paste0(lev, rep("+", max(ind)), " "),
+
+    "-" = paste0(lev, rep("-", max(ind)), " "),
+    "*" = paste0(lev, rep("*", max(ind)), " "),
+
+    "(@)" = ,
+    "@" = ,
+    "master" = paste0(rep("(@)", max(ind)), " ")
+  )
+
+
+  purrr::walk2(selected_rows, text, rs_insert_at_row_start)
+
+  # insert an empty line:  to display list correctly
+  if (level == 1) {
+    rs_insert_at_row_start(selected_rows[1], "\n")
+  }
 }
 
 
 #' @rdname rmd_list
 #' @export
 rmd_list_unordered <- function() {
-    rmd_list("-", level = 1)
+  rmd_list("-", level = 1)
 }
 
 #' @rdname rmd_list
 #' @export
 rmd_list_unordered_2 <- function() {
-    rmd_list("+", level = 2)
+  rmd_list("+", level = 2)
 }
 
 #' @rdname rmd_list
 #' @export
 rmd_list_numbered <- function() {
-    rmd_list("numbered", level = 1)
+  rmd_list("numbered", level = 1)
 }
 
 #' @rdname rmd_list
 #' @export
 rmd_list_numbered_2 <- function() {
-    rmd_list("numbered", level = 2)
+  rmd_list("numbered", level = 2)
 }
 
 #' @rdname rmd_list
 #' @export
 rmd_list_lettered <- function() {
-    rmd_list("lettered", level = 1)
+  rmd_list("lettered", level = 1)
 }
 
 #' @rdname rmd_list
 #' @export
 rmd_list_lettered_2 <- function() {
-    rmd_list("lettered", level = 2)
+  rmd_list("lettered", level = 2)
 }
 
 #' @rdname rmd_list
 #' @export
 rmd_master_list <- function() {
-    rmd_list("master")
+  rmd_list("master")
 }
