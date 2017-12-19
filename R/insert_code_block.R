@@ -13,11 +13,14 @@
 #' @family R Markdown formatting addins
 #'
 rmd_code_block_r <- function() {
-  rs_enclose_all_with_lines(above = "```{r}", below = "```")
+    rs_enclose_all_with_lines(above = "```{r}", below = "```")
 }
 
 #' @rdname rmd_code_block
 #' @export
 rmd_code_block <- function() {
-  rs_enclose_all_with_lines(above = "```", below = "```")
+    rs_enclose_all_with_lines(above = "```", below = "```")
 }
+
+
+

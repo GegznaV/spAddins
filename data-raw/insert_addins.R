@@ -16,7 +16,7 @@
 #'
 #' @family 'Insert at cursor position' addins
 insertMatMuliplication_Addin <- function() {
-  rstudioapi::insertText(text = " %*% ")
+    rstudioapi::insertText(text = " %*% ")
 }
 
 
@@ -34,7 +34,7 @@ insertMatMuliplication_Addin <- function() {
 #'
 #' @family 'Insert at cursor position' addins
 insertIn_Addin <- function() {
-  rstudioapi::insertText(text = " %in% ")
+    rstudioapi::insertText(text = " %in% ")
 }
 
 # "sp" family operators by VG --------------------------------------------------
@@ -56,7 +56,7 @@ insertIn_Addin <- function() {
 #' # link "keyboard shortcuts" in section "See also".
 #'
 insertNotIn_Addin <- function() {
-  rstudioapi::insertText(text = " %!in% ")
+    rstudioapi::insertText(text = " %!in% ")
 }
 
 
@@ -75,7 +75,7 @@ insertNotIn_Addin <- function() {
 #' # link "keyboard shortcuts" in section "See also".
 #'
 insertPaste0_Addin <- function() {
-  rstudioapi::insertText(text = " %++% ")
+    rstudioapi::insertText(text = " %++% ")
 }
 
 #' Insert \%.+.\%
@@ -96,7 +96,7 @@ insertPaste0_Addin <- function() {
 #'
 
 insertPaste_Addin <- function() {
-  rstudioapi::insertText(text = " %.+.% ")
+    rstudioapi::insertText(text = " %.+.% ")
 }
 
 #' Insert \%if.NULL\%
@@ -116,7 +116,7 @@ insertPaste_Addin <- function() {
 #' # link "keyboard shortcuts" in section "See also".
 #'
 insertIfNULL_Addin <- function() {
-  rstudioapi::insertText(text = " %if.NULL% ")
+    rstudioapi::insertText(text = " %if.NULL% ")
 }
 
 
@@ -138,7 +138,7 @@ insertIfNULL_Addin <- function() {
 #' # link "keyboard shortcuts" in section "See also".
 #'
 insert_if_null_Addin <- function() {
-  rstudioapi::insertText(text = " %if_null% ")
+    rstudioapi::insertText(text = " %if_null% ")
 }
 
 
@@ -158,5 +158,5 @@ insert_if_null_Addin <- function() {
 #' # link "keyboard shortcuts" in section "See also".
 #'
 insert_if_null_or_len0_Addin <- function() {
-  rstudioapi::insertText(text = " %if_null_or_len0% ")
+    rstudioapi::insertText(text = " %if_null_or_len0% ")
 }

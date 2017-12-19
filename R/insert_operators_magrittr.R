@@ -20,24 +20,24 @@
 #' @export
 #' @family 'Insert at cursor position' add-ins
 rs_insert_pipe <- function() {
-  rstudioapi::insertText(text = " %>% ")
+    rstudioapi::insertText(text = " %>% ")
 }
 
 #' @rdname insert_magrittr_operators
 #' @export
 rs_insert_update_pipe <- function() {
-  rstudioapi::insertText(text = " %<>% ")
+    rstudioapi::insertText(text = " %<>% ")
 }
 
 #' @rdname insert_magrittr_operators
 #' @export
 rs_insert_exposition_pipe <- function() {
-  rstudioapi::insertText(text = " %$% ")
+    rstudioapi::insertText(text = " %$% ")
 }
 
 
 #' @rdname insert_magrittr_operators
 #' @export
 rs_insert_tee_pipe <- function() {
-  rstudioapi::insertText(text = " %T>% ")
+    rstudioapi::insertText(text = " %T>% ")
 }

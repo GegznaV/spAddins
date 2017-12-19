@@ -10,19 +10,19 @@
 #' @name rmd_equations
 #' @family R Markdown formatting add-ins
 rmd_equation_inline <- function() {
-  rs_enclose_selection_with(symbol = "$")
+    rs_enclose_selection_with(symbol = "$")
 }
 
 #' @rdname rmd_equations
 #' @export
 #' @family 'Enclose selected symbols' add-ins
 rmd_equation_block <- function() {
-  rs_enclose_selection_with(symbol = "$$")
+    rs_enclose_selection_with(symbol = "$$")
 }
 
 #' @rdname rmd_equations
 #' @export
 #' @family 'Enclose selected symbols' add-ins
 rmd_equation_block2 <- function() {
-  rs_enclose_selection_with(symbol_before = "\\[", symbol_after = "\\]")
+    rs_enclose_selection_with(symbol_before = "\\[", symbol_after = "\\]")
 }

@@ -13,7 +13,7 @@
 #'
 #' @family 'Insert at cursor position' add-ins
 rs_insert_matrix_multiplication <- function() {
-  rstudioapi::insertText(text = " %*% ")
+    rstudioapi::insertText(text = " %*% ")
 }
 
 
@@ -26,7 +26,7 @@ rs_insert_matrix_multiplication <- function() {
 #'
 #' @family 'Insert at cursor position' add-ins
 rs_insert_infix_in <- function() {
-  rstudioapi::insertText(text = " %in% ")
+    rstudioapi::insertText(text = " %in% ")
 }
 
 #' Insert \%!in\%
@@ -39,7 +39,7 @@ rs_insert_infix_in <- function() {
 #' @family 'Insert at cursor position' add-ins
 #' @seealso Operator \link[base]{\%in\%}.
 rs_insert_infix_not_in <- function() {
-  rstudioapi::insertText(text = " %!in% ")
+    rstudioapi::insertText(text = " %!in% ")
 }
 
 
@@ -56,5 +56,5 @@ rs_insert_infix_not_in <- function() {
 #' @family 'Insert at cursor position' add-ins
 #'
 rs_insert_infix_R <- function() {
-  rstudioapi::insertText(text = " %R% ")
+    rstudioapi::insertText(text = " %R% ")
 }
