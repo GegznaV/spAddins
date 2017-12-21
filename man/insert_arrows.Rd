@@ -6,7 +6,7 @@
 \alias{rs_insert_arrow_rl2}
 \alias{rs_insert_arrow_lr}
 \alias{rs_insert_arrow_lr2}
-\title{Insert arrow (->, ->>, <-, <<-)}
+\title{Insert arrow (->, ->>, <-, <<-).}
 \usage{
 rs_insert_arrow_rl()
 

@@ -2,7 +2,7 @@
 % Please edit documentation in R/rs_insert_symbol_seq.R
 \name{rs_insert_symbol_seq}
 \alias{rs_insert_symbol_seq}
-\title{Insert a sequence of symbols}
+\title{Insert a sequence of symbols.}
 \usage{
 rs_insert_symbol_seq(symbol, start_column = 1, end_column = 80)
 }
@@ -14,5 +14,5 @@ rs_insert_symbol_seq(symbol, start_column = 1, end_column = 80)
 \item{end_column}{(integer) Column position where the sequence stops.}
 }
 \description{
-Insert a sequence of symbols
+Insert a sequence of symbols.
 }

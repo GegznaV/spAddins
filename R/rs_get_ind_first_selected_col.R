@@ -1,5 +1,5 @@
 #' @name rs_get_ind
-#' @title  Get indices from the selection
+#' @title  Get indices from the selection.
 #' @description
 #' Get index of the first/last row/column in the selection.
 #'

@@ -2,7 +2,7 @@
 % Please edit documentation in R/insert_operators_other.R
 \name{rs_insert_infix_not_in}
 \alias{rs_insert_infix_not_in}
-\title{Insert \%!in\%}
+\title{Insert \%!in\%.}
 \usage{
 rs_insert_infix_not_in()
 }

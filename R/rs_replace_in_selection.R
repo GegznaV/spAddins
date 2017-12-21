@@ -1,6 +1,6 @@
 # Main "replace" function
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' Replace text in selection
+#' Replace text in selection.
 #'
 #' @param pattern (character) A fixed pattern of text to be replaced
 #'                            (not a regular expression).

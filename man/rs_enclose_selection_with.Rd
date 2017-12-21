@@ -2,10 +2,10 @@
 % Please edit documentation in R/rs_enclose_selection_with.R
 \name{rs_enclose_selection_with}
 \alias{rs_enclose_selection_with}
-\title{Enclose selection of text with indicated symbols}
+\title{Enclose selection of text with indicated symbols.}
 \usage{
 rs_enclose_selection_with(symbol = "", symbol_before = symbol,
-  symbol_after = symbol)
+  symbol_after = symbol, context = get_context())
 }
 \arguments{
 \item{symbol}{(character) A sequence of symbols to add on both sides of selection.}
@@ -17,5 +17,5 @@ rs_enclose_selection_with(symbol = "", symbol_before = symbol,
 (overrides value of \code{symbol}).}
 }
 \description{
-Enclose selection of text with indicated symbols
+Enclose selection of text with indicated symbols.
 }

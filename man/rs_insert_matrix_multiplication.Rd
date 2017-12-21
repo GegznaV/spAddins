@@ -2,7 +2,7 @@
 % Please edit documentation in R/insert_operators_other.R
 \name{rs_insert_matrix_multiplication}
 \alias{rs_insert_matrix_multiplication}
-\title{Insert \%*\%}
+\title{Insert \%*\%.}
 \usage{
 rs_insert_matrix_multiplication()
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/rs_insert_at_row_start.R
 \name{rs_insert_before_first_selected_row}
 \alias{rs_insert_before_first_selected_row}
-\title{Insert text at the beginning of the first selected row}
+\title{Insert text at the beginning of the first selected row.}
 \usage{
 rs_insert_before_first_selected_row(text = NULL, ensure_blank_above = FALSE,
   context = get_context())
@@ -19,5 +19,5 @@ blank line above/bolow the selection. If line is not blank,
 (class \code{document_context}).}
 }
 \description{
-Insert text at the beginning of the first selected row
+Insert text at the beginning of the first selected row.
 }

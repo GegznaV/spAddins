@@ -3,14 +3,13 @@
 \name{rs_enclose_all_with_lines}
 \alias{rs_enclose_all_with_lines}
 \alias{rs_enclose_first_row_with_lines}
-\title{Enclose selection with lines}
+\title{Enclose selection with lines.}
 \usage{
 rs_enclose_all_with_lines(above = NA, below = NA,
   ensure_blank_above = FALSE, context = get_context())
 
 rs_enclose_first_row_with_lines(above = NA, below = NA,
-  ensure_blank_above = FALSE, ensure_blank_line_below = FALSE,
-  context = get_context())
+  ensure_blank_above = FALSE, context = get_context())
 }
 \arguments{
 \item{above}{(character) Text to be inserted in the row above the selection.}

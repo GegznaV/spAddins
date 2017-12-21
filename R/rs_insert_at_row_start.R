@@ -1,5 +1,5 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' Insert text at the beginning of the row
+#' Insert text at the beginning of the row.
 #'
 #' @param row (integer) The index of the row.
 #' @param text (character) The text to add.
@@ -18,7 +18,7 @@ rs_insert_at_row_start <- function(row,
                            id = id)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' Insert text at the beginning of the first selected row
+#' Insert text at the beginning of the first selected row.
 #' @param text (character) The text to add.
 #' @param ensure_blank_above (logical)
 #'      If \code{TRUE}, checks if there is a

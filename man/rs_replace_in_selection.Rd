@@ -2,7 +2,7 @@
 % Please edit documentation in R/rs_replace_in_selection.R
 \name{rs_replace_in_selection}
 \alias{rs_replace_in_selection}
-\title{Replace text in selection}
+\title{Replace text in selection.}
 \usage{
 rs_replace_in_selection(pattern, replacement, context = get_context())
 }
@@ -16,5 +16,5 @@ rs_replace_in_selection(pattern, replacement, context = get_context())
 (class \code{document_context}).}
 }
 \description{
-Replace text in selection
+Replace text in selection.
 }

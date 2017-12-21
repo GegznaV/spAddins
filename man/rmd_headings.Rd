@@ -10,7 +10,7 @@
 \alias{rmd_b_heading_6}
 \alias{rmd_b_heading_1_title}
 \alias{rmd_b_heading_2_subtitle}
-\title{Format text as R Markdown headings}
+\title{Format text as R Markdown headings.}
 \usage{
 rmd_b_heading_1()
 

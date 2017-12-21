@@ -6,7 +6,7 @@
 \alias{rs_replace_slash_bd2s}
 \alias{rs_replace_slash_b2fw}
 \alias{rs_replace_slash_fw2b}
-\title{Replace slash}
+\title{Replace slash.}
 \usage{
 rs_replace_slash_bs2d()
 

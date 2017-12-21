@@ -1,4 +1,4 @@
-#' Repeat sequence of symbols
+#' Repeat sequence of symbols.
 #'
 #' @param text (character) The symbol (or sequence of symbols) to be repeated
 #'             until desired length of string.

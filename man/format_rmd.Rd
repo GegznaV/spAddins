@@ -12,7 +12,7 @@
 \alias{rmd_a_superscript}
 \alias{rmd_a_subscript}
 \alias{rmd_a_strikethrough}
-\title{Add-ins for basic R Markdown formatting}
+\title{Add-ins for basic R Markdown formatting.}
 \usage{
 rmd_a_bold()
 
@@ -50,6 +50,6 @@ interpretation in R Markdown. Function, symbols and interpretation \itemize{
 }
 }
 \seealso{
-Other R Markdown formatting add-ins: \code{\link{rmd_equations}},
-  \code{\link{rmd_list}}
+Other R Markdown formatting add-ins: \code{\link{rmd_code_block}},
+  \code{\link{rmd_equations}}, \code{\link{rmd_list}}
 }

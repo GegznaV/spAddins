@@ -1,4 +1,4 @@
-#' Insert a sequence of symbols
+#' Insert a sequence of symbols.
 #'
 #' @param symbol (character) A sequence of symbols to be repeated
 #' @param start_column (integer) Column position where the sequence begins.

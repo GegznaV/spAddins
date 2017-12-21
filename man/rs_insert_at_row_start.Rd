@@ -2,7 +2,7 @@
 % Please edit documentation in R/rs_insert_at_row_start.R
 \name{rs_insert_at_row_start}
 \alias{rs_insert_at_row_start}
-\title{Insert text at the beginning of the row}
+\title{Insert text at the beginning of the row.}
 \usage{
 rs_insert_at_row_start(row, text = NULL, id = NULL)
 }
@@ -12,5 +12,5 @@ rs_insert_at_row_start(row, text = NULL, id = NULL)
 \item{text}{(character) The text to add.}
 }
 \description{
-Insert text at the beginning of the row
+Insert text at the beginning of the row.
 }

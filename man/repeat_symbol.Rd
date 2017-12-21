@@ -2,7 +2,7 @@
 % Please edit documentation in R/repeat_symbol.R
 \name{repeat_symbol}
 \alias{repeat_symbol}
-\title{Repeat sequence of symbols}
+\title{Repeat sequence of symbols.}
 \usage{
 repeat_symbol(text, length.out)
 }
@@ -16,7 +16,7 @@ until desired length of string.}
 Sting of defined length.
 }
 \description{
-Repeat sequence of symbols
+Repeat sequence of symbols.
 }
 \examples{
 

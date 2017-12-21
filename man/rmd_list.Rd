@@ -9,9 +9,9 @@
 \alias{rmd_list_lettered}
 \alias{rmd_list_lettered_2}
 \alias{rmd_master_list}
-\title{Format text as R Markdown list}
+\title{Format text as R Markdown list.}
 \usage{
-rmd_list(type = "unordered", level = 1)
+rmd_list(type = "unordered", level = 1, context = get_context())
 
 rmd_list_unordered()
 
@@ -44,5 +44,5 @@ For the first-level lists: \itemize{
 }
 \seealso{
 Other R Markdown formatting add-ins: \code{\link{format_rmd}},
-  \code{\link{rmd_equations}}
+  \code{\link{rmd_code_block}}, \code{\link{rmd_equations}}
 }

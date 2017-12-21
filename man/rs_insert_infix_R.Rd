@@ -2,7 +2,7 @@
 % Please edit documentation in R/insert_operators_other.R
 \name{rs_insert_infix_R}
 \alias{rs_insert_infix_R}
-\title{Insert \%R\%}
+\title{Insert \%R\%.}
 \usage{
 rs_insert_infix_R()
 }

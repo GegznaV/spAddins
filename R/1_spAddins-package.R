@@ -1,7 +1,7 @@
 #' @name spAddins
 #' @docType package
 #'
-#' @title A Set of RStudio Add-ins
+#' @title A Set of RStudio Add-ins.
 #'
 #'
 #' @description

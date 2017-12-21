@@ -6,7 +6,7 @@
 \alias{rs_get_ind_last_selected_col}
 \alias{rs_get_ind_first_selected_row}
 \alias{rs_get_ind_last_selected_row}
-\title{Get indices from the selection}
+\title{Get indices from the selection.}
 \usage{
 rs_get_ind_first_selected_col(context = get_context())
 

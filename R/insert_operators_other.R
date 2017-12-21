@@ -4,7 +4,7 @@
 
 
 # =============================================================================
-#' Insert \%*\%
+#' Insert \%*\%.
 #'
 #' Call this function as an add-in to insert \code{ \%*\% } at the cursor position.
 #'
@@ -17,7 +17,7 @@ rs_insert_matrix_multiplication <- function() {
 }
 
 
-#' Insert \%in\%
+#' Insert \%in\%.
 #'
 #' Call this function as an add-in to insert \code{ \%in\% } at the cursor position.
 #'
@@ -29,7 +29,7 @@ rs_insert_infix_in <- function() {
     rstudioapi::insertText(text = " %in% ")
 }
 
-#' Insert \%!in\%
+#' Insert \%!in\%.
 #'
 #' Call this function as an add-in to insert \code{ \%!in\% } at the cursor position.
 #'
@@ -44,7 +44,7 @@ rs_insert_infix_not_in <- function() {
 
 
 
-#' Insert \%R\%
+#' Insert \%R\%.
 #'
 #' Call this function as an add-in to insert \code{ \%R\% } at the cursor position.
 #'

@@ -1,7 +1,7 @@
 # Code -------------------------------------------------------------------
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @name rmd_code_block
-#' @title Convert rows into the block of code
+#' @title Convert rows into the block of code.
 #' @description
 #' RStudio add-in to insert selected lines into code block: \itemize{
 #'    \item \code{rmd_r_code_block()} - R code block;
@@ -10,7 +10,7 @@
 #' \code{rs_enclose_all_with_lines} - function that adds lines above and below
 #'                                    the selection.
 #'
-#' @family R Markdown formatting addins
+#' @family R Markdown formatting add-ins
 NULL
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
