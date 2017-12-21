@@ -13,3 +13,6 @@ rmd_table_2()
 
 rmd_table_3()
 }
+\description{
+Insert examples of R Markdown tables.
+}
