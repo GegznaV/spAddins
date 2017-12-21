@@ -7,6 +7,8 @@
 #'                      (overrides value of \code{symbol}).
 #' @param symbol_after  (character) A sequence of symbols to add after the selection
 #'                      (overrides value of \code{symbol}).
+#' @inheritParams rs_get_ind
+#'
 #' @export
 rs_enclose_selection_with <- function(symbol = "",
                                       symbol_before = symbol,

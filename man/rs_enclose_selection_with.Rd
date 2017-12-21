@@ -15,6 +15,9 @@ rs_enclose_selection_with(symbol = "", symbol_before = symbol,
 
 \item{symbol_after}{(character) A sequence of symbols to add after the selection
 (overrides value of \code{symbol}).}
+
+\item{context}{Object with context of active R Studio document
+(class \code{document_context}).}
 }
 \description{
 Enclose selection of text with indicated symbols.

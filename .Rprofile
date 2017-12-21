@@ -1,5 +1,5 @@
 # .First <- function(){
-#     Sys.setlocale("LC_ALL", "lithuanian")
+#     Sys.setlocale("LC_ALL", "Lithuanian")
 #     cat("\nWelcome at", date(), "\n")
 # }
 #
