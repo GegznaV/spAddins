@@ -1,5 +1,5 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' Enclose selection with lines
+#' Enclose selection with lines.
 #'
 #' Enclose selected rows with lines above and below: \itemize{
 #'     \item \code{rs_enclose_all_with_lines()} - all selected rows;
@@ -33,7 +33,6 @@ rs_enclose_all_with_lines <- function(above = NA, below = NA,
                                context = context,
                                above = ensure_blank_above)
 
-
     # To avoid error, at first the last line is inserted, then the first one.
     rstudioapi::insertText(location = range_last,
                            text = stringr::str_c(below, "\n"))
@@ -47,7 +46,6 @@ rs_enclose_all_with_lines <- function(above = NA, below = NA,
 rs_enclose_first_row_with_lines <- function(above = NA,
                                             below = NA,
                                             ensure_blank_above = FALSE,
-                                            ensure_blank_line_below = FALSE,
                                             context = get_context()) {
 
     sel <- context$selection[[1]]
@@ -56,6 +54,10 @@ rs_enclose_first_row_with_lines <- function(above = NA,
 
     range_first$start  <- range_first$end  <- c(range_$start[1],     1)
     range_second$start <- range_second$end <- c(range_$start[1] + 1, 1)
+
+    above <- ensure_blank_line(text = above,
+                               context = context,
+                               above = ensure_blank_above)
 
     # To avoid error, at first insert the second line, then modify the first one.
     rstudioapi::insertText(location = range_second,

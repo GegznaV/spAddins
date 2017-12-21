@@ -4,7 +4,7 @@ get_context <- function() {
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Checks if a blank line should be added above the selection
-needs_blank_line_above <- function(context = get_context()) {
+is_blank_line_needed_above <- function(context = get_context()) {
     row <- rs_get_ind_first_selected_row(context)
 
     # Contents of row above the selection:
@@ -21,7 +21,7 @@ needs_blank_line_above <- function(context = get_context()) {
 # where = c("selection", "first line"):
 #       "selection" - below whole selection;
 #       "first line" - below the first line of the selection.
-needs_blank_line_below <- function(where = c("selection",
+is_blank_line_needed_below <- function(where = c("selection",
                                              "first line"),
                                    context = get_context()) {
     where <- match.arg(where)
@@ -46,11 +46,6 @@ needs_blank_line_below <- function(where = c("selection",
     isTRUE(!cond)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-rs_insert_code_block <- function(language = "{r}") {
-    rs_enclose_all_with_lines(above = paste0("```", language),
-                              below =  "```")
-}
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ensure_blank_line <- function(text,
                               context = get_context(),
                               above = FALSE,
@@ -58,26 +53,31 @@ ensure_blank_line <- function(text,
                               below_selection = FALSE) {
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     if (above) {
-        if (needs_blank_line_above(context)) {
+        if (is_blank_line_needed_above(context)) {
             text <- paste0("\n", text)
         }
     }
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # Checks if blank is needed below the first selected line
     if (below_first) {
-        if (needs_blank_line_below("first line", context)) {
+        if (is_blank_line_needed_below("first line", context)) {
             text <- paste0(text, "\n")
         }
     }
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # Checks if blank is needed below the all selection
     if (below_selection) {
-        if (needs_blank_line_below("selection", context)) {
+        if (is_blank_line_needed_below("selection", context)) {
             text <- paste0(text, "\n")
         }
     }
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     text
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+}
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+rs_insert_code_block <- function(language = "{r}") {
+    rs_enclose_all_with_lines(above = paste0("```", language),
+                              below =  "```")
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

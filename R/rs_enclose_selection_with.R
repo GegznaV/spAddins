@@ -1,6 +1,6 @@
 # 'Enclose selected symbols' addins ---------------------------------------
 
-#' Enclose selection of text with indicated symbols
+#' Enclose selection of text with indicated symbols.
 #'
 #' @param symbol (character) A sequence of symbols to add on both sides of selection.
 #' @param symbol_before (character) A sequence of symbols to before the selection
@@ -10,8 +10,8 @@
 #' @export
 rs_enclose_selection_with <- function(symbol = "",
                                       symbol_before = symbol,
-                                      symbol_after  = symbol) {
-    context <- rstudioapi::getActiveDocumentContext()
+                                      symbol_after  = symbol,
+                                      context = get_context()) {
 
     # For the first selection only
     sel <- context$selection[[1]]
@@ -24,4 +24,4 @@ rs_enclose_selection_with <- function(symbol = "",
                            text = as.character(new_text),
                            id = context$id)
 }
-
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
