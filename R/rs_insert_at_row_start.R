@@ -3,7 +3,7 @@
 #'
 #' @param row (integer) The index of the row.
 #' @param text (character) The text to add.
-#'
+#' @inheritParams rstudioapi::insertText
 #' @export
 rs_insert_at_row_start <- function(row,
                                    text = NULL,
@@ -26,7 +26,7 @@ rs_insert_at_row_start <- function(row,
 #'       a blank line is added. If \code{FALSE}, blank line is not added.
 #' @inheritParams rs_get_ind
 #' @export
-rs_insert_before_first_selected_row <- function(text = NULL,
+rs_insert_before_first_selected_row <- function(text = "",
                                                 ensure_blank_above = FALSE,
                                                 context = get_context()) {
 

@@ -1,21 +1,21 @@
+Name: Rmd: Heading 1 (======)
+Description: Underline with ======
+Binding: rmd_b_heading_01a_title
+Interactive: false
+
+Name: Rmd: Heading 2 (------)
+Description: Underline with ------
+Binding: rmd_b_heading_01b_subtitle
+Interactive: false
+
 Name: Rmd: Heading 1 (#)
 Description: Insert #
 Binding: rmd_b_heading_1
 Interactive: false
 
-Name: Rmd: Heading 1 (======)
-Description: Underline with ======
-Binding: rmd_b_heading_1_title
-Interactive: false
-
 Name: Rmd: Heading 2 (##)
 Description: Insert ##
 Binding: rmd_b_heading_2
-Interactive: false
-
-Name: Rmd: Heading 2 (------)
-Description: Underline with ------
-Binding: rmd_b_heading_2_subtitle
 Interactive: false
 
 Name: Rmd: Heading 3 (###)
@@ -120,39 +120,59 @@ Description: Enclose selected lines with ```{r} and ```.
 Binding: rmd_code_block_r
 Interactive: false
 
-Name: Rmd: unordered list (level 1: -, -, -, ...)
+Name: Rmd: Block quotes (>, >, >, ...)
+Description: Make block quotes.
+Binding: rmd_block_quotes
+Interactive: false
+
+Name: Rmd: Unordered list (level 1: -, -, -, ...)
 Description: Make unordered list (level 1).
 Binding: rmd_list_unordered
 Interactive: false
 
-Name: Rmd: unordered list (level 2: +, +, +, ...)
+Name: Rmd: Unordered list (level 2: +, +, +, ...)
 Description: Make unordered list (level 2).
 Binding: rmd_list_unordered_2
 Interactive: false
 
-Name: Rmd: numbered list (level 1: 1, 2, 3, ...)
+Name: Rmd: Numbered list (level 1: 1, 2, 3, ...)
 Description: Make numbered list (level 1).
 Binding: rmd_list_numbered
 Interactive: false
 
-Name: Rmd: numbered list (level 2: 1, 2, 3, ...)
+Name: Rmd: Numbered list (level 2: 1, 2, 3, ...)
 Description: Make numbered list (level 2).
 Binding: rmd_list_numbered_2
 Interactive: false
 
-Name: Rmd: lettered list (level 1: a, b, c, ...)
+Name: Rmd: Lettered list (level 1: a, b, c, ...)
 Description: Make lettered list (level 1).
 Binding: rmd_list_lettered
 Interactive: false
 
-Name: Rmd: lettered list (level 2: a, b, c, ...)
+Name: Rmd: Lettered list (level 2: a, b, c, ...)
 Description: Make lettered list (level 2).
 Binding: rmd_list_lettered_2
 Interactive: false
 
-Name: Rmd: master list
+Name: Rmd: Master list
 Description: Make masterlist list.
 Binding: rmd_master_list
+Interactive: false
+
+Name: Rmd: Insert table (example 1)
+Description: Insert an example of R Markdown table.
+Binding: rmd_table_1
+Interactive: false
+
+Name: Rmd: Insert table (example 2)
+Description: Insert an example of R Markdown table.
+Binding: rmd_table_2
+Interactive: false
+
+Name: Rmd: Insert table (example 3)
+Description: Insert an example of R Markdown table.
+Binding: rmd_table_3
 Interactive: false
 
 
@@ -195,7 +215,6 @@ Name: Insert %R%
 Description: Insert `%R%` at the cursor position.
 Binding: rs_insert_infix_R
 Interactive: false
-
 
 Name: Replace \ with \\
 Description: Replaces \ with \\ in the selected text.

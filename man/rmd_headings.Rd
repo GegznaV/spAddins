@@ -8,8 +8,8 @@
 \alias{rmd_b_heading_4}
 \alias{rmd_b_heading_5}
 \alias{rmd_b_heading_6}
-\alias{rmd_b_heading_1_title}
-\alias{rmd_b_heading_2_subtitle}
+\alias{rmd_b_heading_01a_title}
+\alias{rmd_b_heading_01b_subtitle}
 \title{Format text as R Markdown headings.}
 \usage{
 rmd_b_heading_1()
@@ -24,9 +24,9 @@ rmd_b_heading_5()
 
 rmd_b_heading_6()
 
-rmd_b_heading_1_title()
+rmd_b_heading_01a_title()
 
-rmd_b_heading_2_subtitle()
+rmd_b_heading_01b_subtitle()
 }
 \description{
 RStudio add-ins to format text as R Markdown headings.

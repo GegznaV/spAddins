@@ -46,7 +46,7 @@ rmd_b_heading_6 <- function() {
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
-rmd_b_heading_1_title <- function() {
+rmd_b_heading_01a_title <- function() {
 
     text <- repeat_symbol("=", 60)
     rs_enclose_first_row_with_lines(below = text,
@@ -55,7 +55,7 @@ rmd_b_heading_1_title <- function() {
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
-rmd_b_heading_2_subtitle <- function() {
+rmd_b_heading_01b_subtitle <- function() {
 
     text <- repeat_symbol("-", 60)
     rs_enclose_first_row_with_lines(below = text,

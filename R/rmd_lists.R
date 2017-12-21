@@ -12,6 +12,7 @@
 #' @param type (character) the type of list "unordered", "numbered", "lettered",  "LETTERED", "master".
 #'
 #' @param level (integer) the level of list.
+#' @inheritParams rs_get_ind
 #'
 #' @export
 #' @family R Markdown formatting add-ins
@@ -47,7 +48,12 @@ rmd_list <- function(type = "unordered", level = 1, context = get_context()) {
 
                    "(@)" = ,
                    "@" = ,
-                   "master" = paste0(rep("(@)", max(ind)), " ")
+                   "master" = paste0(rep("(@)", max(ind)), " "),
+
+                   "blockquotes" = ,
+                   ">" = paste0(rep(">", max(ind)), " "),
+
+                   stop("Unrecognized symol.")
     )
 
 
@@ -61,6 +67,12 @@ rmd_list <- function(type = "unordered", level = 1, context = get_context()) {
     }
 }
 
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' @rdname rmd_list
+#' @export
+rmd_block_quotes <- function() {
+    rmd_list(">")
+}
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_list
 #' @export

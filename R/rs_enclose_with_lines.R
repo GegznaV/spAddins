@@ -15,7 +15,7 @@
 #'      blank line above the selection. If line is not blank, a blank line
 #'      is added. If \code{FALSE}, blank line is not added.
 #'
-#' @param context
+#' @inheritParams rs_get_ind
 #'
 #' @export
 rs_enclose_all_with_lines <- function(above = NA, below = NA,
@@ -43,8 +43,8 @@ rs_enclose_all_with_lines <- function(above = NA, below = NA,
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rs_enclose_all_with_lines
 #' @export
-rs_enclose_first_row_with_lines <- function(above = NA,
-                                            below = NA,
+rs_enclose_first_row_with_lines <- function(above = NULL,
+                                            below = NULL,
                                             ensure_blank_above = FALSE,
                                             context = get_context()) {
 
@@ -55,17 +55,21 @@ rs_enclose_first_row_with_lines <- function(above = NA,
     range_first$start  <- range_first$end  <- c(range_$start[1],     1)
     range_second$start <- range_second$end <- c(range_$start[1] + 1, 1)
 
-    above <- ensure_blank_line(text = above,
-                               context = context,
-                               above = ensure_blank_above)
-
     # To avoid error, at first insert the second line, then modify the first one.
-    rstudioapi::insertText(location = range_second,
-                           text = stringr::str_c(below, "\n"),
-                           id = context$id)
+    if (!is.null(below)) {
+        rstudioapi::insertText(location = range_second,
+                               text = stringr::str_c(below, "\n"),
+                               id = context$id)
+    }
 
-    rstudioapi::insertText(location = range_first,
-                           text = stringr::str_c(above, "\n"),
-                           id = context$id)
+    if (!is.null(above)) {
+        rstudioapi::insertText(location = range_first,
+                               text = stringr::str_c(above, "\n"),
+                               id = context$id)
+    }
+
+    # Lastly, add blank line above if needed.
+    rs_insert_before_first_selected_row(ensure_blank_above = ensure_blank_above,
+                                        context = context)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
