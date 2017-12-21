@@ -97,7 +97,8 @@
     </div>
 
     
-    <p>Enclose selection of text with indicated symbols.</p>
+    <p>Enclose selection of text with certain symbols which usually have special
+meaning in R Markdown files.</p>
     
 
     <pre class="usage"><span class='fu'>rs_enclose_selection_with</span>(<span class='kw'>symbol</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>symbol_before</span> <span class='kw'>=</span> <span class='no'>symbol</span>,
@@ -120,7 +121,17 @@
       <td><p>(character) A sequence of symbols to add after the selection
 (overrides value of <code>symbol</code>).</p></td>
     </tr>
+    <tr>
+      <th>context</th>
+      <td><p>Object with context of active R Studio document
+(class <code>document_context</code>).</p></td>
+    </tr>
     </table>
+    
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>If text is selected, the cursor is placed after the modified selection.
+If no text is selected, the cursor is placed between the inserted symbols.</p>
     
 
   </div>
@@ -128,7 +139,9 @@
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-                </ul>
+      
+      <li><a href="#details">Details</a></li>
+          </ul>
 
   </div>
 </div>
