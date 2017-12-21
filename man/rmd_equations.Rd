@@ -5,7 +5,7 @@
 \alias{rmd_equation_inline}
 \alias{rmd_equation_block}
 \alias{rmd_equation_block2}
-\title{Format as LaTeX equation}
+\title{Format as LaTeX equation.}
 \usage{
 rmd_equation_inline()
 
@@ -21,5 +21,5 @@ as a block equation in R Markdown.
 }
 \seealso{
 Other R Markdown formatting add-ins: \code{\link{format_rmd}},
-  \code{\link{rmd_list}}
+  \code{\link{rmd_code_block}}, \code{\link{rmd_list}}
 }

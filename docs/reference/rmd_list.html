@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Format text as R Markdown list � rmd_list • spAddins</title>
+<title>Format text as R Markdown list. � rmd_list • spAddins</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -93,7 +93,7 @@
       <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Format text as R Markdown list</h1>
+    <h1>Format text as R Markdown list.</h1>
     </div>
 
     
@@ -107,7 +107,9 @@ For the first-level lists:</p><ul>
 </ul>
     
 
-    <pre class="usage"><span class='fu'>rmd_list</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"unordered"</span>, <span class='kw'>level</span> <span class='kw'>=</span> <span class='fl'>1</span>)
+    <pre class="usage"><span class='fu'>rmd_list</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"unordered"</span>, <span class='kw'>level</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>get_context</span>())
+
+<span class='fu'>rmd_block_quotes</span>()
 
 <span class='fu'>rmd_list_unordered</span>()
 
@@ -134,12 +136,17 @@ For the first-level lists:</p><ul>
       <th>level</th>
       <td><p>(integer) the level of list.</p></td>
     </tr>
+    <tr>
+      <th>context</th>
+      <td><p>Object with context of active R Studio document
+(class <code>document_context</code>).</p></td>
+    </tr>
     </table>
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <p>Other R Markdown formatting add-ins: <code><a href='format_rmd.html'>format_rmd</a></code>,
-  <code><a href='rmd_equations.html'>rmd_equations</a></code></p>
+  <code>rmd_code_block</code>, <code><a href='rmd_equations.html'>rmd_equations</a></code></p>
     
 
   </div>

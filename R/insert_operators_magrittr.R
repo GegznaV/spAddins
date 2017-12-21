@@ -1,6 +1,7 @@
 # From `magrittr` ---------------------------------------------------------
-
-#' Insert \%>\%, \%<>\%, \%$\% and \%T>\%
+# Insert \%>\%, \%<>\%, \%$\% and \%T>\%
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' Insert magrittr operators.
 #'
 #' These add-ins insert operators \code{\%>\%}, \code{\%<>\%}, \code{\%$\%},
 #' and \code{\%T>\%} at the cursor position.
@@ -17,27 +18,31 @@
 #' }
 #'
 #' @name insert_magrittr_operators
-#' @export
 #' @family 'Insert at cursor position' add-ins
+NULL
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' @rdname insert_magrittr_operators
+#' @export
 rs_insert_pipe <- function() {
     rstudioapi::insertText(text = " %>% ")
 }
-
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname insert_magrittr_operators
 #' @export
 rs_insert_update_pipe <- function() {
     rstudioapi::insertText(text = " %<>% ")
 }
-
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname insert_magrittr_operators
 #' @export
 rs_insert_exposition_pipe <- function() {
     rstudioapi::insertText(text = " %$% ")
 }
-
-
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname insert_magrittr_operators
 #' @export
 rs_insert_tee_pipe <- function() {
     rstudioapi::insertText(text = " %T>% ")
 }
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

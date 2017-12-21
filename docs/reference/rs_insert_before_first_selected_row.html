@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Enclose selection with lines. � rs_enclose_all_with_lines • spAddins</title>
+<title>Insert text at the beginning of the first selected row. � rs_insert_before_first_selected_row • spAddins</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -93,40 +93,29 @@
       <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Enclose selection with lines.</h1>
+    <h1>Insert text at the beginning of the first selected row.</h1>
     </div>
 
     
-    <p>Enclose selected rows with lines above and below:</p><ul>
-<li><p><code>rs_enclose_all_with_lines()</code> - all selected rows;</p></li>
-<li><p><code>rs_enclose_first_row_with_lines()</code> - the first selected row only.</p></li>
-</ul>
+    <p>Insert text at the beginning of the first selected row.</p>
     
 
-    <pre class="usage"><span class='fu'>rs_enclose_all_with_lines</span>(<span class='kw'>above</span> <span class='kw'>=</span> <span class='fl'>NA</span>, <span class='kw'>below</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>ensure_blank_above</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>get_context</span>())
-
-<span class='fu'>rs_enclose_first_row_with_lines</span>(<span class='kw'>above</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>below</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>ensure_blank_above</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>get_context</span>())</pre>
+    <pre class="usage"><span class='fu'>rs_insert_before_first_selected_row</span>(<span class='kw'>text</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>ensure_blank_above</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>context</span> <span class='kw'>=</span> <span class='fu'>get_context</span>())</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>above</th>
-      <td><p>(character) Text to be inserted in the row above the selection.</p></td>
-    </tr>
-    <tr>
-      <th>below</th>
-      <td><p>(character) Text to be inserted in the row below the selection
-(or the first row).</p></td>
+      <th>text</th>
+      <td><p>(character) The text to add.</p></td>
     </tr>
     <tr>
       <th>ensure_blank_above</th>
       <td><p>(logical)
 If <code>TRUE</code>, checks if there is a
-blank line above the selection. If line is not blank, a blank line
-is added. If <code>FALSE</code>, blank line is not added.</p></td>
+blank line above/bolow the selection. If line is not blank,
+ a blank line is added. If <code>FALSE</code>, blank line is not added.</p></td>
     </tr>
     <tr>
       <th>context</th>

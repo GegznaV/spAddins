@@ -1,13 +1,14 @@
 # Main "replace" function
-#' Replace text in selection
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' Replace text in selection.
 #'
-#' @param pattern (character) A fixted pattern of text to be replaced
+#' @param pattern (character) A fixed pattern of text to be replaced
 #'                            (not a regular expression).
 #' @param replacement (character) The replacement text.
-#'
+#' @inheritParams rs_get_ind
 #' @export
-rs_replace_in_selection <- function(pattern, replacement) {
-    context <- rstudioapi::getActiveDocumentContext()
+rs_replace_in_selection <- function(pattern, replacement,
+                                    context = get_context()) {
 
     sel <-  context$selection[[1]]
     old_text  <- sel$text
@@ -23,3 +24,4 @@ rs_replace_in_selection <- function(pattern, replacement) {
                             id = context$id)
 
 }
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

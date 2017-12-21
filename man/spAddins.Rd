@@ -4,7 +4,7 @@
 \name{spAddins}
 \alias{spAddins}
 \alias{spAddins-package}
-\title{A Set of RStudio Add-ins}
+\title{A Set of RStudio Add-ins.}
 \description{
 \code{spAddins} provides a set of RStudio add-ins that
 are designed to be used in combination with user-defined RStudio keyboard

@@ -3,8 +3,9 @@
 <!-- 1. Create an interactive addin, that enables to select formatting options; -->
 <!-- 2. Write unit tests. -->
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/spAddins)](https://cran.r-project.org/package=spAddins) [![Travis-CI Build Status](https://travis-ci.org/GegznaV/spAddins.png?branch=master)](https://travis-ci.org/GegznaV/spAddins) [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Rdoc](http://www.rdocumentation.org/badges/version/spAddins)](http://www.rdocumentation.org/packages/spAddins) [![Updated-on](https://img.shields.io/badge/Updated%20on-2017--12--14-yellowgreen.svg)](/commits/master)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/spAddins)](https://cran.r-project.org/package=spAddins) [![GitHub version](https://img.shields.io/badge/GitHub-0.2.1-brightgreen.svg)](https://github.com/GegznaV/spAddins) [![Travis-CI Build Status](https://travis-ci.org/GegznaV/spAddins.png?branch=master)](https://travis-ci.org/GegznaV/spAddins) [![Updated-on](https://img.shields.io/badge/Updated%20on-2017--12--21-yellowgreen.svg)](/commits/master) [![Research software impact](http://depsy.org/api/package/cran/spAddins/badge.svg)](http://depsy.org/package/r/spAddins)
 
+<!-- [![Rdoc](http://www.rdocumentation.org/badges/version/spAddins)](http://www.rdocumentation.org/packages/spAddins) -->
 <!--
 
 -->

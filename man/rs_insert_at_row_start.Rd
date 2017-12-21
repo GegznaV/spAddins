@@ -2,15 +2,21 @@
 % Please edit documentation in R/rs_insert_at_row_start.R
 \name{rs_insert_at_row_start}
 \alias{rs_insert_at_row_start}
-\title{Insert text at the beginning of the row}
+\title{Insert text at the beginning of the row.}
 \usage{
-rs_insert_at_row_start(row, text = NULL)
+rs_insert_at_row_start(row, text = NULL, id = NULL)
 }
 \arguments{
 \item{row}{(integer) The index of the row.}
 
 \item{text}{(character) The text to add.}
+
+\item{id}{The document id. When \code{NULL} or blank,
+the mutation will apply to the currently open, or last
+focused, RStudio document. Use the \code{id} returned
+from \code{\link{getActiveDocumentContext}()} to ensure
+that the operation is applied on the intended document.}
 }
 \description{
-Insert text at the beginning of the row
+Insert text at the beginning of the row.
 }

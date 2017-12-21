@@ -1,4 +1,4 @@
-#' Format text as R Markdown list
+#' Format text as R Markdown list.
 #'
 #' RStudio add-ins which convert text into R Markdown lists.
 #' For the first-level lists: \itemize{
@@ -12,20 +12,19 @@
 #' @param type (character) the type of list "unordered", "numbered", "lettered",  "LETTERED", "master".
 #'
 #' @param level (integer) the level of list.
+#' @inheritParams rs_get_ind
 #'
 #' @export
 #' @family R Markdown formatting add-ins
 
-rmd_list <- function(type = "unordered", level = 1) {
-    obj <- rstudioapi::getSourceEditorContext()
-    sel <- obj$selection[[1]]
-    selected_rows <- sel$range$start[1]:sel$range$end[1]
+rmd_list <- function(type = "unordered", level = 1, context = get_context()) {
+    sel <- context$selection[[1]]
+    selected_rows <- sel$range$start["row"]:sel$range$end["row"]
 
     ind <- seq_along(selected_rows)
 
-    # Identitation for level of list
+    # Indentitation for level of list
     lev <- rep("\t", level - 1)
-
 
     text <- switch(type,
                    "1" = ,
@@ -49,57 +48,71 @@ rmd_list <- function(type = "unordered", level = 1) {
 
                    "(@)" = ,
                    "@" = ,
-                   "master" = paste0(rep("(@)", max(ind)), " ")
+                   "master" = paste0(rep("(@)", max(ind)), " "),
+
+                   "blockquotes" = ,
+                   ">" = paste0(rep(">", max(ind)), " "),
+
+                   stop("Unrecognized symol.")
     )
 
 
-    purrr::walk2(selected_rows, text, rs_insert_at_row_start)
+    purrr::walk2(selected_rows, text, rs_insert_at_row_start, id = context$id)
 
     # insert an empty line:  to display list correctly
     if (level == 1) {
-        rs_insert_at_row_start(selected_rows[1], "\n")
+        if (is_blank_line_needed_above(context)) {
+            rs_insert_at_row_start(selected_rows[1], "\n", id = context$id)
+        }
     }
 }
 
-
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' @rdname rmd_list
+#' @export
+rmd_block_quotes <- function() {
+    rmd_list(">")
+}
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_list
 #' @export
 rmd_list_unordered <- function() {
     rmd_list("-", level = 1)
 }
-
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_list
 #' @export
 rmd_list_unordered_2 <- function() {
     rmd_list("+", level = 2)
 }
-
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_list
 #' @export
 rmd_list_numbered <- function() {
     rmd_list("numbered", level = 1)
 }
-
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_list
 #' @export
 rmd_list_numbered_2 <- function() {
     rmd_list("numbered", level = 2)
 }
-
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_list
 #' @export
 rmd_list_lettered <- function() {
     rmd_list("lettered", level = 1)
 }
-
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_list
 #' @export
 rmd_list_lettered_2 <- function() {
     rmd_list("lettered", level = 2)
 }
-
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_list
 #' @export
 rmd_master_list <- function() {
     rmd_list("master")
 }
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

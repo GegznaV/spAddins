@@ -1,0 +1,166 @@
+---
+title: "Untitled"
+author: "VG"
+date: "December 18, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<!--
+#' @rdname rmd_headings
+#' @export
+rmd_e_table_1 <- function() {
+    row_ind <- rs_get_ind_first_selected_row()
+    
+    
+    rs_insert_at_row_start(row_ind, "\n#### ")
+}
+
+tbl_1 <- c(
+"
+:
+
+----------------------------------------------------
+Left-aligned      Centered column      Right-aligned
+---------------- -----------------  ----------------
+Row 1 Col 1       Row 1 Col 2        Row 1 Col 3 
+
+Row 2 Col 1       Row 2 Col 2        Row 2 Col 3 
+
+Row 3 Col 1       Row 3 Col 2        Row 3 Col 3 
+----------------------------------------------------
+
+Table: The name of the table
+"
+)
+
+
+tbl_2 <- c(
+"
+| Left-aligned  | Left-aligned  |   Centered    | Right-aligned |    
+|---------------|:--------------|:-------------:|--------------:|
+|  Row 1 Col 1  |  Row 1 Col 2  |  Row 1 Col 3  |  Row 1 Col 4  |
+|  Row 2 Col 1  |  Row 2 Col 2  |  Row 2 Col 3  |  Row 2 Col 4  |
+|  Row 3 Col 1  |  Row 3 Col 2  |  Row 3 Col 3  |  Row 3 Col 4  |
+
+Table: The name of the table
+"
+)
+writeLines(tbl_2)
+-->
+
+
+https://www.tablesgenerator.com/markdown_tables
+https://help.github.com/articles/organizing-information-with-tables
+
+
+----------- ------- --------------- -------------------------
+   First    row                12.0 Example of a row that
+                                    spans multiple lines.
+
+  Second    row                 5.0 Here's another one. Note
+                                    the blank line between
+                                    rows.
+----------- ------- --------------- -------------------------
+
+: Here's a multiline table without headers.
+
+
+tbl_3 <- c(
+"
+
+:  The name of the grid table.
+
++---------------+---------------+--------------------+
+| Auto-aligned  |  Centered     | Right-aligned      |
++===============+:=============:+===================:+
+| Row_1_Col_1   | Row_1_Col_2   | - Row_1_Col_3a     |
+|               |               | - Row_1_Col_3b     |
++---------------+---------------+--------------------+
+| Row_2_Col_1   | Row_2_Col_2   | - Row_2_Col_3a     |
+|               |               | - Row_2_Col_3b     |
++---------------+---------------+--------------------+
+
+"
+
+
+tbl_3 <- c(
+"
+
+: The name of the multi-row table
+
+-----------------------------------------------------
+Left-aligned      Centered column      Right-aligned
+---------------- -----------------  ----------------
+   Row_1_Col_1     Row_1_Col_2        Row_1_Col_3 
+   
+   Row_2_Col_1     Row_2_Col_2        Row_2_Col_3 
+
+   Row_3_Col_1     Row_3_Col_2        Row_3_Col_3 
+-----------------------------------------------------
+
+"
+
+
+
+
+
+tbl_1 <- c(
+"
+: The name of the table
+
+| Auto-aligned  | Left-aligned  |   Centered    | Right-aligned |    
+| ------------- | :------------ | :-----------: | ------------: |
+|  Row_1_Col_1  |  Row_1_Col_2  |  Row_1_Col_3  |  Row_1_Col_4  |
+|  Row_2_Col_1  |  Row_2_Col_2  |  Row_2_Col_3  |  Row_2_Col_4  |
+|  Row_3_Col_1  |  Row_3_Col_2  |  Row_3_Col_3  |  Row_3_Col_4  |
+
+"
+
+
+
+
+: The name of the table
+
+| Left-aligned  | Left-aligned  |   Centered    | Right-aligned |    
+|---            |:--------------|  :-----:      |      --------:|
+|  Row_1_Col_1  |  Row_1_Col_2  |  Row_1_Col_3  |  Row_1_Col_4  |
+|  Row_2_Col_1  |  Row_2_Col_2  |  Row_2_Col_3  |  Row_2_Col_4  |
+|  Row_3_Col_1  |  Row_3_Col_2  |  Row_3_Col_3  |  Row_3_Col_4  |
+ 
+
+
+<!-- [![ropensci_footer](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org) -->
+
+
+
+
+
+
+: The name of the table.
+
+| Auto-aligned  | Left-aligned  |   Centered    | Right-aligned |
+| ------------- | :------------ | :-----------: | ------------: |
+|  Row_1_Col_1  |  Row_1_Col_2  |  Row_1_Col_3  |  Row_1_Col_4  |
+|  Row_2_Col_1  |  Row_2_Col_2  |  Row_2_Col_3  |  Row_2_Col_4  |
+|  Row_3_Col_1  |  Row_3_Col_2  |  Row_3_Col_3  |  Row_3_Col_4  |
+
+
+
+
+:  The name of the grid table.
+
++---------------+---------------+--------------------+
+| Auto-aligned  |  Centered     | Right-aligned      |
++===============+:=============:+===================:+
+| Row_1_Col_1   | Row_1_Col_2   | - Row_1_Col_3a     |
+|               |               | - Row_1_Col_3b     |
++---------------+---------------+--------------------+
+| Row_2_Col_1   | Row_2_Col_2   | - Row_2_Col_3a     |
+|               |               | - Row_2_Col_3b     |
++---------------+---------------+--------------------+
+
+

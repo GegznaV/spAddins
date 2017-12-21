@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Insert text at the beginning of the row � rs_insert_at_row_start • spAddins</title>
+<title>Insert text at the beginning of the row. � rs_insert_at_row_start • spAddins</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -93,14 +93,14 @@
       <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Insert text at the beginning of the row</h1>
+    <h1>Insert text at the beginning of the row.</h1>
     </div>
 
     
-    <p>Insert text at the beginning of the row</p>
+    <p>Insert text at the beginning of the row.</p>
     
 
-    <pre class="usage"><span class='fu'>rs_insert_at_row_start</span>(<span class='no'>row</span>, <span class='kw'>text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+    <pre class="usage"><span class='fu'>rs_insert_at_row_start</span>(<span class='no'>row</span>, <span class='kw'>text</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>id</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
     <table class="ref-arguments">
@@ -112,6 +112,14 @@
     <tr>
       <th>text</th>
       <td><p>(character) The text to add.</p></td>
+    </tr>
+    <tr>
+      <th>id</th>
+      <td><p>The document id. When <code>NULL</code> or blank,
+the mutation will apply to the currently open, or last
+focused, RStudio document. Use the <code>id</code> returned
+from <code>getActiveDocumentContext()</code> to ensure
+that the operation is applied on the intended document.</p></td>
     </tr>
     </table>
     

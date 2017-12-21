@@ -2,16 +2,19 @@
 % Please edit documentation in R/rs_replace_in_selection.R
 \name{rs_replace_in_selection}
 \alias{rs_replace_in_selection}
-\title{Replace text in selection}
+\title{Replace text in selection.}
 \usage{
-rs_replace_in_selection(pattern, replacement)
+rs_replace_in_selection(pattern, replacement, context = get_context())
 }
 \arguments{
-\item{pattern}{(character) A fixted pattern of text to be replaced
+\item{pattern}{(character) A fixed pattern of text to be replaced
 (not a regular expression).}
 
 \item{replacement}{(character) The replacement text.}
+
+\item{context}{Object with context of active R Studio document
+(class \code{document_context}).}
 }
 \description{
-Replace text in selection
+Replace text in selection.
 }
