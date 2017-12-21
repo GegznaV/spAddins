@@ -10,6 +10,12 @@ rs_insert_at_row_start(row, text = NULL, id = NULL)
 \item{row}{(integer) The index of the row.}
 
 \item{text}{(character) The text to add.}
+
+\item{id}{The document id. When \code{NULL} or blank,
+the mutation will apply to the currently open, or last
+focused, RStudio document. Use the \code{id} returned
+from \code{\link{getActiveDocumentContext}()} to ensure
+that the operation is applied on the intended document.}
 }
 \description{
 Insert text at the beginning of the row.

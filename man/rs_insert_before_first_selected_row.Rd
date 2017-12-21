@@ -4,7 +4,7 @@
 \alias{rs_insert_before_first_selected_row}
 \title{Insert text at the beginning of the first selected row.}
 \usage{
-rs_insert_before_first_selected_row(text = NULL, ensure_blank_above = FALSE,
+rs_insert_before_first_selected_row(text = "", ensure_blank_above = FALSE,
   context = get_context())
 }
 \arguments{

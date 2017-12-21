@@ -1,7 +1,7 @@
 # Insert lines ---------------------------------------------------------------
 
 #' @name insert_symbol_sequences
-#' @title Insert various lines
+#' @title Insert various lines.
 #' @description
 #' Use
 #' \code{rs_insert_ss_line()} to insert \code{------};\cr

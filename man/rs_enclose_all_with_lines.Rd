@@ -8,7 +8,7 @@
 rs_enclose_all_with_lines(above = NA, below = NA,
   ensure_blank_above = FALSE, context = get_context())
 
-rs_enclose_first_row_with_lines(above = NA, below = NA,
+rs_enclose_first_row_with_lines(above = NULL, below = NULL,
   ensure_blank_above = FALSE, context = get_context())
 }
 \arguments{
@@ -22,7 +22,8 @@ If \code{TRUE}, checks if there is a
 blank line above the selection. If line is not blank, a blank line
 is added. If \code{FALSE}, blank line is not added.}
 
-\item{context}{}
+\item{context}{Object with context of active R Studio document
+(class \code{document_context}).}
 }
 \description{
 Enclose selected rows with lines above and below: \itemize{
