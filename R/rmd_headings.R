@@ -1,54 +1,64 @@
-#' Format text as R Markdown headings
+#' Format text as R Markdown headings.
 #'
 #' RStudio add-ins to format text as R Markdown headings.
 #'
 #' @name rmd_headings
 #' @export
 rmd_b_heading_1 <- function() {
-    row_ind <- rs_get_ind_first_selected_row()
-    rs_insert_at_row_start(row_ind, "\n# ")
+    rs_insert_before_first_selected_row("# ",
+                                        ensure_blank_above = TRUE)
 }
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
 rmd_b_heading_2 <- function() {
-    row_ind <- rs_get_ind_first_selected_row()
-    rs_insert_at_row_start(row_ind, "\n## ")
+    rs_insert_before_first_selected_row("## ",
+                                        ensure_blank_above = TRUE)
 }
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
 rmd_b_heading_3 <- function() {
-    row_ind <- rs_get_ind_first_selected_row()
-    rs_insert_at_row_start(row_ind, "\n### ")
+    rs_insert_before_first_selected_row("### ",
+                                        ensure_blank_above = TRUE)
 }
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
 rmd_b_heading_4 <- function() {
-    row_ind <- rs_get_ind_first_selected_row()
-    rs_insert_at_row_start(row_ind, "\n#### ")
+    rs_insert_before_first_selected_row("#### ",
+                                        ensure_blank_above = TRUE)
 }
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
 rmd_b_heading_5 <- function() {
-    row_ind <- rs_get_ind_first_selected_row()
-    rs_insert_at_row_start(row_ind, "\n##### ")
+    rs_insert_before_first_selected_row("##### ",
+                                        ensure_blank_above = TRUE)
 }
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
 rmd_b_heading_6 <- function() {
-    row_ind <- rs_get_ind_first_selected_row()
-    rs_insert_at_row_start(row_ind, "\n###### ")
+    rs_insert_before_first_selected_row("###### ",
+                                        ensure_blank_above = TRUE)
 }
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
 rmd_b_heading_1_title <- function() {
 
     text <- repeat_symbol("=", 60)
-    rs_enclose_first_row_with_lines("\n", below = text)
+    rs_enclose_first_row_with_lines(below = text,
+                                    ensure_blank_above = TRUE)
 }
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_headings
 #' @export
 rmd_b_heading_2_subtitle <- function() {
 
     text <- repeat_symbol("-", 60)
-    rs_enclose_first_row_with_lines("\n", below = text)
+    rs_enclose_first_row_with_lines(below = text,
+                                    ensure_blank_above = TRUE)
 }
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

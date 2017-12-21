@@ -15,5 +15,6 @@ RStudio add-in to insert selected lines into code block: \itemize{
    \item \code{rmd_r_code_block()} - R code block;
    \item \code{rmd_code_block()} - verbatim code block.
 }
-\code{rs_enclose_all_with_lines} - function that adds lines above and below the selection.
+\code{rs_enclose_all_with_lines} - function that adds lines above and below
+                                   the selection.
 }

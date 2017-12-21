@@ -1,17 +1,34 @@
-#' Get index of the first column in the selection
+#' @name rs_get_ind
+#' @title  Get indices from the selection
+#' @description
+#' Get index of the first/last row/column in the selection.
 #'
-#' @export
-rs_get_ind_first_selected_col <- function() {
-    context <- rstudioapi::getActiveDocumentContext()
-    start_pos <- context$selection[[1]]$range$start[2]
-    start_pos
-}
+#' @param context Object with context of active R Studio document
+#'                (class \code{document_context}).
+NULL
 
-#' Get index of the first row in the selection
-#'
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' @rdname rs_get_ind
 #' @export
-rs_get_ind_first_selected_row <- function() {
-    context <- rstudioapi::getActiveDocumentContext()
-    start_pos <- context$selection[[1]]$range$start[1]
-    start_pos
+rs_get_ind_first_selected_col <- function(context = get_context()) {
+    context$selection[[1]]$range$start["column"]
 }
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' @rdname rs_get_ind
+#' @export
+rs_get_ind_last_selected_col <- function(context = get_context()) {
+    context$selection[[1]]$range$end["column"]
+}
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' @rdname rs_get_ind
+#' @export
+rs_get_ind_first_selected_row <- function(context = get_context()) {
+    context$selection[[1]]$range$start["row"]
+}
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' @rdname rs_get_ind
+#' @export
+rs_get_ind_last_selected_row <- function(context = get_context()) {
+    context$selection[[1]]$range$end["row"]
+}
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

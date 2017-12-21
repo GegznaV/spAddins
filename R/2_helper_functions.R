@@ -3,6 +3,7 @@ get_context <- function() {
     rstudioapi::getActiveDocumentContext()
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Checks if a blank line should be added above the selection
 needs_blank_line_above <- function(context = get_context()) {
     row <- rs_get_ind_first_selected_row(context)
 
@@ -15,13 +16,27 @@ needs_blank_line_above <- function(context = get_context()) {
     isTRUE(!cond)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-needs_blank_line_below <- function(context = get_context()) {
-    row <- rs_get_ind_last_selected_row(context)
+# Checks if a blank line should be added below either the selection or
+# the first line of the selection.
+# where = c("selection", "first line"):
+#       "selection" - below whole selection;
+#       "first line" - below the first line of the selection.
+needs_blank_line_below <- function(where = c("selection",
+                                             "first line"),
+                                   context = get_context()) {
+    where <- match.arg(where)
+    row <- switch(where,
+                  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  "first line" = rs_get_ind_first_selected_row(context),
+                  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  "selection" = rs_get_ind_last_selected_row(context),
+                  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                  stop("Incorrect choice of `where`"))
 
     # Contents of row below the selection:
     txt <- context$contents[row + 1]
 
-    # If the last line, a blank should be added
+    # If the last line is selected, a blank line should be added:
     if (is.na(txt)) {
         return(TRUE)
     }
@@ -34,5 +49,35 @@ needs_blank_line_below <- function(context = get_context()) {
 rs_insert_code_block <- function(language = "{r}") {
     rs_enclose_all_with_lines(above = paste0("```", language),
                               below =  "```")
+}
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ensure_blank_line <- function(text,
+                              context = get_context(),
+                              above = FALSE,
+                              below_first = FALSE,
+                              below_selection = FALSE) {
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    if (above) {
+        if (needs_blank_line_above(context)) {
+            text <- paste0("\n", text)
+        }
+    }
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    # Checks if blank is needed below the first selected line
+    if (below_first) {
+        if (needs_blank_line_below("first line", context)) {
+            text <- paste0(text, "\n")
+        }
+    }
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    # Checks if blank is needed below the all selection
+    if (below_selection) {
+        if (needs_blank_line_below("selection", context)) {
+            text <- paste0(text, "\n")
+        }
+    }
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    text
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

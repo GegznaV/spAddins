@@ -6,7 +6,7 @@
 \alias{rs_insert_update_pipe}
 \alias{rs_insert_exposition_pipe}
 \alias{rs_insert_tee_pipe}
-\title{Insert \%>\%, \%<>\%, \%$\% and \%T>\%}
+\title{Insert magrittr operators.}
 \usage{
 rs_insert_pipe()
 

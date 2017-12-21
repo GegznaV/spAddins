@@ -4,7 +4,7 @@
 \alias{rs_insert_at_row_start}
 \title{Insert text at the beginning of the row}
 \usage{
-rs_insert_at_row_start(row, text = NULL)
+rs_insert_at_row_start(row, text = NULL, id = NULL)
 }
 \arguments{
 \item{row}{(integer) The index of the row.}
