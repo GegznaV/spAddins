@@ -120,6 +120,12 @@ Description: Enclose selected lines with ```{r} and ```.
 Binding: rmd_code_block_r
 Interactive: false
 
+Name: Rmd: Split R code block (```  ```{r})
+Description: Insert lines ``` and ```{r} above the selection.
+Binding: rmd_code_block_r_split
+Interactive: false
+
+
 Name: Rmd: Block quotes (>, >, >, ...)
 Description: Make block quotes.
 Binding: rmd_block_quotes
