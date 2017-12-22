@@ -35,10 +35,12 @@ rs_enclose_all_with_lines <- function(above = NA, below = NA,
 
     # To avoid error, at first the last line is inserted, then the first one.
     rstudioapi::insertText(location = range_last,
-                           text = stringr::str_c(below, "\n"))
+                           text = stringr::str_c(below, "\n"),
+                           id = context$id)
 
     rstudioapi::insertText(location = range_first,
-                           text = stringr::str_c(above, "\n"))
+                           text = stringr::str_c(above, "\n"),
+                           id = context$id)
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rs_enclose_all_with_lines
