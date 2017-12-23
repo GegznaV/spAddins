@@ -166,19 +166,34 @@ Description: Make masterlist list.
 Binding: rmd_master_list
 Interactive: false
 
-Name: Rmd: Insert table (example 1)
+Name: Rmd: Insert table (example 1: simple)
 Description: Insert an example of R Markdown table.
 Binding: rmd_table_1
 Interactive: false
 
-Name: Rmd: Insert table (example 2)
+Name: Rmd: Insert table (example 2: without column names)
 Description: Insert an example of R Markdown table.
 Binding: rmd_table_2
 Interactive: false
 
-Name: Rmd: Insert table (example 3)
+Name: Rmd: Insert table (example 3: multiline)
 Description: Insert an example of R Markdown table.
 Binding: rmd_table_3
+Interactive: false
+
+Name: Rmd: Insert table (example 4: markdown-style)
+Description: Insert an example of R Markdown table.
+Binding: rmd_table_4
+Interactive: false
+
+Name: Rmd: Insert table (example 5: grid-style)
+Description: Insert an example of R Markdown table.
+Binding: rmd_table_5
+Interactive: false
+
+Name: Rmd: Insert horizontal rule (* * *)
+Description: Insert a horizontal rule (style: * * *) below the selection.
+Binding: rmd_horizontal_rule
 Interactive: false
 
 

@@ -12,6 +12,7 @@
 \alias{rmd_a_superscript}
 \alias{rmd_a_subscript}
 \alias{rmd_a_strikethrough}
+\alias{rmd_horizontal_rule}
 \title{Add-ins for basic R Markdown formatting.}
 \usage{
 rmd_a_bold()
@@ -33,6 +34,8 @@ rmd_a_superscript()
 rmd_a_subscript()
 
 rmd_a_strikethrough()
+
+rmd_horizontal_rule()
 }
 \description{
 RStudio add-ins, which enclose selected text with symbols that have special
