@@ -88,3 +88,15 @@ rmd_a_strikethrough <- function() {
     rs_enclose_selection_with(symbol = "~~")
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' @rdname format_rmd
+#' @export
+rmd_horizontal_rule <- function() {
+    # Style ***
+    # Style * * *
+    # Style ___
+    # Style _ _ _
+    # Style ---
+    # Style - - -
+    rs_enclose_all_with_lines(below = "* * *")
+}
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
