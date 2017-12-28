@@ -26,16 +26,25 @@ rs_enclose_all_with_lines <- function(above = NA, below = NA,
 
     range_ <- range_first <- range_last <- sel$range
 
-    range_first$start <- range_first$end <- c(range_$start[1]  , 1)
-    range_last$start <-   range_last$end <- c(range_$end[1] + 1, 1)
+    ind_row_below <- range_$end[1] + 1
+
+    range_first$start <- range_first$end <- c(range_$start[1], 1)
+    range_last$start <-   range_last$end <- c(ind_row_below,   1)
 
     above <- ensure_blank_line(text = above,
                                context = context,
                                above = ensure_blank_above)
 
-    # To avoid error, at first the last line is inserted, then the first one.
+    # If the last line of document is selected, one line should be inserted
+    add_last_line <-
+        if (length(context$contents) < (ind_row_below)) "\n" else ""
+
+
+    # To avoid error:
+    #    firstly the line below is inserted,
+    #    lastly, the line above is inserted.
     rstudioapi::insertText(location = range_last,
-                           text = stringr::str_c(below, "\n"),
+                           text = stringr::str_c(add_last_line, below, "\n"),
                            id = context$id)
 
     rstudioapi::insertText(location = range_first,
@@ -54,13 +63,21 @@ rs_enclose_first_row_with_lines <- function(above = NULL,
 
     range_ <- range_first <- range_second <- sel$range
 
-    range_first$start  <- range_first$end  <- c(range_$start[1],     1)
-    range_second$start <- range_second$end <- c(range_$start[1] + 1, 1)
+    ind_row_below <- range_$start[1] + 1
 
-    # To avoid error, at first insert the second line, then modify the first one.
+    range_first$start  <- range_first$end  <- c(range_$start[1], 1)
+    range_second$start <- range_second$end <- c(ind_row_below  , 1)
+
+    # If the last line of document selected
+    add_last_line <-
+        if (length(context$contents) < (ind_row_below)) "\n" else ""
+
+    # To avoid error:
+    #    firstly the line below is inserted,
+    #    lastly, the line above is inserted.
     if (!is.null(below)) {
         rstudioapi::insertText(location = range_second,
-                               text = stringr::str_c(below, "\n"),
+                               text = stringr::str_c(add_last_line, below, "\n"),
                                id = context$id)
     }
 
