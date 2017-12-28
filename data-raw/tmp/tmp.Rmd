@@ -7,14 +7,22 @@ author:
   name: Author Two
 date: "December 18, 2017"
 output:
-  html_document: 
+  pdf_document: 
     highlight: pygments
+lang: lt
+latex_engine: xelatex
+header-includes:
+  \renewcommand{\abstractname}{My Very Own Summary}
+  \usepackage[L7x]{fontenc}
 abstract: |
   This is the abstract.
+  
   It consists of two paragraphs.
 ---
 
-```
+
+`102 * c[1]`{.r}
+
 ~~~~~~~~~~~~~~~~
 ~~~~~~~~~~
 code including tildes
