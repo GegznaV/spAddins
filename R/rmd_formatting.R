@@ -72,6 +72,12 @@ rmd_code_inline_r <- function() {
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname format_rmd
 #' @export
+rmd_code_inline_r_highlighted <- function() {
+    rs_enclose_selection_with(symbol_before = "`r ", symbol_after = "`{.r}")
+}
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' @rdname format_rmd
+#' @export
 rmd_a_superscript <- function() {
     rs_enclose_selection_with(symbol = "^")
 }

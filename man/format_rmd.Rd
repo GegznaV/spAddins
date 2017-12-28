@@ -9,6 +9,7 @@
 \alias{rmd_a_italics2}
 \alias{rmd_code_inline}
 \alias{rmd_code_inline_r}
+\alias{rmd_code_inline_r_highlighted}
 \alias{rmd_a_superscript}
 \alias{rmd_a_subscript}
 \alias{rmd_a_strikethrough}
@@ -28,6 +29,8 @@ rmd_a_italics2()
 rmd_code_inline()
 
 rmd_code_inline_r()
+
+rmd_code_inline_r_highlighted()
 
 rmd_a_superscript()
 

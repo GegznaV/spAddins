@@ -1,8 +1,8 @@
 Package: spAddins
 Type: Package
-Title: A Set of RStudio Addins
-Version: 0.2.2.9001
-Date: 2017-12-23
+Title: RStudio Add-ins to Format Text and Insert Operators
+Version: 0.2.2.9003
+Date: 2017-12-28
 Authors@R: person("Vilmantas", "Gegzna",
                     email = "GegznaV@gmail.com",
                     role = c("aut", "cre","cph")

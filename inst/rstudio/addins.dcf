@@ -39,7 +39,6 @@ Binding: rmd_b_heading_6
 Interactive: false
 
 
-
 Name: Rmd: Bold (** **)
 Description: Enclose selected text with `**` and `**`.
 Binding: rmd_a_bold
@@ -109,6 +108,11 @@ Description: Enclose selected text with `r and `.
 Binding: rmd_code_inline_r
 Interactive: false
 
+Name: Rmd: R code inline (highlighted) (`r  `{.r})
+Description: Enclose selected text with `r and `{.r}.
+Binding: rmd_code_inline_r_highlighted
+Interactive: false
+
 
 Name: Rmd: Code block (``` ```)
 Description: Enclose selected lines with ``` and ```.
@@ -129,6 +133,11 @@ Interactive: false
 Name: Rmd: Block quotes (>, >, >, ...)
 Description: Make block quotes.
 Binding: rmd_block_quotes
+Interactive: false
+
+Name: Rmd: Line blocks (|, |, |, ...)
+Description: Make line blocks (useful for writing adressess).
+Binding: rmd_line_blocks
 Interactive: false
 
 Name: Rmd: Unordered list (level 1: -, -, -, ...)
@@ -161,9 +170,9 @@ Description: Make lettered list (level 2).
 Binding: rmd_list_lettered_2
 Interactive: false
 
-Name: Rmd: Master list
-Description: Make masterlist list.
-Binding: rmd_master_list
+Name: Rmd: Numbered example list ((@), (@), (@), ...)
+Description: Make numbered example list for sequentially numbered examples. Numbering does not restart.
+Binding: rmd_example_list
 Interactive: false
 
 Name: Rmd: Insert table (example 1: simple)
