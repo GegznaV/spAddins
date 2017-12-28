@@ -56,13 +56,22 @@ are designed to be used in
 combination with user-defined RStudio keyboard shortcuts. These
 addins either:
 
-1) **format text in R Markdown documents**:
+1) Basic text formatting add-ins for R Markdown documents. More on formatting can be found here: 
+    - http://rmarkdown.rstudio.com/authoring_pandoc_markdown.html
+2) Insert various R operatiors, including `%>%`, `<<-`, `%$%`;
+3) Replace certain symbols (e.g., strings like `"c:\data\"` converted into `"c:/data/"`. This can be useful for Windows users).
+
+<!-- 
+1) **format text in R Markdown documents**: 
     - **enclose** either selected text or selected rows with special symbols and text gets inerpreted in a special way when rendered with R Markdown (e.g., converts "bold" into "\*\*bold\*\*"
 that is interpreted as "**bold**").
 2) **insert** text (e.g., operators `%>%`, `<<-`, `%$%`) at the cursor position; 
 3)  **replace** symbols in selected
 pieces of text (e.g., convert backslashes to forward slashes which results 
 in strings like `"c:\data\"` converted into `"c:/data/"`). 
+-->
+
+
 
 Install package
 ---------------------------

@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A Set of RStudio Addins • spAddins</title>
+<title>RStudio Add-ins to Format Text and Insert Operators • spAddins</title>
 <!-- jquery --><script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/united/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><!-- Font Awesome icons --><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 <!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
@@ -77,6 +77,17 @@
 <!-- TO DO: -->
 <!-- 1. Create an interactive addin, that enables to select formatting options; -->
 <!-- 2. Write unit tests. -->
+<!-- 3. Insert link [label](link_location) -->
+<!-- 4. Insert image ![caption](image_location) -->
+<!-- 5. Insert image with caption (interactive input through Shiny): -->
+<!-- fig_id = sub("\\.","_",  -->
+<!--              paste0("fig_ID__", (as.double(Sys.time())))) -->
+<!-- ```{r fig_ID_, fig.align='center', fig.cap=CAPTION,  echo=FALSE, } -->
+<!-- # Figure location -->
+<!-- knitr::include_graphics("image_location") -->
+<!-- # Figure caption/name/description -->
+<!-- CAPTION = "The caption of your figure comes here..." -->
+<!-- ``` -->
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 <!-- [![Rdoc](http://www.rdocumentation.org/badges/version/spAddins)](http://www.rdocumentation.org/packages/spAddins) -->
@@ -91,19 +102,23 @@
 </h1></div>
 <p><code>spAddins</code> is an R package that provides a set of RStudio addins which are designed to be used in combination with user-defined RStudio keyboard shortcuts. These addins either:</p>
 <ol style="list-style-type: decimal">
-<li>
-<strong>format text in R Markdown documents</strong>:
+<li>Basic text formatting add-ins for R Markdown documents. More on formatting can be found here:
 <ul>
-<li>
-<strong>enclose</strong> either selected text or selected rows with special symbols and text gets inerpreted in a special way when rendered with R Markdown (e.g., converts “bold” into “**bold**” that is interpreted as “<strong>bold</strong>”).</li>
+<li><a href="http://rmarkdown.rstudio.com/authoring_pandoc_markdown.html" class="uri">http://rmarkdown.rstudio.com/authoring_pandoc_markdown.html</a></li>
 </ul>
 </li>
-<li>
-<strong>insert</strong> text (e.g., operators <code>%&gt;%</code>, <code>&lt;&lt;-</code>, <code>%$%</code>) at the cursor position;</li>
-<li>
-<strong>replace</strong> symbols in selected pieces of text (e.g., convert backslashes to forward slashes which results in strings like <code>"c:\data\"</code> converted into <code>"c:/data/"</code>).</li>
+<li>Insert various R operatiors, including <code>%&gt;%</code>, <code>&lt;&lt;-</code>, <code>%$%</code>;</li>
+<li>Replace certain symbols (e.g., strings like <code>"c:\data\"</code> converted into <code>"c:/data/"</code>. This can be useful for Windows users).</li>
 </ol>
-<div id="install-package" class="section level2">
+<!-- 
+1) **format text in R Markdown documents**: 
+    - **enclose** either selected text or selected rows with special symbols and text gets inerpreted in a special way when rendered with R Markdown (e.g., converts "bold" into "\*\*bold\*\*"
+that is interpreted as "**bold**").
+2) **insert** text (e.g., operators `%>%`, `<<-`, `%$%`) at the cursor position; 
+3)  **replace** symbols in selected
+pieces of text (e.g., convert backslashes to forward slashes which results 
+in strings like `"c:\data\"` converted into `"c:/data/"`). 
+--><div id="install-package" class="section level2">
 <h2 class="hasAnchor">
 <a href="#install-package" class="anchor"></a>Install package</h2>
 <p>Install released version from CRAN:</p>
@@ -121,7 +136,6 @@ devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocument
 <!-- browseVignettes("spAddins") -->
 <hr>
 <p>More information at <a href="http://gegznav.github.io/spAddins/" class="uri">http://gegznav.github.io/spAddins/</a></p>
-<hr>
 </div>
 </div>
 </div>
@@ -148,9 +162,9 @@ devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocument
 <ul class="list-unstyled">
 <li><a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT licensed"></a></li>
 <li><a href="https://cran.r-project.org/package=spAddins"><img src="http://www.r-pkg.org/badges/version/spAddins" alt="CRAN_Status_Badge"></a></li>
-<li><a href="https://github.com/GegznaV/spAddins"><img src="https://img.shields.io/badge/GitHub-0.2.2-brightgreen.svg" alt="GitHub version"></a></li>
+<li><a href="https://github.com/GegznaV/spAddins"><img src="https://img.shields.io/badge/GitHub-0.2.2.9003-brightgreen.svg" alt="GitHub version"></a></li>
 <li><a href="https://travis-ci.org/GegznaV/spAddins"><img src="https://travis-ci.org/GegznaV/spAddins.png?branch=master" alt="Travis-CI Build Status"></a></li>
-<li><a href="/commits/master"><img src="https://img.shields.io/badge/Updated%20on-2017--12--21-yellowgreen.svg" alt="Updated-on"></a></li>
+<li><a href="/commits/master"><img src="https://img.shields.io/badge/Updated%20on-2017--12--28-yellowgreen.svg" alt="Updated-on"></a></li>
 <li><a href="http://depsy.org/package/r/spAddins"><img src="http://depsy.org/api/package/cran/spAddins/badge.svg" alt="Research software impact"></a></li>
 </ul>
 </div>

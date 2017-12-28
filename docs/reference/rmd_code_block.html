@@ -98,15 +98,21 @@
 
     
     <p>RStudio add-in to insert selected lines into code block:</p><ul>
-<li><p><code>rmd_r_code_block()</code> - R code block;</p></li>
-<li><p><code>rmd_code_block()</code> - verbatim code block.</p></li>
-</ul><p><code>rs_enclose_all_with_lines</code> - function that adds lines above and below
-                                   the selection.</p>
+<li><p><code>rmd_code_block()</code> - verbatim code block;</p></li>
+<li><p><code>rmd_code_block_r()</code> - R code block.</p></li>
+</ul><p>.
+<code>rmd_code_block_r_split()</code> - splits block of R code.</p>
+
+    <p>These functions internally use function
+<code><a href='rs_enclose_all_with_lines.html'>rs_enclose_all_with_lines()</a></code> -
+that adds lines above and below the selection.</p>
     
 
     <pre class="usage"><span class='fu'>rmd_code_block_r</span>()
 
-<span class='fu'>rmd_code_block</span>()</pre>
+<span class='fu'>rmd_code_block</span>()
+
+<span class='fu'>rmd_code_block_r_split</span>()</pre>
         
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
