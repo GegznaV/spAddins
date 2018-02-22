@@ -1,3 +1,8 @@
+Name: HTML: Space
+Description: Insert HTML code of space
+Binding: html_insert_space
+Interactive: false
+
 Name: Rmd: Heading 1 (======)
 Description: Underline with ======
 Binding: rmd_b_heading_01a_title
@@ -97,20 +102,19 @@ Binding: rmd_equation_block2
 Interactive: false
 
 
-
 Name: Rmd: Code inline (` `)
 Description: Enclose selected text with ` and `.
 Binding: rmd_code_inline
 Interactive: false
 
-Name: Rmd: R code inline (`r  `)
+Name: Rmd: Code inline (R code to be executed) (`r  `)
 Description: Enclose selected text with `r and `.
 Binding: rmd_code_inline_r
 Interactive: false
 
-Name: Rmd: R code inline (highlighted) (`r  `{.r})
-Description: Enclose selected text with `r and `{.r}.
-Binding: rmd_code_inline_r_highlighted
+Name: Rmd: Code inline (highlighted as R code) (`  `{.r})
+Description: Enclose selected text with ` and `{.r}.
+Binding: rmd_code_inline_highlighted_as_r
 Interactive: false
 
 
@@ -119,15 +123,27 @@ Description: Enclose selected lines with ``` and ```.
 Binding: rmd_code_block
 Interactive: false
 
-Name: Rmd: R code block (```{r}  ```)
+Name: Rmd: Code block: R code (```{r}  ```)
 Description: Enclose selected lines with ```{r} and ```.
 Binding: rmd_code_block_r
 Interactive: false
 
-Name: Rmd: Split R code block (```  ```{r})
+Name: Rmd: Code block: split R code (```  ```{r})
 Description: Insert lines ``` and ```{r} above the selection.
 Binding: rmd_code_block_r_split
 Interactive: false
+
+
+Name: Rmd: Link/URL [...](...)
+Description: Enclose selection with [ and ]().
+Binding: rmd_link_url
+Interactive: false
+
+Name: Rmd: Insert figure ![...](...)
+Description: Enclose selection with ![ and ]().
+Binding: rmd_insert_figure
+Interactive: false
+
 
 
 Name: Rmd: Block quotes (>, >, >, ...)
@@ -140,67 +156,67 @@ Description: Make line blocks (useful for writing adressess).
 Binding: rmd_line_blocks
 Interactive: false
 
-Name: Rmd: Unordered list (level 1: -, -, -, ...)
+Name: Rmd: List (unordered: -, -, -, ..., level 1)
 Description: Make unordered list (level 1).
 Binding: rmd_list_unordered
 Interactive: false
 
-Name: Rmd: Unordered list (level 2: +, +, +, ...)
+Name: Rmd: List (unordered: +, +, +, ..., level 2)
 Description: Make unordered list (level 2).
 Binding: rmd_list_unordered_2
 Interactive: false
 
-Name: Rmd: Numbered list (level 1: 1, 2, 3, ...)
+Name: Rmd: List (numbered: 1, 2, 3, ..., level 1)
 Description: Make numbered list (level 1).
 Binding: rmd_list_numbered
 Interactive: false
 
-Name: Rmd: Numbered list (level 2: 1, 2, 3, ...)
+Name: Rmd: List (numbered: 1, 2, 3, ..., level 2)
 Description: Make numbered list (level 2).
 Binding: rmd_list_numbered_2
 Interactive: false
 
-Name: Rmd: Lettered list (level 1: a, b, c, ...)
+Name: Rmd: List (lettered: a, b, c, ..., level 1)
 Description: Make lettered list (level 1).
 Binding: rmd_list_lettered
 Interactive: false
 
-Name: Rmd: Lettered list (level 2: a, b, c, ...)
+Name: Rmd: List (lettered: a, b, c, ..., level 2)
 Description: Make lettered list (level 2).
 Binding: rmd_list_lettered_2
 Interactive: false
 
-Name: Rmd: Numbered example list ((@), (@), (@), ...)
+Name: Rmd: List (numbered example list (@), (@), (@), ...)
 Description: Make numbered example list for sequentially numbered examples. Numbering does not restart.
-Binding: rmd_example_list
+Binding: rmd_list_z_example_list
 Interactive: false
 
-Name: Rmd: Insert table (example 1: simple)
+Name: Rmd: Table (example 1: simple)
 Description: Insert an example of R Markdown table.
 Binding: rmd_table_1
 Interactive: false
 
-Name: Rmd: Insert table (example 2: without column names)
+Name: Rmd: Table (example 2: without column names)
 Description: Insert an example of R Markdown table.
 Binding: rmd_table_2
 Interactive: false
 
-Name: Rmd: Insert table (example 3: multiline)
+Name: Rmd: Table (example 3: multiline)
 Description: Insert an example of R Markdown table.
 Binding: rmd_table_3
 Interactive: false
 
-Name: Rmd: Insert table (example 4: markdown-style)
+Name: Rmd: Table (example 4: markdown-style)
 Description: Insert an example of R Markdown table.
 Binding: rmd_table_4
 Interactive: false
 
-Name: Rmd: Insert table (example 5: grid-style)
+Name: Rmd: Table (example 5: grid-style)
 Description: Insert an example of R Markdown table.
 Binding: rmd_table_5
 Interactive: false
 
-Name: Rmd: Insert horizontal rule (* * *)
+Name: Rmd: Horizontal rule (* * *)
 Description: Insert a horizontal rule (style: * * *) below the selection.
 Binding: rmd_horizontal_rule
 Interactive: false

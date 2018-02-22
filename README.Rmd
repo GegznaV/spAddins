@@ -26,6 +26,7 @@ CAPTION = "The_caption_of_your_figure_comes_here..."
 6. Write function to check if there is a space before and after the selection
 (for %>% and similar operators)
 
+7. Add possibility not to add list bullets and numbers to the empty rows.
 
 -->
 

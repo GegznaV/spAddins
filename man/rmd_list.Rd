@@ -10,7 +10,7 @@
 \alias{rmd_list_numbered_2}
 \alias{rmd_list_lettered}
 \alias{rmd_list_lettered_2}
-\alias{rmd_example_list}
+\alias{rmd_list_z_example_list}
 \title{Format text as R Markdown list.}
 \usage{
 rmd_list(type = "unordered", level = 1, context = get_context())
@@ -31,7 +31,7 @@ rmd_list_lettered()
 
 rmd_list_lettered_2()
 
-rmd_example_list()
+rmd_list_z_example_list()
 }
 \arguments{
 \item{type}{(character) the type of list "unordered", "numbered", "lettered",  "LETTERED", "master".}

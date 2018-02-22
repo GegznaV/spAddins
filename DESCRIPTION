@@ -1,13 +1,15 @@
 Package: spAddins
 Type: Package
-Title: RStudio Add-ins to Format Text and Insert Operators
-Version: 0.2.2.9004
-Date: 2017-12-28
+Title: RStudio Add-ins to Format R Markdown files
+Version: 0.2.2.9007
+Date: 2018-02-20
 Authors@R: person("Vilmantas", "Gegzna",
                     email = "GegznaV@gmail.com",
                     role = c("aut", "cre","cph")
             )
-Description: A set of RStudio addins that are designed to be used in
+Description: RStudio Add-ins to Format Text and Insert Operators
+             ...
+             A set of RStudio addins that are designed to be used in
              combination with user-defined RStudio keyboard shortcuts. These
              addins either:
              1) insert text at a cursor position (e.g. insert

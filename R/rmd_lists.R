@@ -121,7 +121,7 @@ rmd_list_lettered_2 <- function() {
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_list
 #' @export
-rmd_example_list <- function() {
+rmd_list_z_example_list <- function() {
     rmd_list("(@)")
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
