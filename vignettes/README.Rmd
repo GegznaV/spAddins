@@ -36,9 +36,8 @@ knitr::include_graphics("http://gegznav.github.io/spAddins/logo.png")
 Important
 ==============================================================================
   
-Package `spAddins` has RETIRED in favor of packages `addins.rmd` and `addins.rs`.
-
-Please find development versions of these packages at:
+<font color = "red">The development of `spAddins` **ended** in 2018 </font> as the package <font color = "red">RETIRED</font> in favor of packages `addins.rmd` and `addins.rs`.
+Please find the development versions of these packages at:
 
 - http://gegznav.github.io/addins.rmd/
 - http://gegznav.github.io/addins.rs/
@@ -47,10 +46,9 @@ Please find development versions of these packages at:
 R package `spAddins`  
 ==============================================================================
 
-`spAddins` is an R package that provides a set of RStudio addins which
-are designed to be used in
-combination with user-defined RStudio keyboard shortcuts. These
-addins either:
+`spAddins` is an R package that provides a set of RStudio addins, which
+are designed to be used in combination with user-defined RStudio keyboard shortcuts. 
+These addins either:
 
 1) Basic text formatting add-ins for R Markdown documents. More on formatting can be found here: 
     - http://rmarkdown.rstudio.com/authoring_pandoc_markdown.html
