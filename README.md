@@ -1,25 +1,5 @@
 
-<!-- 
-
-TO DO: 
-
-1. Create an interactive addin, that enables to select formatting options;
-2. Write unit tests.
-3. Insert link [label](link_location)
-4. Insert image ![caption](image_location)
-5. Insert image with caption (interactive input through Shiny):
-
-fig_id = sub("\\.","_",
-             paste0("fig_ID__", (as.double(Sys.time()))))
-
-<img src="image_location" title="The_caption_of_your_figure_comes_here..." alt="The_caption_of_your_figure_comes_here..." style="display: block; margin: auto;" />
-
-6. Write function to check if there is a space before and after the selection
-(for %>% and similar operators)
-
-7. Add possibility not to add list bullets and numbers to the empty rows.
-
--->
+<!-- RETIRED PACKAGE -->
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
@@ -28,7 +8,7 @@ fig_id = sub("\\.","_",
 licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/spAddins)](https://cran.r-project.org/package=spAddins)
 [![GitHub
-version](https://img.shields.io/badge/GitHub-0.2.2.9008-brightgreen.svg)](https://github.com/GegznaV/spAddins)
+version](https://img.shields.io/badge/GitHub-0.2.3-brightgreen.svg)](https://github.com/GegznaV/spAddins)
 [![Travis-CI Build
 Status](https://travis-ci.org/GegznaV/spAddins.png?branch=master)](https://travis-ci.org/GegznaV/spAddins)
 [![Updated-on](https://img.shields.io/badge/Updated%20on-2019--02--27-yellowgreen.svg)](/commits/master)
@@ -47,17 +27,17 @@ impact](http://depsy.org/api/package/cran/spAddins/badge.svg)](http://depsy.org/
 
 # Important
 
-Package `spAddins` has RETIRED in favor of packages `addins.rmd` and
-`addins.rs`.
-
-Please find development versions of these packages at:
+<font color = "red">The development of `spAddins` **ended** in 2018
+</font> as the package <font color = "red">RETIRED</font> in favor of
+packages `addins.rmd` and `addins.rs`. Please find the development
+versions of these packages at:
 
   - <http://gegznav.github.io/addins.rmd/>
   - <http://gegznav.github.io/addins.rs/>
 
 # R package `spAddins`
 
-`spAddins` is an R package that provides a set of RStudio addins which
+`spAddins` is an R package that provides a set of RStudio addins, which
 are designed to be used in combination with user-defined RStudio
 keyboard shortcuts. These addins either:
 
@@ -108,4 +88,41 @@ vignette("v1_workflow", package = "spAddins")
 
 -----
 
-More information at <http://gegznav.github.io/spAddins/>
+More information at
+<http://gegznav.github.io/spAddins/>
+
+<!-- ================================================================== -->
+
+<!-- TO DO:  -->
+
+<!-- 1. Create an interactive addin, that enables to select formatting options; -->
+
+<!-- 2. Write unit tests. -->
+
+<!-- 3. Insert link [label](link_location) -->
+
+<!-- 4. Insert image ![caption](image_location) -->
+
+<!-- 5. Insert image with caption (interactive input through Shiny): -->
+
+<!-- fig_id = sub("\\.","_", -->
+
+<!--              paste0("fig_ID__", (as.double(Sys.time())))) -->
+
+<!-- ```{r fig_ID_, fig.align='center', fig.cap=CAPTION,  echo=FALSE, } -->
+
+<!-- # Figure location -->
+
+<!-- knitr::include_graphics("image_location") -->
+
+<!-- # Figure caption/name/description -->
+
+<!-- CAPTION = "The_caption_of_your_figure_comes_here..." -->
+
+<!-- ``` -->
+
+<!-- 6. Write function to check if there is a space before and after the selection -->
+
+<!-- (for %>% and similar operators) -->
+
+<!-- 7. Add possibility not to add list bullets and numbers to the empty rows. -->
