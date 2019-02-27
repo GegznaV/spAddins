@@ -26,3 +26,4 @@ operation in the selected text: \itemize{
    \item \code{rs_replace_slash_fw2b} forward-slash into back-slash.
 }
 }
+\concept{'Replace selected symbols' add-ins}

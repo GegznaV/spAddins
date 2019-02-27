@@ -23,3 +23,4 @@ as a block equation in R Markdown.
 Other R Markdown formatting add-ins: \code{\link{format_rmd}},
   \code{\link{rmd_code_block}}, \code{\link{rmd_list}}
 }
+\concept{R Markdown formatting add-ins}

@@ -65,3 +65,4 @@ interpretation in R Markdown. Function, symbols and interpretation \itemize{
 Other R Markdown formatting add-ins: \code{\link{rmd_code_block}},
   \code{\link{rmd_equations}}, \code{\link{rmd_list}}
 }
+\concept{R Markdown formatting add-ins}

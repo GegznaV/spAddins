@@ -3,7 +3,6 @@
 \name{insert_arrows}
 \alias{insert_arrows}
 \alias{html_insert_space}
-\alias{insert_arrows}
 \alias{rs_insert_arrow_rl}
 \alias{rs_insert_arrow_rl2}
 \alias{rs_insert_arrow_lr}
@@ -55,3 +54,4 @@ Other 'Insert at cursor position' addins: \code{\link{insert_symbol_sequences}}
 
 Other 'Insert at cursor position' addins: \code{\link{insert_symbol_sequences}}
 }
+\concept{'Insert at cursor position' addins}

@@ -38,3 +38,4 @@ Other 'Insert at cursor position' add-ins: \code{\link{rs_insert_infix_R}},
   \code{\link{rs_insert_infix_not_in}},
   \code{\link{rs_insert_matrix_multiplication}}
 }
+\concept{'Insert at cursor position' add-ins}

@@ -20,3 +20,4 @@ Other 'Insert at cursor position' add-ins: \code{\link{insert_magrittr_operators
   \code{\link{rs_insert_infix_in}},
   \code{\link{rs_insert_matrix_multiplication}}
 }
+\concept{'Insert at cursor position' add-ins}

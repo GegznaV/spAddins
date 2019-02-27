@@ -1,13 +1,15 @@
 Package: spAddins
 Type: Package
-Title: RStudio Add-ins to Format R Markdown files
-Version: 0.2.2.9007
+Title: RStudio Add-ins to Format R Markdown files (RETIRED PACKAGE)
+Version: 0.2.2.9008
 Date: 2018-02-20
 Authors@R: person("Vilmantas", "Gegzna",
                     email = "GegznaV@gmail.com",
                     role = c("aut", "cre","cph")
             )
-Description: RStudio Add-ins to Format Text and Insert Operators
+Description: `spAddins` has retired in favour of packages `addins.rmd` and `addins.rs`.
+             ...
+             RStudio Add-ins to Format Text and Insert Operators
              ...
              A set of RStudio addins that are designed to be used in
              combination with user-defined RStudio keyboard shortcuts. These
@@ -25,7 +27,7 @@ License: MIT + file LICENSE
 LazyData: TRUE
 ByteCompile: TRUE
 Encoding: UTF-8
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
 VignetteBuilder: knitr
 Depends:
     R (>= 3.2)
