@@ -2,31 +2,7 @@
 output: github_document
 ---
 
-
-
-<!-- TO DO:  -->
-
-<!-- 1. Create an interactive addin, that enables to select formatting options; -->
-<!-- 2. Write unit tests. -->
-<!-- 3. Insert link [label](link_location) -->
-<!-- 4. Insert image ![caption](image_location) -->
-<!-- 5. Insert image with caption (interactive input through Shiny): -->
-
-<!-- fig_id = sub("\\.","_", -->
-<!--              paste0("fig_ID__", (as.double(Sys.time())))) -->
-
-<!-- ```{r fig_ID_, fig.align='center', fig.cap=CAPTION,  echo=FALSE, } -->
-<!-- # Figure location -->
-<!-- knitr::include_graphics("image_location") -->
-
-<!-- # Figure caption/name/description -->
-<!-- CAPTION = "The_caption_of_your_figure_comes_here..." -->
-<!-- ``` -->
-
-<!-- 6. Write function to check if there is a space before and after the selection -->
-<!-- (for %>% and similar operators) -->
-
-<!-- 7. Add possibility not to add list bullets and numbers to the empty rows. -->
+<!-- RETIRED PACKAGE -->
 
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -122,5 +98,28 @@ vignette("v1_workflow", package = "spAddins")
 
 More information at http://gegznav.github.io/spAddins/
 
+<!-- ================================================================== -->
+<!-- TO DO:  -->
 
+<!-- 1. Create an interactive addin, that enables to select formatting options; -->
+<!-- 2. Write unit tests. -->
+<!-- 3. Insert link [label](link_location) -->
+<!-- 4. Insert image ![caption](image_location) -->
+<!-- 5. Insert image with caption (interactive input through Shiny): -->
+
+<!-- fig_id = sub("\\.","_", -->
+<!--              paste0("fig_ID__", (as.double(Sys.time())))) -->
+
+<!-- ```{r fig_ID_, fig.align='center', fig.cap=CAPTION,  echo=FALSE, } -->
+<!-- # Figure location -->
+<!-- knitr::include_graphics("image_location") -->
+
+<!-- # Figure caption/name/description -->
+<!-- CAPTION = "The_caption_of_your_figure_comes_here..." -->
+<!-- ``` -->
+
+<!-- 6. Write function to check if there is a space before and after the selection -->
+<!-- (for %>% and similar operators) -->
+
+<!-- 7. Add possibility not to add list bullets and numbers to the empty rows. -->
 

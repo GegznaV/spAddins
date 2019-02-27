@@ -1,13 +1,13 @@
 Package: spAddins
 Type: Package
 Title: RStudio Add-ins to Format R Markdown files (RETIRED PACKAGE)
-Version: 0.2.2.9008
-Date: 2018-02-20
+Version: 0.2.3
+Date: 2019-02-27
 Authors@R: person("Vilmantas", "Gegzna",
                     email = "GegznaV@gmail.com",
                     role = c("aut", "cre","cph")
             )
-Description: `spAddins` has retired in favour of packages `addins.rmd` and `addins.rs`.
+Description: `spAddins` has retired in favor of packages `addins.rmd` and `addins.rs`.
              ...
              RStudio Add-ins to Format Text and Insert Operators
              ...
