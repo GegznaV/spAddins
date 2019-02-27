@@ -3,22 +3,29 @@
 \name{rmd_code_block}
 \alias{rmd_code_block}
 \alias{rmd_code_block_r}
-\alias{rmd_code_block}
+\alias{rmd_code_block_r_split}
 \title{Convert rows into the block of code.}
 \usage{
 rmd_code_block_r()
 
 rmd_code_block()
+
+rmd_code_block_r_split()
 }
 \description{
 RStudio add-in to insert selected lines into code block: \itemize{
-   \item \code{rmd_r_code_block()} - R code block;
-   \item \code{rmd_code_block()} - verbatim code block.
-}
-\code{rs_enclose_all_with_lines} - function that adds lines above and below
-                                   the selection.
+   \item \code{rmd_code_block()} - verbatim code block;
+   \item \code{rmd_code_block_r()} - R code block.
+}.
+\code{rmd_code_block_r_split()} - splits block of R code.
+
+
+These functions internally use function
+\code{rs_enclose_all_with_lines()} -
+that adds lines above and below the selection.
 }
 \seealso{
 Other R Markdown formatting add-ins: \code{\link{format_rmd}},
   \code{\link{rmd_equations}}, \code{\link{rmd_list}}
 }
+\concept{R Markdown formatting add-ins}

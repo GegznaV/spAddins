@@ -9,9 +9,13 @@
 \alias{rmd_a_italics2}
 \alias{rmd_code_inline}
 \alias{rmd_code_inline_r}
+\alias{rmd_code_inline_highlighted_as_r}
 \alias{rmd_a_superscript}
 \alias{rmd_a_subscript}
 \alias{rmd_a_strikethrough}
+\alias{rmd_horizontal_rule}
+\alias{rmd_link_url}
+\alias{rmd_insert_figure}
 \title{Add-ins for basic R Markdown formatting.}
 \usage{
 rmd_a_bold()
@@ -28,11 +32,19 @@ rmd_code_inline()
 
 rmd_code_inline_r()
 
+rmd_code_inline_highlighted_as_r()
+
 rmd_a_superscript()
 
 rmd_a_subscript()
 
 rmd_a_strikethrough()
+
+rmd_horizontal_rule()
+
+rmd_link_url()
+
+rmd_insert_figure()
 }
 \description{
 RStudio add-ins, which enclose selected text with symbols that have special
@@ -53,3 +65,4 @@ interpretation in R Markdown. Function, symbols and interpretation \itemize{
 Other R Markdown formatting add-ins: \code{\link{rmd_code_block}},
   \code{\link{rmd_equations}}, \code{\link{rmd_list}}
 }
+\concept{R Markdown formatting add-ins}

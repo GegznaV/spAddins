@@ -2,11 +2,8 @@
 % Please edit documentation in R/insert_lines.R
 \name{insert_symbol_sequences}
 \alias{insert_symbol_sequences}
-\alias{insert_symbol_sequences}
 \alias{rs_insert_line_ss}
-\alias{insert_symbol_sequences}
 \alias{rs_insert_line_ds}
-\alias{insert_symbol_sequences}
 \alias{rs_insert_line_sw}
 \title{Insert various lines.}
 \usage{
@@ -30,3 +27,4 @@ Use
 \seealso{
 Other 'Insert at cursor position' addins: \code{\link{insert_arrows}}
 }
+\concept{'Insert at cursor position' addins}

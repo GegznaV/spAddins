@@ -1,13 +1,134 @@
 ---
 title: "Untitled"
-author: "VG"
+author:
+- affiliation: University of Somewhere
+  name: Author One
+- affiliation: University of Nowhere
+  name: Author Two
 date: "December 18, 2017"
-output: html_document
+output:
+  pdf_document: 
+    highlight: pygments
+lang: lt
+latex_engine: xelatex
+header-includes:
+  \renewcommand{\abstractname}{My Very Own Summary}
+  \usepackage[L7x]{fontenc}
+abstract: |
+  This is the abstract.
+  
+  It consists of two paragraphs.
 ---
+
+
+`102 * c[1]`{.r}
+
+~~~~~~~~~~~~~~~~
+~~~~~~~~~~
+code including tildes
+~~~~~~~~~~
+~~~~~~~~~~~~~~~~
+```
+
+```r
+~~~~ {#mycode .r .numberLines startFrom="100"}
+# --- Abs
+qsort()     = 1 +a[4]
+qsort (x:xs) = qsort (filter (< x) xs) ++ [x] ++
+               qsort (filter (>= x) xs)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+
+
+| The limerick packs laughs anatomical
+| In space that is quite economical.
+|    But the good ones I've seen
+|    So seldom are clean
+| And the clean ones so seldom are comical
+
+| 200 Main St.
+| Berkeley, CA 94718
+
+
+https://pandoc.org/MANUAL.html#pandocs-markdown
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+***
+
+ooo
+
+`3 + 2 line()`{.r}
+
+
+This is an [inline link](/url), 
+and here's [one witha title](http://fsf.org "click here for a good time!")
+
+Here is an inline note.^[Inlines notes are easier to write, since
+you don't have to pick an identifier and move down to type the
+note.]
+
+
+#. one
+#. two
+
+
+(1) aaa
+(2) fff
+
+* * *
+
+https://pandoc.org/MANUAL.html#definition-lists
+
+
+Term 1
+
+:   Definition 1
+
+Term 2 with *inline markup*
+
+:   Definition 2
+
+        { some code, part of Definition 2 }
+
+    Third paragraph of definition 2.
+    
+_ _ _
+
+https://pandoc.org/MANUAL.html#definition-lists
+
+Term 1
+
+:   Definition
+with lazy continuation.
+
+    Second paragraph of the definition.
+
+
+
+_ _ _
+
+https://pandoc.org/MANUAL.html#definition-lists
+
+Term 1
+  ~ Definition 1
+
+Term 2
+  ~ Definition 2a
+  ~ Definition 2b
+
+_ _ _
+
+
+-   item one
+-   item two
+
+
+    { my code block }
+
 
 <!--
 #' @rdname rmd_headings

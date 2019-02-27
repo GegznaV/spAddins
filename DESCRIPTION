@@ -1,13 +1,17 @@
 Package: spAddins
 Type: Package
-Title: A Set of RStudio Addins
-Version: 0.2.2
-Date: 2017-12-21
+Title: RStudio Add-ins to Format R Markdown files (RETIRED PACKAGE)
+Version: 0.2.3
+Date: 2019-02-27
 Authors@R: person("Vilmantas", "Gegzna",
                     email = "GegznaV@gmail.com",
                     role = c("aut", "cre","cph")
             )
-Description: A set of RStudio addins that are designed to be used in
+Description: `spAddins` has retired in favor of packages `addins.rmd` and `addins.rs`.
+             ...
+             RStudio Add-ins to Format Text and Insert Operators
+             ...
+             A set of RStudio addins that are designed to be used in
              combination with user-defined RStudio keyboard shortcuts. These
              addins either:
              1) insert text at a cursor position (e.g. insert
@@ -23,7 +27,7 @@ License: MIT + file LICENSE
 LazyData: TRUE
 ByteCompile: TRUE
 Encoding: UTF-8
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
 VignetteBuilder: knitr
 Depends:
     R (>= 3.2)

@@ -48,10 +48,14 @@ rmd_list <- function(type = "unordered", level = 1, context = get_context()) {
 
                    "(@)" = ,
                    "@" = ,
-                   "master" = paste0(rep("(@)", max(ind)), " "),
+                   "master" = ,
+                   "example-list" = paste0(rep("(@)", max(ind)), " "),
 
                    "blockquotes" = ,
                    ">" = paste0(rep(">", max(ind)), " "),
+
+                   "line blocks" = ,
+                   "|" = paste0(rep("|", max(ind)), " "),
 
                    stop("Unrecognized symol.")
     )
@@ -72,6 +76,11 @@ rmd_list <- function(type = "unordered", level = 1, context = get_context()) {
 #' @export
 rmd_block_quotes <- function() {
     rmd_list(">")
+}
+#' @rdname rmd_list
+#' @export
+rmd_line_blocks <- function() {
+    rmd_list("|")
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_list
@@ -112,7 +121,7 @@ rmd_list_lettered_2 <- function() {
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname rmd_list
 #' @export
-rmd_master_list <- function() {
-    rmd_list("master")
+rmd_list_z_example_list <- function() {
+    rmd_list("(@)")
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

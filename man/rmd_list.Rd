@@ -3,18 +3,21 @@
 \name{rmd_list}
 \alias{rmd_list}
 \alias{rmd_block_quotes}
+\alias{rmd_line_blocks}
 \alias{rmd_list_unordered}
 \alias{rmd_list_unordered_2}
 \alias{rmd_list_numbered}
 \alias{rmd_list_numbered_2}
 \alias{rmd_list_lettered}
 \alias{rmd_list_lettered_2}
-\alias{rmd_master_list}
+\alias{rmd_list_z_example_list}
 \title{Format text as R Markdown list.}
 \usage{
 rmd_list(type = "unordered", level = 1, context = get_context())
 
 rmd_block_quotes()
+
+rmd_line_blocks()
 
 rmd_list_unordered()
 
@@ -28,7 +31,7 @@ rmd_list_lettered()
 
 rmd_list_lettered_2()
 
-rmd_master_list()
+rmd_list_z_example_list()
 }
 \arguments{
 \item{type}{(character) the type of list "unordered", "numbered", "lettered",  "LETTERED", "master".}
@@ -52,3 +55,4 @@ For the first-level lists: \itemize{
 Other R Markdown formatting add-ins: \code{\link{format_rmd}},
   \code{\link{rmd_code_block}}, \code{\link{rmd_equations}}
 }
+\concept{R Markdown formatting add-ins}

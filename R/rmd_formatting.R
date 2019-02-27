@@ -72,6 +72,12 @@ rmd_code_inline_r <- function() {
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' @rdname format_rmd
 #' @export
+rmd_code_inline_highlighted_as_r <- function() {
+    rs_enclose_selection_with(symbol_before = "`", symbol_after = "`{.r}")
+}
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' @rdname format_rmd
+#' @export
 rmd_a_superscript <- function() {
     rs_enclose_selection_with(symbol = "^")
 }
@@ -88,3 +94,27 @@ rmd_a_strikethrough <- function() {
     rs_enclose_selection_with(symbol = "~~")
 }
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' @rdname format_rmd
+#' @export
+rmd_horizontal_rule <- function() {
+    # Style ***
+    # Style * * *
+    # Style ___
+    # Style _ _ _
+    # Style ---
+    # Style - - -
+    rs_enclose_all_with_lines(below = "* * *")
+}
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' @rdname format_rmd
+#' @export
+rmd_link_url <- function() {
+    rs_enclose_selection_with(symbol_before = "[", symbol_after = "](url_link_address)")
+}
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' @rdname format_rmd
+#' @export
+rmd_insert_figure <- function() {
+    rs_enclose_selection_with(symbol_before = "![", symbol_after = "](path_to_figure)")
+}
