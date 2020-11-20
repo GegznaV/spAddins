@@ -42,7 +42,7 @@ rs_insert_arrow_rl2 <- function() {
 #' @export
 #' @rdname insert_arrows
 rs_insert_arrow_lr <- function() {
-    rstudioapi::insertText(text = "->")
+    rstudioapi::insertText(text = " -> ")
 }
 
 #' @export
